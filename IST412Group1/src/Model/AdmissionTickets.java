@@ -4,10 +4,16 @@
  */
 package Model;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author Kate
  */
-public class TicketTypes {
+public class AdmissionTickets {
+    private String ticketType;
+    private String ticketDescription;
+    private BigDecimal ticketCost;
+            
     
 }
