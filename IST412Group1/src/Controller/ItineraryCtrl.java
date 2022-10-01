@@ -33,11 +33,20 @@ public class ItineraryCtrl {
         this.itinNum = itinNum;
     }
 
-    
-// Add confirmed reservations to itinerary
-    
-// Remove selected activities from itinerary when reservations are deleted
-    
+    /**
+     * Add reservation to Itinerary and return true if added, false if not
+     * @return True if reservation has been added to itinerary, false if not
+     */
+    public boolean addToItin() {
+        return false;
+    }
 
+    /**
+     * Remove a reservation from itinerary, return true if removed, false if not
+     * @return True if reservation was removed from itinerary, false if not
+     */
+    public boolean removeFromItin() {
+        return false;
+    }
     
 }
