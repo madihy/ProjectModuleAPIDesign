@@ -37,7 +37,7 @@ public class ActivityUI {
      * @return Boolean to show if the reservation has been confirmed (true) or
      * not confirmed (false)
      */
-    public boolean confirmReservation() {
+    public boolean ConfirmReservation() {
         return false;
     }
 }
