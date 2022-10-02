@@ -11,14 +11,12 @@ import java.util.ArrayList;
  */
 
 public class Itinerary {
-    private long itinNum;
-    private ArrayList<Activity> activities;
+    protected ArrayList<Activity> activities;
 
     /**
      * This is the default Itinerary constructor 
      */
     public Itinerary() {
-        this.itinNum = 000000;
         this.activities = null;
     }
 
@@ -28,25 +26,10 @@ public class Itinerary {
      * @param activities Array list of activities on the itinerary
      */
     public Itinerary(long itinNum, ArrayList<Activity> activities) {
-        this.itinNum = itinNum;
         this.activities = activities;
     }
 
-    /**
-     * Gets the unique Itinerary number
-     * @return A long representing the Itinerary Number
-     */
-    public long getItinNum() {
-        return itinNum;
-    }
-
-    /**
-     * Sets the unique Itinerary number
-     * @param itinNum Sets the unique Itinerary Number 
-     */
-    public void setItinNum(long itinNum) {
-        this.itinNum = itinNum;
-    }
+    
 
     /**
      * Gets the list of activities on the itinerary
