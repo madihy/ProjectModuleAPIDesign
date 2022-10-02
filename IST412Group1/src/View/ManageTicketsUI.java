@@ -4,14 +4,18 @@
  */
 package View;
 
+import java.awt.Label;
+import javax.swing.JPanel;
+
 /**
  *
  * @author IST412 Group1
  * This class is to provide a user interface for managing tickets purchased.
- * Users can view individual tickets for use at admission check-in and can assign a person to each ticket so 
- * individuals can make reservations for the visit.
+ * Users can view a list of tickets and an individual selected ticket for use at admission check-in and to assign a person to each ticket.
  */
 public class ManageTicketsUI {
+    JPanel manageTicketsUI;
+    Label manageTicketUITitleLabel = new Label ("Manage your tickets to check-in for admission and to assign tickets.");
     
     
     /**
