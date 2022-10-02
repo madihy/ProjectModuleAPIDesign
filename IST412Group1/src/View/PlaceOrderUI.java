@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 public class PlaceOrderUI {
     
     JPanel placeOrderPanel;
-    private Label placeOrderTitleLabel;
+    private Label placeOrderTitleLabel = new Label ("Review your order and click the place order button to purchase.");
     
     private Label ticketType1Label;
     private Label type1QuantityLabel;

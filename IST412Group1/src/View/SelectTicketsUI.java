@@ -15,37 +15,39 @@ import javax.swing.JPanel;
  * This class is a user interface to allow the user to select the tickets and then submit that selection for the ticket order.
  */
 public class SelectTicketsUI {
-    JPanel selectTickets;
-    private Label selectTicketsTitleLabel;
+    JPanel selectTicketsPanel;
+    private Label selectTicketsTitleLabel = new Label("Select the quantity of each ticket type you want to order.");
     
-    Label ticketType1Label;
     String type1Name = "Adult, ages 6+, $50";
+    Label ticketType1Label = new Label (type1Name);
     JFormattedTextField type1QuantityField;
     int type1Quantity = 0;
-    Label type1SubtotalLabel; 
     double type1Subtotal = 0;
+    Label type1SubtotalLabel; 
     
-    Label ticketType2Label;
+    
     String type2Name = "Senior, ages 65+, $25";
+    Label ticketType2Label = new Label (type2Name);
     JFormattedTextField type2QuantityField;
     int type2Quantity = 0;
-    Label type2SubtotalLabel;
     double type2Subtotal = 0;
+    Label type2SubtotalLabel;
     
-    Label ticketType3Label;
+    
     String type3Name = "Adult, ages 5 and under, $25";
+    Label ticketType3Label = new Label(type3Name);
     JFormattedTextField type3QuantityField;
     int type3Quanity = 0;
-    Label type3SubtotalLabel;
     double type3Subtotal = 0;
-    
+    Label type3SubtotalLabel;
+   
     JButton purchaseTickets;
     
     /**
      * This is the default constructor for the SelectTicketsUI class.
      */
     public SelectTicketsUI(){
-    
+        
     }
     
     /**
@@ -58,6 +60,8 @@ public class SelectTicketsUI {
         double subtotal = 0;
         return subtotal;
     }
+    
+    
     
 }
 
