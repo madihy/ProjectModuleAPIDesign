@@ -8,6 +8,6 @@ package View;
  *
  * @author Kate
  */
-public class ConfirmTicketUI {
+public class CheckInTickets {
     
 }
