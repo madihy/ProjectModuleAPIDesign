@@ -7,24 +7,43 @@ package View;
 import java.awt.Label;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
+import javax.swing.JPanel;
 
 /**
  *
- * @author Kate
+ * @author IST412 Group1
+ * This class is a user interface that displays the order for the customer to review.
+ * The customer can cancel the back out of the order at this point or can place the order. 
  */
 public class PlaceOrderUI {
+    
+    JPanel placeOrderPanel;
+    private Label placeOrderTitleLabel;
+    
     private Label ticketType1Label;
-    private JFormattedTextField type1QuantityText;
-    private Label type1Subtotal;
+    private Label type1QuantityLabel;
+    private Label type1SubtotalLabel;
     
     private Label ticketType2Label;
-    private JFormattedTextField type2QuantityText;
-    private Label type2Subtotal;
+    private Label type2QuantityLabel;
+    private Label type2SubtotalLabel;
     
-    private Label ticketType3Label; 
-    private JFormattedTextField type3QuantityText;
-    private Label type3Subtotal;
+    private Label ticketType3Label;
+    private Label type1Quant3tyLabel;
+    private Label type3SubtotalLabel;
+    
+    private Label orderSubtotalLabel;
+    private Label orderTaxLabel;
+    private Label orderTotalLabel;
     
     private JButton placeOrder;
+    private JButton cancelOrderButton;
+    
+    /**
+     * This is the standard default constructor for the PlaceOrderUI class.
+     */
+    public PlaceOrderUI(){
+    
+}
     
 }
