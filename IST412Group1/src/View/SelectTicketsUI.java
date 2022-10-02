@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author IST412 Group1
+ * @author katerineer
  * This class is a user interface to allow the user to select the tickets and then submit that selection for the ticket order.
  */
 public class SelectTicketsUI {

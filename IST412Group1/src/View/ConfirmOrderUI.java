@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- *@author IST412 Group1
+ *@author katerineer
  * This class is for a user interface screen that displays the completed ticket order as a confirmation
  * and provides access to the list of individual tickets purchased with a manage tickets button.
  */

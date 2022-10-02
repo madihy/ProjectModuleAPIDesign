@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author IST412 Group1
+ * @author katerineer
  * This class is to provide a user interface for managing tickets purchased.
  * Users can view a list of tickets and an individual selected ticket for use at admission check-in and to assign a person to each ticket.
  */

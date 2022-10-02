@@ -8,7 +8,7 @@ import java.lang.reflect.Array;
 
 /**
  *
- * @author IST412 Group1
+ * @author katerineer
  * A class to create an ticket order for tickets to be purchased.
  * This class creates instances of tickets and adds them to an array for the ticket order.
  */

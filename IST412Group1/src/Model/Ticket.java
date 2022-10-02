@@ -7,7 +7,7 @@ package Model;
 import java.math.BigDecimal;
 
 /**
- *@author IST412 Group1 
+ *@author katerineer 
  * A class to define the admission ticket object and its associated variables and methods.
  * This class will be used to create ticket objects so that customers can purchase tickets
  * and manage tickets in other classes.

@@ -2,90 +2,30 @@ package Model;
 
 
 /**
- * This class contains information about the Customer
- * @author brandonworley
+ * This is the subclass Customer that extends the superclass Accounts and contains account information specific to customers.
+ * @author brandonworley and katerineer
  */
-public class Customer {
-    private String firstName;
-    private String lastName;
-    private long custNum;
+public class Customer extends Account {
     private String DOB;
+    private String email;
 
-    /**
-     * This is the default constructor for the Customer class
-     */
-    public Customer() {
-        this.firstName = "None";
-        this.lastName = "None";
-        this.custNum = 000000;
-        this.DOB = "00/00/0000";
-    }
-
-    /**
-     * This is the full constructor for the Customer class
-     *
-     * @param firstName Customer's first name
-     * @param lastName Customer's last name
-     * @param custNum Customer's unique customer number
-     * @param DOB Customer's date of birth
-     */
-    public Customer(String firstName, String lastName, long custNum, String DOB) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.custNum = custNum;
-        this.DOB = DOB;
-    }
-
-    /**
-     * Returns the customer's first name
-     *
-     * @return A string of the customer's first name
-     */
-    public String getFirstName() {
-        return firstName;
-    }
-
-    /**
-     * Sets the First Name of the Customer
-     *
-     * @param firstName Sets the first name of the customer
-     */
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    /**
-     * Gets the last name of the customer
-     *
-     * @return A string of the customer's last name
-     */
-    public String getLastName() {
-        return lastName;
-    }
-
-    /**
-     * Sets the last name of the customer
-     *
-     * @param lastName Sets the last name of the customer
-     */
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
     
-/**
- * Gets the customer's unique customer number
- * @return a long that represents the customer number
- */    
-    public long getCustNum() {
-        return custNum;
-    }
-
     /**
-     * Sets the unique customer number for the customer
-     * @param custNum Sets the customer number
+     * This is the full constructor for the Customer subclass.
+     * @param accountID the customer's account ID number.
+     * @param userName the customer's account user name.
+     * @param password the customer's account password.
+     * @param firstName the customer's account first name.
+     * @param lastName the customer's account last name.
+     * @param DOB the customer's date of birth.
+     * @param email the customer's email.
      */
-    public void setCustNum(int custNum) {
-        this.custNum = custNum;
+    public Customer(int accountID, String userName, String password, String firstName, String lastName, String DOB, String email) {
+        
+        super(accountID, userName, password, firstName, lastName);
+        
+        this.DOB = DOB;
+        this.email = email;
     }
 
     /**
@@ -104,4 +44,25 @@ public class Customer {
         this.DOB = DOB;
     }
 
+    /**
+     * Returns the email for this account.
+     * @return a string representing the email for this account.
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Checks the format of the email string and sets the email for this account.
+     * @param email sets the email for this account.
+     */
+    public void setEmail(String email) {
+        //verifies the email address is formatted correctly
+         String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+        if (this.email.matches(regex)) {
+            this.email = email;
+        } else {
+            System.out.println("Not a valid address!");
+        }
+    }
 }

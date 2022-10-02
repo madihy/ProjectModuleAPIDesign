@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author IST412 Group1
+ * @author katerineer
  * This class is a user interface that displays the order for the customer to review.
  * The customer can cancel the back out of the order at this point or can place the order. 
  */
