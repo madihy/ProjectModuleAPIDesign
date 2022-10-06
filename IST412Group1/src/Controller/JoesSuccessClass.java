@@ -8,7 +8,7 @@ package Controller;
  *
  * @author joepompilii
  */
-public class JoesTestClass {
+public class JoesSuccessClass {
     
     // this is just a test. please work.
     
