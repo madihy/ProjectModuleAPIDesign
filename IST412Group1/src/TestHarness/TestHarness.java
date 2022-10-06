@@ -4,6 +4,9 @@
  */
 package TestHarness;
 
+import Controller.LoginCtrl;
+import View.LoginUI;
+
 /**
  *
  * @author joepompilii
@@ -14,9 +17,14 @@ public class TestHarness {
         
         // testBlankClass
         // testBlankClass
-        // etc
+        // etc   
     }
-    
+
+    public void testLoginCtrl (){
+        LoginCtrl login1 = new LoginCtrl();
+        
+        
+    }
     // public void testBlankClass(){
     
     // System.out.println("Testing Blank Class");

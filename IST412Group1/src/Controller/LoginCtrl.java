@@ -5,6 +5,7 @@
 package Controller;
 
 import java.awt.event.ActionEvent;
+import View.LoginUI;
 
 /**
  *
@@ -18,7 +19,7 @@ public class LoginCtrl {
      */
     
     public LoginCtrl(){
-        
+    
     }
     /**
      * Establishes the action event to be carried out when the submit button is selected on the login screen.
