@@ -17,11 +17,11 @@ public class TestHarness {
         // etc
     }
     
-    // public void testBlankClass
+    // public void testBlankClass(){
     
     // System.out.println("Testing Blank Class");
     
     
-    
+    // }
     
 }
