@@ -13,16 +13,16 @@ public class Customer extends Account {
     /**
      * This is the full constructor for the Customer subclass.
      * @param accountID the customer's account ID number.
-     * @param userName the customer's account user name.
+     * @param username the customer's account user name.
      * @param password the customer's account password.
      * @param firstName the customer's account first name.
      * @param lastName the customer's account last name.
      * @param DOB the customer's date of birth.
      * @param email the customer's email.
      */
-    public Customer(int accountID, String userName, String password, String firstName, String lastName, String DOB, String email) {
+    public Customer(int accountID, String username, String password, String firstName, String lastName, String DOB, String email) {
         
-        super(accountID, userName, password, firstName, lastName);
+        super(accountID, username, password, firstName, lastName);
         
         this.DOB = DOB;
         this.email = email;

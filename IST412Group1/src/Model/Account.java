@@ -8,32 +8,31 @@ import java.time.LocalDate;
 import java.util.Random;
 
 /**
- *
- * @author brandonworley and katerineer
- * This is an abstract class for the account login information that will be used for both customers and employees.
+ * This is a class for the account login information that will be used for both customers and employees.
  * Customer and employee classes will extend this class.
+ * @author brandonworley and katerineer
  */
-abstract class Account {
+public class Account {
 
     private int accountID;
-    private String userName;
+    private String username;
     private String password;
     private String firstName; 
     private String lastName; 
     private Boolean accountTypeCustomer;
         
     /**
-     * This is the constructor for the Account abstract class.
+     * This is the full constructor for the Account class.
      * @param accountID
-     * @param userName
+     * @param username
      * @param password
      * @param firstName
      * @param lastName 
      */
     
-    public Account(int accountID, String userName, String password, String firstName, String lastName) {  
+    public Account(int accountID, String username, String password, String firstName, String lastName) {  
         //Instantiates the userName and password variables.
-        this.userName = userName;
+        this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -47,20 +46,21 @@ abstract class Account {
 
     }
 
+
     /**
-     * Returns the user name for this login account.
-     * @return a string representing the userName for this login account.
+     * Returns the username for this login account.
+     * @return a string representing the username for this login account.
      */
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
     /**
      * Sets the user name for this account.
-     * @param userName sets the user name for the account.
+     * @param username sets the user name for the account.
      */
     public void setUserName(String userName) {
-        this.userName = userName;
+        this.username = username;
     }
 
     /**

@@ -14,15 +14,15 @@ public class Employee extends Account{
     /**
      * This is a full constructor for the Employee subclass.
      * @param accountID the employee's account ID number.
-     * @param userName the employee's account user name.
+     * @param username the employee's account user name.
      * @param password the employee password.
      * @param firstName the employee's account first name.
      * @param lastName the employee's account last name.
      * @param authLevel the employee's authorization level.
      */
-    public Employee (int accountID, String userName, String password, String firstName, String lastName, String authLevel){
+    public Employee (int accountID, String username, String password, String firstName, String lastName, String authLevel){
         
-        super(accountID, userName, password, firstName, lastName);
+        super(accountID, username, password, firstName, lastName);
         
         authLevel = ""; //instantiates the authLevel string variable
         this.authLevel = authLevel;
