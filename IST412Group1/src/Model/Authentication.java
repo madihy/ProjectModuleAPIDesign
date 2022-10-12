@@ -36,7 +36,7 @@ public class Authentication{
      * Gets the users array and adds the new accounts to the users array list.
      */ 
     public void createTestUsers() {
-        //int accountID, String username, String password, String firstName, String lastName
+        
         //Populate array with some test users 
         Account account1 = new Account(1001, "username1", "password1", "user1FirstName", "user1LastName");
         Account account2 = new Account(1002, "username2", "password2", "user2FirstName", "user2LastName");
@@ -44,6 +44,7 @@ public class Authentication{
         Account account4 = new Account(1004, "username4", "password4", "user4FirstName", "user4LastName");
         Account account5 = new Account(1005, "username5", "password5", "user5FirstName", "user5LastName");
         
+        //Adds user accounts to the user array
         getUsersArray().add(account1);
         getUsersArray().add(account2);
         getUsersArray().add(account3);
