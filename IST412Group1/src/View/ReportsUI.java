@@ -39,7 +39,6 @@ public class ReportsUI {
         btnDelete = new javax.swing.JButton();
         btnReturn = new javax.swing.JButton();
         btnApprove = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         tblReports.setModel(new javax.swing.table.DefaultTableModel(
                 new Object[][]{
