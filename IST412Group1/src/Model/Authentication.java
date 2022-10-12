@@ -17,7 +17,10 @@ public class Authentication{
     private String currentPassword;
     
     /**
-     * This is the full constructor for the authentication class. 
+     * This is the full constructor for the authentication class.
+     * @param usersArray array of user accounts to be used in the authentication process
+     * @param currentUsername string for the current username used in the authentication process
+     * @param currentPassword string for the current password used in the authentication process
      */
     public Authentication (ArrayList usersArray, String currentUsername, String currentPassword){
         
