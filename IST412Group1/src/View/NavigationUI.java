@@ -5,9 +5,8 @@
 package View;
 
 /**
- *
- * @author katerineer
  * This class is to provide the user interface for the main application navigation screen.
+ * @author katerineer
  */
 public class NavigationUI {
     

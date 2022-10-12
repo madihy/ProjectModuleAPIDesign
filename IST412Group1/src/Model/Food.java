@@ -11,16 +11,19 @@ package Model;
 public class Food {
     private String foodName;
     private String foodDescription;
+    private double foodPrice;
     
     /**
      * This is the full constructor for the food class.
-     * @param foodName
-     * @param foodDescription 
+     * @param foodName string representing the name of the food item
+     * @param foodDescription string representing the description of the food item
+     * @param foodPrice double representing the price of the food item
      */   
-    public Food (String foodName, String foodDescription){
+    public Food (String foodName, String foodDescription, double foodPrice){
         
         this.foodName = foodName;
         this.foodDescription = foodDescription;
+        this.foodPrice = foodPrice;
     }
 
     /**
@@ -53,6 +56,22 @@ public class Food {
      */
     public void setFoodDescription(String foodDescription) {
         this.foodDescription = foodDescription;
+    }
+
+    /**
+     * Gets the price of this food item.
+     * @return the double foodPrice representing the price of the food item.
+     */
+    public double getFoodPrice() {
+        return foodPrice;
+    }
+
+    /**
+     * Sets the price of this food item.
+     * @param foodPrice sets the price of the food item.
+     */
+    public void setFoodPrice(double foodPrice) {
+        this.foodPrice = foodPrice;
     }
     
 }

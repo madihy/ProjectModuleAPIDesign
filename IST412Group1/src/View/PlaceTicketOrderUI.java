@@ -10,12 +10,11 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JPanel;
 
 /**
- *
- * @author katerineer
- * This class is a user interface that displays the order for the customer to review.
- * The customer can cancel the back out of the order at this point or can place the order. 
+ * This class is a user interface that displays the ticket order for the customer to review.
+ * The customer can cancel the back out of the order at this point or can place the order.
+ * @author katerineer 
  */
-public class PlaceOrderUI {
+public class PlaceTicketOrderUI {
     
     JPanel placeOrderPanel;
     private Label placeOrderTitleLabel = new Label ("Review your order and click the place order button to purchase.");
@@ -42,7 +41,7 @@ public class PlaceOrderUI {
     /**
      * This is the standard default constructor for the PlaceOrderUI class.
      */
-    public PlaceOrderUI(){
+    public PlaceTicketOrderUI(){
     
     }
     

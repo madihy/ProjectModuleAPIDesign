@@ -9,11 +9,11 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- *@author katerineer
  * This class is for a user interface screen that displays the completed ticket order as a confirmation
  * and provides access to the list of individual tickets purchased with a manage tickets button.
+ *@author katerineer
  */
-public class ConfirmOrderUI {
+public class ConfirmTicketOrderUI {
     
     JPanel confirmOrderUIPanel;
     Label confirmOrderTitleLabel = new Label("Your ticket order is complete.");
@@ -25,7 +25,7 @@ public class ConfirmOrderUI {
     /**
      * This is a default constructor for the ConfirmOrderUI class.
      */
-    public ConfirmOrderUI(){
+    public ConfirmTicketOrderUI(){
         
     }
     

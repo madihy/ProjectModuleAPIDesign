@@ -10,9 +10,8 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JPanel;
 
 /**
- *
- * @author katerineer
  * This class is a user interface to allow the user to select the tickets and then submit that selection for the ticket order.
+ * @author katerineer
  */
 public class SelectTicketsUI {
     JPanel selectTicketsPanel;
