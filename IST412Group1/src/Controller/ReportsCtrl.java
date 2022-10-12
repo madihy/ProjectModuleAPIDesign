@@ -11,33 +11,41 @@ public class ReportsCtrl {
 
     }
 
-    /** modifies a report
+    /**
+     * This method contains the logic for modifying a report
+     * @author hythammadi
      */
 
     public void modifyReport() {
 
     }
 
-    /** submits a report
+    /**
+     * This method contains the logic for submitting a report
+     * @author hythammadi
      */
-
     public void submitReport() {
 
     }
 
-    /** deletes a report
+    /**
+     * This method contains the logic for deleting a report
+     * @author hythammadi
      */
-
     public void deleteReport() {
 
     }
 
-    /** returns a report to the user
+    /**
+     * This method contains the logic for returning a report
+     * @author hythammadi
      */
     public void returnReport() {
 
     }
-    /** approves a report to
+    /**
+     * This method contains the logic for approving a report
+     * @author hythammadi
      */
     public void approveReport() {
 
