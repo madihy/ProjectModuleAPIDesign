@@ -30,6 +30,7 @@ public class Authentication{
     
     /**
      * Creates test user accounts to allow testing of the application throughout development.
+     * Gets the users array and adds the new accounts to the users array list.
      */ 
     public void createTestUsers() {
         //int accountID, String username, String password, String firstName, String lastName
@@ -48,42 +49,48 @@ public class Authentication{
     }
 
     /**
-     * @return the usersArray
+     * Gets array list of user accounts.
+     * @return the array list usersArray representing the list of user accounts.
      */
     public ArrayList<Account> getUsersArray() {
         return usersArray;
     }
 
     /**
-     * @param usersArray the usersArray to set
+     * Sets the array list of user accounts.
+     * @param usersArray sets the array list of user accounts.
      */
     public void setUsersArray(ArrayList<Account> usersArray) {
         this.usersArray = usersArray;
     }
 
     /**
-     * @return the currentUsername
+     * Gets the string value for the current username for the authentication process.
+     * @return the string representing currentUsername for the authentication process.
      */
     public String getCurrentUsername() {
         return currentUsername;
     }
 
     /**
-     * @param currentUsername the currentUsername to set
+     * Sets the current username for the authentication process.
+     * @param currentUsername sets the current username for the authentication process.
      */
     public void setCurrentUsername(String currentUsername) {
         this.currentUsername = currentUsername;
     }
 
     /**
-     * @return the currentPassword
+     * gets the current user's password for the authentication process.
+     * @return the string currentPassword representing the current password for the authentication process.
      */
     public String getCurrentPassword() {
         return currentPassword;
     }
 
     /**
-     * @param currentPassword the currentPassword to set
+     * Sets the current user's password for the authentication process.
+     * @param currentPassword sets the current user's password for the authentication process.
      */
     public void setCurrentPassword(String currentPassword) {
         this.currentPassword = currentPassword;
