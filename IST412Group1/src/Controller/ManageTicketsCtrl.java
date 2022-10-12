@@ -7,10 +7,8 @@ package Controller;
 import java.awt.event.ActionEvent;
 
 /**
- *
+ * This class allows a customer to select tickets, place the ticket order, confirm the ticket order, and manage the tickets
  * @author katerineer
- * This class is used to manage the tickets that the customer has purchased.
- * It allows the customer to view a list of tickets, open individual tickets, and assign the ticket to a person.
  */
 public class ManageTicketsCtrl {
     
@@ -20,7 +18,45 @@ public class ManageTicketsCtrl {
     public ManageTicketsCtrl(){
     
     }
-     /**
+    /**
+     * Establishes the action event to be carried out when the purchase ticket button 
+     * is selected on the select ticket user interface.
+     * Submits the quantity and ticket type information to use on the Place Order screen.
+     * @param event sets the event variable to occur when the purchase ticket button is selected.
+     */
+    public void purchaseTicketsButtonEvent (ActionEvent event){
+        
+    }
+    /**
+     * Establishes the action event to be carried out when the place order button 
+     * is selected on the place order user interface screen.
+     * Confirms the order information and takes the user to the confirm order screen.
+     * @param event sets the event variable to occur when the place order button is selected.
+     */
+    public void placeOrderButtonEvent (ActionEvent event){
+        
+    }
+    /**
+     * Establishes the action event to be carried out when the cancel order button 
+     * is selected on the place order user interface screen.
+     * Confirms the order information and takes the user back to the select tickets screen.
+     * @param event sets the event variable to occur when the cancel order button is selected.
+     */
+    public void cancelOrderButtonEvent (ActionEvent event){
+        
+    }
+    
+    /**
+     * Establishes the action event to be carried out when the manage tickets button 
+     * is selected on the confirm order user interface screen.
+     * Confirms the order information and takes the user to the manage tickets screen.
+     * @param event sets the event variable to occur when the manage tickets button is selected.
+     */
+    public void manageTicketsButtonEvent (ActionEvent event){
+        
+    }
+    
+    /**
      * Establishes the action event to be carried out when the open ticket button 
      * is selected on the manage tickets user interface.
      * @param event sets the event variable to occur when the open ticket button is selected.
