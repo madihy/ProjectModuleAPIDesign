@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.ArrayList;
+
 
 /**
  * This is the subclass Customer that extends the superclass Accounts and contains account information specific to customers.
@@ -8,6 +10,7 @@ package Model;
 public class Customer extends Account {
     private String DOB;
     private String email;
+    private ArrayList<Ticket> purchasedTickets = new ArrayList<>();
 
     
     /**
@@ -19,13 +22,16 @@ public class Customer extends Account {
      * @param lastName the customer's account last name.
      * @param DOB the customer's date of birth.
      * @param email the customer's email.
+     * @param purchasedTickets array list of the tickets the customer has purchased.
      */
-    public Customer(int accountID, String username, String password, String firstName, String lastName, String DOB, String email) {
+    
+    public Customer(int accountID, String username, String password, String firstName, String lastName, String DOB, String email, ArrayList purchasedTickets) {
         
         super(accountID, username, password, firstName, lastName);
         
         this.DOB = DOB;
         this.email = email;
+        this.purchasedTickets = purchasedTickets;
     }
 
     /**
@@ -65,4 +71,22 @@ public class Customer extends Account {
             System.out.println("Not a valid address!");
         }
     }
+
+    /**
+     * Gets the list of tickets purchased by this customer.
+     * @return the ArrayList purchasedTickets representing the list of tickets purchased by the customer.
+     */
+    public ArrayList<Ticket> getPurchasedTickets() {
+        return purchasedTickets;
+    }
+
+    /**
+     * Sets the array list of tickets purchased by this customer.
+     * @param purchasedTickets sets the list of tickets purchased by the customer.
+     */
+    public void setPurchasedTickets(ArrayList<Ticket> purchasedTickets) {
+        this.purchasedTickets = purchasedTickets;
+    }
+    
+    
 }
