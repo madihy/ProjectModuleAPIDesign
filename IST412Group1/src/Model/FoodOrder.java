@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -11,11 +12,11 @@ import java.util.ArrayList;
  * @author katerineer
  */
 public class FoodOrder {
-    private int orderNumber;
+    private int orderNumber = 0;
     private ArrayList<Food> foodsSelected = new ArrayList<>();
-    private double foodOrderSubtotal;
-    private double foodOrderTax;
-    private double foodOrderTotal;
+    private double foodOrderSubtotal = 0;
+    private double foodOrderTax = 0;
+    private double foodOrderTotal = 0;
     private String foodOrderStatus; //such as pending, being prepared, ready for pick-up, or completed
     
     /**
@@ -42,6 +43,7 @@ public class FoodOrder {
      * @return the integer orderNumber representing the order number for the food order.
      */
     public int getOrderNumber() {
+        orderNumber = orderNumber + 1; // will this work or will there need to be a for loop?
         return orderNumber;
     }
 
@@ -89,7 +91,7 @@ public class FoodOrder {
      * Gets the tax amount for this food order.
      * @return the double foodOrderTax representing the tax amount for the food order.
      */
-    public double getFoodOrderTax() {
+    public double getFoodOrderTax() { 
         return foodOrderTax;
     }
 

@@ -26,6 +26,11 @@ public class Food {
         this.foodPrice = foodPrice;
     }
 
+    Food f1 = new Food("Hotdog", "Description", 6.99);
+    Food f2 = new Food("Hamburger", "Description", 8.99);
+    Food f3 = new Food("Turkey leg", "Description", 7);
+    Food f4 = new Food("Dole Whip", "Description", 4.50);
+    Food f5 = new Food("Chicken Nuggets", "Description", 6.99);
     /**
      * Gets the name of this food item.
      * @return the string foodName representing the name of the food item.
