@@ -5,41 +5,27 @@
 package View;
 
 import java.awt.Label;
+import java.awt.TextField;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 import javax.swing.JPanel;
 
 /**
- * This class is a user interface to allow the user to select the tickets and then submit that selection for the ticket order.
+ * This class is a user interface to allow the user to select the tickets and then submit that selection to place the ticket order.
  * @author katerineer
  */
 public class SelectTicketsUI {
     JPanel selectTicketsPanel;
-    private Label selectTicketsTitleLabel = new Label("Select the quantity of each ticket type you want to order.");
-    
-    String type1Name = "Adult, ages 6+, $50";
-    Label ticketType1Label = new Label (type1Name);
-    JFormattedTextField type1QuantityField;
-    int type1Quantity = 0;
-    double type1Subtotal = 0;
-    Label type1SubtotalLabel; 
-    
-    
-    String type2Name = "Senior, ages 65+, $25";
-    Label ticketType2Label = new Label (type2Name);
-    JFormattedTextField type2QuantityField;
-    int type2Quantity = 0;
-    double type2Subtotal = 0;
-    Label type2SubtotalLabel;
-    
-    
-    String type3Name = "Adult, ages 5 and under, $25";
-    Label ticketType3Label = new Label(type3Name);
-    JFormattedTextField type3QuantityField;
-    int type3Quanity = 0;
-    double type3Subtotal = 0;
-    Label type3SubtotalLabel;
-   
+    Label selectTicketsTitleLabel = new Label("Select the quantity and number of days for your tickets.");
+    String ticketDescription = "Ticket are $50 each for each day";
+    Label ticketDescriptionLabel = new Label (ticketDescription);
+    TextField numberOfTicketsField;
+    TextField numberOfDaysField;
+    Label currentTicketCost;
+    Label orderSubtotalLabel; 
+    Label orderTaxLabel;
+    Label orderTotalLabel;
+    JButton updateTickets;
     JButton purchaseTickets;
     
     /**
