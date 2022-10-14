@@ -19,11 +19,10 @@ import java.sql.SQLOutput;
 
 
 public class TestHarness {
-    static private Reports myReportsModel;
     public static void main(String[] args) {
         System.out.println("Initiating Test Harness...");
-        myReportsModel = new Reports();
-        myReportsModel.setReportType("Sales");
+        Reports myReportsModel = new Reports();
+        myReportsModel.setReportType("Test Report Type");
         myReportsModel.getReportType();
     }
 
