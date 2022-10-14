@@ -49,18 +49,6 @@ public class SelectTicketsUI {
         
     }
     
-    /**
-     * Returns the subtotal amount for the quantity and type of ticket selected and updates the subtotal label.
-     * @param quantity sets the quantity of tickets to be used to calculate the subtotal.
-     * @param ticketType sets the ticket type to be used to calculate the subtotal.
-     * @return a double representing the subtotal for the ticket quantity and type selected.
-     */
-    public double calculateSubtotal(int quantity, String ticketType){
-        double subtotal = 0;
-        return subtotal;
-    }
-    
-    
-    
+   
 }
 

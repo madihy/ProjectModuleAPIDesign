@@ -5,53 +5,54 @@
 package Model;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /**
- *
+ * This class contains ticket order information for when a orders ticket.
  * @author katerineer
- * A class to create an ticket order for tickets to be purchased.
- * This class creates instances of tickets and adds them to an array for the ticket order.
  */
 public class TicketOrder{
    
      private int orderNumber;
-     private Array[] adultTickets = null;
-     private Array[] seniorTickets = null;
-     private Array[] childTickets = null;
+     private int quantityTickets;
+     private int quantityDays;
+     private ArrayList <Ticket> ticketsOrdered = new ArrayList<>();
      private double orderSubtotal = 0;
      private double orderTax = 0;
      private double orderTotal = 0;
-     private String orderStatus = ""; //in progress, complete
+     private String orderStatus = ""; 
      
      /**
-      * This is the basic constructor for the TicketOrder class.
-      * @param orderNumber
-      * @param adultTickets
-      * @param seniorTickets
-      * @param childTickets
-      * @param orderSubtotal
-      * @param orderTax
-      * @param orderTotal
-      * @param orderStatus 
+      * This is the full constructor for the TicketOrder Class
+      * @param orderNumber unique number to identify a specific order
+      * @param quantityTickets number of tickets requested for the order
+      * @param quantityDays number of days requested for each ticket
+      * @param ticketsOrdered array list of the tickets for the order
+      * @param orderSubtotal subtotal of the ticket order before tax
+      * @param orderTax amount of tax for the ticket order
+      * @param orderTotal total cost for the ticket order including the subtotal and tax
+      * @param orderStatus status of the order such as in-progress or completed
       */
-     public TicketOrder(int orderNumber, Array[] adultTickets, Array[] seniorTickets, Array[] childTickets, double orderSubtotal, double orderTax, double orderTotal, String orderStatus){
+     public TicketOrder(int orderNumber, int quantityTickets, int quantityDays, ArrayList ticketsOrdered, double orderSubtotal, double orderTax, double orderTotal, String orderStatus){
          
          this.orderNumber = orderNumber;
-         this.adultTickets = adultTickets;
-         this.seniorTickets = seniorTickets;
-         this.childTickets = childTickets;
+         this.quantityTickets = quantityTickets;
+         this.quantityDays = quantityDays;
+         this.ticketsOrdered = ticketsOrdered;
          this.orderSubtotal = orderSubtotal;
          this.orderTax = orderTax;
+         this.orderTotal = orderTotal;
          this.orderStatus = orderStatus;
      }
      /**
-      * Returns the array of the specified type and specified quantity of tickets requested for this ticket order.
-      * @param quantity sets the quantity of tickets to be created for the ticket order.
-      * @param ticketType sets the type of ticket to create in the array for the ticket order.
-      * @return an Array of tickets containing the specified quantity and type of ticket requested for the ticket order.
+      * Returns the array tickets requested for this ticket order creating one ticket for each person each day.
+      * @param numberOfTickets sets the quantity of tickets to be created for the ticket order.
+      * @param numberOfDays sets the number of days for each ticket.
+      * @return an Array of tickets containing the specified quantity for each day requested for the ticket order.
       */
-     public Array[] createTicketsArray (int quantity, String ticketType){
+     public Array[] createTicketsArray (int numberOfTickets, int numberOfDays){
          Array[] ticketsRequested = null;
+         int quantity = numberOfTickets * numberOfDays;
          for(int i = 0; i <= quantity; i++){     
          }
          return ticketsRequested;
@@ -98,29 +99,29 @@ public class TicketOrder{
     }
 
     /**
-     * Returns the array of adult tickets for this ticket order.
-     * @return an array representing the adult tickets for the ticket order.
+     * Gets the quantity of tickets for this ticket order.
+     * @return the integer quantityTickets representing the quantity of tickets for the ticket order.
      */
-    public Array[] getAdultTickets() {
-        return adultTickets;
+    public int getQuantityTickets() {
+        return quantityTickets;
     }
 
     /**
-     * Returns the array of senior tickets for this ticket order.
-     * @return an array representing the senior tickets for the ticket order.
+     * Gets the quantity of days for each ticket for this ticket order.
+     * @return the integer quantityDays representing the quantity of days for each ticket for the ticket order.
      */
-    public Array[] getSeniorTickets() {
-        return seniorTickets;
+    public int getQuantityDays() {
+        return quantityDays;
     }
 
     /**
-     * Returns the array of child tickets for this ticket order.
-     * @return an array representing the child tickets for the ticket order.
+     * Gets the list of tickets for this ticket order.
+     * @return the ArrayList ticketsOrdered representing the list of tickets for the ticket order.
      */
-    public Array[] getChildTickets() {
-        return childTickets;
+    public ArrayList <Ticket> getTicketsOrdered() {
+        return ticketsOrdered;
     }
-
+         
     /**
      * Returns the order subtotal for this ticket order.
      * @return a double representing the order subtotal for the ticket order.
@@ -160,29 +161,29 @@ public class TicketOrder{
     public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
     }
-
+    
     /**
-     * Sets the ticket array for the adult tickets for this ticket order.
-     * @param adultTickets sets the adult tickets in the array for the ticket order.
+     * Sets the number of tickets for this ticket order.
+     * @param quantityTickets sets the number of tickets for the ticket order.
      */
-    public void setAdultTickets(Array[] adultTickets) {
-        this.adultTickets = adultTickets;
+    public void setQuantityTickets(int quantityTickets) {
+        this.quantityTickets = quantityTickets;
     }
 
     /**
-     * Sets the ticket array for the senior tickets for this ticket order.
-     * @param seniorTickets sets the senior tickets in the array for the ticket order.
-     */ 
-    public void setSeniorTickets(Array[] seniorTickets) {
-        this.seniorTickets = seniorTickets;
+     * Sets the quantity of days for each ticket for this ticket order.
+     * @param quantityDays sets the quantity of days for each ticket for the ticket order.
+     */
+    public void setQuantityDays(int quantityDays) {
+        this.quantityDays = quantityDays;
     }
 
     /**
-     * Sets the ticket array for the child tickets for this ticket order.
-     * @param childTickets sets the child tickets in the array for the ticket order.
+     * Sets the list of tickets ordered for this ticket order.
+     * @param ticketsOrdered sets the list of tickets ordered for the ticket order.
      */
-    public void setChildTickets(Array[] childTickets) {
-        this.childTickets = childTickets;
+    public void setTicketsOrdered(ArrayList <Ticket> ticketsOrdered) {
+        this.ticketsOrdered = ticketsOrdered;
     }
 
     /**
@@ -216,5 +217,5 @@ public class TicketOrder{
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
-         
+
 }

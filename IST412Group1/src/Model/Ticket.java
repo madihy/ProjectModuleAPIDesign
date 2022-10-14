@@ -5,41 +5,38 @@
 package Model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 /**
+ * This class contains information for tickets that customers can purchase and manage.
  *@author katerineer 
- * A class to define the admission ticket object and its associated variables and methods.
- * This class will be used to create ticket objects so that customers can purchase tickets
- * and manage tickets in other classes.
+ *
  */
 public class Ticket {
-    private String ticketType; //adult, senior, or child ticket type
-    private double ticketCost; //
+    private double ticketCost; 
     private long ticketNumber;
+    private LocalDate visitDate;
     private String ticketAssignedName;
     private boolean checkedIn;
     
     /**
-     * This is the constructor for the Ticket class.
+     * This is the full constructor for the Ticket class.
+     * @param ticketCost the double representing the cost of the ticket
+     * @param ticketNumber the long number representing the unique number assigned to the ticket
+     * @param visitDate the date that the ticket will be used in the park
+     * @param ticketAssignedName the string representing the optional name of the person who will use the ticket
+     * @param checkedIn the Boolean representing whether the ticket has been checked in or used
      */
-    public Ticket (String ticketType, double ticketCost, long ticketNumber, String ticketAssignedName, boolean checkedIn){
+    public Ticket (double ticketCost, long ticketNumber, LocalDate visitDate, String ticketAssignedName, boolean checkedIn){
         
-        this.ticketType = ticketType;
         this.ticketCost = ticketCost;
         this.ticketNumber = ticketNumber;
+        this.visitDate = visitDate;
         this.ticketAssignedName = ticketAssignedName;
         this.checkedIn = checkedIn;
     
 }
     
-    /**
-     * Returns the ticket type for this ticket.
-     * @return the string representing the ticket type for the ticket.
-     */
-    public String getTicketType() {
-        return ticketType;
-    }
-
     /**
      * Returns the ticket cost for this ticket.
      * @return the double representing the ticket cost for the ticket.
@@ -86,6 +83,38 @@ public class Ticket {
      */
     public void setCheckedIn(boolean checkedIn) {
         this.checkedIn = checkedIn;
+    }
+
+    /**
+     * Gets the date for the park visit for this ticket.
+     * @return the LocalDate visitDate representing the date for the park visit for the ticket.
+     */
+    public LocalDate getVisitDate() {
+        return visitDate;
+    }
+
+    /**
+     * Sets the date for the park visit for this ticket.
+     * @param visitDate sets the date for the park visit for the ticket.
+     */
+    public void setVisitDate(LocalDate visitDate) {
+        this.visitDate = visitDate;
+    }
+
+    /**
+     * Gets the name of the person assigned to this ticket.
+     * @return the string ticketAssignedName representing the name of the person assigned to the ticket.
+     */
+    public String getTicketAssignedName() {
+        return ticketAssignedName;
+    }
+
+    /**
+     * Sets the name of the person assigned to this ticket.
+     * @param ticketAssignedName sets the name of the person assigned to this ticket.
+     */
+    public void setTicketAssignedName(String ticketAssignedName) {
+        this.ticketAssignedName = ticketAssignedName;
     }
     
     
