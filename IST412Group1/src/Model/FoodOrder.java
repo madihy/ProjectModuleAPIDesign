@@ -107,7 +107,8 @@ public class FoodOrder {
      * Gets the total cost of the food including tax for this food order.
      * @return the double foodOrderTotal representing the total cost of the food including tax for the food order.
      */
-    public double getFoodOrderTotal() {
+    public double getFoodOrderTotal() {       
+        foodOrderTotal = foodOrderSubtotal + foodOrderTax;       
         return foodOrderTotal;
     }
 
