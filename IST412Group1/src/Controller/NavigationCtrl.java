@@ -4,10 +4,14 @@
  */
 package Controller;
 
+import View.CustomerUI;
+import View.NavigationUI;
+import java.awt.event.ActionEvent;
+
 /**
- *
- * @author katerineer
  * This class provides the actions to facilitate user interface navigation menus in the application.
+ * @author katerineer
+ * 
  */
 public class NavigationCtrl {
     
@@ -17,5 +21,35 @@ public class NavigationCtrl {
     public NavigationCtrl(){
         
     }
+    
+    public void handleCustomerAccountButtonAction (ActionEvent event) {
+        
+        
+    }
+    
+    public void handleParkInformationButtonAction (ActionEvent event){
+        
+    }
+    
+    public void handlePurchaseTicketsButtonAction (ActionEvent event){
+        
+    }
+    
+    public void handleManageTicketsButtonAction (ActionEvent event){
+        
+    }
+    
+    public void handleManageReservationsButtonAction (ActionEvent event){
+        
+    }
+    
+    public void handleManageFoodOrdersButtonAction (ActionEvent event){
+        
+    }
+    
+    public void handleExitButtonAction (ActionEvent event){
+        
+    }
+    
     
 }
