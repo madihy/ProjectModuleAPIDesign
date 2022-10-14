@@ -15,7 +15,7 @@ import Controller.ReportsCtrl;
 public class TestHarness {
 
     public static void main(String[] args) {
-
+        System.out.println("Initiating Test Harness...");
         // testBlankClass
         // testBlankClass
         // etc   
