@@ -1,7 +1,9 @@
 package Model;
 
 
-import Model.Activity;
+import Model.*;
+import View.*;
+import Controller.*;
 import java.util.ArrayList;
 
 
