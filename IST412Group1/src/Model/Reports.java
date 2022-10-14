@@ -17,7 +17,7 @@ public class Reports {
      * Reports constructor
      * @author hythammadi
      */
-    public Reports(String reportType, String reportDate, String reportTime, String reportLocation, String reportDescription, String reportStatus, String reportID) {
+    public void ReportsSets(String reportType, String reportDate, String reportTime, String reportLocation, String reportDescription, String reportStatus, String reportID) {
         this.reportType = reportType;
         this.reportDate = reportDate;
         this.reportTime = reportTime;
@@ -26,12 +26,14 @@ public class Reports {
         this.reportStatus = reportStatus;
         this.reportID = reportID;
     }
+
+
     /**
      * This method gets the type of report
      * @author hythammadi
      */
-    public String getReportType() {
-        return reportType;
+    public void getReportType() {
+        System.out.println("Report type is... " + reportType);
     }
     /**
      * This method sets the report type.
@@ -39,6 +41,7 @@ public class Reports {
      */
     public void setReportType(String reportType) {
         this.reportType = reportType;
+        System.out.println("Setting report type to... " + reportType);
     }
     /**
      * This method sets the report type.

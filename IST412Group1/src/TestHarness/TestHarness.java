@@ -7,18 +7,24 @@ package TestHarness;
 import Controller.LoginCtrl;
 import View.LoginUI;
 import Controller.ReportsCtrl;
+import Model.Reports;
+
+import java.sql.SQLOutput;
 
 /**
  *
  * @author joepompilii
  */
-public class TestHarness {
 
+
+
+public class TestHarness {
+    static private Reports myReportsModel;
     public static void main(String[] args) {
         System.out.println("Initiating Test Harness...");
-        // testBlankClass
-        // testBlankClass
-        // etc   
+        myReportsModel = new Reports();
+        myReportsModel.setReportType("Sales");
+        myReportsModel.getReportType();
     }
 
     public void testLoginCtrl (){
