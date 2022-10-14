@@ -34,6 +34,7 @@ public class Restaurant {
         this.restaurantLocation = restaurantLocation;
         this.menuFoods = menuFoods;
         this.restaurantResOptions = restaurantResOptions;
+       
         
     }
 
@@ -78,7 +79,7 @@ public class Restaurant {
     }
 
     /**
-     * Sets this restuarant's location.
+     * Sets this restaurant's location.
      * @param restaurantLocation sets the restaurant's location.
      */
     public void setRestaurantLocation(String restaurantLocation) {
