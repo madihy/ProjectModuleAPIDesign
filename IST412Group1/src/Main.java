@@ -6,7 +6,7 @@ import TestHarness.TestHarness;
  */
 
 /**
- *
+ * This application will allow users to complete a variety of tasks for their WallyLand vacation.
  * @author Hytham Madi, Kate Rineer, Joe Pompilii, Brandon Worley
  */
 public class Main {
