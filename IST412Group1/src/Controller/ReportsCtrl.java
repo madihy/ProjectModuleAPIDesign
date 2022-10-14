@@ -1,4 +1,5 @@
 package Controller;
+
 /**
  * This class contains the methods for managing the reports
  * @author hythammadi
@@ -7,8 +8,8 @@ public class ReportsCtrl {
     /** creates a new report
      * @parm Reports
      */
-    public void createReport() {
-
+    public void createReport(){
+         System.out.println("Report created");
     }
 
     /**
@@ -17,7 +18,7 @@ public class ReportsCtrl {
      */
 
     public void modifyReport() {
-
+        System.out.println("Report modified");
     }
 
     /**
@@ -25,7 +26,7 @@ public class ReportsCtrl {
      * @author hythammadi
      */
     public void submitReport() {
-
+        System.out.println("Report submitted");
     }
 
     /**
@@ -33,7 +34,7 @@ public class ReportsCtrl {
      * @author hythammadi
      */
     public void deleteReport() {
-
+        System.out.println("Report deleted");
     }
 
     /**
@@ -41,14 +42,14 @@ public class ReportsCtrl {
      * @author hythammadi
      */
     public void returnReport() {
-
+        System.out.println("Report returned");
     }
     /**
      * This method contains the logic for approving a report
      * @author hythammadi
      */
     public void approveReport() {
-
+        System.out.println("Report approved");
     }
 
 }

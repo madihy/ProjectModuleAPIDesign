@@ -6,15 +6,16 @@ package TestHarness;
 
 import Controller.LoginCtrl;
 import View.LoginUI;
+import Controller.ReportsCtrl;
 
 /**
  *
  * @author joepompilii
  */
 public class TestHarness {
-    
-    public TestHarness(){
-        
+
+    public static void main(String[] args) {
+
         // testBlankClass
         // testBlankClass
         // etc   
@@ -31,5 +32,5 @@ public class TestHarness {
     
     
     // }
-    
+
 }
