@@ -59,6 +59,7 @@ public class TestHarness {
     public void testItineraryCtrl() {
         System.out.println("Testing Itinerary Classes:\n");
         Itinerary itin1 = new Itinerary();
+        itin1.getActivities();
         
         
     }

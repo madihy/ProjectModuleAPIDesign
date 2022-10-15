@@ -1,6 +1,7 @@
 package View;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * This class will display activities to the customer and associates
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 public class ActivityUI {
 
     private ArrayList activities;
-    private String timeSlots;
+    private Date timeSlots;
 
     /**
      * Display a list of time slots during open park hours to select available
@@ -18,7 +19,7 @@ public class ActivityUI {
      *
      * @return String of time slots with available activities
      */
-    public String TimeSlotDisplay() {
+    public Date TimeSlotDisplay() {
         return timeSlots;
     }
 
