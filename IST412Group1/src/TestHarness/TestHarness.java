@@ -8,6 +8,9 @@ import Controller.LoginCtrl;
 import View.LoginUI;
 import Controller.ReportsCtrl;
 import Model.Reports;
+import Model.*;
+import View.*;
+import Controller.*;
 
 import java.sql.SQLOutput;
 
@@ -28,6 +31,13 @@ public class TestHarness {
 
     public void testLoginCtrl (){
         LoginCtrl login1 = new LoginCtrl();
+        
+        
+    }
+    
+    public void testItineraryCtrl() {
+        System.out.println("Testing Itinerary Classes:\n");
+        Itinerary itin1 = new Itinerary();
         
         
     }

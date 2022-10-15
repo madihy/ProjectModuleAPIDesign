@@ -15,7 +15,7 @@ public class ItineraryCtrl {
     private Itinerary itinModel;
     private ItineraryUI itinView;
     
-    public void ItineraryUI(Itinerary itinModel, ItineraryUI itinView) {
+    public void ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
         this.itinModel = itinModel;
         this.itinView = itinView;
     }

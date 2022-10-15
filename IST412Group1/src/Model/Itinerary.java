@@ -5,6 +5,7 @@ import Model.*;
 import View.*;
 import Controller.*;
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
@@ -12,23 +13,32 @@ import java.util.ArrayList;
  * @author brandonworley
  */
 
-public class Itinerary {
+public class Itinerary extends Activity{
     protected ArrayList<Activity> activities;
-
+    private Date timeSlot;
     /**
      * This is the default Itinerary constructor 
      */
     public Itinerary() {
         this.activities = null;
+        this.timeSlot = null;
     }
 
     /**
      * This is the full constructor for the Itinerary class
-     * @param itinNum Unique Itinerary number
      * @param activities Array list of activities on the itinerary
      */
-    public Itinerary(long itinNum, ArrayList<Activity> activities) {
+    public Itinerary(ArrayList<Activity> activities, Date timeSlot) {
         this.activities = activities;
+        this.timeSlot = timeSlot;
+    }
+
+    public Date getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(Date timeSlot) {
+        this.timeSlot = timeSlot;
     }
 
     
