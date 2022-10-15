@@ -25,8 +25,26 @@ public class TestHarness {
     public static void main(String[] args) {
         System.out.println("Initiating Test Harness...");
         Reports myReportsModel = new Reports();
+        ReportsCtrl myReportsCtrl = new ReportsCtrl();
         myReportsModel.setReportType("Test Report Type");
         myReportsModel.getReportType();
+        myReportsModel.setReportDate("Test Report Date");
+        myReportsModel.getReportDate();
+        myReportsModel.setReportTime("Test Report Time");
+        myReportsModel.getReportTime();
+        myReportsModel.setReportDescription("Test Report Description");
+        myReportsModel.getReportDescription();
+        myReportsModel.setReportID("Test Report ID");
+        myReportsModel.getReportID();
+
+
+        myReportsCtrl.createReport();
+        myReportsCtrl.modifyReport();
+        myReportsCtrl.submitReport();
+        myReportsCtrl.deleteReport();
+        myReportsCtrl.returnReport();
+        myReportsCtrl.approveReport();
+
     }
 
     public void testLoginCtrl (){

@@ -62,6 +62,7 @@ public class Reports {
      * @author hythammadi
      */
     public String getReportTime() {
+        System.out.println("Report time is... " + reportTime);
         return reportTime;
     }
     /**
@@ -76,6 +77,7 @@ public class Reports {
      * @author hythammadi
      */
     public String getReportDescription() {
+        System.out.println("Report description is... " + reportDescription);
         return reportDescription;
     }
     /**
@@ -89,21 +91,8 @@ public class Reports {
      * This method gets the report status.
      * @author hythammadi
      */
-    public String getReportStatus() {
-        return reportStatus;
-    }
-    /**
-     * This method sets the report status.
-     * @author hythammadi
-     */
-    public void setReportStatus(String reportStatus) {
-        this.reportStatus = reportStatus;
-    }
-    /**
-     * This method gets the report ID.
-     * @author hythammadi
-     */
     public String getReportID() {
+        System.out.println("Report ID is... " + reportID);
         return reportID;
     }
     /**
