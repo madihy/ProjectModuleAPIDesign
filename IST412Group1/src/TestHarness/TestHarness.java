@@ -23,6 +23,9 @@ import java.sql.SQLOutput;
 
 public class TestHarness {
     public static void main(String[] args) {
+
+
+        //Reports Model Logic Test Stubs
         System.out.println("Initiating Test Harness...");
         Reports myReportsModel = new Reports();
         ReportsCtrl myReportsCtrl = new ReportsCtrl();
@@ -37,7 +40,7 @@ public class TestHarness {
         myReportsModel.setReportID("Test Report ID");
         myReportsModel.getReportID();
 
-
+        //Reports Control Logic Test Stubs
         myReportsCtrl.createReport();
         myReportsCtrl.modifyReport();
         myReportsCtrl.submitReport();
