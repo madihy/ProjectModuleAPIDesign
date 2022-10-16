@@ -82,8 +82,20 @@ public class TestHarness {
         Activity activityModel = new Activity();
         ActivityUI activityView = new ActivityUI();
         ActivityCtrl activityCtrl = new ActivityCtrl();
-        
-        
+        activityModel.setActivityName("Coaster 1");
+        activityModel.setActivityType("Roller Coaster");
+        activityModel.setActLenInMins(5);
+        activityModel.setActivityAvail(true);
+        activityModel.setWaitTimeInMins(15);
+        activityView.ActivityUI();
+        activityModel.getActivityName();
+        activityModel.getActivityType();
+        activityModel.getActLenInMins();
+        activityModel.isActivityAvail();
+        activityModel.getWaitTimeInMins();
+        activityView.btnReturnToNav();
+        activityCtrl.returnToNav();
+                
     }
 
     public void testLoginCtrl (){

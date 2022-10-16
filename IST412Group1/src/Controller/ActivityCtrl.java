@@ -11,7 +11,8 @@ import Controller.*;
  * @author brandonworley
  */
 public class ActivityCtrl {
-    
+    private Activity activity;
+    private ActivityUI activityView;
 /**
  * Add new activities
  */ 
@@ -46,6 +47,16 @@ public class ActivityCtrl {
  */
     public void updateWaitTime() {
         System.out.println("Activity Wait Time has been updated");
-    }    
+    }  
     
+    public void returnToNav() {
+        System.out.println("Returning to Navigation Menu!\n");
+    }
+    
+    @Override
+    public String toString() {
+        return "Activity: " + activity.getActivityName() + "\nType: " + activity.getActivityType()
+                + "\nActivity Length: " + activity.getActLenInMins() + " minutes"
+                +"\nAvailable: " + activity.isActivityAvail() + "\nWait Time: " + activity.getWaitTimeInMins() + " minutes";
+}
 }

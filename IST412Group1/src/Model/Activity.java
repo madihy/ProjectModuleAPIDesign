@@ -54,7 +54,8 @@ public class Activity {
      * @return A string of the activity name
      */
     public String getActivityName() {
-        return activityName;
+        System.out.println("Activity Name: " + this.activityName);
+        return "";
     }
 
     /**
@@ -70,7 +71,8 @@ public class Activity {
      * @return A string representing the type of the activity
      */
     public String getActivityType() {
-        return activityType;
+        System.out.println("Acvtivity Type: " + activityType);
+        return "";
     }
 
     /**
@@ -86,7 +88,8 @@ public class Activity {
      * @return An int representing the length of the activity in minutes
      */
     public int getActLenInMins() {
-        return actLenInMins;
+        System.out.println("Activity length in minutes: " + actLenInMins);
+        return 0;
     }
 
     /**
@@ -102,6 +105,7 @@ public class Activity {
      * @return True if the activity is available, false if it is not available
      */
     public boolean isActivityAvail() {
+        System.out.println("Activity Available? " + activityAvail);
         return activityAvail;
     }
 
@@ -118,6 +122,7 @@ public class Activity {
      * @return An int representing the wait time in minutes
      */
     public int getWaitTimeInMins() {
+        System.out.println("Activity Wat Time in Minutes: " + waitTimeInMins);
         return waitTimeInMins;
     }
 

@@ -1,5 +1,8 @@
 package View;
 
+import Model.*;
+import View.*;
+import Controller.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,10 +15,13 @@ public class ActivityUI {
 
     private ArrayList activities;
     private String timeSlots;
-
-    public String ActivityUI() {
-        return "Prints a list of All Activities in the Park";
-    }
+    private Activity activity;
+    private ActivityCtrl activityCtrl;
+    
+    
+    public void ActivityUI() {
+        System.out.println("***Displaying the Activity View***");
+    }    
     /**
      * Display a list of time slots during open park hours to select available
      * activities from.
@@ -44,5 +50,9 @@ public class ActivityUI {
     public boolean ConfirmReservation() {
         System.out.println("Reservation has been confirmed!");
         return true;
+    }
+    
+    public void btnReturnToNav() {
+        System.out.println("\nClick to return to Navigation Menu:");
     }
 }
