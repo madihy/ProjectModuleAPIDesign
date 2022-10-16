@@ -26,59 +26,78 @@ public class NavigationCtrl {
      * Handles the actions to occur when the Customer Account button is clicked on the Main Navigation Menu.
      * Opens the customer user interface screen.
      * Displays the current customer's information in the text fields.
-     * @param event 
      */
     public void handleCustomerAccountButtonAction () {
         //Opens the Customer UI by setting the customerUIActive boolean to true 
-        System.out.println("Action to open the CustomerUI and display account information.\n");
+        System.out.println("Button clicked to open the CustomerUI and display account information.\n");
         //Displays the current customer information
                 
     }
     /**
      * Handles the actions to occur when the update button is clicked on the Customer User Interface.
-     * @param event 
      */
     public void handleUpdateCustomerButtonAction (){
-        System.out.println("Update the customer account.");
+        System.out.println("\n"+ "Button clicked to update the customer account.");
         
     }
     
-    public void handleBackButtonAction (){
-        System.out.println("Click button to go back to the Navigtion Menu.");
-        
-    }
-    
-    public void handleExitButtonAction (){
-        System.out.println("The application exits!");
-    }
-    
-    //Additional buttons to be added to the Main Navigation Menu still under development.
     /**
-    
-    public void handleParkInformationButtonAction (ActionEvent event){
-        System.out.println("Park Information Controller has been started.");
+     * Handles actions to take place when the Back Button is clicked.
+     */
+    public void handleCustomerBackButtonAction (){
+        System.out.println("Button clicked to go back to the Navigtion Menu.");
+            
     }
     
-    public void handlePurchaseTicketsButtonAction (ActionEvent event){
-        System.out.println("Manage Tickets Controller is created and opens the PurchaseTicketsUI.");
-    }
-    
-    public void handleManageTicketsButtonAction (ActionEvent event){
-        System.out.println("Manage Tickets Controller is created and opens the ManageTicketsUI. /n");
+    /**
+     * Handles actions to take place when the Exit Button is clicked.
+     */
+    public void handleExitButtonAction (){
+        System.out.println("Button clicked to exit the application.");
         
     }
     
-    public void handleManageReservationsButtonAction (ActionEvent event){
-        System.out.println("Manage Reservations Controller is created and opens the ActivityUI. /n");
+    /**
+     * Handles actions to take place when the Park Information Button is clicked.
+     */
+    public void handleParkInformationButtonAction (){
+        System.out.println("Button clicked to access Park Information.");
     }
     
-    public void handleManageFoodOrdersButtonAction (ActionEvent event){
-        System.out.println("Manage Food Controller is created and opens the OrderFoodUI. /n");
+    /**
+     * Handles actions to take place when the Purchase Tickets Button is clicked.
+     */
+    public void handlePurchaseTicketsButtonAction (){
+        System.out.println("Button clicked to Purchase Tickets.");
     }
     
-    public void handleExitButtonAction (ActionEvent event){
-        System.out.println("The application exits!");
+    /**
+     * Handles actions to take when the Manage Tickets Button is clicked.
+     */
+    public void handleManageTicketsButtonAction (){
+        System.out.println("Button clicked to Manage Tickets.");
+        
     }
-    */
+    
+    /**
+     * Handles actions to take when the Manage Activities Button is clicked.
+     */
+    public void handleManageActivitiesButtonAction (){
+        System.out.println("Button clicked to Manage Activities.");
+    }
+    
+    /** 
+     * Handles actions to take place when the Manage Food Orders button is clicked.
+     */
+    public void handleManageFoodOrdersButtonAction (){
+        System.out.println("Button clicked to Manage Food Orders.");
+    }
+    
+    /**
+     * Handles actions to take when the Manage Reports Button is clicked.
+     */
+    public void handleManageReportsButtonAction (){
+        System.out.println("Button clicked to Manage Reports.");
+    }
     
 }

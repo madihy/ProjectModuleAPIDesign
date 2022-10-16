@@ -29,10 +29,10 @@ public class CustomerUI {
      */
     public boolean isCustomerUIActive() {
         if(customerUIActive = true){
-            System.out.println("Customer UI is active! \n");
+            System.out.println("Customer UI is active!");
         }
         else{
-            System.out.println("CustomerUI is no longer active! \n");
+            System.out.println("CustomerUI is no longer active!");
         }
         return customerUIActive;
     }

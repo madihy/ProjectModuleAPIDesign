@@ -31,7 +31,7 @@ public class NavigationUI extends javax.swing.JPanel {
         accountInformationButton = new javax.swing.JButton();
         parkInformationButton = new javax.swing.JButton();
         purchaseTicketsButton = new javax.swing.JButton();
-        manageReservationsButton = new javax.swing.JButton();
+        manageActivitiesButton = new javax.swing.JButton();
         manageFoodOrdersButton = new javax.swing.JButton();
         manageReports = new javax.swing.JButton();
         navigationPanelTitleLabel = new javax.swing.JLabel();
@@ -50,7 +50,7 @@ public class NavigationUI extends javax.swing.JPanel {
 
         purchaseTicketsButton.setText("Purchase Tickets");
 
-        manageReservationsButton.setText("Manage Reservations");
+        manageActivitiesButton.setText("Manage Activities");
 
         manageFoodOrdersButton.setText("Manage Food Orders");
 
@@ -81,7 +81,7 @@ public class NavigationUI extends javax.swing.JPanel {
                     .addComponent(accountInformationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(parkInformationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(purchaseTicketsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manageReservationsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(manageActivitiesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(manageFoodOrdersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(manageReports, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(viewItineraryButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -102,7 +102,7 @@ public class NavigationUI extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(purchaseTicketsButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(manageReservationsButton)
+                .addComponent(manageActivitiesButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(manageFoodOrdersButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -123,9 +123,9 @@ public class NavigationUI extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accountInformationButton;
     private javax.swing.JButton exitApplicationButton;
+    private javax.swing.JButton manageActivitiesButton;
     private javax.swing.JButton manageFoodOrdersButton;
     private javax.swing.JButton manageReports;
-    private javax.swing.JButton manageReservationsButton;
     private javax.swing.JLabel navigationPanelTitleLabel;
     private javax.swing.JButton parkInformationButton;
     private javax.swing.JButton purchaseTicketsButton;
@@ -139,10 +139,10 @@ public class NavigationUI extends javax.swing.JPanel {
      */
     public boolean isNavigationUIActive() {
         if(navigationUIActive = true){
-            System.out.println("Navigation UI is active! \n");
+            System.out.println("Navigation UI is active!");
         }
         else{
-            System.out.println("NavigationUI is no longer active! \n");
+            System.out.println("NavigationUI is no longer active!");
         }
         return navigationUIActive;
     }

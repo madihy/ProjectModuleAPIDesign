@@ -39,7 +39,7 @@ public class Customer extends Account {
      * @return A string containing the customer's date of birth (mm/dd/yyyy)
      */
     public String getDOB() {
-        System.out.println("Customer DOB: " + DOB + "\n");
+        System.out.println("Customer DOB: " + DOB);
         return DOB;
     }
 
@@ -56,7 +56,7 @@ public class Customer extends Account {
      * @return a string representing the email for this account.
      */
     public String getEmail() {
-        System.out.println("Email: " + email + "\n");
+        System.out.println("Email: " + email);
         return email;
     }
 
@@ -79,7 +79,7 @@ public class Customer extends Account {
      * @return the ArrayList purchasedTickets representing the list of tickets purchased by the customer.
      */
     public ArrayList<Ticket> getPurchasedTickets() {
-        System.out.println("Purchased Tickets: " + purchasedTickets + "\n");
+        System.out.println("Purchased Tickets: " + purchasedTickets);
         return purchasedTickets;
     }
 

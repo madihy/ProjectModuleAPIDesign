@@ -47,32 +47,51 @@ public class TestHarness {
         TimeUnit.SECONDS.sleep(1);
 
         // Testing Navigation Model, View, and Controller classes
-        System.out.println("Testing the Navigation classes: \n");
+        System.out.println("\n" + "Testing the Navigation classes...");
         NavigationCtrl navCtrl = new NavigationCtrl();
         NavigationUI navUI = new NavigationUI();
         navUI.isNavigationUIActive();
+        TimeUnit.MILLISECONDS.sleep(500);
         navUI.setNavigationUIActive(true);
         navCtrl.handleCustomerAccountButtonAction();
         CustomerUI cusAccountUI = new CustomerUI();
         cusAccountUI.setCustomerUIActive(true);
         cusAccountUI.isCustomerUIActive();
         Customer customerModel = new Customer(1001, "user1", "password1", "firstname1", "lastname1", "01/01/2000", "email1@email.com");
+        System.out.println("Current customer account information is displayed!");
         customerModel.getUsername();
         customerModel.getPassword();
         customerModel.getFirstName();
         customerModel.getLastName();
         customerModel.getDOB();
         customerModel.getEmail();
+        navCtrl.handleUpdateCustomerButtonAction();
+        TimeUnit.MILLISECONDS.sleep(500);
+        System.out.println("New customer information has been updated and is displayed!");
         customerModel.setUserName("usernameNew");
         customerModel.setPassword("userpasswordNew");
         customerModel.setFirstName("firstnameNew");
         customerModel.setLastName("lastnameNew");
         customerModel.setDOB("01/02/2000");
         customerModel.setEmail("emailNew@email.com");
-        navCtrl.handleBackButtonAction();
-        cusAccountUI.setCustomerUIActive(false);
-        cusAccountUI.isCustomerUIActive();
+        customerModel.getUsername();
+        customerModel.getPassword();
+        customerModel.getFirstName();
+        customerModel.getLastName();
+        customerModel.getDOB();
+        customerModel.getEmail();
+        System.out.println("\n");
+        
+        navCtrl.handleCustomerBackButtonAction();
+        TimeUnit.MILLISECONDS.sleep(500);
+        navCtrl.handleParkInformationButtonAction();
+        navCtrl.handlePurchaseTicketsButtonAction();
+        navCtrl.handleManageTicketsButtonAction();
+        navCtrl.handleManageActivitiesButtonAction();
+        navCtrl.handleManageFoodOrdersButtonAction();
+        navCtrl.handleManageReportsButtonAction();
         navCtrl.handleExitButtonAction();
+        TimeUnit.MILLISECONDS.sleep(500);
                      
 
         // Testing Itinerary Model, View, and Controller classes

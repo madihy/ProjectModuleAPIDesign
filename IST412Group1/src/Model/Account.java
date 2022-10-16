@@ -52,7 +52,7 @@ public class Account {
      * @return a string representing the username for this login account.
      */
     public String getUsername() {
-        System.out.println("Username: " + username + "\n");
+        System.out.println("Username: " + username);
         return username;
     }
 
@@ -69,7 +69,7 @@ public class Account {
      * @return the integer representing the accountID for the account.
      */
     public int getAccountID() {
-        System.out.println("Account ID: " + accountID + "\n");
+        System.out.println("Account ID: " + accountID);
         return accountID;
     }
 
@@ -86,7 +86,7 @@ public class Account {
      * @return a string representing the password for this login account.
      */
     public String getPassword() {
-        System.out.println("Password: " + password + "\n");
+        System.out.println("Password: " + password);
         return password;
     }
 
@@ -103,7 +103,7 @@ public class Account {
      * @return a string representing the firstName for this account.
      */
     public String getFirstName() {
-        System.out.println("First Name: " + firstName + "\n");
+        System.out.println("First Name: " + firstName);
         return firstName;
     }
 
@@ -120,7 +120,7 @@ public class Account {
      * @return a string representing the lastName for the account.
      */
     public String getLastName() {
-        System.out.println("Last Name: " + lastName + "\n");
+        System.out.println("Last Name: " + lastName);
         return lastName;
     }
 

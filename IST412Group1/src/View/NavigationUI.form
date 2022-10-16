@@ -28,7 +28,7 @@
                   <Component id="accountInformationButton" max="32767" attributes="0"/>
                   <Component id="parkInformationButton" max="32767" attributes="0"/>
                   <Component id="purchaseTicketsButton" max="32767" attributes="0"/>
-                  <Component id="manageReservationsButton" alignment="0" max="32767" attributes="0"/>
+                  <Component id="manageActivitiesButton" alignment="0" max="32767" attributes="0"/>
                   <Component id="manageFoodOrdersButton" max="32767" attributes="0"/>
                   <Component id="manageReports" max="32767" attributes="0"/>
                   <Component id="viewItineraryButton" alignment="0" max="32767" attributes="0"/>
@@ -52,7 +52,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="purchaseTicketsButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="manageReservationsButton" min="-2" max="-2" attributes="0"/>
+              <Component id="manageActivitiesButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="manageFoodOrdersButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -85,9 +85,9 @@
         <Property name="text" type="java.lang.String" value="Purchase Tickets"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="manageReservationsButton">
+    <Component class="javax.swing.JButton" name="manageActivitiesButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Manage Reservations"/>
+        <Property name="text" type="java.lang.String" value="Manage Activities"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="manageFoodOrdersButton">
