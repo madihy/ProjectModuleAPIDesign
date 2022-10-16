@@ -13,6 +13,7 @@ import View.*;
 import Controller.*;
 
 import java.sql.SQLOutput;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -48,10 +49,12 @@ public class TestHarness {
         myReportsCtrl.returnReport();
         myReportsCtrl.approveReport();
         
+        TimeUnit.SECONDS.sleep(4);
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();
         ItineraryCtrl itinCtrl = new ItineraryCtrl();
         itinModel.getActivities();
+        
         
         
         

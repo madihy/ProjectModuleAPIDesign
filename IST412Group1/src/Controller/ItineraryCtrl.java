@@ -19,10 +19,10 @@ public class ItineraryCtrl {
     
     protected ArrayList<Activity> activities;
     
-    public ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
-        this.itinModel = itinModel;
-        this.itinView = itinView;
-    }
+//    public ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
+//        this.itinModel = itinModel;
+//        this.itinView = itinView;
+//    }
     public Itinerary getItinModel() {
         return itinModel;
     }
