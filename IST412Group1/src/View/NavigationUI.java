@@ -9,7 +9,7 @@ package View;
  * @author Kate
  */
 public class NavigationUI extends javax.swing.JPanel {
-    private boolean navigationUI = false;
+    private boolean navigationUIActive = false;
 
     /**
      * Creates new form NavigationUI
@@ -137,15 +137,25 @@ public class NavigationUI extends javax.swing.JPanel {
      * Gets the Boolean value representing this navigation interface screen status.
      * @return the Boolean navigationUI representing the navigation interface screen status.
      */
-    public boolean isNavigationUI() {
-        return navigationUI;
+    public boolean isNavigationUIActive() {
+        if(navigationUIActive = true){
+            System.out.println("Navigation UI is active! \n");
+        }
+        else{
+            System.out.println("NavigationUI is no longer active! \n");
+        }
+        return navigationUIActive;
     }
 
     /**
      * Sets the boolean status for this navigation interface screen status.
      * @param navigationUI sets the boolean status for the navigation interface screen status.
+     * @param navigationUIActive the navigationUIActive to set
      */
-    public void setNavigationUI(boolean navigationUI) {
-        this.navigationUI = navigationUI;
+    public void setNavigationUIActive(boolean navigationUIActive) {
+        this.navigationUIActive = navigationUIActive;
     }
+
+    
+    
 }

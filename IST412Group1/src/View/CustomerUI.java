@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
+
 /**
  * This class will allow customers to input their info and display that info
  * @author brandonworley
@@ -27,6 +28,12 @@ public class CustomerUI {
      * @return the Boolean customerUIActive representing the customer interface screen status.
      */
     public boolean isCustomerUIActive() {
+        if(customerUIActive = true){
+            System.out.println("Customer UI is active! \n");
+        }
+        else{
+            System.out.println("CustomerUI is no longer active! \n");
+        }
         return customerUIActive;
     }
 
@@ -35,6 +42,7 @@ public class CustomerUI {
      * @param customerUIActive sets the boolean status for the customer interface screen status.
      */
     public void setCustomerUIActive(boolean customerUIActive) {
+        
         this.customerUIActive = customerUIActive;
     }
 
