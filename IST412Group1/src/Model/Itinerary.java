@@ -70,6 +70,20 @@ public class Itinerary extends Activity {
         //this.activities = activities;
     }
     
-    
+        public void getItinModel() {
+        System.out.println("Displaying Itinerary in UI");;
+    }
+
+    public void setItinModel(Itinerary itinModel) {
+        itinModel.setActivities(activities);
+    }
+
+    public void getItinView() {
+        System.out.println("Calling UI to change Itinerary");;
+    }
+
+    public void setItinView(ItineraryUI itinView) {
+        System.out.println("Setting the Itinerary UI View");
+    }
 
 }

@@ -19,25 +19,15 @@ public class ItineraryCtrl {
     
     protected ArrayList<Activity> activities;
     
+    public void printIniterary(Itinerary itin) {
+        System.out.println("***Itinerary***\n");
+    }
+    
 //    public ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
 //        this.itinModel = itinModel;
 //        this.itinView = itinView;
 //    }
-    public Itinerary getItinModel() {
-        return itinModel;
-    }
 
-    public void setItinModel(Itinerary itinModel) {
-        itinModel.setActivities(activities);
-    }
-
-    public void getItinView() {
-        itinView.printIniterary(itinModel);
-    }
-
-    public void setItinView(ItineraryUI itinView) {
-        this.itinView = itinView;
-    }
     
 //    
 //    /**

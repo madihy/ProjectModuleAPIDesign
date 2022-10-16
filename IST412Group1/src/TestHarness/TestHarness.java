@@ -54,7 +54,13 @@ public class TestHarness {
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();
         ItineraryCtrl itinCtrl = new ItineraryCtrl();
-        itinModel.getActivities();
+        ItineraryUI itinView = new ItineraryUI();
+        
+        itinModel.getItinView();
+        TimeUnit.SECONDS.sleep(1);
+        itinModel.getItinModel();
+        TimeUnit.SECONDS.sleep(1);
+        itinCtrl.printIniterary(itinModel);
         
     }
 
@@ -66,8 +72,13 @@ public class TestHarness {
     
     public void testItineraryCtrl() {
         System.out.println("Testing Itinerary Classes:\n");
-        ItineraryCtrl itin1 = new ItineraryCtrl();    
-        itin1.getItinView();
+        Itinerary itinModel = new Itinerary();
+        ItineraryCtrl itinCtrl = new ItineraryCtrl();
+        ItineraryUI itinView = new ItineraryUI();
+        
+        itinModel.getItinView();
+        itinModel.getItinModel();
+        itinCtrl.printIniterary(itinModel);
     }
     // public void testBlankClass(){
     

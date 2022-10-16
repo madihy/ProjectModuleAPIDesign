@@ -17,10 +17,7 @@ public class ItineraryUI {
     private NavigationCtrl navCtrl;
     private ArrayList<Activity> activities;
 
-    public String printIniterary(Itinerary itin) {
-        System.out.println("Itinerary\n");
-        return activities.toString();
-    }
+    
 
     @Override
     public String toString() {
