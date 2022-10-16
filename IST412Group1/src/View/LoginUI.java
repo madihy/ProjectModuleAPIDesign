@@ -17,7 +17,8 @@ public class LoginUI {
     
     private static JFrame primaryFrame;
     private JPanel loginPanel;
-    
+    private boolean panelRunning = true;
+
     /**
      * This is the default constructor for the LoginUI class.
      */
@@ -55,6 +56,14 @@ public class LoginUI {
      */
     public void setLoginPanel(JPanel loginPanel) {
         this.loginPanel = loginPanel;
+    }
+
+    /**
+     * This method verifies that all UI elements are running.
+     */
+
+    public boolean isPanelRunning(){
+        return panelRunning;
     }
    
 }
