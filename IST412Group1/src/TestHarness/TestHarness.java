@@ -64,7 +64,16 @@ public class TestHarness {
         itinModel.getItinModel();
         TimeUnit.SECONDS.sleep(1);
         itinCtrl.printIniterary(itinModel);
-        itinView.clickToReturnToNav();
+        itinView.btnAddActivity();
+        TimeUnit.MILLISECONDS.sleep(500);
+        itinCtrl.clickAdd();
+        itinView.btnUpdateActivity();
+        TimeUnit.MILLISECONDS.sleep(500);
+        itinCtrl.clickUpdate();
+        itinView.btnRemoveActivity();
+        TimeUnit.MILLISECONDS.sleep(500);
+        itinCtrl.clickRemove();
+        itinView.btnReturnToNav();        
         TimeUnit.MILLISECONDS.sleep(500);
         itinCtrl.returnToNav();
         

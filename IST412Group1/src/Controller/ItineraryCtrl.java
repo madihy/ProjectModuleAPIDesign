@@ -23,6 +23,18 @@ public class ItineraryCtrl {
         System.out.println("***Itinerary***\n");        
     }
     
+    public void clickAdd() {
+        System.out.println("Activity Added!");
+    }
+    
+    public void clickRemove() {
+        System.out.println("Activity Removed!");
+    }
+    
+    public void clickUpdate() {
+        System.out.println("Activity Updated!");
+    }
+    
     public void returnToNav() {
         System.out.println("Returning to Navigation Menu!\n");
     }

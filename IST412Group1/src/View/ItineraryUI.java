@@ -17,12 +17,19 @@ public class ItineraryUI {
     private NavigationCtrl navCtrl;
     private ArrayList<Activity> activities;
 
-    public void clickToReturnToNav() {
+    public void btnAddActivity() {
+        System.out.println("Click to Add this Activity to the Itinerary:");
+    }
+    
+    public void btnRemoveActivity() {
+        System.out.println("Click to Remove this Activity from the Itinerary:");
+    }
+    
+    public void btnUpdateActivity() {
+        System.out.println("Click to Update this Activity on the Itinerary:");
+    }
+    
+    public void btnReturnToNav() {
         System.out.println("Click to return to Navigation Menu:");
-    }
-
-    @Override
-    public String toString() {
-        return itinModel.getActivities().toString();
-    }
+    }    
 }
