@@ -36,32 +36,6 @@ public class TestHarness {
         myLoginCtrl.handleSubmitButtonAction();
         TimeUnit.SECONDS.sleep(1);
 
-        //Reports Model Logic Test Stubs
-        System.out.println("\nTesting Reports Classes:\n");
-        TimeUnit.SECONDS.sleep(1);
-        Reports myReportsModel = new Reports();
-        ReportsCtrl myReportsCtrl = new ReportsCtrl();
-        myReportsModel.setReportType("Test Report Type");
-        myReportsModel.getReportType();
-        myReportsModel.setReportDate("Test Report Date");
-        myReportsModel.getReportDate();
-        myReportsModel.setReportTime("Test Report Time");
-        myReportsModel.getReportTime();
-        myReportsModel.setReportDescription("Test Report Description");
-        myReportsModel.getReportDescription();
-        myReportsModel.setReportID("Test Report ID");
-        myReportsModel.getReportID();
-        TimeUnit.SECONDS.sleep(1);
-        //Reports Control Logic Test Stubs
-        myReportsCtrl.createReport();
-        myReportsCtrl.modifyReport();
-        myReportsCtrl.submitReport();
-        myReportsCtrl.deleteReport();
-        myReportsCtrl.returnReport();
-        myReportsCtrl.approveReport();
-        
-        TimeUnit.SECONDS.sleep(1);
-        
         // Testing Itinerary Model, View, and Controller classes
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();
@@ -86,7 +60,7 @@ public class TestHarness {
         itinView.btnReturnToNav();        
         TimeUnit.MILLISECONDS.sleep(500);
         itinCtrl.returnToNav();
-        
+        TimeUnit.SECONDS.sleep(1);
         // Testing Activity Model, View, and Controller classes
         System.out.println("Testing Activity Classes:\n");
         Activity activityModel = new Activity();
@@ -105,7 +79,31 @@ public class TestHarness {
         activityModel.getWaitTimeInMins();
         activityView.btnReturnToNav();
         activityCtrl.returnToNav();
-                
+
+        //Reports Model Logic Test Stubs
+        System.out.println("\nTesting Reports Classes:\n");
+        TimeUnit.SECONDS.sleep(1);
+        Reports myReportsModel = new Reports();
+        ReportsCtrl myReportsCtrl = new ReportsCtrl();
+        myReportsModel.setReportType("Test Report Type");
+        myReportsModel.getReportType();
+        myReportsModel.setReportDate("Test Report Date");
+        myReportsModel.getReportDate();
+        myReportsModel.setReportTime("Test Report Time");
+        myReportsModel.getReportTime();
+        myReportsModel.setReportDescription("Test Report Description");
+        myReportsModel.getReportDescription();
+        myReportsModel.setReportID("Test Report ID");
+        myReportsModel.getReportID();
+        TimeUnit.SECONDS.sleep(1);
+        //Reports Control Logic Test Stubs
+        myReportsCtrl.createReport();
+        myReportsCtrl.modifyReport();
+        myReportsCtrl.submitReport();
+        myReportsCtrl.deleteReport();
+        myReportsCtrl.returnReport();
+        myReportsCtrl.approveReport();
+
     }
 
     public void testLoginCtrl (){
