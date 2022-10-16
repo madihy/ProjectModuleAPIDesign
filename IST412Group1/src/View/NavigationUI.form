@@ -27,11 +27,12 @@
                   <Component id="exitApplicationButton" pref="186" max="32767" attributes="0"/>
                   <Component id="accountInformationButton" max="32767" attributes="0"/>
                   <Component id="parkInformationButton" max="32767" attributes="0"/>
-                  <Component id="manageTicketsButton" max="32767" attributes="0"/>
+                  <Component id="purchaseTicketsButton" max="32767" attributes="0"/>
                   <Component id="manageReservationsButton" alignment="0" max="32767" attributes="0"/>
                   <Component id="manageFoodOrdersButton" max="32767" attributes="0"/>
-                  <Component id="jButton1" max="32767" attributes="0"/>
+                  <Component id="manageReports" max="32767" attributes="0"/>
                   <Component id="viewItineraryButton" alignment="0" max="32767" attributes="0"/>
+                  <Component id="purchaseTicketsButton1" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="108" max="32767" attributes="0"/>
           </Group>
@@ -47,7 +48,9 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="parkInformationButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="manageTicketsButton" min="-2" max="-2" attributes="0"/>
+              <Component id="purchaseTicketsButton" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="purchaseTicketsButton1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="manageReservationsButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -55,10 +58,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="viewItineraryButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <Component id="manageReports" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="exitApplicationButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="59" max="32767" attributes="0"/>
+              <EmptySpace pref="30" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,6 +72,7 @@
         <Property name="text" type="java.lang.String" value="Account Information"/>
       </Properties>
       <Events>
+        <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="accountInformationButtonComponentAdded"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accountInformationButtonActionPerformed"/>
       </Events>
     </Component>
@@ -80,25 +84,37 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="parkInformationButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="manageTicketsButton">
+    <Component class="javax.swing.JButton" name="purchaseTicketsButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Purchase/Manage Tickets"/>
+        <Property name="text" type="java.lang.String" value="Purchase Tickets"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="purchaseTicketsButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="manageReservationsButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Make/Manage Reservations"/>
+        <Property name="text" type="java.lang.String" value="Manage Reservations"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageReservationsButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="manageFoodOrdersButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Make/Manage Food Orders"/>
+        <Property name="text" type="java.lang.String" value="Manage Food Orders"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageFoodOrdersButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="manageReports">
       <Properties>
         <Property name="text" type="java.lang.String" value="Manage Reports"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageReportsActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="navigationPanelTitleLabel">
       <Properties>
@@ -121,6 +137,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="View Itinerary"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewItineraryButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="purchaseTicketsButton1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Manage Tickets"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="purchaseTicketsButton1ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

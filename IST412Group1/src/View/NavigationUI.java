@@ -5,7 +5,7 @@
 package View;
 
 /**
- *
+ * This class is used to display the user interface for the main navigation menu.
  * @author Kate
  */
 public class NavigationUI extends javax.swing.JPanel {
@@ -28,15 +28,21 @@ public class NavigationUI extends javax.swing.JPanel {
 
         accountInformationButton = new javax.swing.JButton();
         parkInformationButton = new javax.swing.JButton();
-        manageTicketsButton = new javax.swing.JButton();
+        purchaseTicketsButton = new javax.swing.JButton();
         manageReservationsButton = new javax.swing.JButton();
         manageFoodOrdersButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        manageReports = new javax.swing.JButton();
         navigationPanelTitleLabel = new javax.swing.JLabel();
         exitApplicationButton = new javax.swing.JButton();
         viewItineraryButton = new javax.swing.JButton();
+        purchaseTicketsButton1 = new javax.swing.JButton();
 
         accountInformationButton.setText("Account Information");
+        accountInformationButton.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                accountInformationButtonComponentAdded(evt);
+            }
+        });
         accountInformationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accountInformationButtonActionPerformed(evt);
@@ -50,13 +56,33 @@ public class NavigationUI extends javax.swing.JPanel {
             }
         });
 
-        manageTicketsButton.setText("Purchase/Manage Tickets");
+        purchaseTicketsButton.setText("Purchase Tickets");
+        purchaseTicketsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                purchaseTicketsButtonActionPerformed(evt);
+            }
+        });
 
-        manageReservationsButton.setText("Make/Manage Reservations");
+        manageReservationsButton.setText("Manage Reservations");
+        manageReservationsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageReservationsButtonActionPerformed(evt);
+            }
+        });
 
-        manageFoodOrdersButton.setText("Make/Manage Food Orders");
+        manageFoodOrdersButton.setText("Manage Food Orders");
+        manageFoodOrdersButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageFoodOrdersButtonActionPerformed(evt);
+            }
+        });
 
-        jButton1.setText("Manage Reports");
+        manageReports.setText("Manage Reports");
+        manageReports.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageReportsActionPerformed(evt);
+            }
+        });
 
         navigationPanelTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         navigationPanelTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -70,6 +96,18 @@ public class NavigationUI extends javax.swing.JPanel {
         });
 
         viewItineraryButton.setText("View Itinerary");
+        viewItineraryButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewItineraryButtonActionPerformed(evt);
+            }
+        });
+
+        purchaseTicketsButton1.setText("Manage Tickets");
+        purchaseTicketsButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                purchaseTicketsButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -85,11 +123,12 @@ public class NavigationUI extends javax.swing.JPanel {
                     .addComponent(exitApplicationButton, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
                     .addComponent(accountInformationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(parkInformationButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manageTicketsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(purchaseTicketsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(manageReservationsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(manageFoodOrdersButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(viewItineraryButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(manageReports, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(viewItineraryButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(purchaseTicketsButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(108, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -102,7 +141,9 @@ public class NavigationUI extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(parkInformationButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(manageTicketsButton)
+                .addComponent(purchaseTicketsButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(purchaseTicketsButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(manageReservationsButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -110,10 +151,10 @@ public class NavigationUI extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(viewItineraryButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(manageReports)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(exitApplicationButton)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -129,16 +170,45 @@ public class NavigationUI extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_accountInformationButtonActionPerformed
 
+    private void accountInformationButtonComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_accountInformationButtonComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_accountInformationButtonComponentAdded
+
+    private void purchaseTicketsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchaseTicketsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_purchaseTicketsButtonActionPerformed
+
+    private void manageReservationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageReservationsButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageReservationsButtonActionPerformed
+
+    private void manageFoodOrdersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageFoodOrdersButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageFoodOrdersButtonActionPerformed
+
+    private void viewItineraryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewItineraryButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_viewItineraryButtonActionPerformed
+
+    private void manageReportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageReportsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageReportsActionPerformed
+
+    private void purchaseTicketsButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchaseTicketsButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_purchaseTicketsButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accountInformationButton;
     private javax.swing.JButton exitApplicationButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton manageFoodOrdersButton;
+    private javax.swing.JButton manageReports;
     private javax.swing.JButton manageReservationsButton;
-    private javax.swing.JButton manageTicketsButton;
     private javax.swing.JLabel navigationPanelTitleLabel;
     private javax.swing.JButton parkInformationButton;
+    private javax.swing.JButton purchaseTicketsButton;
+    private javax.swing.JButton purchaseTicketsButton1;
     private javax.swing.JButton viewItineraryButton;
     // End of variables declaration//GEN-END:variables
 }
