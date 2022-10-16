@@ -39,7 +39,9 @@ public class TestHarness {
         // Testing Navigation Model, View, and Controller classes
         System.out.println("Testing the Navigation classes: \n");
         NavigationCtrl navCtrl = new NavigationCtrl();
-        NavigationUI navUI = new NavigationUI(); 
+        NavigationUI navUI = new NavigationUI();
+        navUI.isNavigationUI();
+        navUI.setNavigationUI(true);
         CustomerUI cusAccountUI = new CustomerUI();
         cusAccountUI.isCustomerUIActive();
         cusAccountUI.setCustomerUIActive(true);
@@ -57,7 +59,6 @@ public class TestHarness {
         customerModel.getDOB();
         customerModel.getEmail();             
     
-
 
         // Testing Itinerary Model, View, and Controller classes
         System.out.println("\nTesting Itinerary Classes:\n");

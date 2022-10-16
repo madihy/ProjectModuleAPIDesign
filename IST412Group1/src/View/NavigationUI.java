@@ -9,7 +9,7 @@ package View;
  * @author Kate
  */
 public class NavigationUI extends javax.swing.JPanel {
-    private boolean panelRunning = true;
+    private boolean navigationUI = false;
 
     /**
      * Creates new form NavigationUI
@@ -17,6 +17,7 @@ public class NavigationUI extends javax.swing.JPanel {
     public NavigationUI() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -131,4 +132,20 @@ public class NavigationUI extends javax.swing.JPanel {
     private javax.swing.JButton purchaseTicketsButton1;
     private javax.swing.JButton viewItineraryButton;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Gets the Boolean value representing this navigation interface screen status.
+     * @return the Boolean navigationUI representing the navigation interface screen status.
+     */
+    public boolean isNavigationUI() {
+        return navigationUI;
+    }
+
+    /**
+     * Sets the boolean status for this navigation interface screen status.
+     * @param navigationUI sets the boolean status for the navigation interface screen status.
+     */
+    public void setNavigationUI(boolean navigationUI) {
+        this.navigationUI = navigationUI;
+    }
 }
