@@ -27,6 +27,12 @@ public class TestHarness {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Initiating Test Harness...");
         TimeUnit.MILLISECONDS.sleep(500);
+
+        // Testing Login Model, View, and Controller
+        System.out.println("Testing Login UI...");
+        LoginUI loginUI = new LoginUI();
+        loginUI.isPanelRunning();
+        System.out.println("Panel is running " + loginUI.isPanelRunning());
         System.out.println("Logging In Using Test User");
         TimeUnit.MILLISECONDS.sleep(500);
         LoginCtrl myLoginCtrl = new LoginCtrl();
@@ -60,7 +66,6 @@ public class TestHarness {
         customerModel.getLastName();
         customerModel.getDOB();
         customerModel.getEmail();             
-    
 
 
         // Testing Itinerary Model, View, and Controller classes
@@ -110,6 +115,10 @@ public class TestHarness {
         //Reports Model Logic Test Stubs
         System.out.println("\nTesting Reports Classes:\n");
         TimeUnit.SECONDS.sleep(1);
+        System.out.println("Testing Reports UI:");
+        ReportsUI reportsUI = new ReportsUI();
+        reportsUI.isPanelRunning();
+        System.out.println("Panel is running " + reportsUI.isPanelRunning());
         Reports myReportsModel = new Reports();
         ReportsCtrl myReportsCtrl = new ReportsCtrl();
         myReportsModel.setReportType("Test Report Type");

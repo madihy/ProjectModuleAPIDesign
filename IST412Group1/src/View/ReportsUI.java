@@ -16,6 +16,8 @@ public class ReportsUI {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblReports;
+    private boolean panelRunning = true;
+
     // End of variables declaration
 
     /**
@@ -40,16 +42,6 @@ public class ReportsUI {
         btnReturn = new javax.swing.JButton();
         btnApprove = new javax.swing.JButton();
 
-        tblReports.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][]{
-
-                },
-                new String[]{
-                        "Report ID", "Report Type", "Report Date", "Report Status", "Report Comments"
-                }
-        ));
-        jScrollPane1.setViewportView(tblReports);
-
         btnCreate.setText("Create");
 
         btnModify.setText("Modify");
@@ -62,7 +54,8 @@ public class ReportsUI {
 
         btnApprove.setText("Approve");
 
-        jLabel1.setText("Reports");
-
+    }
+    public boolean isPanelRunning(){
+        return panelRunning;
     }
 }
