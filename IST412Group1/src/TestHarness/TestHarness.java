@@ -12,6 +12,7 @@ import Model.*;
 import View.*;
 import Controller.*;
 
+import java.awt.event.ActionEvent;
 import java.sql.SQLOutput;
 import java.util.concurrent.TimeUnit;
 
@@ -24,10 +25,19 @@ import java.util.concurrent.TimeUnit;
 
 public class TestHarness {
     public static void main(String[] args) throws InterruptedException {
+        System.out.println("Initiating Test Harness...");
 
+        System.out.println("Logging In Using Test User");
+        LoginCtrl myLoginCtrl = new LoginCtrl();
+        myLoginCtrl.login("admin", "password");
+        System.out.println("Username: Admin, Password: *******");
+        System.out.println("Login Successful");
+        myLoginCtrl.handleNewUserButtonAction();
+        myLoginCtrl.handleSubmitButtonAction();
+        TimeUnit.SECONDS.sleep(1);
 
         //Reports Model Logic Test Stubs
-        System.out.println("Initiating Test Harness...");
+        System.out.println("\nTesting Reports Classes:\n");
         TimeUnit.SECONDS.sleep(1);
         Reports myReportsModel = new Reports();
         ReportsCtrl myReportsCtrl = new ReportsCtrl();

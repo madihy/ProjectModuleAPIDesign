@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author katerineer
  */
 public class Authentication{
-    private ArrayList<Account> usersArray = new ArrayList<>();
+    public ArrayList<Account> usersArray = new ArrayList<>();
     private String currentUsername;
     private String currentPassword;
     
@@ -30,7 +30,7 @@ public class Authentication{
         this.currentPassword = currentPassword;
                
     }
-    
+
     /**
      * Creates test user accounts to allow testing of the application throughout development.
      * Gets the users array and adds the new accounts to the users array list.

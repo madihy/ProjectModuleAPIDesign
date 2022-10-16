@@ -5,7 +5,13 @@
 package Controller;
 
 import java.awt.event.ActionEvent;
-import View.LoginUI;
+import java.util.ArrayList;
+
+import Model.Account;
+import Model.Authentication;
+
+import javax.swing.*;
+
 
 /**
  *
@@ -13,30 +19,29 @@ import View.LoginUI;
  * This class manages the actions to facilitate the login process for all users of this application.
  */
 public class LoginCtrl {
-    
-    /**
-     * This is the default constructor for the LoginCtrl class.
-     */
-    
-    public LoginCtrl(){
-    
+    public ArrayList<Account> usersArray = new ArrayList<>();
+    private String currentUsername;
+    private String currentPassword;
+    private String event;
+
+    public void login(String username, String password) {
+        Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
+        auth.createTestUsers();
     }
     /**
      * Establishes the action event to be carried out when the submit button is selected on the login screen.
      * Authenticates the user name and password from the list of accounts stored in a data file.
      * Throws an exception and provides an message on the screen if the login information is not found.
-     * @param event sets the event variable to occur when the submit button is selected on the login screen.
      */
-    private void handleSubmitButtonAction(ActionEvent event){
-        
+    public void handleSubmitButtonAction() {
+        System.out.println("Submit Button Selected");
     }
     /**
      * Establishes the action event to be carried out when the new user button is selected on the login screen.
      * Directs the user to the new user login screen to set up a user account.
-     * @param event sets the event variable to occur when the new user button is selected on the login screen.
      */
-    private void handleNewUserButtonAction(ActionEvent event){
-        
+    public void handleNewUserButtonAction() {
+        System.out.println("New User Button Selected");
     }
-    
+
 }
