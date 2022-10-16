@@ -55,6 +55,9 @@ public class ReportsUI {
         btnApprove.setText("Approve");
 
     }
+    /**
+     * This method verifies that all UI elements are running.
+     */
     public boolean isPanelRunning(){
         return panelRunning;
     }

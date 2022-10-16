@@ -58,6 +58,10 @@ public class LoginUI {
         this.loginPanel = loginPanel;
     }
 
+    /**
+     * This method verifies that all UI elements are running.
+     */
+
     public boolean isPanelRunning(){
         return panelRunning;
     }

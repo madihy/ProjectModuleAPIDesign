@@ -23,7 +23,9 @@ public class LoginCtrl {
     private String currentUsername;
     private String currentPassword;
     private String event;
-
+    /**
+     * Login method to authenticate user login credentials.
+     */
     public void login(String username, String password) {
         Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
         auth.createTestUsers();
