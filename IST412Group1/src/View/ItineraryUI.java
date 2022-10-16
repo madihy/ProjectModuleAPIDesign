@@ -17,7 +17,9 @@ public class ItineraryUI {
     private NavigationCtrl navCtrl;
     private ArrayList<Activity> activities;
 
-    
+    public void clickToReturnToNav() {
+        System.out.println("Click to return to Navigation Menu:");
+    }
 
     @Override
     public String toString() {

@@ -9,7 +9,7 @@ import View.LoginUI;
 import Controller.ReportsCtrl;
 import Model.Reports;
 import Model.*;
-import View.ItineraryUI;
+import View.*;
 import Controller.*;
 
 import java.sql.SQLOutput;
@@ -52,7 +52,7 @@ public class TestHarness {
         
         TimeUnit.SECONDS.sleep(1);
         
-        // Testing Itinerary Model, View, and Controller packages
+        // Testing Itinerary Model, View, and Controller classes
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();
         ItineraryCtrl itinCtrl = new ItineraryCtrl();
@@ -64,6 +64,16 @@ public class TestHarness {
         itinModel.getItinModel();
         TimeUnit.SECONDS.sleep(1);
         itinCtrl.printIniterary(itinModel);
+        itinView.clickToReturnToNav();
+        TimeUnit.MILLISECONDS.sleep(500);
+        itinCtrl.returnToNav();
+        
+        // Testing Activity Model, View, and Controller classes
+        System.out.println("Testing Activity Classes:\n");
+        Activity activityModel = new Activity();
+        ActivityUI activityView = new ActivityUI();
+        ActivityCtrl activityCtrl = new ActivityCtrl();
+        
         
     }
 

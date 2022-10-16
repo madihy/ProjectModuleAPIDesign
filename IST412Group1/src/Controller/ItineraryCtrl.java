@@ -23,6 +23,10 @@ public class ItineraryCtrl {
         System.out.println("***Itinerary***\n");        
     }
     
+    public void returnToNav() {
+        System.out.println("Returning to Navigation Menu!\n");
+    }
+    
 //    public ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
 //        this.itinModel = itinModel;
 //        this.itinView = itinView;
