@@ -17,6 +17,7 @@ public class Itinerary extends Activity {
     private NavigationCtrl navCtrl;
     protected ArrayList<Activity> activities;
     private String timeSlot;
+    private String itinData;
 
     /**
      * This is the default Itinerary constructor
@@ -70,20 +71,22 @@ public class Itinerary extends Activity {
         //this.activities = activities;
     }
     
-        public void getItinModel() {
-        System.out.println("Displaying Itinerary in UI");;
+    public void getItinModel() {
+        System.out.println("Displaying Itinerary Data");;
     }
 
-    public void setItinModel(Itinerary itinModel) {
-        itinModel.setActivities(activities);
+    public void setItinModel(String itinData) {
+        this.itinData = itinData;
+        System.out.println("Itinerary Data set");;
     }
 
     public void getItinView() {
-        System.out.println("Calling UI to change Itinerary");;
+        System.out.println("Displaying UI to view/change Itinerary");;
     }
 
-    public void setItinView(ItineraryUI itinView) {
-        System.out.println("Setting the Itinerary UI View");
+    public void setItinView(String initData) {
+        this.itinData = itinData;
+        System.out.println("Itinerary View set");
     }
 
 }

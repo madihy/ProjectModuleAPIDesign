@@ -20,7 +20,7 @@ public class ItineraryCtrl {
     protected ArrayList<Activity> activities;
     
     public void printIniterary(Itinerary itin) {
-        System.out.println("***Itinerary***\n");
+        System.out.println("***Itinerary***\n");        
     }
     
 //    public ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {

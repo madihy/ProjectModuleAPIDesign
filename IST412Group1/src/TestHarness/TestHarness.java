@@ -51,11 +51,14 @@ public class TestHarness {
         myReportsCtrl.approveReport();
         
         TimeUnit.SECONDS.sleep(1);
+        
+        // Testing Itinerary Model, View, and Controller packages
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();
         ItineraryCtrl itinCtrl = new ItineraryCtrl();
         ItineraryUI itinView = new ItineraryUI();
         
+        itinModel.setItinView("Setting Itinerary View");
         itinModel.getItinView();
         TimeUnit.SECONDS.sleep(1);
         itinModel.getItinModel();
@@ -70,16 +73,7 @@ public class TestHarness {
         
     }
     
-    public void testItineraryCtrl() {
-        System.out.println("Testing Itinerary Classes:\n");
-        Itinerary itinModel = new Itinerary();
-        ItineraryCtrl itinCtrl = new ItineraryCtrl();
-        ItineraryUI itinView = new ItineraryUI();
-        
-        itinModel.getItinView();
-        itinModel.getItinModel();
-        itinCtrl.printIniterary(itinModel);
-    }
+    
     // public void testBlankClass(){
     
     // System.out.println("Testing Blank Class");

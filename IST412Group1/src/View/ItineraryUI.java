@@ -21,6 +21,6 @@ public class ItineraryUI {
 
     @Override
     public String toString() {
-        return activities.toString();
+        return itinModel.getActivities().toString();
     }
 }
