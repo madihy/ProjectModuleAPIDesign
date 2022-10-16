@@ -10,19 +10,33 @@ import javax.swing.JPanel;
  * @author brandonworley
  */
 public class CustomerUI {
-    JFrame customerAccountPanel;
+    private JFrame customerAccountPanel;
     JButton updateAccountButton;
     JButton backToMainNavigationButton;
+    private boolean customerUIActive = false;
     
     /**
      * This is the default constructor for the CustomerUI class.
      */
     public CustomerUI(){
     
-    
-}
-    
-// Display text fields for customer to enter required info
-  
+    }
+
+    /**
+     * Gets the Boolean value representing this customer interface screen status.
+     * @return the Boolean customerUIActive representing the customer interface screen status.
+     */
+    public boolean isCustomerUIActive() {
+        return customerUIActive;
+    }
+
+    /**
+     * Sets the boolean status for this customer interface screen status.
+     * @param customerUIActive sets the boolean status for the customer interface screen status.
+     */
+    public void setCustomerUIActive(boolean customerUIActive) {
+        this.customerUIActive = customerUIActive;
+    }
+
     
 }

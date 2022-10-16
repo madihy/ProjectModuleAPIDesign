@@ -9,6 +9,7 @@ package View;
  * @author Kate
  */
 public class NavigationUI extends javax.swing.JPanel {
+    private boolean panelRunning = true;
 
     /**
      * Creates new form NavigationUI
@@ -43,71 +44,26 @@ public class NavigationUI extends javax.swing.JPanel {
                 accountInformationButtonComponentAdded(evt);
             }
         });
-        accountInformationButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                accountInformationButtonActionPerformed(evt);
-            }
-        });
 
         parkInformationButton.setText("Park Information");
-        parkInformationButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                parkInformationButtonActionPerformed(evt);
-            }
-        });
 
         purchaseTicketsButton.setText("Purchase Tickets");
-        purchaseTicketsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                purchaseTicketsButtonActionPerformed(evt);
-            }
-        });
 
         manageReservationsButton.setText("Manage Reservations");
-        manageReservationsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageReservationsButtonActionPerformed(evt);
-            }
-        });
 
         manageFoodOrdersButton.setText("Manage Food Orders");
-        manageFoodOrdersButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageFoodOrdersButtonActionPerformed(evt);
-            }
-        });
 
         manageReports.setText("Manage Reports");
-        manageReports.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageReportsActionPerformed(evt);
-            }
-        });
 
         navigationPanelTitleLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         navigationPanelTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         navigationPanelTitleLabel.setText("Main Navigation Menu");
 
         exitApplicationButton.setText("Exit Application");
-        exitApplicationButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitApplicationButtonActionPerformed(evt);
-            }
-        });
 
         viewItineraryButton.setText("View Itinerary");
-        viewItineraryButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewItineraryButtonActionPerformed(evt);
-            }
-        });
 
         purchaseTicketsButton1.setText("Manage Tickets");
-        purchaseTicketsButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                purchaseTicketsButton1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -158,45 +114,9 @@ public class NavigationUI extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void parkInformationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parkInformationButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_parkInformationButtonActionPerformed
-
-    private void exitApplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitApplicationButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_exitApplicationButtonActionPerformed
-
-    private void accountInformationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountInformationButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_accountInformationButtonActionPerformed
-
     private void accountInformationButtonComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_accountInformationButtonComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_accountInformationButtonComponentAdded
-
-    private void purchaseTicketsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchaseTicketsButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_purchaseTicketsButtonActionPerformed
-
-    private void manageReservationsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageReservationsButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_manageReservationsButtonActionPerformed
-
-    private void manageFoodOrdersButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageFoodOrdersButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_manageFoodOrdersButtonActionPerformed
-
-    private void viewItineraryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewItineraryButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_viewItineraryButtonActionPerformed
-
-    private void manageReportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageReportsActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_manageReportsActionPerformed
-
-    private void purchaseTicketsButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_purchaseTicketsButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_purchaseTicketsButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

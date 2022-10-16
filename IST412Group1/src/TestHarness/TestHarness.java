@@ -36,6 +36,29 @@ public class TestHarness {
         myLoginCtrl.handleSubmitButtonAction();
         TimeUnit.SECONDS.sleep(1);
 
+        // Testing Navigation Model, View, and Controller classes
+        System.out.println("Testing the Navigation classes: \n");
+        NavigationCtrl navCtrl = new NavigationCtrl();
+        NavigationUI navUI = new NavigationUI(); 
+        CustomerUI cusAccountUI = new CustomerUI();
+        cusAccountUI.isCustomerUIActive();
+        cusAccountUI.setCustomerUIActive(true);
+        Customer customerModel = new Customer(1001, "user1", "password1", "firstname1", "lastname1", "01/01/2000", "email1@email.com");
+        customerModel.setUserName("usernameNew");
+        customerModel.setPassword("userpasswordNew");
+        customerModel.setFirstName("firstnameNew");
+        customerModel.setLastName("lastnameNew");
+        customerModel.setDOB("01/02/2000");
+        customerModel.setEmail("emailNew@email.com");
+        customerModel.getUsername();
+        customerModel.getPassword();
+        customerModel.getFirstName();
+        customerModel.getLastName();
+        customerModel.getDOB();
+        customerModel.getEmail();             
+    
+
+
         // Testing Itinerary Model, View, and Controller classes
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();
@@ -106,12 +129,7 @@ public class TestHarness {
 
     }
 
-    public void testLoginCtrl (){
-        LoginCtrl login1 = new LoginCtrl();
-        
-        
-    }
-    
+     
     
     // public void testBlankClass(){
     

@@ -25,7 +25,7 @@ public class Customer extends Account {
      * @param purchasedTickets array list of the tickets the customer has purchased.
      */
     
-    public Customer(int accountID, String username, String password, String firstName, String lastName, String DOB, String email, ArrayList purchasedTickets) {
+    public Customer(int accountID, String username, String password, String firstName, String lastName, String DOB, String email) {
         
         super(accountID, username, password, firstName, lastName);
         

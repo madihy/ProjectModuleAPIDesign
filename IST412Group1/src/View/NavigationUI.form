@@ -73,48 +73,32 @@
       </Properties>
       <Events>
         <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="accountInformationButtonComponentAdded"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accountInformationButtonActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="parkInformationButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Park Information"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="parkInformationButtonActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="purchaseTicketsButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Purchase Tickets"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="purchaseTicketsButtonActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="manageReservationsButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Manage Reservations"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageReservationsButtonActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="manageFoodOrdersButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Manage Food Orders"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageFoodOrdersButtonActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="manageReports">
       <Properties>
         <Property name="text" type="java.lang.String" value="Manage Reports"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageReportsActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="navigationPanelTitleLabel">
       <Properties>
@@ -129,25 +113,16 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Exit Application"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitApplicationButtonActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="viewItineraryButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="View Itinerary"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewItineraryButtonActionPerformed"/>
-      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="purchaseTicketsButton1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Manage Tickets"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="purchaseTicketsButton1ActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>
