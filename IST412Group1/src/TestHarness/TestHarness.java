@@ -47,6 +47,10 @@ public class TestHarness {
         myReportsCtrl.deleteReport();
         myReportsCtrl.returnReport();
         myReportsCtrl.approveReport();
+        
+        System.out.println("\nTesting Itinerary Classes:\n");
+        Itinerary itin1 = new Itinerary();
+        itin1.getActivities();
 
     }
 
