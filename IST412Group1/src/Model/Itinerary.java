@@ -12,9 +12,11 @@ import java.util.Date;
  * @author brandonworley
  */
 public class Itinerary extends Activity {
-
+    private ItineraryUI itinView;
+    private ItineraryCtrl itinController;
+    private NavigationCtrl navCtrl;
     protected ArrayList<Activity> activities;
-    private Date timeSlot;
+    private String timeSlot;
 
     /**
      * This is the default Itinerary constructor
@@ -29,16 +31,16 @@ public class Itinerary extends Activity {
      *
      * @param activities Array list of activities on the itinerary
      */
-    public Itinerary(ArrayList<Activity> activities, Date timeSlot) {
+    public Itinerary(ArrayList<Activity> activities, String timeSlot) {
         this.activities = activities;
         this.timeSlot = timeSlot;
     }
 
-    public Date getTimeSlot() {
-        return timeSlot;
+    public String getTimeSlot() {
+        return "Returning the selected time slot for chosen activity";
     }
 
-    public void setTimeSlot(Date timeSlot) {
+    public void setTimeSlot(String timeSlot) {
         this.timeSlot = timeSlot;
     }
 

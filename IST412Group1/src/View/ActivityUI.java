@@ -11,7 +11,7 @@ import java.util.Date;
 public class ActivityUI {
 
     private ArrayList activities;
-    private Date timeSlots;
+    private String timeSlots;
 
     /**
      * Display a list of time slots during open park hours to select available
@@ -19,8 +19,8 @@ public class ActivityUI {
      *
      * @return String of time slots with available activities
      */
-    public Date TimeSlotDisplay() {
-        return timeSlots;
+    public String TimeSlotDisplay() {
+        return "Returns a list of time slots that this activity is available for";
     }
 
     /**
@@ -39,6 +39,7 @@ public class ActivityUI {
      * not confirmed (false)
      */
     public boolean ConfirmReservation() {
-        return false;
+        System.out.println("Reservation has been confirmed!");
+        return true;
     }
 }

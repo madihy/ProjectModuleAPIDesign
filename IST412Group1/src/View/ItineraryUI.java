@@ -11,6 +11,11 @@ import java.util.ArrayList;
  * @author brandonworley
  */
 public class ItineraryUI {
+    
+    private Itinerary itinModel;
+    private ItineraryCtrl itinController;
+    private NavigationCtrl navCtrl;
+    
     public void printIniterary(ArrayList<Activity> activities) {
         System.out.println("Itinerary\n");
         for (Activity a: activities) {

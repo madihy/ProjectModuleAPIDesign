@@ -1,4 +1,7 @@
 package Model;
+import Model.*;
+import View.*;
+import Controller.*;
 
 
 /**
@@ -12,6 +15,9 @@ public class Activity {
     private int actLenInMins;
     private boolean activityAvail;
     private int waitTimeInMins;
+    private ActivityUI activityView;
+    private ActivityCtrl activityCtrl;
+    
 
     /**
      * This is the default constructor for the Activity class

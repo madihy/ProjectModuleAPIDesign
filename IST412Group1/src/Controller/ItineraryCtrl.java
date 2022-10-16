@@ -3,6 +3,7 @@ package Controller;
 import Model.*;
 import View.*;
 import Controller.*;
+import java.util.ArrayList;
 
 
 /**
@@ -14,8 +15,11 @@ public class ItineraryCtrl {
     // protected long itinNum;
     private Itinerary itinModel;
     private ItineraryUI itinView;
+    private NavigationCtrl navCtrl;
     
-    public void ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
+    protected ArrayList<Activity> activities;
+    
+    public ItineraryCtrl(Itinerary itinModel, ItineraryUI itinView) {
         this.itinModel = itinModel;
         this.itinView = itinView;
     }
@@ -24,11 +28,11 @@ public class ItineraryCtrl {
     }
 
     public void setItinModel(Itinerary itinModel) {
-        this.itinModel = itinModel;
+        itinModel.setActivities(activities);
     }
 
-    public ItineraryUI getItinView() {
-        return itinView;
+    public void getItinView() {
+        itinView.printIniterary(activities);
     }
 
     public void setItinView(ItineraryUI itinView) {

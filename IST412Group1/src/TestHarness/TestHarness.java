@@ -49,8 +49,12 @@ public class TestHarness {
         myReportsCtrl.approveReport();
         
         System.out.println("\nTesting Itinerary Classes:\n");
-        Itinerary itin1 = new Itinerary();
-        itin1.getActivities();
+        Itinerary itinModel = new Itinerary();
+        ItineraryCtrl itinCtrl = new ItineraryCtrl();
+        itinModel.getActivities();
+        
+        
+        
 
     }
 
@@ -62,9 +66,7 @@ public class TestHarness {
     
     public void testItineraryCtrl() {
         System.out.println("Testing Itinerary Classes:\n");
-        Itinerary itin1 = new Itinerary();
-        itin1.getActivities();
-        
+        Itinerary itin1 = new Itinerary();    
         
     }
     // public void testBlankClass(){
