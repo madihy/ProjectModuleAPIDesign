@@ -18,6 +18,8 @@ public class Activity {
     private ActivityUI activityView;
     private ActivityCtrl activityCtrl;
     
+    
+    
 
     /**
      * This is the default constructor for the Activity class

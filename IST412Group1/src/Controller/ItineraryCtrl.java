@@ -32,7 +32,7 @@ public class ItineraryCtrl {
     }
 
     public void getItinView() {
-        itinView.printIniterary(activities);
+        itinView.printIniterary(itinModel);
     }
 
     public void setItinView(ItineraryUI itinView) {

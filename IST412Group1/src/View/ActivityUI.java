@@ -13,6 +13,9 @@ public class ActivityUI {
     private ArrayList activities;
     private String timeSlots;
 
+    public String ActivityUI() {
+        return "Prints a list of All Activities in the Park";
+    }
     /**
      * Display a list of time slots during open park hours to select available
      * activities from.

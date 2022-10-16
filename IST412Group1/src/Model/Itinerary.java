@@ -69,5 +69,7 @@ public class Itinerary extends Activity {
         activities.add(act4);
         //this.activities = activities;
     }
+    
+    
 
 }
