@@ -26,13 +26,17 @@ import java.util.concurrent.TimeUnit;
 public class TestHarness {
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Initiating Test Harness...");
-
+        TimeUnit.MILLISECONDS.sleep(500);
         System.out.println("Logging In Using Test User");
+        TimeUnit.MILLISECONDS.sleep(500);
         LoginCtrl myLoginCtrl = new LoginCtrl();
         myLoginCtrl.login("admin", "password");
+        TimeUnit.MILLISECONDS.sleep(500);
         System.out.println("Username: Admin, Password: *******");
         System.out.println("Login Successful");
+        TimeUnit.MILLISECONDS.sleep(500);
         myLoginCtrl.handleNewUserButtonAction();
+        TimeUnit.MILLISECONDS.sleep(500);
         myLoginCtrl.handleSubmitButtonAction();
         TimeUnit.SECONDS.sleep(1);
 
