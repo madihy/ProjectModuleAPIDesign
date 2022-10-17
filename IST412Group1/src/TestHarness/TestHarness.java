@@ -236,7 +236,7 @@ public class TestHarness {
         Food foodModel = new Food();
         FoodOrder foodOrderModel = new FoodOrder();
 	Restaurant restaurantModel = new Restaurant();
-        // OrderFoodUI foodView = new OrderFoodUI();
+        OrderFoodUI foodView = new OrderFoodUI();
         ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
         
         foodModel.setFoodName("Hot Dog");
@@ -266,6 +266,8 @@ public class TestHarness {
         foodOrderModel.getFoodOrderTax();
         foodOrderModel.getFoodOrderTotal();
         foodOrderModel.getFoodOrderStatus();
+        
+        foodView.isOrderFoodUIActive();
         
        
 
