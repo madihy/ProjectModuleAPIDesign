@@ -195,7 +195,18 @@ public class TestHarness {
         foodModel.setFoodDescription("Description");
         foodModel.setFoodPrice(4.99);
         
+        restaurantModel.setRestaurantName("Wally Dog's");
+        restaurantModel.setRestaurantDescription("Hot Dog's Wally's Way");
+        restaurantModel.setRestaurantLocation("Wild West Land");
         
+        foodModel.getFoodName();
+        foodModel.getFoodDescription();
+        foodModel.getFoodPrice();
+        
+        restaurantModel.getRestaurantName();
+        restaurantModel.getRestaurantLocation();
+        restaurantModel.getRestaurantDescription();
+     
 
     }
 

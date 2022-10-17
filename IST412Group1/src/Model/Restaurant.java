@@ -62,7 +62,7 @@ public class Restaurant {
      * Gets the description for this restaurant.
      * @return the string retaurantDescription representing the description of the restaurant.
      */
-    public String getRetaurantDescription() {
+    public String getRestaurantDescription() {
         return retaurantDescription;
     }
 
@@ -70,7 +70,7 @@ public class Restaurant {
      * Sets the description for this restaurant.
      * @param retaurantDescription sets the description for the restaurant.
      */
-    public void setRetaurantDescription(String retaurantDescription) {
+    public void setRestaurantDescription(String retaurantDescription) {
         this.retaurantDescription = retaurantDescription;
     }
 
