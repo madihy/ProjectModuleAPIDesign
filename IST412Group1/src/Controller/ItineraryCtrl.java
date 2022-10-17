@@ -19,22 +19,38 @@ public class ItineraryCtrl {
     
     protected ArrayList<Activity> activities;
     
+    /**
+     * Printing the itinerary
+     * @param itin 
+     */
     public void printIniterary(Itinerary itin) {
         System.out.println("***Itinerary***\n");        
     }
     
+    /**
+     * Action when the Add button is clicked
+     */
     public void clickAdd() {
         System.out.println("Activity Added!");
     }
     
+    /**
+     * Action when the Remove button is clicked
+     */
     public void clickRemove() {
         System.out.println("Activity Removed!");
     }
     
+    /**
+     * Action when the Update button is clicked
+     */
     public void clickUpdate() {
         System.out.println("Activity Updated!");
     }
     
+    /**
+     * Action when the Return To Nav button is clicked
+     */
     public void returnToNav() {
         System.out.println("Returning to Navigation Menu!\n");
     }

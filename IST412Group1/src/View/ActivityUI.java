@@ -19,6 +19,9 @@ public class ActivityUI {
     private ActivityCtrl activityCtrl;
     
     
+    /**
+     * Initializing the Activity UI
+     */
     public void ActivityUI() {
         System.out.println("***Displaying the Activity View***");
     }    
@@ -52,6 +55,9 @@ public class ActivityUI {
         return true;
     }
     
+    /**
+     * Button the return to the Nav Menu
+     */
     public void btnReturnToNav() {
         System.out.println("\nClick to return to Navigation Menu:");
     }
