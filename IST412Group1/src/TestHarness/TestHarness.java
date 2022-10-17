@@ -104,13 +104,43 @@ public class TestHarness {
         TicketOrder ticketOrder1 = new TicketOrder(10001, 0, 0, null, 0, 0, 0, "in-progress");
         ticketOrder1.setQuantityTickets(1);
         ticketOrder1.setQuantityDays(1);
-        System.out.println("Subtotal requested.");
+        System.out.println("Request made to calculate the order subtotal.");
         ticketOrder1.calculateOrderSubtotal(1,1);
-        ticketOrder1.setOrderSubtotal(50.00);
+        System.out.println("Request made to calculate the order tax.");
         ticketOrder1.calculateTax(50.00);
+        System.out.println("Request made to calculate the order total.");
+        ticketOrder1.calculateTotal(50.00, 3.00);
+        ticketsCtrl.purchaseTicketsButtonEvent();
+        System.out.println("Ticket order variables are set and tickets are created.");
+        System.out.println("Request made to create a ticket array.");
+        ticketOrder1.createTicketsArray(1, 1);
+        ticketOrder1.setOrderNumber(10002);
+        ticketOrder1.setQuantityTickets(1);
+        ticketOrder1.setQuantityDays(1);
+        ticketOrder1.setOrderSubtotal(50.00);
         ticketOrder1.setOrderTax(3.00);
-        Ticket ticketModel = new Ticket(50.00, 1000000001, null, "Unassigned", false);
-        
+        ticketOrder1.setOrderTotal(53.00);
+        ticketOrder1.setOrderStatus("complete");
+        ticketOrder1.setOrderTax(0);
+        ticketOrder1.calculateTax(50.00);
+        ticketOrder1.setOrderTax(3.00); 
+        Ticket ticket1 = new Ticket(53.00, 1001, null, "Unassigned", false);
+        ticketsCtrl.displayTicketOrderConfirmation();
+        System.out.println("\n" + "Ticket order purchase is confirmed:");
+        ticketOrder1.getOrderNumber();
+        ticketOrder1.getQuantityTickets();
+        ticketOrder1.getQuantityDays();
+        ticketOrder1.getOrderSubtotal();
+        ticketOrder1.getOrderTax();
+        ticketOrder1.getOrderTotal();
+        ticketOrder1.getOrderStatus();
+        ticketOrder1.getTicketsOrdered();
+        ticketsCtrl.cancelOrderButtonEvent();
+        ticketsCtrl.manageTicketsButtonEvent(); 
+        ManageTicketsUI manageTicketsView = new ManageTicketsUI();
+        manageTicketsView.setManageTicketsUIActive(true);
+        manageTicketsView.isManageTicketsUIActive();
+        ticketsCtrl.handleTicketsBackButtonAction();
        
         
         // Testing Itinerary Model, View, and Controller classes

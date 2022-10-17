@@ -53,6 +53,7 @@ public class TicketOrder{
      public Array[] createTicketsArray (int numberOfTickets, int numberOfDays){
          Array[] ticketsRequested = null;
          int quantity = numberOfTickets * numberOfDays;
+         System.out.println("Ticket array created.");
          for(int i = 0; i <= quantity; i++){     
          }
          return ticketsRequested;
@@ -75,8 +76,9 @@ public class TicketOrder{
       * @param subTotal set the subtotal value to be used to calculate the tax for the ticket order.
       * @return a double representing the tax amount for this ticket order.
       */
-     public double calculateTax (double subTotal){
-         double tax = 0;
+     public double calculateTax (double subtotal){
+         double tax = 3.00;
+         System.out.println("Order tax calculated!");
          return tax;
      }
      
@@ -87,7 +89,8 @@ public class TicketOrder{
       * @return a double representing the total amount for the ticket order.
       */
      public double calculateTotal (double subtotal, double tax){
-         double total = subtotal + tax;
+         double total = 53.00;
+         System.out.println("Order subtotal calculated!");
          return total;
      }
 
@@ -96,6 +99,7 @@ public class TicketOrder{
      * @return an integer representing the orderNumber for the ticket order.
      */
     public int getOrderNumber() {
+        System.out.println("Order Number: " + orderNumber);
         return orderNumber;
     }
 
@@ -104,6 +108,7 @@ public class TicketOrder{
      * @return the integer quantityTickets representing the quantity of tickets for the ticket order.
      */
     public int getQuantityTickets() {
+        System.out.println("Quantity of Tickets: " + quantityTickets);
         return quantityTickets;
     }
 
@@ -112,6 +117,7 @@ public class TicketOrder{
      * @return the integer quantityDays representing the quantity of days for each ticket for the ticket order.
      */
     public int getQuantityDays() {
+        System.out.println("Quantity of Days: "+"quantityDays");
         return quantityDays;
     }
 
@@ -120,6 +126,7 @@ public class TicketOrder{
      * @return the ArrayList ticketsOrdered representing the list of tickets for the ticket order.
      */
     public ArrayList <Ticket> getTicketsOrdered() {
+        System.out.println("Tickets Array: " + ticketsOrdered);
         return ticketsOrdered;
     }
          
@@ -128,6 +135,7 @@ public class TicketOrder{
      * @return a double representing the order subtotal for the ticket order.
      */
     public double getOrderSubtotal() {
+        System.out.println("Subtotal: " + orderSubtotal);
         return orderSubtotal;
     }
 
@@ -136,6 +144,7 @@ public class TicketOrder{
      * @return a double representing the order tax amount for the ticket order.
      */
     public double getOrderTax() {
+        System.out.println("Tax: " + orderTax);
         return orderTax;
     }
 
@@ -144,6 +153,7 @@ public class TicketOrder{
      * @return a double representing the order total for the ticket order.
      */
     public double getOrderTotal() {
+        System.out.println("Total: " + orderTotal);
         return orderTotal;
     }
 

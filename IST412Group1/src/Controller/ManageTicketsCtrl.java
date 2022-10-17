@@ -33,8 +33,8 @@ public class ManageTicketsCtrl {
      * Confirms the order information and takes the user to the confirm order screen.
      * @param event sets the event variable to occur when the place order button is selected.
      */
-    public void purchaseTicketsButtonEvent (ActionEvent event){
-        
+    public void purchaseTicketsButtonEvent (){
+        System.out.println("Button clicked to purchase tickets.");
     }
     /**
      * Establishes the action event to be carried out when the cancel order button 
@@ -42,8 +42,18 @@ public class ManageTicketsCtrl {
      * Confirms the order information and takes the user back to the select tickets screen.
      * @param event sets the event variable to occur when the cancel order button is selected.
      */
-    public void cancelOrderButtonEvent (ActionEvent event){
+    
+    /**
+     * Displays the ticket order information and lists the tickets purchased.
+     */
+    public void displayTicketOrderConfirmation (){
+        System.out.println("Request to display the ticket confirmation sent.");
         
+    }
+    
+    public void cancelOrderButtonEvent (){
+        System.out.println("\n" +"Clicked button to cancel the order.");
+        System.out.println ("Ordered cancelled and user returned to main menu.");
     }
     
     /**
@@ -52,28 +62,13 @@ public class ManageTicketsCtrl {
      * Confirms the order information and takes the user to the manage tickets screen.
      * @param event sets the event variable to occur when the manage tickets button is selected.
      */
-    public void manageTicketsButtonEvent (ActionEvent event){
-        
+    public void manageTicketsButtonEvent (){
+        System.out.println("Button clicked to manage tickets");
     }
-    
     /**
-     * Establishes the action event to be carried out when the open ticket button 
-     * is selected on the manage tickets user interface.
-     * @param event sets the event variable to occur when the open ticket button is selected.
+     * Manages the actions for the manageTicketsBackButton that will take the user to the main menu.
      */
-    public void openTicketsButtonEvent (ActionEvent event){
-        
+    public void handleTicketsBackButtonAction(){
+        System.out.println("Clicked Back button to return to the main  menu.");
     }
-    
-    /**
-     * Establishes the action event to be carried out when the assign ticket button 
-     * is selected on the manage tickets user interface.
-     * @param event sets the event variable to occur when the assign ticket button is selected.
-     */
-    public void assignTicketsButtonEvent (ActionEvent event){
-        
-    }
-        
-    
-    
 }

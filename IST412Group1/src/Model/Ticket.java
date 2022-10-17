@@ -35,7 +35,7 @@ public class Ticket {
         this.ticketAssignedName = ticketAssignedName;
         this.checkedIn = checkedIn;
     
-}
+    }
     
     /**
      * Returns the ticket cost for this ticket.
@@ -116,7 +116,4 @@ public class Ticket {
     public void setTicketAssignedName(String ticketAssignedName) {
         this.ticketAssignedName = ticketAssignedName;
     }
-    
-    
-                
 }
