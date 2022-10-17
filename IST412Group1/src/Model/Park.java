@@ -40,12 +40,17 @@ public class Park {
     
 }
 
+    public Park() {
+       
+    }
+
     /**
      * Gets the unique name for the park location
      * @return the parkName string representing the unique park name for the park location
      */
     public String getParkName() {
-        return parkName;
+        System.out.println(parkName);
+        return "";
     }
 
     /**
@@ -61,7 +66,8 @@ public class Park {
      * @return the string parkAddress representing the park's physical address.
      */
     public String getParkAddress() {
-        return parkAddress;
+        System.out.println(parkAddress);
+        return "";
     }
 
     /**
@@ -77,7 +83,8 @@ public class Park {
      * @return the string parkHours representing the operational hours for the park. 
      */
     public String getParkHours() {
-        return parkHours;
+        System.out.println("Park hours: " + parkHours);
+        return "";
     }
 
     /**

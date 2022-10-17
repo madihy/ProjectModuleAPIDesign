@@ -185,6 +185,22 @@ public class TestHarness {
         myReportsCtrl.returnReport();
         myReportsCtrl.approveReport();
         
+        // Testing Park Information
+        System.out.println("\nTesting Park Information Classes\n");
+        Park parkModel = new Park();
+        ParkInformationCtrl infoCtrl = new ParkInformationCtrl();
+        ParkInformationUI infoUI = new ParkInformationUI();
+        
+        parkModel.setParkAddress("1000 Wally Way, Orlando, FL, 88375");
+        parkModel.setParkName("Wally Land - Orlando");
+        parkModel.setParkHours("9am - 10pm");
+        parkModel.getParkName();
+        parkModel.getParkAddress();
+        parkModel.getParkHours();
+        
+        
+        
+        
         // Testing Food Model, View, and Controller Classes
         System.out.println("\nTesting Food Classes\n");
         Food foodModel = new Food();
