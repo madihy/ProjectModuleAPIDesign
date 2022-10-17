@@ -190,15 +190,15 @@ public class TestHarness {
         Food foodModel = new Food();
         FoodOrder foodOrderModel = new FoodOrder();
 	Restaurant restaurantModel = new Restaurant();
-        OrderFoodUI foodView = new OrderFoodUI();
+        // OrderFoodUI foodView = new OrderFoodUI();
         ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
         
         foodModel.setFoodName("Hot Dog");
-        foodModel.setFoodDescription("Description");
+        foodModel.setFoodDescription("All beef hotdog on housemade bun");
         foodModel.setFoodPrice(4.99);
         
         restaurantModel.setRestaurantName("Wally Dog's");
-        restaurantModel.setRestaurantDescription("Hot Dog's Wally's Way");
+        restaurantModel.setRestaurantDescription("Hot Dog's, Wally's Way!");
         restaurantModel.setRestaurantLocation("Wild West Land");
         
         foodOrderModel.setOrderNumber(1);
@@ -221,8 +221,7 @@ public class TestHarness {
         foodOrderModel.getFoodOrderTotal();
         foodOrderModel.getFoodOrderStatus();
         
-        
-     
+       
 
     }
 

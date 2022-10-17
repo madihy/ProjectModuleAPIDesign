@@ -37,7 +37,8 @@ public class Food {
      * @return the string foodName representing the name of the food item.
      */
     public String getFoodName() {
-        return foodName;
+        System.out.println(foodName);
+        return "";
     }
 
     /**
@@ -53,7 +54,8 @@ public class Food {
      * @return the string foodDescription representing the description of the food item.
      */
     public String getFoodDescription() {
-        return foodDescription;
+        System.out.println(foodDescription);
+        return "";
     }
 
     /**
@@ -69,7 +71,8 @@ public class Food {
      * @return the double foodPrice representing the price of the food item.
      */
     public double getFoodPrice() {
-        return foodPrice;
+        System.out.println(foodPrice);
+       return 0;
     }
 
     /**
