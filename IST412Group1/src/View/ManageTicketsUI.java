@@ -9,8 +9,9 @@ package View;
  * @author Kate
  */
 public class ManageTicketsUI extends javax.swing.JPanel {
-
+    private boolean manageTicketsUIActive = false; 
     /**
+     * This is the default constructor for the ManageTicketsUI.
      * Creates new form ManageTicketsUI
      */
     public ManageTicketsUI() {
@@ -83,4 +84,23 @@ public class ManageTicketsUI extends javax.swing.JPanel {
     private javax.swing.JLabel manageTicketsTitleLabel;
     private javax.swing.JTable ticketsPurchasedTable;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Gets the boolean value representing the status of this Manage Tickets user interface.
+     * @return the boolean manageTicketsUIActive representing the status of the Manage Tickets user interface.
+     */
+    public boolean isManageTicketsUIActive() {
+        System.out.println("The Manage Tickets UI is active!");
+        return manageTicketsUIActive;
+    }
+
+    /**
+     * Sets the boolean value for the status of this manage tickets user interface.
+     * @param manageTicketsUIActive sets the boolean value for the status of this manage tickets user interface.
+     */
+    public void setManageTicketsUIActive(boolean manageTicketsUIActive) {
+        this.manageTicketsUIActive = manageTicketsUIActive;
+    }
+
+    
 }

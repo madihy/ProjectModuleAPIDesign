@@ -8,12 +8,13 @@ package View;
  * This class is to provide the user interface for purchasing park tickets.
  * @author Kate
  */
-public class PurchaseTickets extends javax.swing.JPanel {
-
+public class PurchaseTicketsUI extends javax.swing.JPanel {
+    private boolean purchaseTicketsUIActive = false; 
     /**
+     * This is the default constructor for the PurchaseTicketsUI.
      * Creates new form PurchaseTickets
      */
-    public PurchaseTickets() {
+    public PurchaseTicketsUI() {
         initComponents();
     }
 
@@ -212,4 +213,22 @@ public class PurchaseTickets extends javax.swing.JPanel {
     private javax.swing.JLabel totalCostLabel;
     private javax.swing.JLabel totalCostValueLable;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Gets the boolean representing the status of this purchase tickets user interface.
+     * @return the boolean purchaseTicketsUIActive representing the tatus of the purchase tickets user interface.
+     */
+    public boolean isPurchaseTicketsUIActive() {
+        System.out.println("Purchase Tickets UI is active!");
+        return purchaseTicketsUIActive;
+    }
+
+    /**
+     * Sets the boolean value for the status of the purchase tickets user interface.
+     * @param purchaseTicketsUIActive sets the boolean value for the status of the purchase tickets user interface. 
+     */
+    public void setPurchaseTicketsUIActive(boolean purchaseTicketsUIActive) {
+        this.purchaseTicketsUIActive = purchaseTicketsUIActive;
+    }
 }
+

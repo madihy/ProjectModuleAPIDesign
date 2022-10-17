@@ -93,7 +93,16 @@ public class TestHarness {
         navCtrl.handleExitButtonAction();
         TimeUnit.MILLISECONDS.sleep(500);
                      
-
+        //Testing Manage Tickets Model, View, and Controller classes.
+        System.out.println("\n Testing Manage Ticket Classes...");
+        ManageTicketsCtrl ticketsCtrl = new ManageTicketsCtrl();
+        PurchaseTicketsUI purchaseView = new PurchaseTicketsUI();
+        
+        TicketOrder ticketOrder1 = new TicketOrder(10001, 0, 0, null, 0, 0, 0, "in-progress");
+        Ticket ticketModel = new Ticket(50.00, 1000000001, null, "Unassigned", false);
+        
+       
+        
         // Testing Itinerary Model, View, and Controller classes
         System.out.println("\nTesting Itinerary Classes:\n");
         Itinerary itinModel = new Itinerary();

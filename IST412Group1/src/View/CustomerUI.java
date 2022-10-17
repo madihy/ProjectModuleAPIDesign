@@ -28,12 +28,7 @@ public class CustomerUI {
      * @return the Boolean customerUIActive representing the customer interface screen status.
      */
     public boolean isCustomerUIActive() {
-        if(customerUIActive = true){
-            System.out.println("Customer UI is active!");
-        }
-        else{
-            System.out.println("CustomerUI is no longer active!");
-        }
+        System.out.println("Customer UI is active!");
         return customerUIActive;
     }
 
