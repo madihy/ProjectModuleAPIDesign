@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class Restaurant {
     
     private String restaurantName;
-    private String retaurantDescription;
+    private String restaurantDescription;
     private String restaurantLocation;
     private ArrayList <Food> menuFoods = new ArrayList<>();
     private ArrayList <ResOption> restaurantResOptions = new ArrayList<>();
@@ -30,7 +30,7 @@ public class Restaurant {
     public Restaurant (String restaurantName, String restaurantDescription, String restaurantLocation, ArrayList menuFoods, ArrayList restaurantResOptions){
         
         this.restaurantName = restaurantName;
-        this.retaurantDescription = restaurantDescription; 
+        this.restaurantDescription = restaurantDescription; 
         this.restaurantLocation = restaurantLocation;
         this.menuFoods = menuFoods;
         this.restaurantResOptions = restaurantResOptions;
@@ -47,7 +47,8 @@ public class Restaurant {
      * @return the string restaurantName representing the name of the restaurant.
      */
     public String getRestaurantName() {
-        return restaurantName;
+         System.out.println(restaurantName);
+        return "";
     }
 
     /**
@@ -63,7 +64,8 @@ public class Restaurant {
      * @return the string retaurantDescription representing the description of the restaurant.
      */
     public String getRestaurantDescription() {
-        return retaurantDescription;
+        System.out.println(restaurantDescription);
+        return "";
     }
 
     /**
@@ -71,7 +73,7 @@ public class Restaurant {
      * @param retaurantDescription sets the description for the restaurant.
      */
     public void setRestaurantDescription(String retaurantDescription) {
-        this.retaurantDescription = retaurantDescription;
+        this.restaurantDescription = retaurantDescription;
     }
 
     /**
@@ -79,7 +81,8 @@ public class Restaurant {
      * @return the string restaurantLocation representing the restaurant's location.
      */
     public String getRestaurantLocation() {
-        return restaurantLocation;
+        System.out.println(restaurantLocation);
+        return "";
     }
 
     /**
@@ -95,7 +98,8 @@ public class Restaurant {
      * @return the array list menuFoods representing the foods making up the menu for the restaurant.
      */
     public ArrayList <Food> getMenuFoods() {
-        return menuFoods;
+        System.out.println(menuFoods);
+        return null;
     }
 
     /**

@@ -38,13 +38,18 @@ public class FoodOrder {
         this.foodOrderStatus = foodOrderStatus;
     }
 
+    public FoodOrder() {
+       
+    }
+
     /**
      * Gets the order number for this food order.
      * @return the integer orderNumber representing the order number for the food order.
      */
     public int getOrderNumber() {
-        orderNumber = orderNumber + 1; // will this work or will there need to be a for loop?
-        return orderNumber;
+        
+        System.out.println("Order number: " + orderNumber);
+        return 0;
     }
 
     /**
@@ -76,7 +81,8 @@ public class FoodOrder {
      * @return the double foodOrderSubtotal representing the food cost subtotal for the food order.
      */
     public double getFoodOrderSubtotal() {
-        return foodOrderSubtotal;
+        System.out.println("Order subtotal: " + foodOrderSubtotal);
+        return 0;
     }
 
     /**
@@ -92,7 +98,8 @@ public class FoodOrder {
      * @return the double foodOrderTax representing the tax amount for the food order.
      */
     public double getFoodOrderTax() { 
-        return foodOrderTax;
+        System.out.println("Order tax: " + foodOrderTax);
+        return 0;
     }
 
     /**
@@ -109,7 +116,8 @@ public class FoodOrder {
      */
     public double getFoodOrderTotal() {       
         foodOrderTotal = foodOrderSubtotal + foodOrderTax;       
-        return foodOrderTotal;
+        System.out.println("Order total: " + foodOrderTotal);
+        return 0;
     }
 
     /**
@@ -125,7 +133,8 @@ public class FoodOrder {
      * @return the string foodOrderStatus representing the status of the food order.
      */
     public String getFoodOrderStatus() {
-        return foodOrderStatus;
+        System.out.println("Your order status: " + foodOrderStatus);
+        return "";
     }
 
     /**
