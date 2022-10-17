@@ -9,6 +9,7 @@ package View;
  * @author joepompilii
  */
 public class OrderFoodUI extends javax.swing.JFrame {
+     private boolean orderUIActive = false;
 
     /**
      * Creates new form NewJFrame
@@ -166,6 +167,16 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 new OrderFoodUI().setVisible(true);
             }
         });
+    }
+    
+public boolean isOrderFoodUIActive() {
+        if(orderUIActive = true){
+            System.out.println("OrderUI is active!");
+        }
+        else{
+            System.out.println("OrderUI is no longer active!");
+        }
+        return orderUIActive;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

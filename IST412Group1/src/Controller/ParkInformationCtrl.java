@@ -10,6 +10,12 @@ package Controller;
  */
 public class ParkInformationCtrl {
     
+    public void viewHours(){
+        
+        System.out.println("View Hours");
+        
+    }
+    
     /**
      * This is the default constructor for the park information controller class.
      */
