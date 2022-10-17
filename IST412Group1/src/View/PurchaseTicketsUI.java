@@ -39,7 +39,7 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
         subtotalValueLabel = new javax.swing.JLabel();
         totalCostValueLable = new javax.swing.JLabel();
         taxValueLabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        updateTicketSelectionButton = new javax.swing.JButton();
         cancelPurchaseButton = new javax.swing.JButton();
         purchaseTicketsButton = new javax.swing.JButton();
 
@@ -75,10 +75,10 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
         taxValueLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         taxValueLabel.setText("$0");
 
-        jButton1.setText("Update");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        updateTicketSelectionButton.setText("Update");
+        updateTicketSelectionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                updateTicketSelectionButtonActionPerformed(evt);
             }
         });
 
@@ -123,7 +123,7 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
                                                             .addComponent(numberOfTicketsLabel)
                                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
+                                                        .addComponent(updateTicketSelectionButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
                                                         .addComponent(numberOfTicketsTextField)
                                                         .addComponent(numberOfDaysTextField)))
                                                 .addGroup(layout.createSequentialGroup()
@@ -160,7 +160,7 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1)
+                        .addComponent(updateTicketSelectionButton)
                         .addGap(8, 8, 8)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(subtotalLabel)
@@ -183,9 +183,9 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void updateTicketSelectionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateTicketSelectionButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_updateTicketSelectionButtonActionPerformed
 
     private void cancelPurchaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelPurchaseButtonActionPerformed
         // TODO add your handling code here:
@@ -198,7 +198,6 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelPurchaseButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel numberOfDaysLabel;
     private javax.swing.JTextField numberOfDaysTextField;
     private javax.swing.JLabel numberOfTicketsLabel;
@@ -212,6 +211,7 @@ public class PurchaseTicketsUI extends javax.swing.JPanel {
     private javax.swing.JLabel ticketPurchaseInformationLabel;
     private javax.swing.JLabel totalCostLabel;
     private javax.swing.JLabel totalCostValueLable;
+    private javax.swing.JButton updateTicketSelectionButton;
     // End of variables declaration//GEN-END:variables
 
     /**

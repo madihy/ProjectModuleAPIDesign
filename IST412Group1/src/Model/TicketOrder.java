@@ -64,8 +64,9 @@ public class TicketOrder{
       * @param tickets sets the array of tickets to be used for this ticket order.
       * @return a double representing the calculated subtotal amount of an array of tickets for the ticket order.
       */
-     public double calculateOrderSubtotal (Array[] tickets){
-         double subTotal = 0;
+     public double calculateOrderSubtotal (int tickets, int days){
+         double subTotal = tickets * days * 50;
+         System.out.println("Order subtotal calculated!");
          return subTotal;
      }
      

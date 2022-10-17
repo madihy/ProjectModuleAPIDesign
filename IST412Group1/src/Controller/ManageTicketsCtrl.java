@@ -19,12 +19,12 @@ public class ManageTicketsCtrl {
     
     }
     /**
-     * Establishes the action event to be carried out when the purchase ticket button 
-     * is selected on the select ticket user interface.
+     * Establishes the action event to be carried out when the update ticket selection button is clicked.
      * Submits the quantity and ticket type information to use on the Place Order screen.
      * @param event sets the event variable to occur when the purchase ticket button is selected.
      */
-    public void purchaseTicketsButtonEvent (ActionEvent event){
+    public void updateTicketSelectionButtonEvent (){
+        System.out.println("Button clicked to set the ticket selection information.");
         
     }
     /**
@@ -33,7 +33,7 @@ public class ManageTicketsCtrl {
      * Confirms the order information and takes the user to the confirm order screen.
      * @param event sets the event variable to occur when the place order button is selected.
      */
-    public void placeOrderButtonEvent (ActionEvent event){
+    public void purchaseTicketsButtonEvent (ActionEvent event){
         
     }
     /**

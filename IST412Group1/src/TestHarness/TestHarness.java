@@ -97,8 +97,17 @@ public class TestHarness {
         System.out.println("\n Testing Manage Ticket Classes...");
         ManageTicketsCtrl ticketsCtrl = new ManageTicketsCtrl();
         PurchaseTicketsUI purchaseView = new PurchaseTicketsUI();
-        
+        purchaseView.setPurchaseTicketsUIActive(true);
+        purchaseView.isPurchaseTicketsUIActive();
+        ticketsCtrl.updateTicketSelectionButtonEvent();
         TicketOrder ticketOrder1 = new TicketOrder(10001, 0, 0, null, 0, 0, 0, "in-progress");
+        ticketOrder1.setQuantityTickets(1);
+        ticketOrder1.setQuantityDays(1);
+        System.out.println("Subtotal requested.");
+        ticketOrder1.calculateOrderSubtotal(1,1);
+        ticketOrder1.setOrderSubtotal(50.00);
+        ticketOrder1.calculateTax(50.00);
+        ticketOrder1.setOrderTax(3.00);
         Ticket ticketModel = new Ticket(50.00, 1000000001, null, "Unassigned", false);
         
        
