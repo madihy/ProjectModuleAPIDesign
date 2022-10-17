@@ -71,19 +71,33 @@ public class Itinerary extends Activity {
         //this.activities = activities;
     }
     
+    /**
+     * Pulling info from the Itinerary Model class
+     */
     public void getItinModel() {
         System.out.println("Displaying Itinerary Data");;
     }
 
+    /**
+     * Writing data to the Itinerary Model class
+     * @param itinData 
+     */
     public void setItinModel(String itinData) {
         this.itinData = itinData;
         System.out.println("Itinerary Data set");;
     }
 
+    /**
+     * Getting the UI for the Itinerary
+     */
     public void getItinView() {
         System.out.println("Displaying UI to view/change Itinerary");;
     }
 
+    /**
+     * Setting info for the UI for the Itinerary
+     * @param initData 
+     */
     public void setItinView(String initData) {
         this.itinData = itinData;
         System.out.println("Itinerary View set");

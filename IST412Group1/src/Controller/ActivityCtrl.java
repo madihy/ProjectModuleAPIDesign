@@ -48,7 +48,9 @@ public class ActivityCtrl {
     public void updateWaitTime() {
         System.out.println("Activity Wait Time has been updated");
     }  
-    
+/**
+ * Method to return back to the Navigation Menu
+ */    
     public void returnToNav() {
         System.out.println("Returning to Navigation Menu!\n");
     }
