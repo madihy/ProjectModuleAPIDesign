@@ -269,8 +269,10 @@ public class TestHarness {
         
         foodView.isOrderFoodUIActive();
         
-       
-
+       manageFoodCtrl.returnToMenuButtonEvent();
+       manageFoodCtrl.selectRestaurantButtonEvent();
+        
+        
     }
 
      

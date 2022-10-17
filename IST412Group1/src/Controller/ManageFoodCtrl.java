@@ -25,9 +25,8 @@ public class ManageFoodCtrl {
      * Displays corresponding restaurant menu items.
      * @param event sets the event variable to occur when the corresponding restaurant button is selected.
      */
-    public void selectRestuarantButtonEvent (ActionEvent event){
-        
-        System.out.println("The restaurant was selected!");
+    public void selectRestaurantButtonEvent (){
+        System.out.println("Button clicked to select the restaurant.");
         
     }
         
@@ -37,9 +36,8 @@ public class ManageFoodCtrl {
      * returns user to the applications main menu interface.
      * @param event sets the event variable to occur when the return to main menu button is selected.
      */
-    public void returnToMenuButtonEvent (ActionEvent event){
-        
-        System.out.println("Returning to the main menu");
+    public void returnToMenuButtonEvent (){
+        System.out.println("Button clicked to return to the main menu.");
         
     }
         
