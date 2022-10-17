@@ -183,6 +183,19 @@ public class TestHarness {
         myReportsCtrl.deleteReport();
         myReportsCtrl.returnReport();
         myReportsCtrl.approveReport();
+        
+        // Testing Food Model, View, and Controller Classes
+        System.out.println("\nTesting Food Classes\n");
+        Food foodModel = new Food();
+	Restaurant restaurantModel = new Restaurant();
+        OrderFoodUI foodView = new OrderFoodUI();
+        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
+        
+        foodModel.setFoodName("Hot Dog");
+        foodModel.setFoodDescription("Description");
+        foodModel.setFoodPrice(4.99);
+        
+        
 
     }
 

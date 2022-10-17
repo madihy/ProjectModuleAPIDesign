@@ -38,6 +38,10 @@ public class Restaurant {
         
     }
 
+    public Restaurant() {
+        
+    }
+
     /**
      * Gets the name for this restaurant.
      * @return the string restaurantName representing the name of the restaurant.
@@ -99,6 +103,17 @@ public class Restaurant {
      * @param menuFoods sets the array of foods making up the restaurant's menu.
      */
     public void setMenuFoods(ArrayList <Food> menuFoods) {
+        Food food1 = new Food("Hotdog", "Description", 6.99);
+        Food food2 = new Food("Hamburger", "Description", 8.99);
+        Food food3 = new Food("Turkey leg", "Description", 7);
+        Food food4 = new Food("Dole Whip", "Description", 4.50);
+        Food food5 = new Food("Chicken Nuggets", "Description", 6.99);
+        menuFoods.add(food1);
+        menuFoods.add(food2);
+        menuFoods.add(food3);
+        menuFoods.add(food4);
+        menuFoods.add(food5);
+        
         this.menuFoods = menuFoods;
     }
 
