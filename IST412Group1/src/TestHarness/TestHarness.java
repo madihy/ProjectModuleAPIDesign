@@ -14,6 +14,7 @@ import Controller.*;
 
 import java.awt.event.ActionEvent;
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -187,6 +188,7 @@ public class TestHarness {
         // Testing Food Model, View, and Controller Classes
         System.out.println("\nTesting Food Classes\n");
         Food foodModel = new Food();
+        FoodOrder foodOrderModel = new FoodOrder();
 	Restaurant restaurantModel = new Restaurant();
         OrderFoodUI foodView = new OrderFoodUI();
         ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
@@ -199,6 +201,12 @@ public class TestHarness {
         restaurantModel.setRestaurantDescription("Hot Dog's Wally's Way");
         restaurantModel.setRestaurantLocation("Wild West Land");
         
+        foodOrderModel.setOrderNumber(1);
+        foodOrderModel.setFoodOrderSubtotal(4.99);
+        foodOrderModel.setFoodOrderTax(0);
+        foodOrderModel.setFoodOrderTotal(4.99);
+        foodOrderModel.setFoodOrderStatus("Ready for Pickup!");
+        
         foodModel.getFoodName();
         foodModel.getFoodDescription();
         foodModel.getFoodPrice();
@@ -206,6 +214,14 @@ public class TestHarness {
         restaurantModel.getRestaurantName();
         restaurantModel.getRestaurantLocation();
         restaurantModel.getRestaurantDescription();
+        
+        foodOrderModel.getOrderNumber();
+        foodOrderModel.getFoodOrderSubtotal();
+        foodOrderModel.getFoodOrderTax();
+        foodOrderModel.getFoodOrderTotal();
+        foodOrderModel.getFoodOrderStatus();
+        
+        
      
 
     }
