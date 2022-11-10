@@ -267,11 +267,11 @@ public class TestHarness {
         foodOrderModel.getFoodOrderTotal();
         foodOrderModel.getFoodOrderStatus();
         
-        foodView.isOrderFoodUIActive();
+        // foodView.isOrderFoodUIActive();
         
        manageFoodCtrl.returnToMenuButtonEvent();
        manageFoodCtrl.selectRestaurantButtonEvent();
-        
+       System.exit(0); 
         
     }
 
