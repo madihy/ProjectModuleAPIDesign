@@ -1,7 +1,7 @@
 
 package Controller;
 
-import View.CreateCustomer;
+import View.CreateCustomerUI;
 
 /**
  *
@@ -15,7 +15,7 @@ public class CreateCustomerCtrl {
     private String email;
     
     public CreateCustomerCtrl() {
-        CreateCustomer createCust = new CreateCustomer();        
+        CreateCustomerUI createCust = new CreateCustomerUI();        
         
     }
     

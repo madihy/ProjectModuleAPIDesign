@@ -5,12 +5,12 @@ package View;
  *
  * @author brandonworley
  */
-public class CreateCustomer extends javax.swing.JPanel {
+public class CreateCustomerUI extends javax.swing.JPanel {
 
     /**
      * Creates new form CreateCustomer
      */
-    public CreateCustomer() {
+    public CreateCustomerUI() {
         initComponents();
     }
 
