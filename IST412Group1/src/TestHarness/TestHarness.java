@@ -269,7 +269,8 @@ public class TestHarness {
        manageFoodCtrl.returnToMenuButtonEvent();
        manageFoodCtrl.selectRestaurantButtonEvent();
        
-       LoginCtrl login = new LoginCtrl();
+       //LoginCtrl login = new LoginCtrl();
+       CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl();
        //System.exit(0); 
         
     }

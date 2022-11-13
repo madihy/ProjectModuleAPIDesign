@@ -36,6 +36,10 @@ public class Authentication{
                
     }
 
+    public Authentication() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Creates test user accounts to allow testing of the application throughout development.
      * Gets the users array and adds the new accounts to the users array list.

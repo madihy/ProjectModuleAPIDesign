@@ -33,6 +33,7 @@ public class CreateCustomerCtrl implements ActionListener {
         addALButtons();
         createCust.setVisible(true);
         createCust.lblSaveAccountError.setVisible(false);
+        
     }
     
     /**

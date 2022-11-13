@@ -23,7 +23,7 @@ import javax.swing.*;
  * @author Kate
  * This class manages the actions to facilitate the login process for all users of this application.
  */
-public class LoginCtrl{
+public class LoginCtrl {
     public ArrayList<Account> usersArray = new ArrayList<>();
     public String currentUsername;
     public String currentPassword;
@@ -33,9 +33,12 @@ public class LoginCtrl{
      * Login method to authenticate user login credentials.
      */
     public void login(String username, String password) {
-        View.LoginUI loginUI = new View.LoginUI();
-        loginUI.setVisible(true);
         Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
+        auth.readUserDataFile();
+        View.LoginUI loginUI = new View.LoginUI();
+        loginUI.setVisible(true);      
+        
+        
         auth.createTestUsers();
         
     }
@@ -49,6 +52,7 @@ public class LoginCtrl{
         //File inputFile = new File("USERDATA.txt");
         String userNameInput = currentUsername;
         String passwordInput = currentPassword;
+       
         try {
             Scanner in = new Scanner(new File("USERDATA.txt"));
             while (in.hasNextLine())
