@@ -47,7 +47,7 @@ public class LoginUI extends javax.swing.JFrame {
         loginPanel = new javax.swing.JPanel();
         loginSubmitButton = new javax.swing.JButton();
         usernameTextField = new javax.swing.JTextField();
-        passwordField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
         newAccountButton = new javax.swing.JButton();
         LoginPanelTitleLabel = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
@@ -256,8 +256,8 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JPanel loginPanel;
     private javax.swing.JButton loginSubmitButton;
     private javax.swing.JButton newAccountButton;
-    static javax.swing.JTextField usernameTextField;
-    static javax.swing.JTextField passwordField;
+    public javax.swing.JPasswordField passwordField;
+    private javax.swing.JTextField usernameTextField;
     private javax.swing.JLabel wallyLandLabel;
     // End of variables declaration//GEN-END:variables
 }
