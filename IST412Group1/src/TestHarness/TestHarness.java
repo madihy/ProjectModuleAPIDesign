@@ -29,7 +29,7 @@ public class TestHarness {
         System.out.println("Initiating Test Harness...");
         TimeUnit.MILLISECONDS.sleep(500);
 
-        // Testing Login Model, View, and Controller
+        /**Testing Login Model, View, and Controller
         System.out.println("Testing Login UI...");
         LoginUI loginUI = new LoginUI();
         loginUI.isPanelRunning();
@@ -45,7 +45,7 @@ public class TestHarness {
         myLoginCtrl.handleNewUserButtonAction();
         TimeUnit.MILLISECONDS.sleep(500);
         myLoginCtrl.handleSubmitButtonAction();
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(1);*/
 
         // Testing Navigation Model, View, and Controller classes
         System.out.println("\n" + "Testing the Navigation classes...");
@@ -270,6 +270,8 @@ public class TestHarness {
        manageFoodCtrl.selectRestaurantButtonEvent();
        
        //LoginCtrl login = new LoginCtrl();
+       JFrameMain main = new JFrameMain();
+       main.setVisible(true);
        CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl();
        //System.exit(0); 
         
