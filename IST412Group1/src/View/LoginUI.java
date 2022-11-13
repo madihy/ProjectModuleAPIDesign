@@ -4,6 +4,11 @@
  */
 package View;
 
+import javax.swing.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  *
  * @author Kate
@@ -40,7 +45,7 @@ public class LoginUI extends javax.swing.JFrame {
         loginPanel = new javax.swing.JPanel();
         loginSubmitButton = new javax.swing.JButton();
         usernameTextField = new javax.swing.JTextField();
-        javax.swing.JPasswordField passwordField = new javax.swing.JPasswordField();
+        passwordField = new javax.swing.JTextField();
         newAccountButton = new javax.swing.JButton();
         LoginPanelTitleLabel = new javax.swing.JLabel();
         lblUsername = new javax.swing.JLabel();
@@ -181,8 +186,37 @@ public class LoginUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginSubmitButtonActionPerformed
-        // TODO add your handling code here:
+    public void loginSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginSubmitButtonActionPerformed
+        File inputFile = new File("USERDATA.txt");
+        String userNameInput = usernameTextField.getText();
+        String passwordInput = passwordField.getText();
+        try {
+            Scanner in = new Scanner(new File("USERDATA.txt"));
+            while (in.hasNextLine())
+            {
+                String s = in.nextLine();
+                String[] sArray = s.split(",");
+
+                if (userNameInput.equals(sArray[0]) && passwordInput.equals(sArray[1]))
+                {
+                    JOptionPane.showMessageDialog(null,
+                            "Login Successful", "Success",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null,
+                            "Invalid Username / Password Combo", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            in.close();
+
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null,
+                    "User Database Not Found", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_loginSubmitButtonActionPerformed
 
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
@@ -233,7 +267,8 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JPanel loginPanel;
     private javax.swing.JButton loginSubmitButton;
     private javax.swing.JButton newAccountButton;
-    private javax.swing.JTextField usernameTextField;
+    static javax.swing.JTextField usernameTextField;
+    static javax.swing.JTextField passwordField;
     private javax.swing.JLabel wallyLandLabel;
     // End of variables declaration//GEN-END:variables
 }
