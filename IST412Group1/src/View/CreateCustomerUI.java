@@ -36,10 +36,12 @@ public class CreateCustomerUI extends javax.swing.JPanel {
         tfPassword = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
-        javax.swing.JLabel accountSaveErrorLabel = new javax.swing.JLabel();
+        lblSaveAccountError = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(204, 204, 204));
+        setMinimumSize(new java.awt.Dimension(300, 590));
         setName("createCustPanel"); // NOI18N
+        setPreferredSize(new java.awt.Dimension(300, 590));
+        setVerifyInputWhenFocusTarget(false);
 
         lblFistName.setText("First Name:");
         lblFistName.setName("lblFirstName"); // NOI18N
@@ -78,46 +80,46 @@ public class CreateCustomerUI extends javax.swing.JPanel {
         btnCancel.setActionCommand("");
         btnCancel.setName("btnCancel"); // NOI18N
 
-        accountSaveErrorLabel.setText("jLabel1");
+        lblSaveAccountError.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(btnSave)
-                .addGap(87, 87, 87)
-                .addComponent(btnCancel)
-                .addContainerGap(212, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblCreateUserTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblFistName)
+                            .addGap(35, 35, 35)
+                            .addComponent(tfFirstName))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblEmail)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblLastName)
+                                .addComponent(lblUsername)
+                                .addComponent(lblPassword))
+                            .addGap(32, 32, 32)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(tfLastName)
+                                .addComponent(tfUsername)
+                                .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(74, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblFistName)
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(tfFirstName, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
-                            .addComponent(lblCreateUserTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblLastName)
-                            .addComponent(lblUsername)
-                            .addComponent(lblPassword))
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfLastName, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                            .addComponent(tfUsername)
-                            .addComponent(tfPassword)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblEmail)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfEmail)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(accountSaveErrorLabel)
-                .addGap(49, 49, 49))
+                        .addGap(27, 27, 27)
+                        .addComponent(btnSave)
+                        .addGap(87, 87, 87)
+                        .addComponent(btnCancel))
+                    .addComponent(lblSaveAccountError))
+                .addGap(108, 108, 108))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,8 +129,7 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFistName)
-                    .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(accountSaveErrorLabel))
+                    .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblLastName)
@@ -145,11 +146,13 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
                     .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
+                .addGap(57, 57, 57)
+                .addComponent(lblSaveAccountError)
+                .addGap(15, 15, 15)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnCancel))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(225, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -162,6 +165,7 @@ public class CreateCustomerUI extends javax.swing.JPanel {
     public javax.swing.JLabel lblFistName;
     public javax.swing.JLabel lblLastName;
     public javax.swing.JLabel lblPassword;
+    public javax.swing.JLabel lblSaveAccountError;
     public javax.swing.JLabel lblUsername;
     public javax.swing.JTextField tfEmail;
     public javax.swing.JTextField tfFirstName;

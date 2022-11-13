@@ -28,6 +28,7 @@ public class CreateCustomerCtrl implements ActionListener {
         addALButtons();
         createCust.setVisible(true);
         
+        
     }
     
     public void addALButtons() {
