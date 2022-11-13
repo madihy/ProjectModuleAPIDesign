@@ -43,10 +43,18 @@ public class LoginUI extends javax.swing.JFrame {
         javax.swing.JPasswordField passwordField = new javax.swing.JPasswordField();
         newAccountButton = new javax.swing.JButton();
         LoginPanelTitleLabel = new javax.swing.JLabel();
+        lblUsername = new javax.swing.JLabel();
+        lblUsername1 = new javax.swing.JLabel();
+        lblSubmitLoginError = new javax.swing.JLabel();
         wallyLandLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setMinimumSize(new java.awt.Dimension(320, 640));
+        setPreferredSize(new java.awt.Dimension(320, 640));
+
+        loginPanel.setMinimumSize(new java.awt.Dimension(300, 590));
+        loginPanel.setPreferredSize(new java.awt.Dimension(300, 590));
 
         loginSubmitButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         loginSubmitButton.setForeground(new java.awt.Color(51, 51, 51));
@@ -61,11 +69,9 @@ public class LoginUI extends javax.swing.JFrame {
         });
 
         usernameTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        usernameTextField.setText("Username");
-        usernameTextField.setToolTipText("");
+        usernameTextField.setToolTipText("Username");
 
         passwordField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        passwordField.setText("Password");
         passwordField.setToolTipText("Password");
 
         newAccountButton.setBackground(new java.awt.Color(255, 255, 255));
@@ -85,41 +91,65 @@ public class LoginUI extends javax.swing.JFrame {
         LoginPanelTitleLabel.setText("Login");
         LoginPanelTitleLabel.setToolTipText("");
 
+        lblUsername.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblUsername.setText("Username");
+
+        lblUsername1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblUsername1.setText("Password");
+
+        lblSubmitLoginError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblSubmitLoginError.setForeground(new java.awt.Color(255, 0, 51));
+        lblSubmitLoginError.setText("Error Message");
+
         javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
         loginPanel.setLayout(loginPanelLayout);
         loginPanelLayout.setHorizontalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LoginPanelTitleLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(loginPanelLayout.createSequentialGroup()
-                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(usernameTextField)
-                            .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(passwordField)
+                            .addGroup(loginPanelLayout.createSequentialGroup()
+                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblUsername))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(loginPanelLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(lblUsername1))
+                            .addGroup(loginPanelLayout.createSequentialGroup()
+                                .addGap(96, 96, 96)
+                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(newAccountButton)
+                                    .addComponent(loginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblSubmitLoginError))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(loginPanelLayout.createSequentialGroup()
-                .addGap(113, 113, 113)
-                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(newAccountButton)
-                    .addComponent(loginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(loginPanelLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
                 .addComponent(LoginPanelTitleLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addComponent(lblUsername)
+                .addGap(4, 4, 4)
                 .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblUsername1)
+                .addGap(3, 3, 3)
                 .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblSubmitLoginError)
                 .addGap(18, 18, 18)
                 .addComponent(loginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(newAccountButton)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(285, Short.MAX_VALUE))
         );
 
         wallyLandLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -133,12 +163,10 @@ public class LoginUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(wallyLandLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(wallyLandLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
-                .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,6 +227,9 @@ public class LoginUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LoginPanelTitleLabel;
+    public javax.swing.JLabel lblSubmitLoginError;
+    private javax.swing.JLabel lblUsername;
+    private javax.swing.JLabel lblUsername1;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JButton loginSubmitButton;
     private javax.swing.JButton newAccountButton;
