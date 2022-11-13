@@ -6,6 +6,7 @@ import Model.Customer;
 import View.CreateCustomerUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Model.Authentication;
 
 /**
  *
@@ -44,6 +45,7 @@ public class CreateCustomerCtrl implements ActionListener {
             
         }
         if (obj == createCust.btnSave) {
+            for (int i = 0; i <  )
             firstName = createCust.tfFirstName.getText();
             lastName = createCust.tfLastName.getText();
             email = createCust.tfEmail.getText();
