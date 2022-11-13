@@ -22,7 +22,7 @@ public class Employee extends Account{
      */
     public Employee (int accountID, String username, String password, String firstName, String lastName, String authLevel){
         
-        super(accountID, username, password, firstName, lastName);
+        super(username, password, firstName, lastName);
         
         authLevel = ""; //instantiates the authLevel string variable
         this.authLevel = authLevel;
