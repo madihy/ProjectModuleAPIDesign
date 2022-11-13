@@ -4,6 +4,11 @@
  */
 package Model;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -99,6 +104,44 @@ public class Authentication{
     public void setCurrentPassword(String currentPassword) {
         this.currentPassword = currentPassword;
     }
-}
 
-    
+
+    public void readUserDataFile() {
+
+        FileInputStream fis = null;
+        ObjectInputStream in = null;
+
+        try {
+            fis = new FileInputStream("USERDATA.txt");
+            in = new ObjectInputStream(fis);
+            usersArray = (ArrayList<Account>) in.readObject();
+            in.close();
+
+            if (!usersArray.isEmpty()) {
+                System.out.println("User Data Loaded from File");
+            }
+
+        } catch (IOException ex) {
+            //ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            // ex.printStackTrace();
+        }
+
+    }
+
+    public void writeUserDataFile() {
+
+        FileOutputStream fos = null;
+        ObjectOutputStream out = null;
+
+        try {
+            fos = new FileOutputStream("USERDATA.txt");
+            out = new ObjectOutputStream(fos);
+            out.writeObject(usersArray);
+            out.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+}
