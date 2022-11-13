@@ -29,7 +29,10 @@ public class CreateCustomerCtrl implements ActionListener {
      */
     
     public CreateCustomerCtrl() {
-        createCust = new CreateCustomerUI();   
+        JFrameMain main = new JFrameMain();
+        main.setVisible(true);
+        createCust = new CreateCustomerUI();
+        main.add(createCust);
         addALButtons();
         createCust.setVisible(true);
         createCust.lblSaveAccountError.setVisible(false);

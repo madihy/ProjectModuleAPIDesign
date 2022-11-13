@@ -270,8 +270,8 @@ public class TestHarness {
        manageFoodCtrl.selectRestaurantButtonEvent();
        
        //LoginCtrl login = new LoginCtrl();
-       JFrameMain main = new JFrameMain();
-       main.setVisible(true);
+       // FrameMain main = new JFrameMain();
+       //main.setVisible(true);
        CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl();
        //System.exit(0); 
         
