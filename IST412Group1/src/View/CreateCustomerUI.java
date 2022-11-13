@@ -43,128 +43,67 @@ public class CreateCustomerUI extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(300, 590));
         setVerifyInputWhenFocusTarget(false);
 
-        lblFistName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblFistName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblFistName.setText("First Name:");
         lblFistName.setName("lblFirstName"); // NOI18N
 
-        lblLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblLastName.setText("Last Name: ");
         lblLastName.setName("lblLastName"); // NOI18N
 
-        lblEmail.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblEmail.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lblEmail.setText("E-Mail:");
+        lblEmail.setText("E-Mail Address:");
         lblEmail.setName("lblEmail"); // NOI18N
 
-        tfFirstName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfFirstName.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfFirstName.setName("tfFirstName"); // NOI18N
 
-        tfLastName.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfLastName.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfLastName.setName("tfLastName"); // NOI18N
 
-        tfEmail.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfEmail.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfEmail.setToolTipText("");
         tfEmail.setName("tfEmail"); // NOI18N
 
-        lblCreateUserTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblCreateUserTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCreateUserTitle.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         lblCreateUserTitle.setText("Create Account");
         lblCreateUserTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        lblUsername.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblUsername.setText("Username:");
         lblUsername.setName("lblUsername"); // NOI18N
 
-        lblPassword.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPassword.setText("Password:");
         lblPassword.setName("lblPassword"); // NOI18N
 
-        tfUsername.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfUsername.setName("tfUsername"); // NOI18N
 
-        tfPassword.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         tfPassword.setName("tfPassword"); // NOI18N
 
-        btnSave.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnSave.setText("Save");
-        btnSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSave.setName("btnSave"); // NOI18N
 
-        btnCancel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnCancel.setText("Cancel");
         btnCancel.setActionCommand("");
-        btnCancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCancel.setName("btnCancel"); // NOI18N
 
-<<<<<<< Updated upstream
         lblSaveAccountError.setForeground(new java.awt.Color(255, 0, 0));
         lblSaveAccountError.setText("User Name is not available");
         lblSaveAccountError.setName("lblSaveAccountError"); // NOI18N
-=======
-<<<<<<< HEAD
-        lblSaveAccountError.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        lblSaveAccountError.setForeground(new java.awt.Color(255, 0, 51));
-        lblSaveAccountError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSaveAccountError.setText("Error Message");
-=======
-        lblSaveAccountError.setForeground(new java.awt.Color(255, 0, 0));
-        lblSaveAccountError.setText("User Name is not available");
-        lblSaveAccountError.setName("lblSaveAccountError"); // NOI18N
->>>>>>> d40cd12a9894920b18175232ddb29f37eec36a4d
->>>>>>> Stashed changes
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblFistName)
-                    .addComponent(lblEmail)
-                    .addComponent(lblCreateUserTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblCreateUserTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(98, 98, 98)
-                            .addComponent(tfFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(lblFistName)
+                            .addGap(35, 35, 35)
+                            .addComponent(tfFirstName))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(lblEmail)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(tfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(lblLastName)
-<<<<<<< HEAD
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblPassword, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblUsername, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(tfLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(10, 10, 10)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(tfUsername)
-                                        .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(tfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblSaveAccountError, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(4, Short.MAX_VALUE))
-=======
                                 .addComponent(lblUsername)
                                 .addComponent(lblPassword))
                             .addGap(32, 32, 32)
@@ -184,10 +123,6 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(lblSaveAccountError)
                         .addGap(168, 168, 168))))
-<<<<<<< Updated upstream
-=======
->>>>>>> d40cd12a9894920b18175232ddb29f37eec36a4d
->>>>>>> Stashed changes
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,27 +151,11 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
                     .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-                .addGap(18, 18, 18)
-                .addComponent(lblSaveAccountError, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSave)
-                    .addComponent(btnCancel))
-                .addContainerGap(199, Short.MAX_VALUE))
-=======
->>>>>>> Stashed changes
                 .addGap(88, 88, 88)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnCancel))
                 .addContainerGap(187, Short.MAX_VALUE))
-<<<<<<< Updated upstream
-=======
->>>>>>> d40cd12a9894920b18175232ddb29f37eec36a4d
->>>>>>> Stashed changes
         );
     }// </editor-fold>//GEN-END:initComponents
 
