@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package View;
 
 /**
@@ -41,6 +37,7 @@ public class CreateCustomer extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(204, 204, 204));
         setName("createCustPanel"); // NOI18N
 
         lblFistName.setText("First Name:");
@@ -61,6 +58,7 @@ public class CreateCustomer extends javax.swing.JPanel {
 
         lblCreateUserTitle.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         lblCreateUserTitle.setText("Create Account");
+        lblCreateUserTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lblUsername.setText("Username:");
         lblUsername.setName("lblUsername"); // NOI18N
