@@ -22,6 +22,7 @@ public class CreateCustomerCtrl implements ActionListener {
     private String email;
     private CreateCustomerUI createCust;
     private ArrayList<Customer> usersArray;
+    private Authentication auth;
     
      /**
      * This is the default constructor for the CreateCustomerCtrl class.
@@ -61,17 +62,19 @@ public class CreateCustomerCtrl implements ActionListener {
             email = createCust.tfEmail.getText();
             username = createCust.tfUsername.getText();
             password = createCust.tfPassword.getText();
+            auth = new Authentication(usersArray, username, password);
+            auth.readUserDataFile();            
             for (int i = 0; i < usersArray.size(); i++) {
                 if (usersArray.contains(username)) {                
                     createCust.tfUsername.setText(null);
-                    createCust.lblSaveAccountError.setVisible(true);
-                
+                    createCust.lblSaveAccountError.setVisible(true);                
                 }
             }
             if (!username.isEmpty() && !password.isEmpty() && !firstName.isEmpty() && !lastName.isEmpty()) {
                 Customer newCust = new Customer(username, password, firstName, 
                         lastName, email);
                 usersArray.add(newCust);
+                auth.writeUserDataFile();
                 createCust.setVisible(false);
             }
         }    
