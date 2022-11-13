@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Model.Authentication;
 import java.util.ArrayList;
+import View.*;
 
 /**
  *
@@ -53,14 +54,16 @@ public class CreateCustomerCtrl implements ActionListener {
             username = createCust.tfUsername.getText();
             password = createCust.tfPassword.getText();
             for (int i = 0; i < usersArray.size(); i++) {
-                if (username == usersArray.get(i).getUsername()) {
+                if (usersArray.contains(username)) {                
                     createCust.tfUsername.setText(null);
-                    // Username not available message
+                //    accountSaveErrorLabel.setVisible(true);
+                
                 }
             }
-            if (!username.isEmpty()) {
+            if (!username.isEmpty() && !password.isEmpty()) {
                 Customer newCust = new Customer(username, password, firstName, 
                         lastName, email);
+                createCust.setVisible(false);
             }
         }    
     }
