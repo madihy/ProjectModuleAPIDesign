@@ -13,6 +13,7 @@ import java.util.Scanner;
 import Model.Account;
 import Model.Authentication;
 import View.LoginUI;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -22,20 +23,21 @@ import javax.swing.*;
  * @author Kate
  * This class manages the actions to facilitate the login process for all users of this application.
  */
-public class LoginCtrl {
+public class LoginCtrl{
     public ArrayList<Account> usersArray = new ArrayList<>();
     public String currentUsername;
     public String currentPassword;
     private String event;
+    LoginUI login;
     /**
      * Login method to authenticate user login credentials.
      */
     public void login(String username, String password) {
         Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
         auth.createTestUsers();
-        LoginUI loginUI = new LoginUI();
-        loginUI.setVisible(true);
+        
     }
+    
     /**
      * Establishes the action event to be carried out when the submit button is selected on the login screen.
      * Authenticates the user name and password from the list of accounts stored in a data file.
@@ -77,8 +79,8 @@ public class LoginCtrl {
      * Establishes the action event to be carried out when the new user button is selected on the login screen.
      * Directs the user to the new user login screen to set up a user account.
      */
-    public void handleNewUserButtonAction() {
-        System.out.println("New User Button Selected");
+    public void handleNewUserButtonAction(){
+        
     }
 
 }

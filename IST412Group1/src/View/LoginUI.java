@@ -4,6 +4,7 @@
  */
 package View;
 
+import Controller.CreateCustomerCtrl;
 import Controller.LoginCtrl;
 
 import javax.swing.*;
@@ -58,7 +59,6 @@ public class LoginUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
         setMinimumSize(new java.awt.Dimension(320, 640));
-        setPreferredSize(new java.awt.Dimension(320, 640));
 
         loginPanel.setMinimumSize(new java.awt.Dimension(300, 590));
         loginPanel.setPreferredSize(new java.awt.Dimension(300, 590));
@@ -209,7 +209,7 @@ public class LoginUI extends javax.swing.JFrame {
      */
     
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
-        // TODO add your handling code here:
+        CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl();
     }//GEN-LAST:event_newAccountButtonActionPerformed
 
     /**
@@ -254,10 +254,10 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblUsername;
     private javax.swing.JLabel lblUsername1;
     private javax.swing.JPanel loginPanel;
-    private javax.swing.JButton loginSubmitButton;
-    private javax.swing.JButton newAccountButton;
+    public javax.swing.JButton loginSubmitButton;
+    public javax.swing.JButton newAccountButton;
     public javax.swing.JPasswordField passwordField;
-    private javax.swing.JTextField usernameTextField;
+    public javax.swing.JTextField usernameTextField;
     private javax.swing.JLabel wallyLandLabel;
     // End of variables declaration//GEN-END:variables
 }
