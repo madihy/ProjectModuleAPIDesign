@@ -7,8 +7,7 @@ import java.util.ArrayList;
  * This is the subclass Customer that extends the superclass Accounts and contains account information specific to customers.
  * @author brandonworley and katerineer
  */
-public class Customer extends Account {
-    private String DOB;
+public class Customer extends Account {    
     private String email;
     private ArrayList<Ticket> purchasedTickets = new ArrayList<>();
 
@@ -25,30 +24,12 @@ public class Customer extends Account {
      * @param purchasedTickets array list of the tickets the customer has purchased.
      */
     
-    public Customer(int accountID, String username, String password, String firstName, String lastName, String DOB, String email) {
+    public Customer(String username, String password, String firstName, String lastName, String email) {
         
-        super(accountID, username, password, firstName, lastName);
+        super(username, password, firstName, lastName);  
         
-        this.DOB = DOB;
         this.email = email;
         this.purchasedTickets = purchasedTickets;
-    }
-
-    /**
-     * Gets the customer's Date of Birth (mm/dd/yyyy)
-     * @return A string containing the customer's date of birth (mm/dd/yyyy)
-     */
-    public String getDOB() {
-        System.out.println("Customer DOB: " + DOB);
-        return DOB;
-    }
-
-    /**
-     * Sets the date of birth of the customer in the format mm/dd/yyyy
-     * @param DOB Sets the date of birth of the customer (mm/dd/yyyy)
-     */
-    public void setDOB(String DOB) {
-        this.DOB = DOB;
     }
 
     /**

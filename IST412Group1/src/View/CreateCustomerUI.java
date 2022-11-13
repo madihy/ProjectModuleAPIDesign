@@ -35,7 +35,7 @@ public class CreateCustomerUI extends javax.swing.JPanel {
         tfUsername = new javax.swing.JTextField();
         tfPassword = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
-        btnClear = new javax.swing.JButton();
+        btnCancel = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setName("createCustPanel"); // NOI18N
@@ -73,8 +73,9 @@ public class CreateCustomerUI extends javax.swing.JPanel {
         btnSave.setText("Save");
         btnSave.setName("btnSave"); // NOI18N
 
-        btnClear.setText("Clear");
-        btnClear.setName("btnClear"); // NOI18N
+        btnCancel.setText("Cancel");
+        btnCancel.setActionCommand("");
+        btnCancel.setName("btnCancel"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -111,7 +112,7 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                         .addGap(163, 163, 163)
                         .addComponent(btnSave)
                         .addGap(87, 87, 87)
-                        .addComponent(btnClear)))
+                        .addComponent(btnCancel)))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -142,14 +143,14 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
-                    .addComponent(btnClear))
+                    .addComponent(btnCancel))
                 .addContainerGap(53, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnClear;
+    public javax.swing.JButton btnCancel;
     public javax.swing.JButton btnSave;
     private javax.swing.JLabel lblCreateUserTitle;
     private javax.swing.JLabel lblEmail;

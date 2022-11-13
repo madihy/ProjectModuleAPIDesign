@@ -2,6 +2,7 @@
 package Controller;
 
 import Model.Account;
+import Model.Customer;
 import View.CreateCustomerUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,18 +28,20 @@ public class CreateCustomerCtrl implements ActionListener {
     
     public void addALButtons() {
         createCust.btnSave.addActionListener(this);
-        createCust.btnClear.addActionListener(this);
+        createCust.btnCancel.addActionListener(this);
     }       
   
     @Override
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
-        if (obj == createCust.btnClear) {
+        if (obj == createCust.btnCancel) {
             createCust.tfFirstName.setText("");
             createCust.tfLastName.setText("");
             createCust.tfEmail.setText("");
             createCust.tfUsername.setText("");
             createCust.tfPassword.setText("");
+            createCust.setVisible(false);
+            
         }
         if (obj == createCust.btnSave) {
             firstName = createCust.tfFirstName.getText();
@@ -46,10 +49,7 @@ public class CreateCustomerCtrl implements ActionListener {
             email = createCust.tfEmail.getText();
             username = createCust.tfUsername.getText();
             password = createCust.tfPassword.getText();
-            
-            // Should the account number randomizer go here?
-            // Create a new account object and save it to the users arraylist
-            
+            Customer newCust = new Customer(username, password, firstName, lastName, email);
         }
     }    
 }

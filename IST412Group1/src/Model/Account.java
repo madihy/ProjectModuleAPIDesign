@@ -30,16 +30,12 @@ public class Account {
      * @param lastName 
      */
     
-    public Account(int accountID, String username, String password, String firstName, String lastName) {  
+    public Account(String username, String password, String firstName, String lastName) {  
         //Instantiates the userName and password variables.
         this.username = username;
         this.password = password;
         this.firstName = firstName;
-        this.lastName = lastName;
-        
-        //Instantiates the account ID.
-        Random randomAcctID = new Random();
-        this.accountID = randomAcctID.nextInt(1000);
+        this.lastName = lastName;    
         
         //Instantiates the account type Boolean value.
         accountTypeCustomer = true;
