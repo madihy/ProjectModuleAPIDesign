@@ -27,6 +27,7 @@ public class CreateCustomerCtrl implements ActionListener {
         createCust = new CreateCustomerUI();   
         addALButtons();
         createCust.setVisible(true);
+        createCust.lblSaveAccountError.setVisible(false);
         
         
     }
@@ -57,7 +58,7 @@ public class CreateCustomerCtrl implements ActionListener {
             for (int i = 0; i < usersArray.size(); i++) {
                 if (usersArray.contains(username)) {                
                     createCust.tfUsername.setText(null);
-                //    accountSaveErrorLabel.setVisible(true);
+                    createCust.lblSaveAccountError.setVisible(true);
                 
                 }
             }

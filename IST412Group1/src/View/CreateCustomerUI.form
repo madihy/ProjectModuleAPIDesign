@@ -56,20 +56,22 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="74" max="32767" attributes="0"/>
+              <EmptySpace pref="86" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="btnSave" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
                       <Component id="btnCancel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lblSaveAccountError" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="lblSaveAccountError" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="168" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,7 +95,9 @@
                   <Component id="lblEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfEmail" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+              <Component id="lblSaveAccountError" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblUsername" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfUsername" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -103,14 +107,12 @@
                   <Component id="lblPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfPassword" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Component id="lblSaveAccountError" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnSave" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnCancel" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="225" max="32767" attributes="0"/>
+              <EmptySpace pref="187" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -229,7 +231,11 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblSaveAccountError">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel1"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="User Name is not available"/>
+        <Property name="name" type="java.lang.String" value="lblSaveAccountError" noResource="true"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

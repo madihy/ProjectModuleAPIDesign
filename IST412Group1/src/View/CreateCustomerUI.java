@@ -80,7 +80,9 @@ public class CreateCustomerUI extends javax.swing.JPanel {
         btnCancel.setActionCommand("");
         btnCancel.setName("btnCancel"); // NOI18N
 
-        lblSaveAccountError.setText("jLabel1");
+        lblSaveAccountError.setForeground(new java.awt.Color(255, 0, 0));
+        lblSaveAccountError.setText("User Name is not available");
+        lblSaveAccountError.setName("lblSaveAccountError"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -109,17 +111,18 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                                 .addComponent(tfLastName)
                                 .addComponent(tfUsername)
                                 .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnSave)
                         .addGap(87, 87, 87)
-                        .addComponent(btnCancel))
-                    .addComponent(lblSaveAccountError))
-                .addGap(108, 108, 108))
+                        .addComponent(btnCancel)
+                        .addGap(108, 108, 108))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lblSaveAccountError)
+                        .addGap(168, 168, 168))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +141,9 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEmail)
                     .addComponent(tfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(2, 2, 2)
+                .addComponent(lblSaveAccountError)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUsername)
                     .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -146,13 +151,11 @@ public class CreateCustomerUI extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPassword)
                     .addComponent(tfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addComponent(lblSaveAccountError)
-                .addGap(15, 15, 15)
+                .addGap(88, 88, 88)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave)
                     .addComponent(btnCancel))
-                .addContainerGap(225, Short.MAX_VALUE))
+                .addContainerGap(187, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
