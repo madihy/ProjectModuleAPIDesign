@@ -68,9 +68,10 @@ public class CreateCustomerCtrl implements ActionListener {
                 
                 }
             }
-            if (!username.isEmpty() && !password.isEmpty()) {
+            if (!username.isEmpty() && !password.isEmpty() && !firstName.isEmpty() && !lastName.isEmpty()) {
                 Customer newCust = new Customer(username, password, firstName, 
                         lastName, email);
+                usersArray.add(newCust);
                 createCust.setVisible(false);
             }
         }    
