@@ -38,11 +38,11 @@ public class Authentication{
     public void createTestUsers() {
         
         //Populate array with some test users 
-        Account account1 = new Account(1001, "username1", "password1", "user1FirstName", "user1LastName");
-        Account account2 = new Account(1002, "username2", "password2", "user2FirstName", "user2LastName");
-        Account account3 = new Account(1003, "username3", "password3", "user3FirstName", "user3LastName");
-        Account account4 = new Account(1004, "username4", "password4", "user4FirstName", "user4LastName");
-        Account account5 = new Account(1005, "username5", "password5", "user5FirstName", "user5LastName");
+        Account account1 = new Account("username1", "password1", "user1FirstName", "user1LastName");
+        Account account2 = new Account("username2", "password2", "user2FirstName", "user2LastName");
+        Account account3 = new Account("username3", "password3", "user3FirstName", "user3LastName");
+        Account account4 = new Account("username4", "password4", "user4FirstName", "user4LastName");
+        Account account5 = new Account("username5", "password5", "user5FirstName", "user5LastName");
         
         //Adds user accounts to the user array
         getUsersArray().add(account1);
