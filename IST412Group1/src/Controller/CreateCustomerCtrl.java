@@ -23,14 +23,20 @@ public class CreateCustomerCtrl implements ActionListener {
     private CreateCustomerUI createCust;
     private ArrayList<Customer> usersArray;
     
+     /**
+     * This is the default constructor for the CreateCustomerCtrl class.
+     */
+    
     public CreateCustomerCtrl() {
         createCust = new CreateCustomerUI();   
         addALButtons();
         createCust.setVisible(true);
         createCust.lblSaveAccountError.setVisible(false);
-        
-        
     }
+    
+    /**
+     * Adds action listener to "Save" and "Cancel" buttons.
+     */
     
     public void addALButtons() {
         createCust.btnSave.addActionListener(this);
