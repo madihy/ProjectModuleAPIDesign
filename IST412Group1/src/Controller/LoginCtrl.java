@@ -33,6 +33,8 @@ public class LoginCtrl{
      * Login method to authenticate user login credentials.
      */
     public void login(String username, String password) {
+        View.LoginUI loginUI = new View.LoginUI();
+        loginUI.setVisible(true);
         Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
         auth.createTestUsers();
         
@@ -44,7 +46,7 @@ public class LoginCtrl{
      * Throws an exception and provides an message on the screen if the login information is not found.
      */
     public void handleSubmitButtonAction() {
-        File inputFile = new File("USERDATA.txt");
+        //File inputFile = new File("USERDATA.txt");
         String userNameInput = currentUsername;
         String passwordInput = currentPassword;
         try {
@@ -80,6 +82,7 @@ public class LoginCtrl{
      * Directs the user to the new user login screen to set up a user account.
      */
     public void handleNewUserButtonAction(){
+        CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl(); 
         
     }
 
