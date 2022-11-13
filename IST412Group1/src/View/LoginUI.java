@@ -186,6 +186,13 @@ public class LoginUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+     /**
+     * Compare the values in the User Name and Password fields to that of
+     * the USERDATA.txt file. If a match is confirmed, login will be
+     * successful. If the values do not match, an error message will display.
+     */
+    
     public void loginSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginSubmitButtonActionPerformed
         File inputFile = new File("USERDATA.txt");
         String userNameInput = usernameTextField.getText();
@@ -219,6 +226,11 @@ public class LoginUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_loginSubmitButtonActionPerformed
 
+    
+    /**
+     * Action performed when Create New Account button is selected.
+     */
+    
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_newAccountButtonActionPerformed
