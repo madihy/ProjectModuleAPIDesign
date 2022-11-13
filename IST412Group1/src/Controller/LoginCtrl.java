@@ -5,7 +5,10 @@
 package Controller;
 
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import Model.Account;
 import Model.Authentication;
@@ -21,8 +24,8 @@ import javax.swing.*;
  */
 public class LoginCtrl {
     public ArrayList<Account> usersArray = new ArrayList<>();
-    private String currentUsername;
-    private String currentPassword;
+    public String currentUsername;
+    public String currentPassword;
     private String event;
     /**
      * Login method to authenticate user login credentials.
@@ -39,7 +42,36 @@ public class LoginCtrl {
      * Throws an exception and provides an message on the screen if the login information is not found.
      */
     public void handleSubmitButtonAction() {
-        System.out.println("Submit Button Selected");
+        File inputFile = new File("USERDATA.txt");
+        String userNameInput = currentUsername;
+        String passwordInput = currentPassword;
+        try {
+            Scanner in = new Scanner(new File("USERDATA.txt"));
+            while (in.hasNextLine())
+            {
+                String s = in.nextLine();
+                String[] sArray = s.split(",");
+
+                if (userNameInput.equals(sArray[0]) && passwordInput.equals(sArray[1]))
+                {
+                    JOptionPane.showMessageDialog(null,
+                            "Login Successful", "Success",
+                            JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null,
+                            "Invalid Username / Password Combo", "Error",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            in.close();
+
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null,
+                    "User Database Not Found", "Error",
+                    JOptionPane.ERROR_MESSAGE);
+        }
     }
     /**
      * Establishes the action event to be carried out when the new user button is selected on the login screen.

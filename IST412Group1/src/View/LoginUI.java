@@ -4,6 +4,8 @@
  */
 package View;
 
+import Controller.LoginCtrl;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -188,35 +190,10 @@ public class LoginUI extends javax.swing.JFrame {
 
     public void loginSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginSubmitButtonActionPerformed
         File inputFile = new File("USERDATA.txt");
-        String userNameInput = usernameTextField.getText();
-        String passwordInput = passwordField.getText();
-        try {
-            Scanner in = new Scanner(new File("USERDATA.txt"));
-            while (in.hasNextLine())
-            {
-                String s = in.nextLine();
-                String[] sArray = s.split(",");
-
-                if (userNameInput.equals(sArray[0]) && passwordInput.equals(sArray[1]))
-                {
-                    JOptionPane.showMessageDialog(null,
-                            "Login Successful", "Success",
-                            JOptionPane.INFORMATION_MESSAGE);
-                }
-                else
-                {
-                    JOptionPane.showMessageDialog(null,
-                            "Invalid Username / Password Combo", "Error",
-                            JOptionPane.ERROR_MESSAGE);
-                }
-            }
-            in.close();
-
-        } catch (FileNotFoundException e) {
-            JOptionPane.showMessageDialog(null,
-                    "User Database Not Found", "Error",
-                    JOptionPane.ERROR_MESSAGE);
-        }
+        LoginCtrl loginCtrl = new LoginCtrl();
+        loginCtrl.currentUsername= usernameTextField.getText();
+        loginCtrl.currentPassword = passwordField.getText();
+        loginCtrl.handleSubmitButtonAction();
     }//GEN-LAST:event_loginSubmitButtonActionPerformed
 
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
