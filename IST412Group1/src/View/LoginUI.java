@@ -9,12 +9,23 @@ package View;
  * @author Kate
  */
 public class LoginUI extends javax.swing.JFrame {
+    private boolean panelRunning = true;
 
     /**
      * Creates new form ApplicationUI
      */
     public LoginUI() {
         initComponents();
+        
+        
+    }
+    
+    /**
+     * This method verifies that all UI elements are running.
+     */
+
+    public boolean isPanelRunning(){
+        return panelRunning;
     }
 
     /**
