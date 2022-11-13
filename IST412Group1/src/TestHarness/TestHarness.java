@@ -58,13 +58,12 @@ public class TestHarness {
         CustomerUI cusAccountUI = new CustomerUI();
         cusAccountUI.setCustomerUIActive(true);
         cusAccountUI.isCustomerUIActive();
-        Customer customerModel = new Customer(1001, "user1", "password1", "firstname1", "lastname1", "01/01/2000", "email1@email.com");
+        Customer customerModel = new Customer("user1", "password1", "firstname1", "lastname1", "email1@email.com");
         System.out.println("Current customer account information is displayed!");
         customerModel.getUsername();
         customerModel.getPassword();
         customerModel.getFirstName();
         customerModel.getLastName();
-        customerModel.getDOB();
         customerModel.getEmail();
         navCtrl.handleUpdateCustomerButtonAction();
         TimeUnit.MILLISECONDS.sleep(500);
@@ -73,13 +72,11 @@ public class TestHarness {
         customerModel.setPassword("userpasswordNew");
         customerModel.setFirstName("firstnameNew");
         customerModel.setLastName("lastnameNew");
-        customerModel.setDOB("01/02/2000");
         customerModel.setEmail("emailNew@email.com");
         customerModel.getUsername();
         customerModel.getPassword();
         customerModel.getFirstName();
         customerModel.getLastName();
-        customerModel.getDOB();
         customerModel.getEmail();
         System.out.println("\n");
         
