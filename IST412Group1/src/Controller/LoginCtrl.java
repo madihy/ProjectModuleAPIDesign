@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import Model.Account;
 import Model.Authentication;
+import View.LoginUI;
 
 import javax.swing.*;
 
@@ -29,6 +30,8 @@ public class LoginCtrl {
     public void login(String username, String password) {
         Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
         auth.createTestUsers();
+        LoginUI loginUI = new LoginUI();
+        loginUI.setVisible(true);
     }
     /**
      * Establishes the action event to be carried out when the submit button is selected on the login screen.
