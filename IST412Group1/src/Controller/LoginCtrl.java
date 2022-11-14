@@ -97,7 +97,6 @@ public class LoginCtrl {
             for(int i=0;i<ln;i++){
                 raf.readLine();
             }
-            //if condition added after video to have no lines on first entry
             if(ln>0){
                 raf.writeBytes("\r\n");
                 raf.writeBytes("\r\n");
