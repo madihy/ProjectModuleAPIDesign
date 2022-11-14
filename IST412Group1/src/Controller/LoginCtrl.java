@@ -58,7 +58,7 @@ public class LoginCtrl {
         //File inputFile = new File("USERDATA.txt");
         String userNameInput = currentUsername;
         String passwordInput = currentPassword;
-       
+
         try {
             Scanner in = new Scanner(new File("USERDATA.txt"));
             while (in.hasNextLine())
@@ -71,6 +71,12 @@ public class LoginCtrl {
                     JOptionPane.showMessageDialog(null,
                             "Login Successful", "Success",
                             JOptionPane.INFORMATION_MESSAGE);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null,
+                            "Invalid Username / Password Combo", "Error",
+                            JOptionPane.ERROR_MESSAGE);
                 }
             }
             in.close();

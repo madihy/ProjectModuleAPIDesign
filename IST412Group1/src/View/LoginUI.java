@@ -84,7 +84,7 @@ public class LoginUI extends javax.swing.JFrame {
         newAccountButton.setBackground(new java.awt.Color(255, 255, 255));
         newAccountButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         newAccountButton.setForeground(new java.awt.Color(0, 51, 255));
-        newAccountButton.setText("New Account");
+        newAccountButton.setText("Register Account");
         newAccountButton.setBorder(null);
         newAccountButton.setOpaque(false);
         newAccountButton.addActionListener(new java.awt.event.ActionListener() {
@@ -104,9 +104,9 @@ public class LoginUI extends javax.swing.JFrame {
         lblUsername1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblUsername1.setText("Password");
 
-        lblSubmitLoginError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblSubmitLoginError.setForeground(new java.awt.Color(255, 0, 51));
-        lblSubmitLoginError.setText("Error Message");
+        //lblSubmitLoginError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        //lblSubmitLoginError.setForeground(new java.awt.Color(255, 0, 51));
+        //lblSubmitLoginError.setText("Error Message");
 
         javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
         loginPanel.setLayout(loginPanelLayout);
