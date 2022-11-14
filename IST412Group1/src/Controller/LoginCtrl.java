@@ -102,7 +102,7 @@ public class LoginCtrl {
                 raf.writeBytes("\r\n");
             }
             raf.writeBytes(usr+ ",");
-            raf.writeBytes(pswd);
+            raf.writeBytes(pswd + "\n");
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
