@@ -7,6 +7,8 @@ package Controller;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +16,8 @@ import Model.Account;
 import Model.Authentication;
 import View.LoginUI;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.swing.*;
 
@@ -28,6 +32,8 @@ public class LoginCtrl {
     public String currentUsername;
     public String currentPassword;
     private String event;
+    File inputFile = new File("USERDATA.txt");
+    int ln;
     LoginUI login;
     /**
      * Login method to authenticate user login credentials.
@@ -66,12 +72,6 @@ public class LoginCtrl {
                             "Login Successful", "Success",
                             JOptionPane.INFORMATION_MESSAGE);
                 }
-                else
-                {
-                    JOptionPane.showMessageDialog(null,
-                            "Invalid Username / Password Combo", "Error",
-                            JOptionPane.ERROR_MESSAGE);
-                }
             }
             in.close();
 
@@ -85,8 +85,24 @@ public class LoginCtrl {
      * Establishes the action event to be carried out when the new user button is selected on the login screen.
      * Directs the user to the new user login screen to set up a user account.
      */
-    public void handleNewUserButtonAction(){
-        CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl(); 
+    public void handleNewUserButtonAction(String usr,String pswd){
+        try {
+            RandomAccessFile raf = new RandomAccessFile(inputFile, "rw");
+            for(int i=0;i<ln;i++){
+                raf.readLine();
+            }
+            //if condition added after video to have no lines on first entry
+            if(ln>0){
+                raf.writeBytes("\r\n");
+                raf.writeBytes("\r\n");
+            }
+            raf.writeBytes(usr+ ",");
+            raf.writeBytes(pswd);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }
 

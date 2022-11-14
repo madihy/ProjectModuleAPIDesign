@@ -209,7 +209,10 @@ public class LoginUI extends javax.swing.JFrame {
      */
     
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
-        CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl();
+        LoginCtrl loginCtrl = new LoginCtrl();
+        loginCtrl.currentUsername= usernameTextField.getText();
+        loginCtrl.currentPassword = passwordField.getText();
+        loginCtrl.handleNewUserButtonAction(loginCtrl.currentUsername, loginCtrl.currentPassword);
     }//GEN-LAST:event_newAccountButtonActionPerformed
 
     /**
