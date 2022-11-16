@@ -12,14 +12,14 @@ import Controller.*;
  * This application will allow users to complete a variety of tasks for their WallyLand vacation.
  * @author Hytham Madi, Kate Rineer, Joe Pompilii, Brandon Worley
  */
-//public class Main {
-//
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String[] args) {
-//        // TODO code application logic here
-//        TestHarness th = new TestHarness();
-//    }
-//    
-//}
+public class Main {
+
+    /**
+     * @param args the command line arguments
+    */
+    public static void main(String[] args) throws InterruptedException {
+        LoginCtrl loginCtrl = new LoginCtrl();
+        TestHarness th = new TestHarness();
+    }
+    
+}

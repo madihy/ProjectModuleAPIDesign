@@ -1,23 +1,21 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
 
 /**
- * This class is used to display the user interface for the main navigation menu.
+ *
  * @author Kate
  */
-public class NavigationUI extends javax.swing.JPanel {
+public class NavigationUI extends javax.swing.JFrame {
     private boolean navigationUIActive = false;
-
     /**
-     * Creates new form NavigationUI
+     * Creates new form MainMenuUI
      */
     public NavigationUI() {
         initComponents();
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,6 +26,7 @@ public class NavigationUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         accountInformationButton = new javax.swing.JButton();
         parkInformationButton = new javax.swing.JButton();
         manageActivitiesButton = new javax.swing.JButton();
@@ -36,9 +35,10 @@ public class NavigationUI extends javax.swing.JPanel {
         navigationPanelTitleLabel = new javax.swing.JLabel();
         exitApplicationButton = new javax.swing.JButton();
 
-        setMinimumSize(new java.awt.Dimension(300, 590));
-        setName(""); // NOI18N
-        setPreferredSize(new java.awt.Dimension(300, 590));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setMinimumSize(new java.awt.Dimension(300, 590));
+        jPanel1.setName(""); // NOI18N
 
         accountInformationButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         accountInformationButton.setText("Account Information");
@@ -67,19 +67,19 @@ public class NavigationUI extends javax.swing.JPanel {
 
         navigationPanelTitleLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         navigationPanelTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        navigationPanelTitleLabel.setText("Main Navigation Menu");
+        navigationPanelTitleLabel.setText("WallyLand Main Menu");
 
         exitApplicationButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         exitApplicationButton.setText("Exit Application");
         exitApplicationButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(navigationPanelTitleLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(accountInformationButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(parkInformationButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -87,24 +87,21 @@ public class NavigationUI extends javax.swing.JPanel {
                     .addComponent(manageFoodOrdersButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(manageReports, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(exitApplicationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {accountInformationButton, manageActivitiesButton, manageFoodOrdersButton, manageReports, parkInformationButton});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(navigationPanelTitleLabel)
                 .addGap(14, 14, 14)
                 .addComponent(accountInformationButton)
-                .addGap(13, 13, 13)
-                .addComponent(parkInformationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(parkInformationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
                 .addComponent(manageActivitiesButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(manageFoodOrdersButton)
@@ -112,21 +109,73 @@ public class NavigationUI extends javax.swing.JPanel {
                 .addComponent(manageReports)
                 .addGap(34, 34, 34)
                 .addComponent(exitApplicationButton)
-                .addContainerGap(286, Short.MAX_VALUE))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {accountInformationButton, manageActivitiesButton, manageFoodOrdersButton, manageReports, parkInformationButton});
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(52, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void accountInformationButtonComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_accountInformationButtonComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_accountInformationButtonComponentAdded
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(NavigationUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(NavigationUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(NavigationUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(NavigationUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new NavigationUI().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accountInformationButton;
     private javax.swing.JButton exitApplicationButton;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton manageActivitiesButton;
     private javax.swing.JButton manageFoodOrdersButton;
     private javax.swing.JButton manageReports;
@@ -134,7 +183,8 @@ public class NavigationUI extends javax.swing.JPanel {
     private javax.swing.JButton parkInformationButton;
     // End of variables declaration//GEN-END:variables
 
-    /**
+
+/**
      * Gets the Boolean value representing this navigation interface screen status.
      * @return the Boolean navigationUI representing the navigation interface screen status.
      */
@@ -156,7 +206,5 @@ public class NavigationUI extends javax.swing.JPanel {
     public void setNavigationUIActive(boolean navigationUIActive) {
         this.navigationUIActive = navigationUIActive;
     }
-
-    
-    
 }
+

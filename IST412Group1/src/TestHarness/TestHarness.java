@@ -25,7 +25,8 @@ import java.util.concurrent.TimeUnit;
 
 
 public class TestHarness {
-    public static void main(String[] args) throws InterruptedException {
+    public TestHarness() throws InterruptedException {    
+      
         System.out.println("Initiating Test Harness...");
         TimeUnit.MILLISECONDS.sleep(500);
 
@@ -55,9 +56,9 @@ public class TestHarness {
         TimeUnit.MILLISECONDS.sleep(500);
         navUI.setNavigationUIActive(true);
         navCtrl.handleCustomerAccountButtonAction();
-        CustomerUI cusAccountUI = new CustomerUI();
-        cusAccountUI.setCustomerUIActive(true);
-        cusAccountUI.isCustomerUIActive();
+        CustomerAccountUI cusAccountUI = new CustomerAccountUI();
+        //cusAccountUI.setCustomerUIActive(true);
+        //cusAccountUI.isCustomerUIActive();
         Customer customerModel = new Customer("user1", "password1", "firstname1", "lastname1", "email1@email.com");
         System.out.println("Current customer account information is displayed!");
         customerModel.getUsername();
@@ -269,12 +270,7 @@ public class TestHarness {
        manageFoodCtrl.returnToMenuButtonEvent();
        manageFoodCtrl.selectRestaurantButtonEvent();
        
-       //LoginCtrl login = new LoginCtrl();
-       // FrameMain main = new JFrameMain();
-       //main.setVisible(true);
-       CreateCustomerCtrl cusCtrl = new CreateCustomerCtrl();
-       //System.exit(0); 
-        
+       
     }
 
      
