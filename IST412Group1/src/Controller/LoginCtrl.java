@@ -34,15 +34,20 @@ public class LoginCtrl {
     private String event;
     File inputFile = new File("USERDATA.txt");
     int ln;
-    LoginUI login;
+    
+    public LoginCtrl(){
+    View.LoginUI loginUI = new View.LoginUI();
+        loginUI.setVisible(true); 
+    }
+    
+    
     /**
      * Login method to authenticate user login credentials.
      */
     public void login(String username, String password) {
         Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
         auth.readUserDataFile();
-        View.LoginUI loginUI = new View.LoginUI();
-        loginUI.setVisible(true);      
+        
         
         
         auth.createTestUsers();
@@ -92,7 +97,8 @@ public class LoginCtrl {
      * Directs the user to the new user login screen to set up a user account.
      */
     public void handleNewUserButtonAction(String usr,String pswd){
-        try {
+                
+        /**try {
             RandomAccessFile raf = new RandomAccessFile(inputFile, "rw");
             for(int i=0;i<ln;i++){
                 raf.readLine();
@@ -107,8 +113,8 @@ public class LoginCtrl {
             Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
         
     }
-
+    
 }

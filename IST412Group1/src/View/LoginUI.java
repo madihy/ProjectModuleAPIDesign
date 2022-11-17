@@ -198,8 +198,8 @@ public class LoginUI extends javax.swing.JFrame {
     public void loginSubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginSubmitButtonActionPerformed
         File inputFile = new File("USERDATA.txt");
         LoginCtrl loginCtrl = new LoginCtrl();
-        loginCtrl.currentUsername= usernameTextField.getText();
-        loginCtrl.currentPassword = passwordField.getText();
+        loginCtrl.currentUsername = usernameTextField.getText();
+        loginCtrl.currentPassword = passwordField.getPassword().toString();
         loginCtrl.handleSubmitButtonAction();
     }//GEN-LAST:event_loginSubmitButtonActionPerformed
 
@@ -211,7 +211,7 @@ public class LoginUI extends javax.swing.JFrame {
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
         LoginCtrl loginCtrl = new LoginCtrl();
         loginCtrl.currentUsername= usernameTextField.getText();
-        loginCtrl.currentPassword = passwordField.getText();
+        loginCtrl.currentPassword = passwordField.getPassword().toString();
         loginCtrl.handleNewUserButtonAction(loginCtrl.currentUsername, loginCtrl.currentPassword);
     }//GEN-LAST:event_newAccountButtonActionPerformed
 

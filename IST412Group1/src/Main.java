@@ -19,7 +19,7 @@ public class Main {
     */
     public static void main(String[] args) throws InterruptedException {
         LoginCtrl loginCtrl = new LoginCtrl();
-        TestHarness th = new TestHarness();
+        //TestHarness th = new TestHarness();
     }
     
 }
