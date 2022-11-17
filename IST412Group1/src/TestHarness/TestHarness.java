@@ -56,7 +56,7 @@ public class TestHarness {
         TimeUnit.MILLISECONDS.sleep(500);
         navUI.setNavigationUIActive(true);
         navCtrl.handleCustomerAccountButtonAction();
-        CustomerAccountUI cusAccountUI = new CustomerAccountUI();
+        CreateCustomerUI cusAccountUI = new CreateCustomerUI();
         //cusAccountUI.setCustomerUIActive(true);
         //cusAccountUI.isCustomerUIActive();
         Customer customerModel = new Customer("user1", "password1", "firstname1", "lastname1", "email1@email.com");

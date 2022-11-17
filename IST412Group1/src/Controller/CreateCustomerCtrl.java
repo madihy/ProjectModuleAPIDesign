@@ -3,7 +3,7 @@ package Controller;
 
 import Model.Account;
 import Model.Customer;
-import View.CustomerAccountUI;
+import View.CreateCustomerUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Model.Authentication;
@@ -20,7 +20,7 @@ public class CreateCustomerCtrl implements ActionListener {
     private String firstName; 
     private String lastName; 
     private String email;
-    private CustomerAccountUI createCust;
+    private CreateCustomerUI createCust;
     private ArrayList<Customer> usersArray;
     private Authentication auth;
     
@@ -29,12 +29,12 @@ public class CreateCustomerCtrl implements ActionListener {
      */
     
     public CreateCustomerCtrl() {
-        CustomerAccountUI customerUI = new CustomerAccountUI();
-        customerUI.setVisible(true);
-        createCust = new CustomerAccountUI();
-        customerUI.add(createCust);
-        addALButtons();
+        CreateCustomerUI createCust = new CreateCustomerUI();
+        //createCust = new CreateCustomerUI();
+        //customerUI.add(createCust);
+        
         createCust.setVisible(true);
+        addALButtons();
         createCust.lblSaveAccountError.setVisible(false);
         
     }

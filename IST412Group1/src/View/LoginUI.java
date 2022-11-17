@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+
 /**
  *
  * @author Kate
@@ -209,10 +210,12 @@ public class LoginUI extends javax.swing.JFrame {
      */
     
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
-        LoginCtrl loginCtrl = new LoginCtrl();
-        loginCtrl.currentUsername= usernameTextField.getText();
-        loginCtrl.currentPassword = passwordField.getPassword().toString();
-        loginCtrl.handleNewUserButtonAction(loginCtrl.currentUsername, loginCtrl.currentPassword);
+        CreateCustomerCtrl createCustCtrl = new CreateCustomerCtrl();
+
+        //LoginCtrl loginCtrl = new LoginCtrl();
+        //loginCtrl.currentUsername= usernameTextField.getText();
+        //loginCtrl.currentPassword = passwordField.getPassword().toString();
+        //loginCtrl.handleNewUserButtonAction(loginCtrl.currentUsername, loginCtrl.currentPassword);
     }//GEN-LAST:event_newAccountButtonActionPerformed
 
     /**

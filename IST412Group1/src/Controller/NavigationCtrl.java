@@ -5,7 +5,7 @@
 package Controller;
 
 import View.NavigationUI;
-import View.CustomerAccountUI;
+import View.CreateCustomerUI;
 import Model.Customer;
 import java.awt.event.ActionEvent;
 
