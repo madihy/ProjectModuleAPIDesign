@@ -34,10 +34,12 @@ public class LoginCtrl {
     private String event;
     File inputFile = new File("USERDATA.txt");
     int ln;
+    LoginUI loginUI;
     
     public LoginCtrl(){
     View.LoginUI loginUI = new View.LoginUI();
         loginUI.setVisible(true); 
+        this.loginUI = loginUI;
     }
     
     
@@ -73,9 +75,11 @@ public class LoginCtrl {
 
                 if (userNameInput.equals(sArray[0]) && passwordInput.equals(sArray[1]))
                 {
-                    JOptionPane.showMessageDialog(null,
-                            "Login Successful", "Success",
-                            JOptionPane.INFORMATION_MESSAGE);
+                        loginUI.setVisible(false);
+                        NavigationCtrl navCtrl = new NavigationCtrl();
+                        //JOptionPane.showMessageDialog(null,
+                            //"Login Successful", "Success",
+                            //JOptionPane.INFORMATION_MESSAGE);
                 }
                 else
                 {

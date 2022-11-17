@@ -20,6 +20,8 @@ public class NavigationCtrl {
      * This is the default constructor for the NavigationCtrl class.
      */
     public NavigationCtrl(){
+        NavigationUI navUI = new NavigationUI();
+        navUI.setVisible(true);
         
     }
     /**

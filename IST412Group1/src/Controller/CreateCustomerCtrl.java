@@ -71,7 +71,7 @@ public class CreateCustomerCtrl implements ActionListener {
             for (int i = 0; i < usersArray.size(); i++) {
                 if (usersArray.contains(username)) {                
                     createCust.tfUsername.setText(null);
-                    createCust.lblSaveAccountError.setVisible(true);                
+                    createCust.lblSaveAccountError.setVisible(true); 
                 }
             }
             if (!username.isEmpty() && !password.isEmpty() && !firstName.isEmpty() && !lastName.isEmpty()) {
