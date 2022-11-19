@@ -4,6 +4,7 @@
  */
 package Controller;
 
+import View.PurchaseTicketsUI;
 import java.awt.event.ActionEvent;
 
 /**
@@ -16,7 +17,10 @@ public class ManageTicketsCtrl {
      * This is the default constructor for the ManageTicketsCtrl class
      */
     public ManageTicketsCtrl(){
-    
+        PurchaseTicketsUI purchaseTicketsUI = new PurchaseTicketsUI();
+        purchaseTicketsUI.setVisible(true);
+        purchaseTicketsUI.pnlPurchaseTickets.setVisible(true);
+        purchaseTicketsUI.pnlTicketOrderConfirmation.setVisible(false);
     }
     /**
      * Establishes the action event to be carried out when the update ticket selection button is clicked.

@@ -4,22 +4,28 @@
  */
 package Controller;
 
+import View.ParkInformationUI;
+
 /**
  * This class controls the customer's ability to view information about parks, rides, shows, and restaurants.
  * @author katerineer
  */
 public class ParkInformationCtrl {
     
-    public void viewHours(){
-        
-        System.out.println("View Hours");
-        
-    }
-    
     /**
      * This is the default constructor for the park information controller class.
      */
     public ParkInformationCtrl(){
         
+        ParkInformationUI parkInfoUI = new ParkInformationUI();
+        parkInfoUI.setVisible(true);
+        
+        
+    }public void viewHours(){
+        
+        System.out.println("View Hours");
+        
     }
+    
+    
 }

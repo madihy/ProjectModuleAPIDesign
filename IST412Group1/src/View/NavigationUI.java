@@ -4,6 +4,10 @@
  */
 package View;
 
+import Controller.CreateCustomerCtrl;
+import Controller.ManageTicketsCtrl;
+import Controller.ParkInformationCtrl;
+
 /**
  *
  * @author Kate
@@ -26,115 +30,156 @@ public class NavigationUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        accountInformationButton = new javax.swing.JButton();
-        parkInformationButton = new javax.swing.JButton();
-        manageActivitiesButton = new javax.swing.JButton();
-        manageFoodOrdersButton = new javax.swing.JButton();
-        manageReports = new javax.swing.JButton();
+        pnlMainMenu = new javax.swing.JPanel();
+        btnAccountInformation = new javax.swing.JButton();
+        btnParkInformation = new javax.swing.JButton();
+        btnManageActivities = new javax.swing.JButton();
+        btnManageFoodOrders = new javax.swing.JButton();
+        btnPurchaseTickets = new javax.swing.JButton();
         navigationPanelTitleLabel = new javax.swing.JLabel();
-        exitApplicationButton = new javax.swing.JButton();
+        btnExitApplication = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("WallyLand--Main Menu");
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(300, 590));
-        jPanel1.setName(""); // NOI18N
+        pnlMainMenu.setMinimumSize(new java.awt.Dimension(300, 590));
+        pnlMainMenu.setName(""); // NOI18N
 
-        accountInformationButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        accountInformationButton.setText("Account Information");
-        accountInformationButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        accountInformationButton.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentAdded(java.awt.event.ContainerEvent evt) {
-                accountInformationButtonComponentAdded(evt);
+        btnAccountInformation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnAccountInformation.setText("Account Information");
+        btnAccountInformation.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAccountInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAccountInformationActionPerformed(evt);
             }
         });
 
-        parkInformationButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        parkInformationButton.setText("Park Information");
-        parkInformationButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnParkInformation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnParkInformation.setText("Park Information");
+        btnParkInformation.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnParkInformation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnParkInformationActionPerformed(evt);
+            }
+        });
 
-        manageActivitiesButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        manageActivitiesButton.setText("Manage Activities");
-        manageActivitiesButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnManageActivities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnManageActivities.setText("Manage Activities");
+        btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        manageFoodOrdersButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        manageFoodOrdersButton.setText("Manage Food Orders");
-        manageFoodOrdersButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnManageFoodOrders.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnManageFoodOrders.setText("Manage Food Orders");
+        btnManageFoodOrders.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        manageReports.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        manageReports.setText("Manage Reports");
-        manageReports.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnPurchaseTickets.setText("Purchase Tickets");
+        btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPurchaseTickets.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPurchaseTicketsActionPerformed(evt);
+            }
+        });
 
         navigationPanelTitleLabel.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         navigationPanelTitleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         navigationPanelTitleLabel.setText("WallyLand Main Menu");
 
-        exitApplicationButton.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        exitApplicationButton.setText("Exit Application");
-        exitApplicationButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnExitApplication.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnExitApplication.setText("Exit Application");
+        btnExitApplication.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnExitApplication.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitApplicationActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(navigationPanelTitleLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(accountInformationButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(parkInformationButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(manageActivitiesButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(manageFoodOrdersButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(manageReports, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(exitApplicationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53))
+        javax.swing.GroupLayout pnlMainMenuLayout = new javax.swing.GroupLayout(pnlMainMenu);
+        pnlMainMenu.setLayout(pnlMainMenuLayout);
+        pnlMainMenuLayout.setHorizontalGroup(
+            pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMainMenuLayout.createSequentialGroup()
+                .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(navigationPanelTitleLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlMainMenuLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                                .addComponent(btnAccountInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnParkInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnManageActivities, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnPurchaseTickets, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlMainMenuLayout.createSequentialGroup()
+                                .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(43, 43, 43)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAccountInformation, btnManageActivities, btnManageFoodOrders, btnParkInformation, btnPurchaseTickets});
+
+        pnlMainMenuLayout.setVerticalGroup(
+            pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMainMenuLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addComponent(navigationPanelTitleLabel)
-                .addGap(14, 14, 14)
-                .addComponent(accountInformationButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(parkInformationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnAccountInformation)
                 .addGap(13, 13, 13)
-                .addComponent(manageActivitiesButton)
+                .addComponent(btnParkInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(manageFoodOrdersButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(manageReports)
+                .addComponent(btnPurchaseTickets)
+                .addGap(11, 11, 11)
+                .addComponent(btnManageActivities)
+                .addGap(11, 11, 11)
+                .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(exitApplicationButton)
-                .addContainerGap(302, Short.MAX_VALUE))
+                .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(287, Short.MAX_VALUE))
         );
+
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAccountInformation, btnManageActivities, btnParkInformation, btnPurchaseTickets});
+
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnExitApplication, btnManageFoodOrders});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(pnlMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(pnlMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void accountInformationButtonComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_accountInformationButtonComponentAdded
-        // TODO add your handling code here:
-    }//GEN-LAST:event_accountInformationButtonComponentAdded
+    private void btnAccountInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccountInformationActionPerformed
+        CreateCustomerCtrl createAccountCtrl = new CreateCustomerCtrl();
+        this.dispose();
+    }//GEN-LAST:event_btnAccountInformationActionPerformed
+
+    private void btnParkInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParkInformationActionPerformed
+        ParkInformationCtrl parkInfoCtrl = new ParkInformationCtrl();
+        this.dispose();
+    }//GEN-LAST:event_btnParkInformationActionPerformed
+
+    private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
+        ManageTicketsCtrl manageTicketsCtrl = new ManageTicketsCtrl();
+        this.dispose();
+        
+    }//GEN-LAST:event_btnPurchaseTicketsActionPerformed
+
+    private void btnExitApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitApplicationActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnExitApplicationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -173,14 +218,14 @@ public class NavigationUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton accountInformationButton;
-    private javax.swing.JButton exitApplicationButton;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton manageActivitiesButton;
-    private javax.swing.JButton manageFoodOrdersButton;
-    private javax.swing.JButton manageReports;
+    public javax.swing.JButton btnAccountInformation;
+    public javax.swing.JButton btnExitApplication;
+    public javax.swing.JButton btnManageActivities;
+    public javax.swing.JButton btnManageFoodOrders;
+    public javax.swing.JButton btnParkInformation;
+    public javax.swing.JButton btnPurchaseTickets;
     private javax.swing.JLabel navigationPanelTitleLabel;
-    private javax.swing.JButton parkInformationButton;
+    public javax.swing.JPanel pnlMainMenu;
     // End of variables declaration//GEN-END:variables
 
 

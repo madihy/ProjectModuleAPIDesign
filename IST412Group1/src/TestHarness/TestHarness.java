@@ -95,9 +95,9 @@ public class TestHarness {
         //Testing Manage Tickets Model, View, and Controller classes.
         System.out.println("\n Testing Manage Ticket Classes...");
         ManageTicketsCtrl ticketsCtrl = new ManageTicketsCtrl();
-        PurchaseTicketsUI purchaseView = new PurchaseTicketsUI();
-        purchaseView.setPurchaseTicketsUIActive(true);
-        purchaseView.isPurchaseTicketsUIActive();
+        PurchaseTicketsUIBackup purchaseView = new PurchaseTicketsUIBackup();
+        //purchaseView.setPurchaseTicketsUIActive(true);
+        //purchaseView.isPurchaseTicketsUIActive();
         ticketsCtrl.updateTicketSelectionButtonEvent();
         TicketOrder ticketOrder1 = new TicketOrder(10001, 0, 0, null, 0, 0, 0, "in-progress");
         ticketOrder1.setQuantityTickets(1);
@@ -135,9 +135,9 @@ public class TestHarness {
         ticketOrder1.getTicketsOrdered();
         ticketsCtrl.cancelOrderButtonEvent();
         ticketsCtrl.manageTicketsButtonEvent(); 
-        ManageTicketsUI manageTicketsView = new ManageTicketsUI();
-        manageTicketsView.setManageTicketsUIActive(true);
-        manageTicketsView.isManageTicketsUIActive();
+        //ManageTicketsUI manageTicketsView = new ManageTicketsUI();
+        //manageTicketsView.setManageTicketsUIActive(true);
+        //manageTicketsView.isManageTicketsUIActive();
         ticketsCtrl.handleTicketsBackButtonAction();
        
         
