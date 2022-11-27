@@ -6,6 +6,10 @@ package View;
 
 import Controller.NavigationCtrl;
 
+import javax.swing.table.DefaultTableModel;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Kate
@@ -116,13 +120,10 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         tblListPurchasedTickets.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         tblListPurchasedTickets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Order #", "# of Tickets", "# of Days", "Total Cost"
             }
         ));
         jScrollPane1.setViewportView(tblListPurchasedTickets);
@@ -403,7 +404,15 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfNumberOfDaysActionPerformed
 
     private void btnUpdateTicketPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateTicketPurchaseActionPerformed
-        // TODO add your handling code here:
+        int nofTickets = Integer.parseInt(tfNumberOfTickets.getText());
+        int nofDays = Integer.parseInt(tfNumberOfDays.getText());
+        int subtotal = (nofTickets * nofDays) * 50;
+        double tax = subtotal * 0.13;
+        double total = subtotal + tax;
+        System.out.println(nofTickets + " " + nofDays + " " + subtotal);
+        lblPurchaseSubtotalValue.setText("$" + String.valueOf(subtotal));
+        lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
+        lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
     }//GEN-LAST:event_btnUpdateTicketPurchaseActionPerformed
 
     private void btnCancelPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelPurchaseActionPerformed
@@ -412,8 +421,29 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelPurchaseActionPerformed
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
+        int nofTickets = Integer.parseInt(tfNumberOfTickets.getText());
+        int nofDays = Integer.parseInt(tfNumberOfDays.getText());
+        int subtotal = (nofTickets * nofDays) * 50;
+        int random = (int) (Math.random() * 100000);
+        double tax = subtotal * 0.13;
+        double total = subtotal + tax;
+        lblConfirmSubtotalValue.setText("$" + String.valueOf(subtotal));
+        lblConfirmTaxValue.setText("$" + String.valueOf(tax));
+        lblConfirmTotalCostValue.setText("$" + String.valueOf(total));
+        lblConfirmNumberOfTicketsValue.setText(tfNumberOfTickets.getText());
+        lblConfirmNumberOfDaysValue.setText(tfNumberOfDays.getText());
+        lblConfirmOrderNumberValue.setText(String.valueOf(random));
+        DefaultTableModel model = (DefaultTableModel) tblListPurchasedTickets.getModel();
+        List<String> list = new ArrayList<String>();
+        list.add(lblConfirmOrderNumberValue.getText());
+        list.add(lblConfirmNumberOfTicketsValue.getText());
+        list.add(lblConfirmNumberOfDaysValue.getText());
+        list.add(lblConfirmTotalCostValue.getText());
+        model.addRow(list.toArray());
+        tblListPurchasedTickets.setModel(model);
         this.pnlTicketOrderConfirmation.setVisible(true);
         this.pnlPurchaseTickets.setVisible(false);
+
     }//GEN-LAST:event_btnPurchaseTicketsActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
@@ -422,8 +452,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMainMenuActionPerformed
 
     private void btnReserveActivitiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReserveActivitiesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnReserveActivitiesActionPerformed
+ }//GEN-LAST:event_btnReserveActivitiesActionPerformed
 
     /**
      * @param args the command line arguments
