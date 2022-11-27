@@ -7,6 +7,8 @@ package View;
 import Controller.CreateCustomerCtrl;
 import Controller.LoginCtrl;
 
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -15,7 +17,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 
 /**
@@ -61,6 +63,7 @@ public class LoginUI extends javax.swing.JFrame {
         tfpswd = new javax.swing.JTextField();
         tfmail = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        GroupLayout layout = new GroupLayout(getContentPane());
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -104,7 +107,6 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,6 +235,8 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfmail;
     private javax.swing.JTextField tfpswd;
     private javax.swing.JTextField tfusr;
+
     // End of variables declaration//GEN-END:variables
+
 }
 

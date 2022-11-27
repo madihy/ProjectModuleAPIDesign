@@ -5,6 +5,7 @@
 package Controller;
 
 import java.awt.event.ActionEvent;
+import View.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,6 +13,8 @@ import java.util.Scanner;
 import Model.Account;
 import Model.Authentication;
 import View.LoginUI;
+import View.NavigationUI;
+
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,10 +37,6 @@ public class LoginCtrl {
     LoginUI loginUI;
     String Username,Password,Email;
 
-    public LoginCtrl(){
-        this.loginUI = loginUI;
-    }
-    
     
     /**
      * Login method to authenticate user login credentials.
@@ -132,6 +131,7 @@ public class LoginCtrl {
      * Throws an exception and provides an message on the screen if the login information is not found.
      */
     public void logic(String usr,String pswd){
+        NavigationUI navigationUI = new NavigationUI();
         try {
             RandomAccessFile raf = new RandomAccessFile(f, "rw");
             for(int i=0;i<ln;i+=4){System.out.println("count "+i);
@@ -140,6 +140,7 @@ public class LoginCtrl {
                 String forPswd = raf.readLine().substring(9);
                 if(usr.equals(forUser) & pswd.equals(forPswd)){
                     JOptionPane.showMessageDialog(null, "password matched");
+                    navigationUI.setVisible(true);
                     break;
                 }else if(i==(ln-3)){
                     JOptionPane.showMessageDialog(null, "incorrect username/password");
