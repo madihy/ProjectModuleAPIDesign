@@ -9,3 +9,7 @@ Email:hjello@gmail.com
 Username:test
 Password:test
 Email:test
+
+Username:test2
+Password:test2
+Email:test2@gmail.com
