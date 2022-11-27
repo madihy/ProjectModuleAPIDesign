@@ -18,7 +18,8 @@ public class Main {
      * @param args the command line arguments
     */
     public static void main(String[] args) throws InterruptedException {
-        LoginCtrl loginCtrl = new LoginCtrl();
+        LoginUI loginUI = new LoginUI();
+        loginUI.setVisible(true);
         //TestHarness th = new TestHarness();
     }
     
