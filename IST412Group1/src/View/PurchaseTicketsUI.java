@@ -7,6 +7,9 @@ package View;
 import Controller.NavigationCtrl;
 
 import javax.swing.table.DefaultTableModel;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -443,8 +446,20 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         tblListPurchasedTickets.setModel(model);
         this.pnlTicketOrderConfirmation.setVisible(true);
         this.pnlPurchaseTickets.setVisible(false);
-
-    }//GEN-LAST:event_btnPurchaseTicketsActionPerformed
+        try
+        {
+            FileOutputStream fos = new FileOutputStream("ticketData");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(list.toArray());
+            oos.close();
+            fos.close();
+        }
+        catch (IOException ioe)
+        {
+            ioe.printStackTrace();
+        }
+    }
+    //GEN-LAST:event_btnPurchaseTicketsActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
         NavigationCtrl navigationCtrl = new NavigationCtrl();
