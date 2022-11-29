@@ -176,7 +176,7 @@ public class LoginUI2 extends javax.swing.JFrame {
 
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
         CreateCustomerCtrl createCustCtrl = new CreateCustomerCtrl();
-        this.dispose();
+        
     }//GEN-LAST:event_newAccountButtonActionPerformed
 
     /**

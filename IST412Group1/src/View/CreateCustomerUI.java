@@ -94,12 +94,22 @@ public class CreateCustomerUI extends javax.swing.JFrame {
         btnSave.setText("Save");
         btnSave.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnSave.setName("btnSave"); // NOI18N
+        btnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveActionPerformed(evt);
+            }
+        });
 
         btnCancel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnCancel.setText("Cancel");
         btnCancel.setActionCommand("");
         btnCancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCancel.setName("btnCancel"); // NOI18N
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         lblSaveAccountError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblSaveAccountError.setForeground(new java.awt.Color(255, 0, 0));
@@ -211,6 +221,19 @@ public class CreateCustomerUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+            this.tfFirstName.setText(null);
+            this.tfLastName.setText(null);
+            this.tfEmail.setText(null);
+            this.tfUsername.setText(null);
+            this.tfPassword.setText(null);
+            this.setVisible(false);
+    }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSaveActionPerformed
 
     /**
      * @param args the command line arguments

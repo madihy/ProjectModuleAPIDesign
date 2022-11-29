@@ -51,7 +51,7 @@ public class CreateCustomerCtrl implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object obj = e.getSource();
-        if (obj == createCust.btnCancel) {
+        /**if (obj == createCust.btnCancel) {
             createCust.tfFirstName.setText(null);
             createCust.tfLastName.setText(null);
             createCust.tfEmail.setText(null);
@@ -59,7 +59,7 @@ public class CreateCustomerCtrl implements ActionListener {
             createCust.tfPassword.setText(null);
             createCust.setVisible(false);
             
-        }
+        }*/
         if (obj == createCust.btnSave) {
             firstName = createCust.tfFirstName.getText();
             lastName = createCust.tfLastName.getText();
@@ -80,6 +80,7 @@ public class CreateCustomerCtrl implements ActionListener {
                 usersArray.add(newCust);
                 auth.writeUserDataFile();
                 createCust.setVisible(false);
+                NavigationCtrl navCtrl = new NavigationCtrl();
             }
         }    
     }
