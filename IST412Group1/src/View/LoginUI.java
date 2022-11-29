@@ -184,7 +184,7 @@ public class LoginUI extends javax.swing.JFrame {
         newLogin.createFolder();
         newLogin.readFile();
         newLogin.countLines();
-        newLogin.addData(tfusr.getText(),tfpswd.getText(),tfmail.getText());
+        //newLogin.addData(tfusr.getText(),tfpswd.getText(),tfmail.getText());
         JOptionPane.showMessageDialog(null,"Data Registered");        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

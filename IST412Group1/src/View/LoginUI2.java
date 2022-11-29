@@ -170,8 +170,7 @@ public class LoginUI2 extends javax.swing.JFrame {
         newLogin.createFolder();
         newLogin.readFile();
         newLogin.countLines();
-        //newLogin.addData();
-        JOptionPane.showMessageDialog(null,"Data Registered");
+        newLogin.logic(usernameTextField.getText(), passwordField.getText());
     }//GEN-LAST:event_loginSubmitButtonActionPerformed
 
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed

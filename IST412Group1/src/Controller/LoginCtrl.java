@@ -35,7 +35,7 @@ public class LoginCtrl {
     File f = new File("USERDATA.txt");
     int ln;
     LoginUI loginUI;
-    String Username,Password,Email;
+    String Username,Password,Email,fname, lname;
 
     
     /**
@@ -103,20 +103,23 @@ public class LoginCtrl {
 
     }
 
-    public void addData(String usr,String pswd,String mail){
+    public void addData(String usr,String pswd,String mail, String fname, String lname){
         try {
             RandomAccessFile raf = new RandomAccessFile(f, "rw");
             for(int i=0;i<ln;i++){
                 raf.readLine();
             }
-            //if condition added after video to have no lines on first entry
             if(ln>0){
                 raf.writeBytes("\r\n");
                 raf.writeBytes("\r\n");
             }
             raf.writeBytes("Username:"+usr+ "\r\n");
             raf.writeBytes("Password:"+pswd+ "\r\n");
-            raf.writeBytes("Email:"+mail);
+            raf.writeBytes("Email:"+mail+ "\r\n");
+            raf.writeBytes("First Name:"+fname + "\r\n");
+            raf.writeBytes("Last Name:"+lname);
+
+
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -134,7 +137,7 @@ public class LoginCtrl {
         NavigationUI navigationUI = new NavigationUI();
         try {
             RandomAccessFile raf = new RandomAccessFile(f, "rw");
-            for(int i=0;i<ln;i+=4){System.out.println("count "+i);
+            for(int i=0;i<ln;i+=6){System.out.println("count "+i);
 
                 String forUser = raf.readLine().substring(9);
                 String forPswd = raf.readLine().substring(9);
@@ -142,11 +145,11 @@ public class LoginCtrl {
                     JOptionPane.showMessageDialog(null, "password matched");
                     navigationUI.setVisible(true);
                     break;
-                }else if(i==(ln-3)){
+                }else if(i==(ln-5)){
                     JOptionPane.showMessageDialog(null, "incorrect username/password");
                     break;
                 }
-                for(int k=1;k<=2;k++){
+                for(int k=1;k<=4;k++){
                     raf.readLine();
                 }
             }
