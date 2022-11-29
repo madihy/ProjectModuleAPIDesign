@@ -17,10 +17,12 @@ public class Main {
     /**
      * @param args the command line arguments
     */
-    public static void main(String[] args) throws InterruptedException {
-        LoginUI loginUI = new LoginUI();
-        loginUI.setVisible(true);
+    public static void main(String[] args)  {
+        //LoginUI loginUI = new LoginUI();
+        //loginUI.setVisible(true);
         //TestHarness th = new TestHarness();
+        LoginUI2 loginUI2 = new LoginUI2();
+        loginUI2.setVisible(true);
     }
     
 }
