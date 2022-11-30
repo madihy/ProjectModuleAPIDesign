@@ -122,7 +122,7 @@ public class TestHarness {
         ticketOrder1.setOrderTax(0);
         ticketOrder1.calculateTax(50.00);
         ticketOrder1.setOrderTax(3.00); 
-        Ticket ticket1 = new Ticket(53.00, 1001, null, "Unassigned", false);
+        //Ticket ticket1 = new Ticket(53.00, 1001, null, "Unassigned", false);
         ticketsCtrl.displayTicketOrderConfirmation();
         System.out.println("\n" + "Ticket order purchase is confirmed:");
         ticketOrder1.getOrderNumber();

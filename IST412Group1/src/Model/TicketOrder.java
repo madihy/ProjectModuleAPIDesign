@@ -38,7 +38,8 @@ public class TicketOrder{
          this.orderNumber = orderNumber;
          this.quantityTickets = quantityTickets;
          this.quantityDays = quantityDays;
-         this.ticketsOrdered = ticketsOrdered;
+         this.ticketsOrdered = createTicketsArray(quantityTickets, quantityDays);
+         
          this.orderSubtotal = orderSubtotal;
          this.orderTax = orderTax;
          this.orderTotal = orderTotal;
@@ -50,11 +51,13 @@ public class TicketOrder{
       * @param numberOfDays sets the number of days for each ticket.
       * @return an Array of tickets containing the specified quantity for each day requested for the ticket order.
       */
-     public Array[] createTicketsArray (int numberOfTickets, int numberOfDays){
-         Array[] ticketsRequested = null;
+     public ArrayList<Ticket> createTicketsArray (int numberOfTickets, int numberOfDays){
+         ArrayList<Ticket> ticketsRequested = new ArrayList();
          int quantity = numberOfTickets * numberOfDays;
          System.out.println("Ticket array created.");
-         for(int i = 0; i <= quantity; i++){     
+         for(int i = 0; i <= quantity; i++){
+             Ticket newTicket = new Ticket();
+             ticketsRequested.add(newTicket);
          }
          return ticketsRequested;
          

@@ -6,18 +6,19 @@ package Model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  * This class contains information for tickets that customers can purchase and manage.
  *@author katerineer 
  *
  */
-public class Ticket {
-    private double ticketCost; 
+public class Ticket { 
     private long ticketNumber;
-    private LocalDate visitDate;
+    private LocalDate purchaseDate;
     private String ticketAssignedName;
     private boolean checkedIn;
+    ArrayList<Integer> ticketNums = new ArrayList<>();
     
     /**
      * This is the full constructor for the Ticket class.
@@ -27,31 +28,16 @@ public class Ticket {
      * @param ticketAssignedName the string representing the optional name of the person who will use the ticket
      * @param checkedIn the Boolean representing whether the ticket has been checked in or used
      */
-    public Ticket (double ticketCost, long ticketNumber, LocalDate visitDate, String ticketAssignedName, boolean checkedIn){
+    public Ticket (){
         
-        this.ticketCost = ticketCost;
-        this.ticketNumber = ticketNumber;
-        this.visitDate = visitDate;
-        this.ticketAssignedName = ticketAssignedName;
-        this.checkedIn = checkedIn;
+        this.ticketNumber = this.createTicketNumber();
+        this.purchaseDate = LocalDate.now();
+        this.ticketAssignedName = "";
+        this.checkedIn = false;
     
     }
     
-    /**
-     * Returns the ticket cost for this ticket.
-     * @return the double representing the ticket cost for the ticket.
-     */
-    public double getTicketCost() {        
-        return ticketCost;
-    }
-
-    /**
-     * Sets the ticket cost for the ticket.
-     * @param ticketCost sets the ticket cost for the ticket.
-     */
-    public void setTicketCost(double ticketCost) {
-        this.ticketCost = ticketCost;
-    }
+   
 
     /**
      * Returns the ticket number for this ticket.
@@ -89,16 +75,16 @@ public class Ticket {
      * Gets the date for the park visit for this ticket.
      * @return the LocalDate visitDate representing the date for the park visit for the ticket.
      */
-    public LocalDate getVisitDate() {
-        return visitDate;
+    public LocalDate getPurchaseDate() {
+        return purchaseDate;
     }
 
     /**
      * Sets the date for the park visit for this ticket.
      * @param visitDate sets the date for the park visit for the ticket.
      */
-    public void setVisitDate(LocalDate visitDate) {
-        this.visitDate = visitDate;
+    public void setPurchaseDate(LocalDate visitDate) {
+        this.purchaseDate = purchaseDate;
     }
 
     /**
@@ -116,4 +102,19 @@ public class Ticket {
     public void setTicketAssignedName(String ticketAssignedName) {
         this.ticketAssignedName = ticketAssignedName;
     }
+    
+    /**
+     * Generates the ticket number automatically when a ticket is produced.
+     * @return 
+     */
+    public int createTicketNumber(){
+        int ticketNum;
+        
+        do{
+            ticketNum = (int)(Math.random()*800000000) + 1000000000;
+        } 
+        while (ticketNums.contains(ticketNum));
+        ticketNums.add(ticketNum);
+        return ticketNum;
+   }
 }
