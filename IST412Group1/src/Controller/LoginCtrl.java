@@ -5,15 +5,16 @@
 package Controller;
 
 import java.awt.event.ActionEvent;
-import View.*;
+import View.LoginUI;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import Model.Account;
 import Model.Authentication;
+import Model.Customer;
+import View.CreateCustomerUI;
 import View.LoginUI;
 import View.NavigationUI;
+import View.LoginUI;
 
 import java.awt.event.ActionListener;
 import java.util.logging.Level;
@@ -27,160 +28,118 @@ import javax.swing.*;
  * @author Kate
  * This class manages the actions to facilitate the login process for all users of this application.
  */
-public class LoginCtrl {
-    public ArrayList<Account> usersArray = new ArrayList<>();
-    public String currentUsername;
-    public String currentPassword;
-    private String event;
-    File f = new File("USERDATA.txt");
-    int ln;
-    private LoginUI2 loginUI2;
-    String Username,Password,Email,fname, lname;
-    public Boolean getSuccess = false;
-
+public class LoginCtrl{
+    
+    Authentication auth; 
+    ArrayList<Customer> customerArray; 
+    LoginUI loginUI;
+    CreateCustomerUI createCustUI;
+    
+    
+    public LoginCtrl(){
+        auth = new Authentication();
+        auth.readCustomerDataFile();
+        this.auth = auth;
+        
+        customerArray = new ArrayList<Customer>(auth.getCustomerArray());
+        this.customerArray = customerArray;
+        
+               
+        createCustUI = new CreateCustomerUI();
+        createCustUI.setVisible(false);
+        this.createCustUI = createCustUI;
+        
+    }
+    
+    public Authentication getCustomerDataFromLoginController(){
+        return this.auth;
+    }
     
     /**
-     * Login method to authenticate user login credentials.
+     * Method to authenticate customer username and password from the LoginUI with the customerArray
+     * @param inf_userName
+     * @param inf_password
+     * @return 
      */
-    public void login(String username, String password) {
-        Authentication auth = new Authentication(usersArray, currentUsername, currentPassword);
-        auth.readUserDataFile();
-
-
-
-        auth.createTestUsers();
+    public boolean authenticateUser(String inf_userName, String inf_password){
+        boolean authStatus = false; //return true if authentication, else false
+        
+        String usernameToAuthenticate = inf_userName;//username from the LoginUI
+        String passwordToAuthenticate = inf_password;//password from the LoginUI
+        Customer customerToVerify;
+        
+        customerToVerify = findAccount(usernameToAuthenticate);//search the customerArray for a username, return a Customer object
+        
+        if (customerToVerify != null && customerToVerify.getPassword().equals(passwordToAuthenticate)){ //checks if the Customer object's password equals the password to authenticate.
+            authStatus = true;
+        }
+        else {
+            authStatus = false;
+        }
+        
+        return authStatus;
         
     }
-
-
     /**
-     * Establishes the action event to be carried out when the new user button is selected on the login screen.
-     * Directs the user to the new user login screen to set up a user account.
+     * Method to find an account and returns a customer object
+     * @param inf_username
+     * @return 
      */
-    public void handleNewUserButtonAction(String usr,String pswd){
-                
-        /**try {
-            RandomAccessFile raf = new RandomAccessFile(inputFile, "rw");
-            for(int i=0;i<ln;i++){
-                raf.readLine();
-            }
-            if(ln>0){
-                raf.writeBytes("\r\n");
-                raf.writeBytes("\r\n");
-            }
-            raf.writeBytes(usr+ ",");
-            raf.writeBytes(pswd + "\n");
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
+    public Customer findAccount(String inf_username){
+        Customer customerToReturn = null;
         
-    }
-
-
-    /**
-     * Creates new form notepad
-     */
-
-   public void createFolder(){
-        if(!f.exists()){
-            f.mkdirs();
-        }
-    }
-
-   public void readFile(){
-        try {
-            FileReader fr = new FileReader(f);
-            System.out.println("file exists!");
-        } catch (FileNotFoundException ex) {
-            try {
-                FileWriter fw = new FileWriter(f);
-                System.out.println("File created");
-            } catch (IOException ex1) {
-                Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex1);
+        for (int i = 0; i < customerArray.size(); i++){
+            if (customerArray.get(i).getUsername().equals(inf_username)){
+                customerToReturn = customerArray.get(i);
             }
         }
+        
+        return customerToReturn;
+    }
+    
+    public boolean createAccount(String inf_FirstName, String inf_LastName, String inf_Email, String inf_Username, String inf_Password) { //Method to create a new account. If account is created, return boolean is true 
+
+        boolean accountCreateSuccess = false; //returns true if account creation is successful 
+        boolean noDuplicate = true; 
+        
+        System.out.println(accountCreateSuccess);    
+        System.out.println(inf_Username + ", " + inf_Password + ", " + inf_FirstName + ", " + inf_LastName + ", " + inf_Email);
+        
+        for (int i = 0; i < customerArray.size(); i++) {
+            if (customerArray.get(i).getUsername().equals(inf_Username)) { //check to make sure username doesn't already exist 
+                noDuplicate = false;
+                System.out.println("duplicate found: " + noDuplicate);
+            }            
+        } 
+        accountCreateSuccess = noDuplicate;
+        System.out.println(accountCreateSuccess);
+        
+        if (accountCreateSuccess == true) {
+            
+            Customer newCustomer = new Customer(inf_Username, inf_Password, inf_FirstName, inf_LastName, inf_Email, null);
+            customerArray.add(newCustomer);
+            writeArray(customerArray);
+        }
+        System.out.println(accountCreateSuccess);
+   
+
+        return accountCreateSuccess;
 
     }
+ 
+    public void writeArray(ArrayList<Customer> inf_arrayToWrite) { //write the local arraylist back to userdata
 
-    public void addData(String usr,String pswd,String mail, String fname, String lname){
-        try {
-            RandomAccessFile raf = new RandomAccessFile(f, "rw");
-            for(int i=0;i<ln;i++){
-                raf.readLine();
-            }
-            if(ln>0){
-                raf.writeBytes("\r\n");
-                raf.writeBytes("\r\n");
-            }
-            raf.writeBytes("Username:"+usr+ "\r\n");
-            raf.writeBytes("Password:"+pswd+ "\r\n");
-            raf.writeBytes("Email:"+mail+ "\r\n");
-            raf.writeBytes("First Name:"+fname + "\r\n");
-            raf.writeBytes("Last Name:"+lname);
-
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
-
-    /**
-     * Establishes the action event to be carried out when the submit button is selected on the login screen.
-     * Authenticates the user name and password from the list of accounts stored in a data file.
-     * Throws an exception and provides an message on the screen if the login information is not found.
-     */
-    public void logic(String usr,String pswd){
-        NavigationUI navigationUI = new NavigationUI();
-        try {
-            RandomAccessFile raf = new RandomAccessFile(f, "rw");
-            for(int i=0;i<ln;i+=6){System.out.println("count "+i);
-
-                String forUser = raf.readLine().substring(9);
-                String forPswd = raf.readLine().substring(9);
-                if(usr.equals(forUser) & pswd.equals(forPswd)){
-                    navigationUI.setVisible(true);
-                    getSuccess = true;
-                    break;
-                }else if(i==(ln-5)){
-                    JOptionPane.showMessageDialog(null, "incorrect username/password");
-                    break;
-                }
-                for(int k=1;k<=4;k++){
-                    raf.readLine();
-                }
-            }
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    }
-
-    /**
-     * Counts the number of lines in the txt file.
-     * Prints out number of lines.
-     * Throws exception if there is an error.
-     */
-   public void countLines(){
-        try {
-            ln=0;
-            RandomAccessFile raf = new RandomAccessFile(f, "rw");
-            for(int i=0;raf.readLine()!=null;i++){
-                ln++;
-            }
-            System.out.println("number of lines:"+ln);
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(LoginCtrl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        auth.writeArray(inf_arrayToWrite);
 
     }
     
+    public void makeCustomerUIVisible(){
+        createCustUI.setVisible(true);
+        loginUI.setVisible(false);
+    }
+    
+    public void makeLoginUIVisible(){
+        createCustUI.setVisible(false);
+        loginUI.setVisible(true);
+    }
 }

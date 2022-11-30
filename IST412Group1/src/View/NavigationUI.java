@@ -4,7 +4,7 @@
  */
 package View;
 
-import Controller.CreateCustomerCtrl;
+
 import Controller.ManageTicketsCtrl;
 import Controller.ParkInformationCtrl;
 
@@ -162,7 +162,7 @@ public class NavigationUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAccountInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccountInformationActionPerformed
-        CreateCustomerCtrl createAccountCtrl = new CreateCustomerCtrl();
+        CreateCustomerUI createCustUI = new CreateCustomerUI();
         this.dispose();
     }//GEN-LAST:event_btnAccountInformationActionPerformed
 
@@ -206,6 +206,12 @@ public class NavigationUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(NavigationUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

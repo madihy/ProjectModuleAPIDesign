@@ -27,7 +27,7 @@ import java.util.concurrent.TimeUnit;
 public class TestHarness {
     public TestHarness() throws InterruptedException {    
       
-        System.out.println("Initiating Test Harness...");
+       System.out.println("Initiating Test Harness...");
         TimeUnit.MILLISECONDS.sleep(500);
 
         /**Testing Login Model, View, and Controller
@@ -59,7 +59,7 @@ public class TestHarness {
         CreateCustomerUI cusAccountUI = new CreateCustomerUI();
         //cusAccountUI.setCustomerUIActive(true);
         //cusAccountUI.isCustomerUIActive();
-        Customer customerModel = new Customer("user1", "password1", "firstname1", "lastname1", "email1@email.com");
+        /**Customer customerModel = new Customer("user1", "password1", "firstname1", "lastname1", "email1@email.com");
         System.out.println("Current customer account information is displayed!");
         customerModel.getUsername();
         customerModel.getPassword();
@@ -78,7 +78,7 @@ public class TestHarness {
         customerModel.getPassword();
         customerModel.getFirstName();
         customerModel.getLastName();
-        customerModel.getEmail();
+        customerModel.getEmail();*/
         System.out.println("\n");
         
         navCtrl.handleCustomerBackButtonAction();

@@ -5,17 +5,18 @@
 package View;
 
 import Controller.LoginCtrl;
-
-import javax.swing.*;
+import Controller.NavigationCtrl;
 
 /**
  *
  * @author Kate
  */
 public class CreateCustomerUI extends javax.swing.JFrame {
-        /**
-         * Creates new form CustomerUI
-         */
+    
+
+    /**
+     * Creates new form CustomerUI
+     */
     public CreateCustomerUI() {
         initComponents();
     }
@@ -45,7 +46,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         lblSaveAccountError = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setMinimumSize(new java.awt.Dimension(300, 590));
         jPanel1.setName("createCustPanel"); // NOI18N
@@ -225,26 +226,35 @@ public class CreateCustomerUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-            this.tfFirstName.setText(null);
-            this.tfLastName.setText(null);
-            this.tfEmail.setText(null);
-            this.tfUsername.setText(null);
-            this.tfPassword.setText(null);
-            this.setVisible(false);
+            LoginUI loginUI = new LoginUI();
+            loginUI.setVisible(true);
+            this.dispose();
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        LoginCtrl newLogin = new LoginCtrl();
-        LoginUI2 newLoginUI = new LoginUI2();
-        NavigationUI newNav = new NavigationUI();
-        newLogin.createFolder();
-        newLogin.readFile();
-        newLogin.countLines();
-        newLogin.addData(tfUsername.getText(),tfPassword.getText(),tfEmail.getText(), tfFirstName.getText(), tfLastName.getText());
-        JOptionPane.showMessageDialog(null,"Data Registered");
-        this.setVisible(false);
-        newLoginUI.setVisible(false);
-        newNav.setVisible(true);
+        LoginCtrl loginCtrl = new LoginCtrl();
+        
+        String newFirstName = this.tfFirstName.getText();
+        String newLastName = this.tfLastName.getText();
+        String newEmail = this.tfEmail.getText();
+        String newUsername = this.tfUsername.getText();
+        String newPassword = this.tfPassword.getText();
+        
+        if(newFirstName.equals("") || newLastName.equals("") || newEmail.equals("") || newUsername.equals("") || newPassword.equals("")){
+            this.lblSaveAccountError.setText("All fields are required");
+        }
+        else{
+            boolean createSuccess = loginCtrl.createAccount(newFirstName, newLastName, newEmail, newUsername, newPassword);   
+                if (createSuccess == true){
+                    NavigationCtrl navCtrl = new NavigationCtrl();
+                    this.dispose();                   
+                }
+                else{
+                    this.lblSaveAccountError.setText("Username taken, try new username");
+                }
+            
+        }
+        
     }//GEN-LAST:event_btnSaveActionPerformed
 
     /**
@@ -272,6 +282,30 @@ public class CreateCustomerUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(CreateCustomerUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>

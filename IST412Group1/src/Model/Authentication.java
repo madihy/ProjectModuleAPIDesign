@@ -17,9 +17,12 @@ import java.util.ArrayList;
  * @author katerineer
  */
 public class Authentication{
-    public ArrayList<Account> usersArray = new ArrayList<>();
+    public ArrayList<Customer> customerArray = new ArrayList<>();
+    String customerDataFileName = "customerData.ser";
+    Customer currentUser;
     private String currentUsername;
     private String currentPassword;
+    
     
     /**
      * This is the full constructor for the authentication class.
@@ -27,46 +30,45 @@ public class Authentication{
      * @param currentUsername string for the current username used in the authentication process
      * @param currentPassword string for the current password used in the authentication process
      */
-    public Authentication (ArrayList usersArray, String currentUsername, String currentPassword){
+    public Authentication (){
         
-        createTestUsers();
-        this.usersArray = usersArray;
-        this.currentUsername = currentUsername;
-        this.currentPassword = currentPassword;
+        this.readCustomerDataFile();
+        
+        if (customerArray.isEmpty() || customerArray == null){
+            System.out.println("customerArray empty, creating test customers...");
+            
+            this.createTestCustomers();
+            this.writeCustomerDataFile();
+            this.readCustomerDataFile();
+        }
                
-    }
-
-    public Authentication() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
      * Creates test user accounts to allow testing of the application throughout development.
      * Gets the users array and adds the new accounts to the users array list.
      */ 
-    public void createTestUsers() {
+    public void createTestCustomers() {
         
         //Populate array with some test users 
-        Account account1 = new Account("username1", "password1", "user1FirstName", "user1LastName");
-        Account account2 = new Account("username2", "password2", "user2FirstName", "user2LastName");
-        Account account3 = new Account("username3", "password3", "user3FirstName", "user3LastName");
-        Account account4 = new Account("username4", "password4", "user4FirstName", "user4LastName");
-        Account account5 = new Account("username5", "password5", "user5FirstName", "user5LastName");
+        Customer customer1 = new Customer("username1", "password1", "user1FirstName", "user1LastName", "email1@test.com", null);
+        Customer customer2 = new Customer("username2", "password2", "user2FirstName", "user2LastName", "email2@test.com", null);
+        Customer customer3 = new Customer("username3", "password3", "user3FirstName", "user3LastName", "email3@test.com", null);
         
-        //Adds user accounts to the user array
-        getUsersArray().add(account1);
-        getUsersArray().add(account2);
-        getUsersArray().add(account3);
-        getUsersArray().add(account4);
-        getUsersArray().add(account5);   
+        
+        //Adds customer accounts to the customer array
+        getCustomerArray().add(customer1);
+        getCustomerArray().add(customer2);
+        getCustomerArray().add(customer3);
+        
     }
 
     /**
-     * Gets array list of user accounts.
-     * @return the array list usersArray representing the list of user accounts.
+     * Gets array list of customer accounts.
+     * @return the array list customerArray representing the list of customer accounts.
      */
-    public ArrayList<Account> getUsersArray() {
-        return usersArray;
+    public ArrayList<Customer> getCustomerArray() {
+        return customerArray;
     }
 
     /**
@@ -74,7 +76,7 @@ public class Authentication{
      * @param usersArray sets the array list of user accounts.
      */
     public void setUsersArray(ArrayList<Account> usersArray) {
-        this.usersArray = usersArray;
+        this.customerArray = customerArray;
     }
 
     /**
@@ -110,20 +112,21 @@ public class Authentication{
     }
 
 
-    public void readUserDataFile() {
+    public void readCustomerDataFile() {
 
         FileInputStream fis = null;
         ObjectInputStream in = null;
 
         try {
-            fis = new FileInputStream("USERDATA.txt");
+            fis = new FileInputStream(customerDataFileName);
             in = new ObjectInputStream(fis);
-            usersArray = (ArrayList<Account>) in.readObject();
+            customerArray = (ArrayList<Customer>) in.readObject();
             in.close();
 
-            if (!usersArray.isEmpty()) {
-                System.out.println("User Data Loaded from File");
+            if (!customerArray.isEmpty()) {
+                System.out.println("Customer Data Loaded from File");
             }
+            this.customerArray = customerArray;
 
         } catch (IOException ex) {
             //ex.printStackTrace();
@@ -133,19 +136,28 @@ public class Authentication{
 
     }
 
-    public void writeUserDataFile() {
+    public void writeArray(ArrayList<Customer> inf_userArray) {
+        //userArray.clear();
+        this.customerArray = inf_userArray;
+
+        writeCustomerDataFile();
+
+    }
+    
+    public void writeCustomerDataFile() {
 
         FileOutputStream fos = null;
         ObjectOutputStream out = null;
 
         try {
-            fos = new FileOutputStream("USERDATA.txt");
+            fos = new FileOutputStream(customerDataFileName);
             out = new ObjectOutputStream(fos);
-            out.writeObject(usersArray);
+            out.writeObject(customerArray);
             out.close();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
 
     }
+ 
 }

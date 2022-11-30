@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Random;
 
@@ -12,7 +13,7 @@ import java.util.Random;
  * Customer and employee classes will extend this class.
  * @author brandonworley and katerineer
  */
-public class Account {
+public class Account implements Serializable{
 
     private int accountID;
     private String username;

@@ -21,15 +21,8 @@ public class Main {
      * @param args the command line arguments
     */
     public static void main(String[] args)  {
-        //LoginUI loginUI = new LoginUI();
-        //loginUI.setVisible(true);
-        //TestHarness th = new TestHarness();
-        LoginUI2 loginUI2 = new LoginUI2();
-        try {
-            loginUI2.setVisible(true);
-        } catch (Exception ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        LoginUI loginUI = new LoginUI();
+        loginUI.setVisible(true);
     }
     
 }
