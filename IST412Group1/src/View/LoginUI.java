@@ -19,6 +19,7 @@ public class LoginUI extends javax.swing.JFrame {
      */
     public LoginUI() {
         initComponents();
+        this.lblSubmitLoginError.setVisible(false);
     }
 
     /**
@@ -84,6 +85,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         lblSubmitLoginError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblSubmitLoginError.setForeground(new java.awt.Color(255, 0, 51));
+        lblSubmitLoginError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSubmitLoginError.setText("Error Message");
 
         usernameTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -108,14 +110,16 @@ public class LoginUI extends javax.swing.JFrame {
                                 .addGap(96, 96, 96)
                                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(newAccountButton)
-                                    .addComponent(loginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblSubmitLoginError))))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addComponent(loginSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 107, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
                         .addGap(0, 20, Short.MAX_VALUE)
                         .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(passwordTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(usernameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(usernameTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblSubmitLoginError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         loginPanelLayout.setVerticalGroup(

@@ -19,6 +19,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
      */
     public CreateCustomerUI() {
         initComponents();
+        this.lblSaveAccountError.setVisible(false);
     }
 
     /**
@@ -116,6 +117,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
 
         lblSaveAccountError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblSaveAccountError.setForeground(new java.awt.Color(255, 0, 0));
+        lblSaveAccountError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSaveAccountError.setText("User Name is not available");
         lblSaveAccountError.setName("lblSaveAccountError"); // NOI18N
 
@@ -139,9 +141,6 @@ public class CreateCustomerUI extends javax.swing.JFrame {
                             .addContainerGap()
                             .addComponent(tfEmail))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addGap(50, 50, 50)
-                            .addComponent(lblSaveAccountError))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
                             .addComponent(tfFirstName))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -164,7 +163,8 @@ public class CreateCustomerUI extends javax.swing.JFrame {
                         .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lblCreateUserTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblCreateUserTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSaveAccountError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -242,6 +242,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
         
         if(newFirstName.equals("") || newLastName.equals("") || newEmail.equals("") || newUsername.equals("") || newPassword.equals("")){
             this.lblSaveAccountError.setText("All fields are required");
+            this.lblSaveAccountError.setVisible(true);
         }
         else{
             boolean createSuccess = loginCtrl.createAccount(newFirstName, newLastName, newEmail, newUsername, newPassword);   
@@ -251,6 +252,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
                 }
                 else{
                     this.lblSaveAccountError.setText("Username taken, try new username");
+                    this.lblSaveAccountError.setVisible(true);
                 }
             
         }
