@@ -4,16 +4,18 @@
  */
 package View;
 
+import Controller.LoginCtrl;
+
+import javax.swing.*;
+
 /**
  *
  * @author Kate
  */
 public class CreateCustomerUI extends javax.swing.JFrame {
-    
-
-    /**
-     * Creates new form CustomerUI
-     */
+        /**
+         * Creates new form CustomerUI
+         */
     public CreateCustomerUI() {
         initComponents();
     }
@@ -43,7 +45,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
         btnCancel = new javax.swing.JButton();
         lblSaveAccountError = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setMinimumSize(new java.awt.Dimension(300, 590));
         jPanel1.setName("createCustPanel"); // NOI18N
@@ -232,7 +234,17 @@ public class CreateCustomerUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
+        LoginCtrl newLogin = new LoginCtrl();
+        LoginUI2 newLoginUI = new LoginUI2();
+        NavigationUI newNav = new NavigationUI();
+        newLogin.createFolder();
+        newLogin.readFile();
+        newLogin.countLines();
+        newLogin.addData(tfUsername.getText(),tfPassword.getText(),tfEmail.getText(), tfFirstName.getText(), tfLastName.getText());
+        JOptionPane.showMessageDialog(null,"Data Registered");
+        this.setVisible(false);
+        newLoginUI.setVisible(false);
+        newNav.setVisible(true);
     }//GEN-LAST:event_btnSaveActionPerformed
 
     /**

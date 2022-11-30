@@ -4,6 +4,9 @@ import Model.*;
 import View.*;
 import Controller.*;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * This is the WallyLand Vacation Group Application for IST 412, Group1
  */
@@ -22,7 +25,11 @@ public class Main {
         //loginUI.setVisible(true);
         //TestHarness th = new TestHarness();
         LoginUI2 loginUI2 = new LoginUI2();
-        loginUI2.setVisible(true);
+        try {
+            loginUI2.setVisible(true);
+        } catch (Exception ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

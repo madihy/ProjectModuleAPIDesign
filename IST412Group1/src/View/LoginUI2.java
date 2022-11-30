@@ -6,7 +6,10 @@ package View;
 
 import Controller.CreateCustomerCtrl;
 import Controller.LoginCtrl;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowEvent;
 
 /**
  *
@@ -20,6 +23,7 @@ public class LoginUI2 extends javax.swing.JFrame {
     public LoginUI2() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,7 +44,9 @@ public class LoginUI2 extends javax.swing.JFrame {
         lblUsername1 = new javax.swing.JLabel();
         lblSubmitLoginError = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+
 
         loginPanel.setMinimumSize(new java.awt.Dimension(300, 590));
 
@@ -55,6 +61,7 @@ public class LoginUI2 extends javax.swing.JFrame {
                 loginSubmitButtonActionPerformed(evt);
             }
         });
+
 
         usernameTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         usernameTextField.setToolTipText("Username");
@@ -171,11 +178,16 @@ public class LoginUI2 extends javax.swing.JFrame {
         newLogin.readFile();
         newLogin.countLines();
         newLogin.logic(usernameTextField.getText(), passwordField.getText());
+        if(newLogin.getSuccess == true){
+            this.setVisible(false);
+        }
+        else{
+            lblSubmitLoginError.setText("Invalid Username or Password");
+        }
     }//GEN-LAST:event_loginSubmitButtonActionPerformed
 
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
         CreateCustomerCtrl createCustCtrl = new CreateCustomerCtrl();
-        
     }//GEN-LAST:event_newAccountButtonActionPerformed
 
     /**

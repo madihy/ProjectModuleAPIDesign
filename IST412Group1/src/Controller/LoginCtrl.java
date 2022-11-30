@@ -34,8 +34,9 @@ public class LoginCtrl {
     private String event;
     File f = new File("USERDATA.txt");
     int ln;
-    LoginUI loginUI;
+    private LoginUI2 loginUI2;
     String Username,Password,Email,fname, lname;
+    public Boolean getSuccess = false;
 
     
     /**
@@ -142,8 +143,8 @@ public class LoginCtrl {
                 String forUser = raf.readLine().substring(9);
                 String forPswd = raf.readLine().substring(9);
                 if(usr.equals(forUser) & pswd.equals(forPswd)){
-                    JOptionPane.showMessageDialog(null, "password matched");
                     navigationUI.setVisible(true);
+                    getSuccess = true;
                     break;
                 }else if(i==(ln-5)){
                     JOptionPane.showMessageDialog(null, "incorrect username/password");
