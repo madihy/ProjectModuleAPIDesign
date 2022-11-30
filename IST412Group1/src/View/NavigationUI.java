@@ -19,6 +19,7 @@ public class NavigationUI extends javax.swing.JFrame {
      */
     public NavigationUI() {
         initComponents();
+        this.btnAccountInformation.setVisible(false);
     }
 
     /**
