@@ -447,8 +447,8 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblConfirmOrderNumberValue.setText(String.valueOf(ticketOrder.getOrderNumber()));
 
         ArrayList<Ticket> purchasedTickets = new ArrayList();
-        purchasedTickets = ticketOrder.getTicketsOrdered();
-
+        purchasedTickets = ticketOrder.createTicketsArray(ticketOrder.getQuantityTickets(), ticketOrder.getQuantityDays());
+        
         for (int i = 0; i < purchasedTickets.size(); i++){
             System.out.println(purchasedTickets.get(i).toString());
 
