@@ -9,6 +9,7 @@ import Controller.NavigationCtrl;
 import Model.Ticket;
 import Model.TicketOrder;
 
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -433,8 +434,9 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
         this.pnlTicketOrderConfirmation.setVisible(true);
-        this.pnlPurchaseTickets.setVisible(false); 
-        
+        this.pnlPurchaseTickets.setVisible(false);
+        StringBuilder sb=new StringBuilder();
+
         TicketOrder ticketOrder = manTicketsCtrl.getTicketOrderInformation();
         
         lblConfirmSubtotalValue.setText("$" + String.valueOf(ticketOrder.getOrderSubtotal()));
@@ -443,24 +445,21 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblConfirmNumberOfTicketsValue.setText(String.valueOf(ticketOrder.getQuantityTickets()));
         lblConfirmNumberOfDaysValue.setText(String.valueOf(ticketOrder.getQuantityDays()));
         lblConfirmOrderNumberValue.setText(String.valueOf(ticketOrder.getOrderNumber()));
-        
-        
-        
-        DefaultTableModel model = (DefaultTableModel) tblListPurchasedTickets.getModel();
+
         ArrayList<Ticket> purchasedTickets = new ArrayList();
-       
         purchasedTickets = ticketOrder.getTicketsOrdered();
+
         for (int i = 0; i < purchasedTickets.size(); i++){
-            
+            System.out.println(purchasedTickets.get(i).toString());
+
         }
-        
-        //model.addRow(list.toArray());
-        tblListPurchasedTickets.setModel(model);
+
         
         try
         {
             FileOutputStream fos = new FileOutputStream("ticketData");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
+
          //   oos.writeObject(list.toArray());
             oos.close();
             fos.close();
