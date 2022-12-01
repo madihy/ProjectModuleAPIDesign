@@ -6,12 +6,14 @@ package View;
 
 import Controller.ManageTicketsCtrl;
 import Controller.NavigationCtrl;
+import Model.Ticket;
 import Model.TicketOrder;
 
 import javax.swing.table.DefaultTableModel;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import static java.time.Clock.system;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -451,12 +453,14 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         
         
         DefaultTableModel model = (DefaultTableModel) tblListPurchasedTickets.getModel();
-        List<String> list = new ArrayList<String>();
-        list.add(lblConfirmOrderNumberValue.getText());
-        list.add(lblConfirmNumberOfTicketsValue.getText());
-        list.add(lblConfirmNumberOfDaysValue.getText());
-        list.add(lblConfirmTotalCostValue.getText());
-        model.addRow(list.toArray());
+        ArrayList<Ticket> purchasedTickets = new ArrayList();
+       
+        purchasedTickets = ticketOrder.getTicketsOrdered();
+        for (int i = 0; i < purchasedTickets.size(); i++){
+            
+        }
+        
+        //model.addRow(list.toArray());
         tblListPurchasedTickets.setModel(model);
         this.pnlTicketOrderConfirmation.setVisible(true);
         this.pnlPurchaseTickets.setVisible(false);
@@ -464,7 +468,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         {
             FileOutputStream fos = new FileOutputStream("ticketData");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(list.toArray());
+         //   oos.writeObject(list.toArray());
             oos.close();
             fos.close();
         }
