@@ -20,7 +20,7 @@ import java.util.List;
  * @author Kate
  */
 public class PurchaseTicketsUI extends javax.swing.JFrame {
-
+    ManageTicketsCtrl manTicketsCtrl;
     /**
      * Creates new form PurchaseTickets
      */
@@ -428,6 +428,8 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
         lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
         
+        this.manTicketsCtrl = manTicketsCtrl;
+        
     }//GEN-LAST:event_btnUpdateTicketPurchaseActionPerformed
 
     private void btnCancelPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelPurchaseActionPerformed
@@ -436,18 +438,18 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelPurchaseActionPerformed
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
-        int nofTickets = Integer.parseInt(tfNumberOfTickets.getText());
-        int nofDays = Integer.parseInt(tfNumberOfDays.getText());
-        int subtotal = (nofTickets * nofDays) * 50;
-        int random = (int) (Math.random() * 100000);
-        double tax = subtotal * 0.13;
-        double total = subtotal + tax;
-        lblConfirmSubtotalValue.setText("$" + String.valueOf(subtotal));
-        lblConfirmTaxValue.setText("$" + String.valueOf(tax));
-        lblConfirmTotalCostValue.setText("$" + String.valueOf(total));
-        lblConfirmNumberOfTicketsValue.setText(tfNumberOfTickets.getText());
-        lblConfirmNumberOfDaysValue.setText(tfNumberOfDays.getText());
-        lblConfirmOrderNumberValue.setText(String.valueOf(random));
+        
+        TicketOrder ticketOrder = manTicketsCtrl.getTicketOrderInformation();
+        
+        lblConfirmSubtotalValue.setText("$" + String.valueOf(ticketOrder.getOrderSubtotal()));
+        lblConfirmTaxValue.setText("$" + String.valueOf(ticketOrder.getOrderTax()));
+        lblConfirmTotalCostValue.setText("$" + String.valueOf(ticketOrder.getOrderTotal()));
+        lblConfirmNumberOfTicketsValue.setText(String.valueOf(ticketOrder.getQuantityTickets()));
+        lblConfirmNumberOfDaysValue.setText(String.valueOf(ticketOrder.getQuantityDays()));
+        lblConfirmOrderNumberValue.setText(String.valueOf(ticketOrder.getOrderNumber()));
+        
+        
+        
         DefaultTableModel model = (DefaultTableModel) tblListPurchasedTickets.getModel();
         List<String> list = new ArrayList<String>();
         list.add(lblConfirmOrderNumberValue.getText());
