@@ -36,7 +36,12 @@ public class Ticket {
         this.checkedIn = false;
     
     }
-    
+
+    @Override
+    public String toString() {
+        return "Ticket Number: " + this.ticketNumber +
+                ", Purchase Date: " + this.purchaseDate;
+    }
    
 
     /**

@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import static java.time.Clock.system;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -460,7 +461,6 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         {
             FileOutputStream fos = new FileOutputStream("ticketData");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
-
          //   oos.writeObject(list.toArray());
             oos.close();
             fos.close();
