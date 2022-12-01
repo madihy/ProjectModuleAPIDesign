@@ -46,7 +46,7 @@ public class TestHarness {
         myLoginCtrl.handleNewUserButtonAction();
         TimeUnit.MILLISECONDS.sleep(500);
         myLoginCtrl.handleSubmitButtonAction();
-        TimeUnit.SECONDS.sleep(1);*/
+        TimeUnit.SECONDS.sleep(1);
 
         // Testing Navigation Model, View, and Controller classes
         System.out.println("\n" + "Testing the Navigation classes...");
@@ -78,7 +78,7 @@ public class TestHarness {
         customerModel.getPassword();
         customerModel.getFirstName();
         customerModel.getLastName();
-        customerModel.getEmail();*/
+        customerModel.getEmail();
         System.out.println("\n");
         
         navCtrl.handleCustomerBackButtonAction();
@@ -280,6 +280,7 @@ public class TestHarness {
     // System.out.println("Testing Blank Class");
     
     
-    // }
+    // }*/
+    }
 
 }
