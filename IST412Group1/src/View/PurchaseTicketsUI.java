@@ -450,7 +450,8 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         purchasedTickets = ticketOrder.createTicketsArray(ticketOrder.getQuantityTickets(), ticketOrder.getQuantityDays());
         
         for (int i = 0; i < purchasedTickets.size(); i++){
-            System.out.println(purchasedTickets.get(i).toString());
+            taPurchasedTickets.append(purchasedTickets.get(i).toString());
+            taPurchasedTickets.append("\n");
 
         }
 
