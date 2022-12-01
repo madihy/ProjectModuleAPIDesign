@@ -173,7 +173,10 @@ public class NavigationUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnParkInformationActionPerformed
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
-        ManageTicketsCtrl manageTicketsCtrl = new ManageTicketsCtrl();
+        PurchaseTicketsUI purchaseTicketsUI = new PurchaseTicketsUI();
+        purchaseTicketsUI.setVisible(true);
+        purchaseTicketsUI.pnlPurchaseTickets.setVisible(true);
+        purchaseTicketsUI.pnlTicketOrderConfirmation.setVisible(false);        
         this.dispose();
         
     }//GEN-LAST:event_btnPurchaseTicketsActionPerformed

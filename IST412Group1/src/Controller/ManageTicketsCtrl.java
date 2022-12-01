@@ -18,10 +18,7 @@ public class ManageTicketsCtrl {
      * This is the default constructor for the ManageTicketsCtrl class
      */
     public ManageTicketsCtrl(){
-        PurchaseTicketsUI purchaseTicketsUI = new PurchaseTicketsUI();
-        purchaseTicketsUI.setVisible(true);
-        purchaseTicketsUI.pnlPurchaseTickets.setVisible(true);
-        purchaseTicketsUI.pnlTicketOrderConfirmation.setVisible(false);
+        
         
        
         

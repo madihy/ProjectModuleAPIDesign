@@ -4,7 +4,9 @@
  */
 package View;
 
+import Controller.ManageTicketsCtrl;
 import Controller.NavigationCtrl;
+import Model.TicketOrder;
 
 import javax.swing.table.DefaultTableModel;
 import java.io.FileOutputStream;
@@ -253,7 +255,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblPurchaseTicketsInfo.setToolTipText("");
 
         tfNumberOfTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfNumberOfTickets.setText("jTextField1");
+        tfNumberOfTickets.setText("0");
         tfNumberOfTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumberOfTicketsActionPerformed(evt);
@@ -267,7 +269,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblNumberOfDays.setText("Number of Days:");
 
         tfNumberOfDays.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        tfNumberOfDays.setText("jTextField1");
+        tfNumberOfDays.setText("0");
         tfNumberOfDays.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumberOfDaysActionPerformed(evt);
@@ -410,15 +412,22 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_tfNumberOfDaysActionPerformed
 
     private void btnUpdateTicketPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateTicketPurchaseActionPerformed
+        ManageTicketsCtrl manTicketsCtrl = new ManageTicketsCtrl();
+
         int nofTickets = Integer.parseInt(tfNumberOfTickets.getText());
         int nofDays = Integer.parseInt(tfNumberOfDays.getText());
-        int subtotal = (nofTickets * nofDays) * 50;
-        double tax = subtotal * 0.13;
-        double total = subtotal + tax;
+        manTicketsCtrl.updateTicketSelectionButtonEvent(nofTickets, nofDays);
+        TicketOrder ticketOrder = manTicketsCtrl.getTicketOrderInformation();
+           
+        double subtotal = ticketOrder.getOrderSubtotal();
+        double tax = ticketOrder.getOrderTax();
+        double total = ticketOrder.getOrderTotal();
         System.out.println(nofTickets + " " + nofDays + " " + subtotal);
+        
         lblPurchaseSubtotalValue.setText("$" + String.valueOf(subtotal));
         lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
         lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
+        
     }//GEN-LAST:event_btnUpdateTicketPurchaseActionPerformed
 
     private void btnCancelPurchaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelPurchaseActionPerformed

@@ -86,7 +86,7 @@ public class TicketOrder{
       * @return a double representing the tax amount for this ticket order.
       */
      public double calculateTax (double subtotal){
-         double tax = 3.00;
+         double tax = this.orderSubtotal * 0.13;
          System.out.println("Order tax calculated!");
          return tax;
      }
@@ -98,7 +98,7 @@ public class TicketOrder{
       * @return a double representing the total amount for the ticket order.
       */
      public double calculateTotal (double subtotal, double tax){
-         double total = 53.00;
+         double total = subtotal + tax;
          System.out.println("Order subtotal calculated!");
          return total;
      }
