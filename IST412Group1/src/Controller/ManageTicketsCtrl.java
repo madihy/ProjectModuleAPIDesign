@@ -40,9 +40,7 @@ public class ManageTicketsCtrl {
         newTicketOrder.setOrderSubtotal(newTicketOrder.calculateOrderSubtotal(inf_NumberOfTickets, inf_NumberOfDays));
         newTicketOrder.setOrderTax(newTicketOrder.calculateTax(newTicketOrder.getOrderSubtotal()));
         newTicketOrder.setOrderTotal(newTicketOrder.calculateTotal(newTicketOrder.getOrderSubtotal(), newTicketOrder.getOrderTax()));
-        this.newTicketOrder = newTicketOrder;
-        
-        
+        this.newTicketOrder = newTicketOrder;  
     }
     
     public TicketOrder getTicketOrderInformation(){
@@ -54,8 +52,14 @@ public class ManageTicketsCtrl {
      * Confirms the order information and takes the user to the confirm order screen.
      * @param event sets the event variable to occur when the place order button is selected.
      */
-    public void purchaseTicketsButtonEvent (){
+    public TicketOrder purchaseTicketsButtonEvent (){
         System.out.println("Button clicked to purchase tickets.");
+        this.getTicketOrderInformation();
+        newTicketOrder.setTicketsOrdered();
+        this.newTicketOrder = newTicketOrder;
+        
+        return newTicketOrder;   
+  
     }
     /**
      * Establishes the action event to be carried out when the cancel order button 

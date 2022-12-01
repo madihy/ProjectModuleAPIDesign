@@ -202,7 +202,8 @@ public class TicketOrder{
      * Sets the list of tickets ordered for this ticket order.
      * @param ticketsOrdered sets the list of tickets ordered for the ticket order.
      */
-    public void setTicketsOrdered(ArrayList <Ticket> ticketsOrdered) {
+    public void setTicketsOrdered() {
+        this.ticketsOrdered = createTicketsArray(this.getQuantityTickets(), this.getQuantityDays());
         this.ticketsOrdered = ticketsOrdered;
     }
 
