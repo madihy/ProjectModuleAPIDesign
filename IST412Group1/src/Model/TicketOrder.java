@@ -21,6 +21,7 @@ public class TicketOrder{
      private double orderTax = 0;
      private double orderTotal = 0;
      private String orderStatus = ""; 
+     ArrayList<Integer> orderNums = new ArrayList<>();
      
      /**
       * This is the full constructor for the TicketOrder Class
@@ -44,6 +45,11 @@ public class TicketOrder{
          this.orderTax = orderTax;
          this.orderTotal = orderTotal;
          this.orderStatus = orderStatus;
+     }
+     
+     public TicketOrder(){
+         
+         
      }
      /**
       * Returns the array tickets requested for this ticket order creating one ticket for each person each day.
@@ -231,5 +237,16 @@ public class TicketOrder{
     public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
+    
+    public int createTicketOrderNumber(){
+        int orderNum;
+        
+        do{
+            orderNum = (int)(Math.random()*400000000) + 1000000000;
+        } 
+        while (orderNums.contains(orderNum));
+        orderNums.add(orderNum);
+        return orderNum;
+   }
 
 }

@@ -4,6 +4,7 @@
  */
 package Controller;
 
+import Model.TicketOrder;
 import View.PurchaseTicketsUI;
 import java.awt.event.ActionEvent;
 
@@ -12,7 +13,7 @@ import java.awt.event.ActionEvent;
  * @author katerineer
  */
 public class ManageTicketsCtrl {
-    
+    TicketOrder newTicketOrder;
     /**
      * This is the default constructor for the ManageTicketsCtrl class
      */
@@ -21,15 +22,31 @@ public class ManageTicketsCtrl {
         purchaseTicketsUI.setVisible(true);
         purchaseTicketsUI.pnlPurchaseTickets.setVisible(true);
         purchaseTicketsUI.pnlTicketOrderConfirmation.setVisible(false);
+        
+       
+        
     }
     /**
      * Establishes the action event to be carried out when the update ticket selection button is clicked.
      * Submits the quantity and ticket type information to use on the Place Order screen.
      * @param event sets the event variable to occur when the purchase ticket button is selected.
      */
-    public void updateTicketSelectionButtonEvent (){
+    public void updateTicketSelectionButtonEvent (int inf_NumberOfTickets, int inf_NumberOfDays){
         System.out.println("Button clicked to set the ticket selection information.");
+        newTicketOrder = new TicketOrder();
+        newTicketOrder.setOrderNumber(newTicketOrder.createTicketOrderNumber());
+        newTicketOrder.setQuantityTickets(inf_NumberOfTickets);
+        newTicketOrder.setQuantityDays(inf_NumberOfDays);
+        newTicketOrder.setOrderSubtotal(newTicketOrder.calculateOrderSubtotal(inf_NumberOfTickets, inf_NumberOfDays));
+        newTicketOrder.setOrderTax(newTicketOrder.calculateTax(newTicketOrder.getOrderSubtotal()));
+        newTicketOrder.setOrderTotal(newTicketOrder.calculateTotal(newTicketOrder.getOrderSubtotal(), newTicketOrder.getOrderTax()));
+        this.newTicketOrder = newTicketOrder;
         
+        
+    }
+    
+    public TicketOrder getTicketOrderInformation(){
+        return newTicketOrder;
     }
     /**
      * Establishes the action event to be carried out when the place order button 

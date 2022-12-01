@@ -123,10 +123,13 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         tblListPurchasedTickets.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
         tblListPurchasedTickets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "Order #", "# of Tickets", "# of Days", "Total Cost"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane1.setViewportView(tblListPurchasedTickets);
@@ -459,7 +462,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
             ioe.printStackTrace();
         }
     }
-    //GEN-LAST:event_btnPurchaseTicketsActionPerformed
+//GEN-LAST:event_btnPurchaseTicketsActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
         NavigationCtrl navigationCtrl = new NavigationCtrl();
