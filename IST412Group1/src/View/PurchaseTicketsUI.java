@@ -51,13 +51,13 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblConfirmTaxValue = new javax.swing.JLabel();
         btnMainMenu = new javax.swing.JButton();
         lblOrderNumber = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblListPurchasedTickets = new javax.swing.JTable();
         lblConfirmNumberOfDaysValue = new javax.swing.JLabel();
         lblConfirmNumberOfTicketsValue = new javax.swing.JLabel();
         lblConfirmOrderNumberValue = new javax.swing.JLabel();
         lblListTicketsPurchased = new javax.swing.JLabel();
         btnReserveActivities = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        taPurchasedTickets = new javax.swing.JTextArea();
         pnlPurchaseTickets = new javax.swing.JPanel();
         lblPurchaseTicketsTitle = new javax.swing.JLabel();
         lblPurchaseTicketsInfo = new javax.swing.JLabel();
@@ -124,20 +124,6 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblOrderNumber.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblOrderNumber.setText("Order Number:");
 
-        tblListPurchasedTickets.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
-        tblListPurchasedTickets.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(tblListPurchasedTickets);
-
         lblConfirmNumberOfDaysValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmNumberOfDaysValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmNumberOfDaysValue.setText("0");
@@ -162,6 +148,10 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
             }
         });
 
+        taPurchasedTickets.setColumns(20);
+        taPurchasedTickets.setRows(5);
+        jScrollPane2.setViewportView(taPurchasedTickets);
+
         javax.swing.GroupLayout pnlTicketOrderConfirmationLayout = new javax.swing.GroupLayout(pnlTicketOrderConfirmation);
         pnlTicketOrderConfirmation.setLayout(pnlTicketOrderConfirmationLayout);
         pnlTicketOrderConfirmationLayout.setHorizontalGroup(
@@ -169,6 +159,9 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
             .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
                         .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblConfirmTax, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -192,7 +185,6 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTicketOrderConfirmationLayout.createSequentialGroup()
                         .addComponent(purchaseTicketsTitleLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
                         .addComponent(lblListTicketsPurchased, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(221, Short.MAX_VALUE))
@@ -237,7 +229,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(lblListTicketsPurchased)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMainMenu)
@@ -440,6 +432,8 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelPurchaseActionPerformed
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
+        this.pnlTicketOrderConfirmation.setVisible(true);
+        this.pnlPurchaseTickets.setVisible(false); 
         
         TicketOrder ticketOrder = manTicketsCtrl.getTicketOrderInformation();
         
@@ -462,8 +456,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         
         //model.addRow(list.toArray());
         tblListPurchasedTickets.setModel(model);
-        this.pnlTicketOrderConfirmation.setVisible(true);
-        this.pnlPurchaseTickets.setVisible(false);
+        
         try
         {
             FileOutputStream fos = new FileOutputStream("ticketData");
@@ -535,7 +528,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     public javax.swing.JButton btnPurchaseTickets;
     public javax.swing.JButton btnReserveActivities;
     public javax.swing.JButton btnUpdateTicketPurchase;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblConfirmNumberOfDays;
     public javax.swing.JLabel lblConfirmNumberOfDaysValue;
     private javax.swing.JLabel lblConfirmNumberOfTickets;
@@ -562,7 +555,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
     public javax.swing.JPanel pnlPurchaseTickets;
     public javax.swing.JPanel pnlTicketOrderConfirmation;
     private javax.swing.JLabel purchaseTicketsTitleLabel1;
-    public javax.swing.JTable tblListPurchasedTickets;
+    public javax.swing.JTextArea taPurchasedTickets;
     public javax.swing.JTextField tfNumberOfDays;
     public javax.swing.JTextField tfNumberOfTickets;
     // End of variables declaration//GEN-END:variables
