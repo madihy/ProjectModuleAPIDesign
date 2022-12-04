@@ -61,7 +61,7 @@ public class TicketOrder{
          ArrayList<Ticket> ticketsRequested = new ArrayList();
          int quantity = numberOfTickets * numberOfDays;
          System.out.println("Ticket array created.");
-         for(int i = 0; i <= quantity; i++){
+         for(int i = 0; i < quantity; i++){
              Ticket newTicket = new Ticket();
              ticketsRequested.add(newTicket);
          }
