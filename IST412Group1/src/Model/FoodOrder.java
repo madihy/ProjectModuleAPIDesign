@@ -4,6 +4,11 @@
  */
 package Model;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -18,6 +23,8 @@ public class FoodOrder {
     private double foodOrderTax = 0;
     private double foodOrderTotal = 0;
     private String foodOrderStatus; //such as pending, being prepared, ready for pick-up, or completed
+    private ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
+    String restaurantDataFileName = "restaurantData.ser";
     
     /**
      * This is the full constructor for the FoodOrder class.
@@ -39,6 +46,18 @@ public class FoodOrder {
     }
 
     public FoodOrder() {
+       this.readRestaurantFile();
+
+        if (restaurants.isEmpty() || restaurants == null) {
+
+            System.out.println("restaurants empty, creating test foods...");
+
+            this.createRestaurants();
+            this.writeRestaurantFile();
+            this.readRestaurantFile();
+
+        } 
+        
        
     }
 
@@ -145,5 +164,61 @@ public class FoodOrder {
         this.foodOrderStatus = foodOrderStatus;
     }
     
+    public ArrayList<Restaurant> createRestaurants(){
+        Restaurant restaurant1 = new Restaurant("Sandwich Shop", "delicatessen", "Area C-1", null);
+        restaurant1.setMenuFoods(restaurant1.createMenuFoodsDeli());
+        Restaurant restaurant2 = new Restaurant("Sofia's Pizza", "pizzaria", "Area B-2", null);
+        restaurant2.setMenuFoods(restaurant2.createMenuFoodsItalian());
+        Restaurant restaurant3 = new Restaurant("El Taco", "Mexican food", "Area C-1", null);
+        restaurant3.setMenuFoods(restaurant3.createMenuFoodsMexican());
+        Restaurant restaurant4 = new Restaurant("Grub Grill", "American grilled foods", "Area A-3", null);
+        restaurant4.setMenuFoods(restaurant4.createMenuFoodsGrill());
+        restaurants.add(restaurant1);
+        restaurants.add(restaurant2);
+        restaurants.add(restaurant3);
+        restaurants.add(restaurant4);
+        
+        return restaurants;
+        
+    }
     
+    public void readRestaurantFile() {
+
+        FileInputStream fis = null;
+        ObjectInputStream in = null;
+
+        try {
+            fis = new FileInputStream(restaurantDataFileName);
+            in = new ObjectInputStream(fis);
+            restaurants = (ArrayList<Restaurant>) in.readObject();
+            in.close();
+
+            if (!restaurants.isEmpty()) {
+                System.out.println("Restaurant Data Loaded from File");
+            }
+
+        } catch (IOException ex) {
+            //ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            // ex.printStackTrace();
+        }
+
+    }
+
+    public void writeRestaurantFile() {
+
+        FileOutputStream fos = null;
+        ObjectOutputStream out = null;
+
+        try {
+            fos = new FileOutputStream(restaurantDataFileName);
+            out = new ObjectOutputStream(fos);
+            out.writeObject(restaurants);
+            out.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+
 }

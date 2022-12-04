@@ -11,14 +11,12 @@ import java.util.ArrayList;
  * This class contains the information about restaurants at the park.
  * @author katerineer
  */
-public class Restaurant implements Serializable{
+public class Restaurant{
     
     private String restaurantName;
     private String restaurantDescription;
     private String restaurantLocation;
-    private ArrayList <Food> menuFoods = new ArrayList<>();
-    
-    
+    private ArrayList <Food> menuFoods = null; 
     
     /**
      * This is the full constructor for the restaurant class.
@@ -33,14 +31,10 @@ public class Restaurant implements Serializable{
         this.restaurantName = restaurantName;
         this.restaurantDescription = restaurantDescription; 
         this.restaurantLocation = restaurantLocation;
-        this.menuFoods = menuFoods;
-       
+        this.menuFoods = menuFoods;       
         
     }
 
-    public Restaurant() {
-        
-    }
 
     /**
      * Gets the name for this restaurant.
@@ -106,7 +100,12 @@ public class Restaurant implements Serializable{
      * Sets the array of foods making up this restaurant's menu.
      * @param menuFoods sets the array of foods making up the restaurant's menu.
      */
-    public void setMenuFoodsGrill(ArrayList <Food> menuFoods) {
+    public void setMenuFoods(ArrayList<Food> menuFoods){
+        this.menuFoods = menuFoods;
+    }
+    
+    
+    public ArrayList createMenuFoodsGrill() {
         Food food1 = new Food("Hotdog", 6.99);
         Food food2 = new Food("Hamburger", 8.99);
         Food food3 = new Food("Turkey leg", 7);
@@ -127,11 +126,11 @@ public class Restaurant implements Serializable{
         menuFoods.add(food8);
         menuFoods.add(food9);
         menuFoods.add(food10);
-        
-        this.menuFoods = menuFoods;
+            
+        return menuFoods;
     }  
     
-    public void setMenuFoodsItalian(ArrayList <Food> menuFoods) {
+    public ArrayList createMenuFoodsItalian() {
         Food food1 = new Food("Small Pizza", 9.99);
         Food food2 = new Food("Large Pizza", 12.99);
         Food food3 = new Food("Pasta Bowl", 7);
@@ -147,10 +146,10 @@ public class Restaurant implements Serializable{
         menuFoods.add(food6);
         menuFoods.add(food7);
         
-        this.menuFoods = menuFoods;
+        return menuFoods;
     }    
     
-    public void setMenuFoodsDeli(ArrayList <Food> menuFoods){
+    public ArrayList createMenuFoodsDeli(){
         Food food1 = new Food("Sandwich", 9.99);
         Food food2 = new Food("Sub", 12.99);
         Food food3 = new Food("Pasta Salad", 7);
@@ -168,10 +167,10 @@ public class Restaurant implements Serializable{
         menuFoods.add(food7);
         menuFoods.add(food8);
         
-        this.menuFoods = menuFoods;
+        return menuFoods;
     }
     
-    public void setMenuFoodsMexican(ArrayList<Food> menuFoods){
+    public ArrayList createMenuFoodsMexican(){
         Food food1 = new Food("Tacos", 9.99);
         Food food2 = new Food("Burrito", 12.99);
         Food food3 = new Food("Rice Bowl", 12.99);
@@ -189,6 +188,8 @@ public class Restaurant implements Serializable{
         menuFoods.add(food7);
         menuFoods.add(food8);
         
-        this.menuFoods = menuFoods;
+        return menuFoods;
     }
+    
+    
 }
