@@ -4,13 +4,14 @@
  */
 package Model;
 
+
+
 /**
  * This class contains the information about foods that can be added to restaurant menus.
  * @author katerineer
  */
-public class Food {
+public class Food{
     private String foodName;
-    private String foodDescription;
     private double foodPrice;
     
     /**
@@ -19,10 +20,9 @@ public class Food {
      * @param foodDescription string representing the description of the food item
      * @param foodPrice double representing the price of the food item
      */   
-    public Food (String foodName, String foodDescription, double foodPrice){
+    public Food (String foodName, double foodPrice){
         
         this.foodName = foodName;
-        this.foodDescription = foodDescription;
         this.foodPrice = foodPrice;
     }
 
@@ -47,23 +47,6 @@ public class Food {
      */
     public void setFoodName(String foodName) {
         this.foodName = foodName;
-    }
-
-    /**
-     * Gets the description of this food item.
-     * @return the string foodDescription representing the description of the food item.
-     */
-    public String getFoodDescription() {
-        System.out.println(foodDescription);
-        return "";
-    }
-
-    /**
-     * Sets the description of this food item.
-     * @param foodDescription sets the description of the food item.
-     */
-    public void setFoodDescription(String foodDescription) {
-        this.foodDescription = foodDescription;
     }
 
     /**
