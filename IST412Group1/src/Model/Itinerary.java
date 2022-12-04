@@ -60,10 +60,10 @@ public class Itinerary extends Activity {
      * @param activities An array list of activity objects
      */
     public void setActivities(ArrayList<Activity> activities) {
-        Activity act1 = new Activity("Circus", "Show", 30, true, 15);
-        Activity act2 = new Activity("Coaster 1", "Roller Coaster", 5, true, 25);
-        Activity act3 = new Activity("The Lunch Spot", "Meal", 30, true, 15);
-        Activity act4 = new Activity("The Big Parade", "Parade", 10, true, 45);
+        Activity act1 = new Activity("Circus", "Show", null);
+        Activity act2 = new Activity("Coaster 1", "Roller Coaster", null);
+        Activity act3 = new Activity("The Lunch Spot", "Meal", null);
+        Activity act4 = new Activity("The Big Parade", "Parade", null);
         activities.add(act1);
         activities.add(act2);
         activities.add(act3);
