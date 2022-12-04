@@ -57,8 +57,6 @@ public class ActivityCtrl {
     
     @Override
     public String toString() {
-        return "Activity: " + activity.getActivityName() + "\nType: " + activity.getActivityType()
-                + "\nActivity Length: " + activity.getActLenInMins() + " minutes"
-                +"\nAvailable: " + activity.isActivityAvail() + "\nWait Time: " + activity.getWaitTimeInMins() + " minutes";
+        return "Activity: " + activity.getActivityName() + "\nType: " + activity.getActivityType();
 }
 }
