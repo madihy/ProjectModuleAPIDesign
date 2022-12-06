@@ -13,6 +13,8 @@ package Model;
 public class Food{
     private String foodName;
     private double foodPrice;
+    private int foodQuantity;
+    private double foodSubtotal;
     
     /**
      * This is the full constructor for the food class.
@@ -24,13 +26,19 @@ public class Food{
         
         this.foodName = foodName;
         this.foodPrice = foodPrice;
+        this.foodQuantity = 0;
+        this.foodSubtotal = this.calculateFoodSubtotal(this.foodPrice, this.foodQuantity);
+              
     }
 
     public Food() {
        
     }
 
-
+    public double calculateFoodSubtotal(double price, int quantity){
+        double subtotal = price * quantity;
+        return subtotal;
+    }
    
     /**
      * Gets the name of this food item.
@@ -65,5 +73,37 @@ public class Food{
     public void setFoodPrice(double foodPrice) {
         this.foodPrice = foodPrice;
     }
+
+    /**
+     * @return the foodQuantity
+     */
+    public int getFoodQuantity() {
+        return foodQuantity;
+    }
+
+    /**
+     * @param foodQuantity the foodQuantity to set
+     */
+    public void setFoodQuantity(int foodQuantity) {
+        this.foodQuantity = foodQuantity;
+    }
+
+    /**
+     * @return the foodSubtotal
+     */
+    public double getFoodSubtotal() {
+        return foodSubtotal;
+    }
+
+    /**
+     * @param foodSubtotal the foodSubtotal to set
+     */
+    public void setFoodSubtotal(double foodSubtotal) {
+        this.foodSubtotal = foodSubtotal;
+    }
     
+    public String ToString(){
+        return "Food Name: " + this.foodName +
+                ", Price: $" + this.foodPrice;
+    }
 }

@@ -4,20 +4,30 @@
  */
 package Controller;
 
+import Model.Food;
+import Model.FoodOrder;
+import Model.Restaurant;
+import View.OrderFoodUI;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 /**
  * This class is to manage the actions to place and manage food orders at the park.
  * @author katerineer
  */
 public class ManageFoodCtrl {
+    FoodOrder foodOrder = new FoodOrder();
+    ArrayList<Restaurant> restaurants1;
     
     /**
      * This is the default controller for the ManageFoodCtrl class.
      */
     public ManageFoodCtrl(){
+    //OrderFoodUI orderFoodUI = new OrderFoodUI();
+    
     
     }
+    
         
      /**
      * Establishes the action event to be carried out when the corresponding restaurant button 
@@ -25,8 +35,26 @@ public class ManageFoodCtrl {
      * Displays corresponding restaurant menu items.
      * @param event sets the event variable to occur when the corresponding restaurant button is selected.
      */
-    public void selectRestaurantButtonEvent (){
+    public ArrayList getRestaurantMenuToDisplay (String selectedRestaurant){
         System.out.println("Button clicked to select the restaurant.");
+        ArrayList<Restaurant> restaurants1 = new ArrayList(foodOrder.createRestaurants());
+        
+        Restaurant restaurantToReturn = null;
+        for (int i = 0; i < restaurants1.size(); i++){
+            if (restaurants1.get(i).getRestaurantName().equals(selectedRestaurant)){
+                restaurantToReturn = restaurants1.get(i);
+            }
+        }
+        
+        ArrayList<Food> selectedMenu = new ArrayList<Food>(restaurantToReturn.getMenuFoods()); 
+        System.out.println(selectedMenu.toString());
+        
+        return selectedMenu;
+        
+    }
+    
+    
+    public void addRowToMenuTable(){
         
     }
         
