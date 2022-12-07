@@ -17,48 +17,32 @@ import java.util.ArrayList;
  * @author katerineer
  */
 public class FoodOrder {
-    private int orderNumber = 0;
+    private int orderNumber = this.getOrderNumber();
     private ArrayList<Food> foodsSelected = new ArrayList<>();
-    private double foodOrderSubtotal = 0;
-    private double foodOrderTax = 0;
-    private double foodOrderTotal = 0;
-    private String foodOrderStatus; //such as pending, being prepared, ready for pick-up, or completed
+    private double foodOrderSubtotal = this.foodOrderSubtotal;
+    private double foodOrderTax = this.getFoodOrderTax();
+    private double foodOrderTotal = this.getFoodOrderTotal();
+    private String foodOrderStatus = "pending"; //such as pending, being prepared, ready for pick-up, or completed
     private ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
     String restaurantDataFileName = "restaurantData.ser";
+    ArrayList<Integer> orderNums = new ArrayList<>();
     
     /**
-     * This is the full constructor for the FoodOrder class.
-     * @param orderNumber integer representing the unique order number
-     * @param foodsSelected array list representing the food selected from a menu to be placed on the order
-     * @param foodOrderSubtotal the double representing the subtotal of the food selected before tax
-     * @param foodOrderTax the double representing the tax for the food order
-     * @param foodOrderTotal the double representing the total of the order including both the food order subtotal and the tax
-     * @param foodOrderStatus the string representing the status of the order such as pending, being prepared, ready for pick-up or completed
+     * Empty constructor for the Food Order class
      */
-    public FoodOrder (int orderNumber, ArrayList foodsSelected, double foodOrderSubtotal, double foodOrderTax, double foodOrderTotal, String foodOrderStatus){
-        
-        this.orderNumber = orderNumber;
-        this.foodsSelected = foodsSelected;
-        this.foodOrderSubtotal = foodOrderSubtotal;
-        this.foodOrderTax = foodOrderTax;
-        this.foodOrderTotal = foodOrderTotal;
-        this.foodOrderStatus = foodOrderStatus;
-    }
-
-    public FoodOrder() {
+    public FoodOrder (){
+            
        this.readRestaurantFile();
 
         if (restaurants.isEmpty() || restaurants == null) {
 
             System.out.println("restaurants empty, creating test foods...");
 
-            this.createRestaurants();
+            this.createRestaurants();   
             this.writeRestaurantFile();
             this.readRestaurantFile();
 
-        } 
-        
-       
+        }  
     }
 
     /**
@@ -164,15 +148,148 @@ public class FoodOrder {
         this.foodOrderStatus = foodOrderStatus;
     }
     
+    public int createFoodOrderNumber(){
+        int orderNum;
+        
+        do{
+            orderNum = (int)(Math.random()*400000000) + 1000000000;
+        } 
+        while (orderNums.contains(orderNum));
+        orderNums.add(orderNum);
+        return orderNum;
+   }
+   /**
+      * Returns the calculated subtotal of the cost the food for this order.
+      * @param foodsSelected sets the array of foods to be used for this ticket order.
+      * @return a double representing the calculated subtotal amount of an array of tickets for the ticket order.
+      */
+     public double calculateFoodOrderSubtotal (ArrayList foodsSelected){
+         double foodSubtotal = 0;
+         System.out.println("Food order subtotal calculated!");
+         return foodSubtotal;
+     }
+     
+     /**
+      * Returns the tax amount for the food order.
+      * @param subTotal set the subtotal value to be used to calculate the tax for the food order.
+      * @return a double representing the tax amount for this food order.
+      */
+     public double calculateFoodOrderTax (double subtotal){
+         double tax = this.foodOrderSubtotal * 0.13;
+         System.out.println("Food order tax calculated!");
+         return tax;
+     }
+     
+     /**
+      * Returns the total cost of this food order.
+      * @param subtotal sets the subtotal amount to be used to calculate the total for the food order.
+      * @param tax sets the tax amount to be used to calculate the total for the food order.
+      * @return a double representing the total amount for the food order.
+      */
+     public double calculateTotal (double subtotal, double tax){
+         double total = subtotal + tax;
+         System.out.println("Food order subtotal calculated!");
+         return total;
+     }
+    
+     /**
+      * Creates the food objects and menu arrays, and then, adds foods to menu arrays
+      * Creates restaurants and sets menu array for each and adds to the restaurants array
+      * @return the restaurants array
+      */
     public ArrayList<Restaurant> createRestaurants(){
-        Restaurant restaurant1 = new Restaurant("Sandwich Shop", "delicatessen", "Area C-1", null);
-        restaurant1.setMenuFoods(restaurant1.createMenuFoodsDeli());
-        Restaurant restaurant2 = new Restaurant("Sofia's Pizza", "pizzaria", "Area B-2", null);
-        restaurant2.setMenuFoods(restaurant2.createMenuFoodsItalian());
-        Restaurant restaurant3 = new Restaurant("El Taco", "Mexican food", "Area C-1", null);
-        restaurant3.setMenuFoods(restaurant3.createMenuFoodsMexican());
-        Restaurant restaurant4 = new Restaurant("Grub Grill", "American grilled foods", "Area A-3", null);
-        restaurant4.setMenuFoods(restaurant4.createMenuFoodsGrill());
+        //Create all food options
+        //Deli-specific foods
+        Food food1 = new Food("Sandwich", 9.99);
+        Food food2 = new Food("Sub", 12.99);
+        Food food3 = new Food("Pasta Salad", 7);
+        Food food4 = new Food("Cookie", 4.50);
+        Food food5 = new Food("Chips", 3.50);
+        Food food6 = new Food("Brownie", 4.50);
+        //Grill-specific foods
+        Food food7 = new Food("Hotdog", 6.99);
+        Food food8 = new Food("Hamburger", 8.99);
+        Food food9 = new Food("Turkey leg", 7);
+        Food food10 = new Food("Dole Whip", 4.50);
+        Food food11 = new Food("Chicken Nuggets", 6.99);
+        Food food12 = new Food("Chips", 3.50);
+        Food food13 = new Food("French Fries", 4.50);
+        Food food14 = new Food("Milkshake", 5.00);
+        //Italian-specific foods
+        Food food15 = new Food("Small Pizza", 9.99);
+        Food food16 = new Food("Large Pizza", 12.99);
+        Food food17 = new Food("Pasta Bowl", 7);
+        Food food18 = new Food("Gelato", 4.50);
+        Food food19 = new Food("Dessert Pizza", 9.99);
+        //Mexican-specific foods
+        Food food20 = new Food("Tacos", 9.99);
+        Food food21 = new Food("Burrito", 12.99);
+        Food food22 = new Food("Rice Bowl", 12.99);
+        Food food23 = new Food("Churro", 4.50);
+        Food food24 = new Food("Chips and Salsa", 6.50);
+        Food food25 = new Food("chips and Guacamole", 7.50);
+        //General Beverages
+        Food food26 = new Food("Fountain Drink", 2.99);
+        Food food27 = new Food("Bottled Drink", 3.99);
+        
+        //Create Menu arrays and add Food objects to each menu
+        //Create array for the deli menu and add food objects to it
+        ArrayList<Food> menuDeli = new ArrayList<Food>();
+        menuDeli.add(food1);
+        menuDeli.add(food2);
+        menuDeli.add(food3);
+        menuDeli.add(food4);
+        menuDeli.add(food5);
+        menuDeli.add(food6);
+        menuDeli.add(food26);
+        menuDeli.add(food27);
+        
+        //Create array for the grill menu and add food objects to it
+        ArrayList<Food> menuGrill = new ArrayList<Food>();
+        menuGrill.add(food7);
+        menuGrill.add(food8);
+        menuGrill.add(food9);
+        menuGrill.add(food10);
+        menuGrill.add(food11);
+        menuGrill.add(food12);
+        menuGrill.add(food13);
+        menuGrill.add(food14);
+        menuGrill.add(food26);
+        menuGrill.add(food27);
+        
+        //Create array for the Italian menu and add food objects to it
+        ArrayList<Food> menuItalian = new ArrayList<Food>();
+        menuItalian.add(food15);
+        menuItalian.add(food16);
+        menuItalian.add(food17);
+        menuItalian.add(food18);
+        menuItalian.add(food19);
+        menuItalian.add(food26);
+        menuItalian.add(food27);
+        
+        
+        //Create array for the Mexican menu and add food objects to it
+        ArrayList<Food> menuMexican = new ArrayList<Food>();
+        menuMexican.add(food20);
+        menuMexican.add(food21);
+        menuMexican.add(food22);
+        menuMexican.add(food23);
+        menuMexican.add(food24);
+        menuMexican.add(food25);
+        menuMexican.add(food26);
+        menuMexican.add(food27);
+        
+        //Create Restaurant objects and set the menu for each
+        Restaurant restaurant1 = new Restaurant("Sandwich Shop", "delicatessen", "Area C-1");
+        restaurant1.setMenuFoods(menuDeli);
+        Restaurant restaurant2 = new Restaurant("Sofia's Pizza", "pizzaria", "Area B-2");
+        restaurant2.setMenuFoods(menuItalian);
+        Restaurant restaurant3 = new Restaurant("El Taco", "Mexican food", "Area C-1");
+        restaurant3.setMenuFoods(menuMexican);
+        Restaurant restaurant4 = new Restaurant("Grub Grill", "American grilled foods", "Area A-3");
+        restaurant4.setMenuFoods(menuGrill);
+        
+        //Add restaurants to the Restaurant array to used by the food order
         restaurants.add(restaurant1);
         restaurants.add(restaurant2);
         restaurants.add(restaurant3);

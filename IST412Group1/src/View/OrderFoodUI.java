@@ -17,7 +17,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
      private boolean orderUIActive = false;
      ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
      String selectedRestaurant = "El Taco";
-     ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay("El Taco");
+     ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(null);
      
 
     /**
@@ -25,9 +25,9 @@ public class OrderFoodUI extends javax.swing.JFrame {
      */
     public OrderFoodUI() {
         initComponents();
-        ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay("El Taco");
-        this.menuToDisplay = menuToDisplay;
-       addRowToMenuTable();
+        //ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay("El Taco");
+        //this.menuToDisplay = menuToDisplay;
+       //addRowToMenuTable();
         
     }
     public void addRowToMenuTable(){

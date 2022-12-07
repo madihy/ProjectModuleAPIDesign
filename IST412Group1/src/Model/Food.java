@@ -26,15 +26,17 @@ public class Food{
         
         this.foodName = foodName;
         this.foodPrice = foodPrice;
-        this.foodQuantity = 0;
+        this.foodQuantity = 0; //begins null but will change on input from user on the FoodOrderUI
         this.foodSubtotal = this.calculateFoodSubtotal(this.foodPrice, this.foodQuantity);
               
     }
 
-    public Food() {
-       
-    }
-
+    /**
+     * Calculates the value for the food subtotal variable
+     * @param price double representing the price for one of this food object
+     * @param quantity integer representing the number requested of this food object
+     * @return double representing the subtotal for the requested number of the food object
+     */
     public double calculateFoodSubtotal(double price, int quantity){
         double subtotal = price * quantity;
         return subtotal;
