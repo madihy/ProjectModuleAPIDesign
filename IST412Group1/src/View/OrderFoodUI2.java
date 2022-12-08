@@ -152,18 +152,7 @@ public class OrderFoodUI2 extends javax.swing.JFrame {
         tblMenu.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tblMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Food Name", "Food Cost", "Food Quantity", "Food Subtotal"
@@ -280,7 +269,7 @@ public class OrderFoodUI2 extends javax.swing.JFrame {
         ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
         ArrayList<Food> menuDeli = new ArrayList<Food>(manageFoodCtrl.getDeliMenuToDisplay());
         
-        DefaultTableModel model = (DefaultTableModel) this.tblMenu.getModel();
+        DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
          Object rowData[] = new Object[4];
          for(int i = 0; i< menuDeli.size(); i++){
              rowData[0] = menuDeli.get(i).getFoodName();
@@ -288,7 +277,9 @@ public class OrderFoodUI2 extends javax.swing.JFrame {
              rowData[2] = menuDeli.get(i).getFoodQuantity();
              rowData[3] = menuDeli.get(i).getFoodSubtotal();
              model.addRow(rowData);
-         }// TODO add your handling code here:
+         }     
+        
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnSandwichShopActionPerformed
 
     private void btnSofiasPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSofiasPizzaActionPerformed
@@ -304,7 +295,9 @@ public class OrderFoodUI2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGrubGrillActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
-        // TODO add your handling code here:
+        NavigationUI navUI = new NavigationUI();
+        navUI.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnMainMenuActionPerformed
 
     private void btnPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceOrderActionPerformed
@@ -312,7 +305,9 @@ public class OrderFoodUI2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPlaceOrderActionPerformed
 
     private void btnCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelOrderActionPerformed
-        // TODO add your handling code here:
+        NavigationUI navUI = new NavigationUI();
+        navUI.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnCancelOrderActionPerformed
 
     /**
