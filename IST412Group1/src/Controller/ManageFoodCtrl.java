@@ -36,6 +36,7 @@ public class ManageFoodCtrl {
      */
     public ArrayList getRestaurantMenuToDisplay (String selectedRestaurant){
         System.out.println("Button clicked to select the restaurant.");
+        System.out.println(selectedRestaurant);
         
         ArrayList<Restaurant> restaurants1 = new ArrayList(foodOrder.createRestaurants());
         System.out.println(restaurants1);
@@ -54,6 +55,33 @@ public class ManageFoodCtrl {
         
         
         return selectedMenu;
+        
+    }
+    
+    public ArrayList getDeliMenuToDisplay (){
+        System.out.println("Button clicked to get Deli Menu");
+
+        ArrayList<Food> menuDeli = new ArrayList();
+        Food food1 = new Food("Sandwich", 9.99);
+        Food food2 = new Food("Sub", 12.99);
+        Food food3 = new Food("Pasta Salad", 7);
+        Food food4 = new Food("Cookie", 4.50);
+        Food food5 = new Food("Chips", 3.50);
+        Food food6 = new Food("Brownie", 4.50);
+        Food food26 = new Food("Fountain Drink", 2.99);
+        Food food27 = new Food("Bottled Drink", 3.99);
+        
+        menuDeli.add(food1);
+        menuDeli.add(food2);
+        menuDeli.add(food3);
+        menuDeli.add(food4);
+        menuDeli.add(food5);
+        menuDeli.add(food6);
+        menuDeli.add(food26);
+        menuDeli.add(food27);
+        System.out.println("Deli menu found");
+        
+        return menuDeli;
         
     }
    

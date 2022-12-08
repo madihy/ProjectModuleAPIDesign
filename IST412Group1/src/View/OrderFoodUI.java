@@ -106,6 +106,12 @@ public class OrderFoodUI extends javax.swing.JFrame {
         tblMenu.setColumnSelectionAllowed(true);
         jScrollPane2.setViewportView(tblMenu);
         tblMenu.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        if (tblMenu.getColumnModel().getColumnCount() > 0) {
+            tblMenu.getColumnModel().getColumn(0).setHeaderValue("Food Name");
+            tblMenu.getColumnModel().getColumn(1).setHeaderValue("Cost");
+            tblMenu.getColumnModel().getColumn(2).setHeaderValue("Quantity");
+            tblMenu.getColumnModel().getColumn(3).setHeaderValue("Subtotal");
+        }
 
         javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
         pnlMenu.setLayout(pnlMenuLayout);

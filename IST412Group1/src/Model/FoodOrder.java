@@ -270,20 +270,20 @@ public class FoodOrder {
         menuMexican.add(food27);
         
         //Create Restaurant objects and set the menu for each
-        Restaurant restaurant1 = new Restaurant("Sandwich Shop", "delicatessen", "Area C-1");
-        restaurant1.setMenuFoods(menuDeli);
-        Restaurant restaurant2 = new Restaurant("Sofia's Pizza", "pizzaria", "Area B-2");
-        restaurant2.setMenuFoods(menuItalian);
-        Restaurant restaurant3 = new Restaurant("El Taco", "Mexican food", "Area C-1");
-        restaurant3.setMenuFoods(menuMexican);
-        Restaurant restaurant4 = new Restaurant("Grub Grill", "American grilled foods", "Area A-3");
-        restaurant4.setMenuFoods(menuGrill);
+        Restaurant restaurantDeli = new Restaurant("Sandwich Shop", "delicatessen", "Area C-1");
+        restaurantDeli.setMenuFoods(menuDeli);
+        Restaurant restaurantItalian = new Restaurant("Sofia's Pizza", "pizzaria", "Area B-2");
+        restaurantItalian.setMenuFoods(menuItalian);
+        Restaurant restaurantMexican = new Restaurant("El Taco", "Mexican food", "Area C-1");
+        restaurantMexican.setMenuFoods(menuMexican);
+        Restaurant restaurantGrill = new Restaurant("Grub Grill", "American grilled foods", "Area A-3");
+        restaurantGrill.setMenuFoods(menuGrill);
         
         //Add restaurants to the Restaurant array to used by the food order
-        restaurants.add(restaurant1);
-        restaurants.add(restaurant2);
-        restaurants.add(restaurant3);
-        restaurants.add(restaurant4);
+        restaurants.add(restaurantDeli);
+        restaurants.add(restaurantItalian);
+        restaurants.add(restaurantMexican);
+        restaurants.add(restaurantGrill);
         
         return restaurants;
         
