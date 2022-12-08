@@ -69,8 +69,13 @@ public class NavigationUI extends javax.swing.JFrame {
         btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnManageFoodOrders.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnManageFoodOrders.setText("Manage Food Orders");
+        btnManageFoodOrders.setText("Order Food");
         btnManageFoodOrders.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnManageFoodOrders.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageFoodOrdersActionPerformed(evt);
+            }
+        });
 
         btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPurchaseTickets.setText("Purchase Tickets");
@@ -184,6 +189,16 @@ public class NavigationUI extends javax.swing.JFrame {
     private void btnExitApplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitApplicationActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnExitApplicationActionPerformed
+
+    private void btnManageFoodOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFoodOrdersActionPerformed
+       OrderFoodUI orderFoodUI = new OrderFoodUI();
+       orderFoodUI.setVisible(true);
+       orderFoodUI.pnlMenu.setVisible(true);
+       orderFoodUI.cbRestaurantList.setVisible(true);
+       orderFoodUI.tblMenu.setVisible(false);
+       this.dispose();
+       
+    }//GEN-LAST:event_btnManageFoodOrdersActionPerformed
 
     /**
      * @param args the command line arguments

@@ -15,9 +15,9 @@ import javax.swing.table.DefaultTableModel;
  */
 public class OrderFoodUI extends javax.swing.JFrame {
      private boolean orderUIActive = false;
-     ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
-     String selectedRestaurant = "El Taco";
-     ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(null);
+     ManageFoodCtrl manageFoodCtrl;
+     ArrayList<Food> menuToDisplay;
+     
      
 
     /**
@@ -26,8 +26,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
     public OrderFoodUI() {
         initComponents();
         //ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay("El Taco");
-        //this.menuToDisplay = menuToDisplay;
-       //addRowToMenuTable();
         
     }
     public void addRowToMenuTable(){
@@ -52,7 +50,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlMenu = new javax.swing.JPanel();
         cbRestaurantList = new javax.swing.JComboBox<>();
         lblSelectRestaurant = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -73,6 +71,8 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
         tblMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
@@ -107,13 +107,13 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tblMenu);
         tblMenu.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
+        pnlMenu.setLayout(pnlMenuLayout);
+        pnlMenuLayout.setHorizontalGroup(
+            pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMenuLayout.createSequentialGroup()
+                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlMenuLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblSelectRestaurant)
                         .addGap(18, 18, 18)
@@ -121,11 +121,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlMenuLayout.setVerticalGroup(
+            pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlMenuLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbRestaurantList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSelectRestaurant))
                 .addGap(18, 18, 18)
@@ -139,14 +139,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(405, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -154,14 +154,16 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbRestaurantListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRestaurantListActionPerformed
+        manageFoodCtrl = new ManageFoodCtrl();
+        ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(this.cbRestaurantList.getSelectedItem().toString());
+        
         String selectedRestaurant = this.cbRestaurantList.getSelectedItem().toString();
-        this.selectedRestaurant = selectedRestaurant;
         System.out.println(selectedRestaurant);
-         ArrayList<Food> menuToDisplay;
-         menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(selectedRestaurant);
-         this.menuToDisplay = menuToDisplay;
+        menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(selectedRestaurant);
+        this.menuToDisplay = menuToDisplay;
          
-         //addRowToMenuTable();
+         addRowToMenuTable();
+         
         
         
     }//GEN-LAST:event_cbRestaurantListActionPerformed
@@ -214,9 +216,9 @@ public boolean isOrderFoodUIActive() {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> cbRestaurantList;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblSelectRestaurant;
+    public javax.swing.JPanel pnlMenu;
     public javax.swing.JTable tblMenu;
     // End of variables declaration//GEN-END:variables
 }

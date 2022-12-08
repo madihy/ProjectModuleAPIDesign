@@ -23,8 +23,7 @@ public class ManageFoodCtrl {
      * This is the default controller for the ManageFoodCtrl class.
      */
     public ManageFoodCtrl(){
-    //OrderFoodUI orderFoodUI = new OrderFoodUI();
-    
+        
     
     }
     
@@ -37,27 +36,27 @@ public class ManageFoodCtrl {
      */
     public ArrayList getRestaurantMenuToDisplay (String selectedRestaurant){
         System.out.println("Button clicked to select the restaurant.");
-        ArrayList<Restaurant> restaurants1 = new ArrayList(foodOrder.createRestaurants());
         
-        Restaurant restaurantToReturn = null;
+        ArrayList<Restaurant> restaurants1 = new ArrayList(foodOrder.createRestaurants());
+        System.out.println(restaurants1);
+        
+        ArrayList<Food> selectedMenu;
+        Restaurant restaurantToReturn = restaurants1.get(0);
         for (int i = 0; i < restaurants1.size(); i++){
             if (restaurants1.get(i).getRestaurantName().equals(selectedRestaurant)){
                 restaurantToReturn = restaurants1.get(i);
+                //selectedMenu = restaurants1.get(i).getMenuFoods();
+                System.out.println(restaurantToReturn.toString());
             }
         }
+        selectedMenu = restaurantToReturn.getMenuFoods();
         
-        ArrayList<Food> selectedMenu = new ArrayList<Food>(restaurantToReturn.getMenuFoods()); 
-        System.out.println(selectedMenu.toString());
+        
         
         return selectedMenu;
         
     }
-    
-    
-    public void addRowToMenuTable(){
-        
-    }
-        
+   
      /**
      * Establishes the action event to be carried out when the return to main menu button 
      * is selected on the order food user interface.

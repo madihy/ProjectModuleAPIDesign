@@ -31,18 +31,8 @@ public class FoodOrder {
      * Empty constructor for the Food Order class
      */
     public FoodOrder (){
+              
             
-       this.readRestaurantFile();
-
-        if (restaurants.isEmpty() || restaurants == null) {
-
-            System.out.println("restaurants empty, creating test foods...");
-
-            this.createRestaurants();   
-            this.writeRestaurantFile();
-            this.readRestaurantFile();
-
-        }  
     }
 
     /**
