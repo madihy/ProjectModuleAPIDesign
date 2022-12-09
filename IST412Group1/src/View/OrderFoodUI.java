@@ -7,38 +7,22 @@ package View;
 import Controller.ManageFoodCtrl;
 import Model.Food;
 import java.util.ArrayList;
+import javax.swing.JScrollPane;
+import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author joepompilii
+ * @author Kate
  */
 public class OrderFoodUI extends javax.swing.JFrame {
-     private boolean orderUIActive = false;
-     ManageFoodCtrl manageFoodCtrl;
-     ArrayList<Food> menuToDisplay;
-     
-     
+    ArrayList<Food> menu = new ArrayList<Food>();
 
     /**
-     * Creates new form NewJFrame
+     * Creates new form OrderFoodUI2
      */
     public OrderFoodUI() {
         initComponents();
-        //ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay("El Taco");
-        
-    }
-    public void addRowToMenuTable(){
-        
-        DefaultTableModel model = (DefaultTableModel) this.tblMenu.getModel();
-         Object rowData[] = new Object[4];
-         for(int i = 0; i< menuToDisplay.size(); i++){
-             rowData[0] = menuToDisplay.get(i).getFoodName();
-             rowData[1] = menuToDisplay.get(i).getFoodPrice();
-             rowData[2] = menuToDisplay.get(i).getFoodQuantity();
-             rowData[3] = menuToDisplay.get(i).getFoodSubtotal();
-             model.addRow(rowData);
-         }
     }
 
     /**
@@ -50,93 +34,207 @@ public class OrderFoodUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlMenu = new javax.swing.JPanel();
-        cbRestaurantList = new javax.swing.JComboBox<>();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
+        pnlSelectRestaurant = new javax.swing.JPanel();
+        btnSandwichShop = new javax.swing.JButton();
+        btnSofiasPizza = new javax.swing.JButton();
+        btnElTaco = new javax.swing.JButton();
+        btnGrubGrill = new javax.swing.JButton();
         lblSelectRestaurant = new javax.swing.JLabel();
+        btnMainMenu = new javax.swing.JButton();
+        pnlSelectFood = new javax.swing.JPanel();
+        lblSelectRestaurant1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblMenu = new javax.swing.JTable();
+        btnPlaceOrder = new javax.swing.JButton();
+        btnCancelOrder = new javax.swing.JButton();
+        lblOrderSubtotal = new javax.swing.JLabel();
+        lblOrderSubtotalAmount = new javax.swing.JLabel();
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
+
+        jCheckBoxMenuItem2.setSelected(true);
+        jCheckBoxMenuItem2.setText("jCheckBoxMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        cbRestaurantList.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        cbRestaurantList.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "El Taco", "Grub Grill", "Sandwich Shop", "Sofia's Pizza" }));
-        cbRestaurantList.addActionListener(new java.awt.event.ActionListener() {
+        btnSandwichShop.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnSandwichShop.setText("Sandwich Shop");
+        btnSandwichShop.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSandwichShop.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbRestaurantListActionPerformed(evt);
+                btnSandwichShopActionPerformed(evt);
             }
         });
 
-        lblSelectRestaurant.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        btnSofiasPizza.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnSofiasPizza.setText("Sofia's Pizza");
+        btnSofiasPizza.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSofiasPizza.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSofiasPizzaActionPerformed(evt);
+            }
+        });
+
+        btnElTaco.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnElTaco.setText("El Taco");
+        btnElTaco.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnElTaco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnElTacoActionPerformed(evt);
+            }
+        });
+
+        btnGrubGrill.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnGrubGrill.setText("Grub Grill");
+        btnGrubGrill.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnGrubGrill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrubGrillActionPerformed(evt);
+            }
+        });
+
+        lblSelectRestaurant.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblSelectRestaurant.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSelectRestaurant.setText("Select a Restaurant");
 
+        btnMainMenu.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnMainMenu.setText("Main Menu");
+        btnMainMenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnMainMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMainMenuActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlSelectRestaurantLayout = new javax.swing.GroupLayout(pnlSelectRestaurant);
+        pnlSelectRestaurant.setLayout(pnlSelectRestaurantLayout);
+        pnlSelectRestaurantLayout.setHorizontalGroup(
+            pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSelectRestaurantLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSelectRestaurant, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlSelectRestaurantLayout.createSequentialGroup()
+                        .addGroup(pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnGrubGrill, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnElTaco, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSofiasPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSandwichShop, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 23, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSelectRestaurantLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84))
+        );
+        pnlSelectRestaurantLayout.setVerticalGroup(
+            pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSelectRestaurantLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSelectRestaurant)
+                .addGap(27, 27, 27)
+                .addComponent(btnSandwichShop, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSofiasPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnElTaco, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGrubGrill, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        lblSelectRestaurant1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblSelectRestaurant1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSelectRestaurant1.setText("Update the Food Quantities");
+
+        tblMenu.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         tblMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Food Name", "Cost", "Quantity", "Subtotal"
+                "Food Name", "Food Cost", "Food Quantity", "Food Subtotal"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Double.class, java.lang.Integer.class, java.lang.Double.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, true, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
         tblMenu.setColumnSelectionAllowed(true);
+        tblMenu.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tblMenu);
         tblMenu.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        if (tblMenu.getColumnModel().getColumnCount() > 0) {
-            tblMenu.getColumnModel().getColumn(0).setHeaderValue("Food Name");
-            tblMenu.getColumnModel().getColumn(1).setHeaderValue("Cost");
-            tblMenu.getColumnModel().getColumn(2).setHeaderValue("Quantity");
-            tblMenu.getColumnModel().getColumn(3).setHeaderValue("Subtotal");
-        }
 
-        javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
-        pnlMenu.setLayout(pnlMenuLayout);
-        pnlMenuLayout.setHorizontalGroup(
-            pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMenuLayout.createSequentialGroup()
-                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblSelectRestaurant)
-                        .addGap(18, 18, 18)
-                        .addComponent(cbRestaurantList, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE))
+        btnPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnPlaceOrder.setText("Place Order");
+        btnPlaceOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlaceOrderActionPerformed(evt);
+            }
+        });
+
+        btnCancelOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnCancelOrder.setText("Cancel Order");
+        btnCancelOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnCancelOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelOrderActionPerformed(evt);
+            }
+        });
+
+        lblOrderSubtotal.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        lblOrderSubtotal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblOrderSubtotal.setText("Order Subtotal:");
+
+        lblOrderSubtotalAmount.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        lblOrderSubtotalAmount.setText("$ 0");
+
+        javax.swing.GroupLayout pnlSelectFoodLayout = new javax.swing.GroupLayout(pnlSelectFood);
+        pnlSelectFood.setLayout(pnlSelectFoodLayout);
+        pnlSelectFoodLayout.setHorizontalGroup(
+            pnlSelectFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSelectFoodLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlSelectFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSelectRestaurant1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSelectFoodLayout.createSequentialGroup()
+                        .addComponent(btnCancelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnlSelectFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSelectFoodLayout.createSequentialGroup()
+                                .addComponent(lblOrderSubtotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblOrderSubtotalAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(btnPlaceOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
-        pnlMenuLayout.setVerticalGroup(
-            pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMenuLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbRestaurantList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSelectRestaurant))
+        pnlSelectFoodLayout.setVerticalGroup(
+            pnlSelectFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSelectFoodLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblSelectRestaurant1)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlSelectFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOrderSubtotal)
+                    .addComponent(lblOrderSubtotalAmount))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(pnlSelectFoodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPlaceOrder)
+                    .addComponent(btnCancelOrder))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -144,35 +242,74 @@ public class OrderFoodUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(405, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addComponent(pnlSelectRestaurant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
+                .addComponent(pnlSelectFood, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnlSelectRestaurant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlSelectFood, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cbRestaurantListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRestaurantListActionPerformed
-        manageFoodCtrl = new ManageFoodCtrl();
-        ArrayList<Food> menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(this.cbRestaurantList.getSelectedItem().toString());
-        
-        String selectedRestaurant = this.cbRestaurantList.getSelectedItem().toString();
-        System.out.println(selectedRestaurant);
-        menuToDisplay = manageFoodCtrl.getRestaurantMenuToDisplay(selectedRestaurant);
-        this.menuToDisplay = menuToDisplay;
-         
-         addRowToMenuTable();
-         
+    private void btnSandwichShopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSandwichShopActionPerformed
+        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
+        menu = new ArrayList<Food>(manageFoodCtrl.getDeliMenuToDisplay());
+        this.menu = menu;
         
         
-    }//GEN-LAST:event_cbRestaurantListActionPerformed
+        DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
+         Object rowData[] = new Object[4];
+         for(int i = 0; i< menu.size(); i++){
+             rowData[0] = menu.get(i).getFoodName();
+             rowData[1] = menu.get(i).getFoodPrice();
+             rowData[2] = menu.get(i).getFoodQuantity();
+             rowData[3] = menu.get(i).getFoodSubtotal();
+             
+             model.addRow(rowData);
+         }
+             
+              
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSandwichShopActionPerformed
+
+    private void btnSofiasPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSofiasPizzaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSofiasPizzaActionPerformed
+
+    private void btnElTacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElTacoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnElTacoActionPerformed
+
+    private void btnGrubGrillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrubGrillActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGrubGrillActionPerformed
+
+    private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed
+        NavigationUI navUI = new NavigationUI();
+        navUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMainMenuActionPerformed
+
+    private void btnPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceOrderActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPlaceOrderActionPerformed
+
+    private void btnCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelOrderActionPerformed
+        NavigationUI navUI = new NavigationUI();
+        navUI.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnCancelOrderActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,22 +346,24 @@ public class OrderFoodUI extends javax.swing.JFrame {
             }
         });
     }
-    
-public boolean isOrderFoodUIActive() {
-        if(orderUIActive = true){
-            System.out.println("OrderUI is active!");
-        }
-        else{
-            System.out.println("OrderUI is no longer active!");
-        }
-        return orderUIActive;
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JComboBox<String> cbRestaurantList;
+    public javax.swing.JButton btnCancelOrder;
+    public javax.swing.JButton btnElTaco;
+    public javax.swing.JButton btnGrubGrill;
+    public javax.swing.JButton btnMainMenu;
+    public javax.swing.JButton btnPlaceOrder;
+    public javax.swing.JButton btnSandwichShop;
+    public javax.swing.JButton btnSofiasPizza;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblOrderSubtotal;
+    public javax.swing.JLabel lblOrderSubtotalAmount;
     private javax.swing.JLabel lblSelectRestaurant;
-    public javax.swing.JPanel pnlMenu;
+    private javax.swing.JLabel lblSelectRestaurant1;
+    public javax.swing.JPanel pnlSelectFood;
+    public javax.swing.JPanel pnlSelectRestaurant;
     public javax.swing.JTable tblMenu;
     // End of variables declaration//GEN-END:variables
 }

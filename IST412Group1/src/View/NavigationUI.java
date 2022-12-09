@@ -191,7 +191,7 @@ public class NavigationUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitApplicationActionPerformed
 
     private void btnManageFoodOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFoodOrdersActionPerformed
-       OrderFoodUI2 orderFoodUI = new OrderFoodUI2();
+       OrderFoodUI orderFoodUI = new OrderFoodUI();
        orderFoodUI.setVisible(true);
        
        this.dispose();

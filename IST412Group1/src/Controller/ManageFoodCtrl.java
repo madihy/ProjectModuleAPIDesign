@@ -41,7 +41,7 @@ public class ManageFoodCtrl {
         ArrayList<Restaurant> restaurants1 = new ArrayList(foodOrder.createRestaurants());
         System.out.println(restaurants1);
         
-        ArrayList<Food> selectedMenu;
+        ArrayList<Food> selectedMenu = new ArrayList<Food>();
         Restaurant restaurantToReturn = restaurants1.get(0);
         for (int i = 0; i < restaurants1.size(); i++){
             if (restaurants1.get(i).getRestaurantName().equals(selectedRestaurant)){
@@ -51,8 +51,6 @@ public class ManageFoodCtrl {
             }
         }
         selectedMenu = restaurantToReturn.getMenuFoods();
-        
-        
         
         return selectedMenu;
         
