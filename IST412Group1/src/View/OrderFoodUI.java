@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import javax.swing.JScrollPane;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
 
 /**
  *
@@ -23,6 +24,18 @@ public class OrderFoodUI extends javax.swing.JFrame {
      */
     public OrderFoodUI() {
         initComponents();
+    }
+    public void createTableModel(){
+        DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
+         Object rowData[] = new Object[4];
+         for(int i = 0; i< menu.size(); i++){      
+             rowData[0] = menu.get(i).getFoodName().toString();
+             rowData[1] = menu.get(i).getFoodPrice();
+             rowData[2] = menu.get(i).getFoodQuantity();
+             rowData[3] = menu.get(i).getFoodSubtotal();
+             
+             model.addRow(rowData);
+         }
     }
 
     /**
@@ -265,34 +278,29 @@ public class OrderFoodUI extends javax.swing.JFrame {
         ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
         menu = new ArrayList<Food>(manageFoodCtrl.getDeliMenuToDisplay());
         this.menu = menu;
-        
-        
-        DefaultTableModel model = (DefaultTableModel) tblMenu.getModel();
-         Object rowData[] = new Object[4];
-         for(int i = 0; i< menu.size(); i++){
-             rowData[0] = menu.get(i).getFoodName();
-             rowData[1] = menu.get(i).getFoodPrice();
-             rowData[2] = menu.get(i).getFoodQuantity();
-             rowData[3] = menu.get(i).getFoodSubtotal();
-             
-             model.addRow(rowData);
-         }
-             
-              
-        
-        // TODO add your handling code here:
+        createTableModel();
+
     }//GEN-LAST:event_btnSandwichShopActionPerformed
 
     private void btnSofiasPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSofiasPizzaActionPerformed
-        // TODO add your handling code here:
+        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
+        menu = new ArrayList<Food>(manageFoodCtrl.getItalianMenuToDisplay());
+        this.menu = menu;
+        createTableModel();
     }//GEN-LAST:event_btnSofiasPizzaActionPerformed
 
     private void btnElTacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElTacoActionPerformed
-        // TODO add your handling code here:
+        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
+        menu = new ArrayList<Food>(manageFoodCtrl.getMexicanMenuToDisplay());
+        this.menu = menu;
+        createTableModel();
     }//GEN-LAST:event_btnElTacoActionPerformed
 
     private void btnGrubGrillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrubGrillActionPerformed
-        // TODO add your handling code here:
+        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
+        menu = new ArrayList<Food>(manageFoodCtrl.getGrillMenuToDisplay());
+        this.menu = menu;
+        createTableModel();
     }//GEN-LAST:event_btnGrubGrillActionPerformed
 
     private void btnMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuActionPerformed

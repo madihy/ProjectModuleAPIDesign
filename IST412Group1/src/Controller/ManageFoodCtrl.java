@@ -27,35 +27,6 @@ public class ManageFoodCtrl {
     
     }
     
-        
-     /**
-     * Establishes the action event to be carried out when the corresponding restaurant button 
-     * is selected on the order food user interface.
-     * Displays corresponding restaurant menu items.
-     * @param event sets the event variable to occur when the corresponding restaurant button is selected.
-     */
-    public ArrayList getRestaurantMenuToDisplay (String selectedRestaurant){
-        System.out.println("Button clicked to select the restaurant.");
-        System.out.println(selectedRestaurant);
-        
-        ArrayList<Restaurant> restaurants1 = new ArrayList(foodOrder.createRestaurants());
-        System.out.println(restaurants1);
-        
-        ArrayList<Food> selectedMenu = new ArrayList<Food>();
-        Restaurant restaurantToReturn = restaurants1.get(0);
-        for (int i = 0; i < restaurants1.size(); i++){
-            if (restaurants1.get(i).getRestaurantName().equals(selectedRestaurant)){
-                restaurantToReturn = restaurants1.get(i);
-                //selectedMenu = restaurants1.get(i).getMenuFoods();
-                System.out.println(restaurantToReturn.toString());
-            }
-        }
-        selectedMenu = restaurantToReturn.getMenuFoods();
-        
-        return selectedMenu;
-        
-    }
-    
     public ArrayList getDeliMenuToDisplay (){
         System.out.println("Button clicked to get Deli Menu");
 
@@ -80,6 +51,89 @@ public class ManageFoodCtrl {
         System.out.println("Deli menu found");
         
         return menuDeli;
+        
+    }
+    
+    public ArrayList getItalianMenuToDisplay (){
+        System.out.println("Button clicked to get Italian Menu");
+
+        ArrayList<Food> menuItalian = new ArrayList();
+        Food food15 = new Food("Small Pizza", 9.99);
+        Food food16 = new Food("Large Pizza", 12.99);
+        Food food17 = new Food("Pasta Bowl", 7);
+        Food food18 = new Food("Gelato", 4.50);
+        Food food19 = new Food("Dessert Pizza", 9.99);
+        Food food26 = new Food("Fountain Drink", 2.99);
+        Food food27 = new Food("Bottled Drink", 3.99);
+        
+        menuItalian.add(food15);
+        menuItalian.add(food16);
+        menuItalian.add(food17);
+        menuItalian.add(food18);
+        menuItalian.add(food19);
+        menuItalian.add(food26);
+        menuItalian.add(food27);
+        System.out.println("Italian menu found");
+        
+        return menuItalian;
+        
+    }
+    
+    public ArrayList getMexicanMenuToDisplay (){
+        System.out.println("Button clicked to get Mexican Menu");
+
+        ArrayList<Food> menuMexican = new ArrayList();
+        Food food20 = new Food("Tacos", 9.99);
+        Food food21 = new Food("Burrito", 12.99);
+        Food food22 = new Food("Rice Bowl", 12.99);
+        Food food23 = new Food("Churro", 4.50);
+        Food food24 = new Food("Chips and Salsa", 6.50);
+        Food food25 = new Food("chips and Guacamole", 7.50);
+        Food food26 = new Food("Fountain Drink", 2.99);
+        Food food27 = new Food("Bottled Drink", 3.99);
+        
+        menuMexican.add(food20);
+        menuMexican.add(food21);
+        menuMexican.add(food22);
+        menuMexican.add(food23);
+        menuMexican.add(food24);
+        menuMexican.add(food25);
+        menuMexican.add(food26);
+        menuMexican.add(food27);
+        System.out.println("Mexican menu found");
+        
+        return menuMexican;
+        
+    }
+    
+    public ArrayList getGrillMenuToDisplay (){
+        System.out.println("Button clicked to get Grill Menu");
+
+        ArrayList<Food> menuGrill = new ArrayList();
+        Food food7 = new Food("Hotdog", 6.99);
+        Food food8 = new Food("Hamburger", 8.99);
+        Food food9 = new Food("Turkey leg", 7);
+        Food food10 = new Food("Dole Whip", 4.50);
+        Food food11 = new Food("Chicken Nuggets", 6.99);
+        Food food12 = new Food("Chips", 3.50);
+        Food food13 = new Food("French Fries", 4.50);
+        Food food14 = new Food("Milkshake", 5.00);
+        Food food26 = new Food("Fountain Drink", 2.99);
+        Food food27 = new Food("Bottled Drink", 3.99);
+        
+        menuGrill.add(food7);
+        menuGrill.add(food8);
+        menuGrill.add(food9);
+        menuGrill.add(food10);
+        menuGrill.add(food11);
+        menuGrill.add(food12);
+        menuGrill.add(food13);
+        menuGrill.add(food14);
+        menuGrill.add(food26);
+        menuGrill.add(food27);      
+        System.out.println("Grill menu found");
+        
+        return menuGrill;
         
     }
    

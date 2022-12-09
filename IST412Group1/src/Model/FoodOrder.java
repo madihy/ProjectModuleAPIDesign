@@ -24,16 +24,13 @@ public class FoodOrder {
     private double foodOrderTotal = this.getFoodOrderTotal();
     private String foodOrderStatus = "pending"; //such as pending, being prepared, ready for pick-up, or completed
     private ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
-    String restaurantDataFileName = "restaurantData.ser";
-    ArrayList<Integer> orderNums = new ArrayList<>();
+    ArrayList<Integer> orderNums = new ArrayList<Integer>();
     
     /**
      * Empty constructor for the Food Order class
      */
     public FoodOrder (){
-    
-    
-            
+     
     }
 
     /**
@@ -140,13 +137,13 @@ public class FoodOrder {
     }
     
     public int createFoodOrderNumber(){
-        int orderNum;
-        
+        int orderNum = 0;
         do{
             orderNum = (int)(Math.random()*400000000) + 1000000000;
         } 
         while (orderNums.contains(orderNum));
         orderNums.add(orderNum);
+        
         return orderNum;
    }
    /**
@@ -182,151 +179,5 @@ public class FoodOrder {
          System.out.println("Food order subtotal calculated!");
          return total;
      }
-    
-     /**
-      * Creates the food objects and menu arrays, and then, adds foods to menu arrays
-      * Creates restaurants and sets menu array for each and adds to the restaurants array
-      * @return the restaurants array
-      */
-    public ArrayList<Restaurant> createRestaurants(){
-        //Create all food options
-        //Deli-specific foods
-        Food food1 = new Food("Sandwich", 9.99);
-        Food food2 = new Food("Sub", 12.99);
-        Food food3 = new Food("Pasta Salad", 7);
-        Food food4 = new Food("Cookie", 4.50);
-        Food food5 = new Food("Chips", 3.50);
-        Food food6 = new Food("Brownie", 4.50);
-        //Grill-specific foods
-        Food food7 = new Food("Hotdog", 6.99);
-        Food food8 = new Food("Hamburger", 8.99);
-        Food food9 = new Food("Turkey leg", 7);
-        Food food10 = new Food("Dole Whip", 4.50);
-        Food food11 = new Food("Chicken Nuggets", 6.99);
-        Food food12 = new Food("Chips", 3.50);
-        Food food13 = new Food("French Fries", 4.50);
-        Food food14 = new Food("Milkshake", 5.00);
-        //Italian-specific foods
-        Food food15 = new Food("Small Pizza", 9.99);
-        Food food16 = new Food("Large Pizza", 12.99);
-        Food food17 = new Food("Pasta Bowl", 7);
-        Food food18 = new Food("Gelato", 4.50);
-        Food food19 = new Food("Dessert Pizza", 9.99);
-        //Mexican-specific foods
-        Food food20 = new Food("Tacos", 9.99);
-        Food food21 = new Food("Burrito", 12.99);
-        Food food22 = new Food("Rice Bowl", 12.99);
-        Food food23 = new Food("Churro", 4.50);
-        Food food24 = new Food("Chips and Salsa", 6.50);
-        Food food25 = new Food("chips and Guacamole", 7.50);
-        //General Beverages
-        Food food26 = new Food("Fountain Drink", 2.99);
-        Food food27 = new Food("Bottled Drink", 3.99);
-        
-        //Create Menu arrays and add Food objects to each menu
-        //Create array for the deli menu and add food objects to it
-        ArrayList<Food> menuDeli = new ArrayList<Food>();
-        menuDeli.add(food1);
-        menuDeli.add(food2);
-        menuDeli.add(food3);
-        menuDeli.add(food4);
-        menuDeli.add(food5);
-        menuDeli.add(food6);
-        menuDeli.add(food26);
-        menuDeli.add(food27);
-        
-        //Create array for the grill menu and add food objects to it
-        ArrayList<Food> menuGrill = new ArrayList<Food>();
-        menuGrill.add(food7);
-        menuGrill.add(food8);
-        menuGrill.add(food9);
-        menuGrill.add(food10);
-        menuGrill.add(food11);
-        menuGrill.add(food12);
-        menuGrill.add(food13);
-        menuGrill.add(food14);
-        menuGrill.add(food26);
-        menuGrill.add(food27);
-        
-        //Create array for the Italian menu and add food objects to it
-        ArrayList<Food> menuItalian = new ArrayList<Food>();
-        menuItalian.add(food15);
-        menuItalian.add(food16);
-        menuItalian.add(food17);
-        menuItalian.add(food18);
-        menuItalian.add(food19);
-        menuItalian.add(food26);
-        menuItalian.add(food27);
-        
-        
-        //Create array for the Mexican menu and add food objects to it
-        ArrayList<Food> menuMexican = new ArrayList<Food>();
-        menuMexican.add(food20);
-        menuMexican.add(food21);
-        menuMexican.add(food22);
-        menuMexican.add(food23);
-        menuMexican.add(food24);
-        menuMexican.add(food25);
-        menuMexican.add(food26);
-        menuMexican.add(food27);
-        
-        //Create Restaurant objects and set the menu for each
-        Restaurant restaurantDeli = new Restaurant("Sandwich Shop", "delicatessen", "Area C-1");
-        restaurantDeli.setMenuFoods(menuDeli);
-        Restaurant restaurantItalian = new Restaurant("Sofia's Pizza", "pizzaria", "Area B-2");
-        restaurantItalian.setMenuFoods(menuItalian);
-        Restaurant restaurantMexican = new Restaurant("El Taco", "Mexican food", "Area C-1");
-        restaurantMexican.setMenuFoods(menuMexican);
-        Restaurant restaurantGrill = new Restaurant("Grub Grill", "American grilled foods", "Area A-3");
-        restaurantGrill.setMenuFoods(menuGrill);
-        
-        //Add restaurants to the Restaurant array to used by the food order
-        restaurants.add(restaurantDeli);
-        restaurants.add(restaurantItalian);
-        restaurants.add(restaurantMexican);
-        restaurants.add(restaurantGrill);
-        
-        return restaurants;
-        
-    }
-    
-    public void readRestaurantFile() {
-
-        FileInputStream fis = null;
-        ObjectInputStream in = null;
-
-        try {
-            fis = new FileInputStream(restaurantDataFileName);
-            in = new ObjectInputStream(fis);
-            restaurants = (ArrayList<Restaurant>) in.readObject();
-            in.close();
-
-            if (!restaurants.isEmpty()) {
-                System.out.println("Restaurant Data Loaded from File");
-            }
-
-        } catch (IOException ex) {
-            //ex.printStackTrace();
-        } catch (ClassNotFoundException ex) {
-            // ex.printStackTrace();
-        }
-
-    }
-
-    public void writeRestaurantFile() {
-
-        FileOutputStream fos = null;
-        ObjectOutputStream out = null;
-
-        try {
-            fos = new FileOutputStream(restaurantDataFileName);
-            out = new ObjectOutputStream(fos);
-            out.writeObject(restaurants);
-            out.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-
-    }
-
+   
 }
