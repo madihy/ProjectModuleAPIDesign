@@ -314,6 +314,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPurchaseTickets.setText("Purchase Tickets");
         btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPurchaseTickets.setEnabled(false);
         btnPurchaseTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPurchaseTicketsActionPerformed(evt);
@@ -417,6 +418,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         if (nofTickets <= 0 || nofDays <= 0) {
             JOptionPane.showMessageDialog(null, "Invalid Entry.");
+            btnPurchaseTickets.setEnabled(true);
         } else {
             double subtotal = ticketOrder.getOrderSubtotal();
             double tax = ticketOrder.getOrderTax();
@@ -426,6 +428,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
             lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
             lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
             this.manTicketsCtrl = manTicketsCtrl;
+            btnPurchaseTickets.setEnabled(true);
         }
 
         
