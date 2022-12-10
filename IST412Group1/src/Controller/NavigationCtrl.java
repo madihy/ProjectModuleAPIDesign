@@ -21,6 +21,7 @@ public class NavigationCtrl {
      */
     public NavigationCtrl(){
         NavigationUI navUI = new NavigationUI();
+        navUI.setLocationRelativeTo(null);
         navUI.setVisible(true);
         
     }

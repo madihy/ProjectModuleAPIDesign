@@ -227,6 +227,7 @@ public class CreateCustomerUI extends javax.swing.JFrame {
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
             LoginUI loginUI = new LoginUI();
+            loginUI.setLocationRelativeTo(null);
             loginUI.setVisible(true);
             this.dispose();
     }//GEN-LAST:event_btnCancelActionPerformed

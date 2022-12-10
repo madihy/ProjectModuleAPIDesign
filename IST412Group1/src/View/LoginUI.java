@@ -6,6 +6,7 @@ package View;
 
 
 import Controller.LoginCtrl;
+import Controller.NavigationCtrl;
 import javax.swing.JOptionPane;
 
 /**
@@ -176,8 +177,8 @@ public class LoginUI extends javax.swing.JFrame {
         
         
         if (auth == true){
-            NavigationUI navUI = new NavigationUI();
-            navUI.setVisible(true);
+            NavigationCtrl navCtrl = new NavigationCtrl();
+            
             this.setVisible(false);
         }
         else{
@@ -191,6 +192,7 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void newAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newAccountButtonActionPerformed
         CreateCustomerUI createCustUI = new CreateCustomerUI();
+        createCustUI.setLocationRelativeTo(null);
         createCustUI.setVisible(true);
         this.dispose();
         

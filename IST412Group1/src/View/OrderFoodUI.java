@@ -5,6 +5,7 @@
 package View;
 
 import Controller.ManageFoodCtrl;
+import Controller.NavigationCtrl;
 import Model.Food;
 import java.util.ArrayList;
 import javax.swing.JScrollPane;
@@ -35,6 +36,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
         jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
@@ -81,6 +83,36 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel19 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+        pnlSofiasPizza = new javax.swing.JPanel();
+        lblSelectRestaurantTitle2 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        spnItalianSmPizzaQty = new javax.swing.JSpinner();
+        spnItalianLgPizzaQty = new javax.swing.JSpinner();
+        spnItalianPastaQty = new javax.swing.JSpinner();
+        spnItalianGelatoQty = new javax.swing.JSpinner();
+        spnItalianDesPizzaQty = new javax.swing.JSpinner();
+        spnItalianFountainQty = new javax.swing.JSpinner();
+        spnItalianBottledQty = new javax.swing.JSpinner();
+        btnItalianCancelOrder = new javax.swing.JButton();
+        btnItalianPlaceOrder = new javax.swing.JButton();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel38 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
         pnlGrubGrill = new javax.swing.JPanel();
         lblSelectRestaurantTitle3 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -117,52 +149,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jLabel56 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
         spnGrillBottledQty = new javax.swing.JSpinner();
-        pnlFoodOrderConfirmation = new javax.swing.JPanel();
-        lblFoodOrderConfTitle = new javax.swing.JLabel();
-        lblOrderNumber = new javax.swing.JLabel();
-        lblRestaurant = new javax.swing.JLabel();
-        lblConfirmSubtotal = new javax.swing.JLabel();
-        lblConfirmTax = new javax.swing.JLabel();
-        lblConfirmTotalCost = new javax.swing.JLabel();
-        lblConfirmTotalCostValue = new javax.swing.JLabel();
-        lblConfirmTaxValue = new javax.swing.JLabel();
-        lblConfirmSubtotalValue = new javax.swing.JLabel();
-        lblConfirmNumberOfTicketsValue = new javax.swing.JLabel();
-        lblConfirmOrderNumberValue = new javax.swing.JLabel();
-        lblListFoodsSelected = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        taFoodsSelected = new javax.swing.JTextArea();
-        btnMainMenuOrdCon = new javax.swing.JButton();
-        pnlSofiasPizza = new javax.swing.JPanel();
-        lblSelectRestaurantTitle2 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        spnItalianSmPizzaQty = new javax.swing.JSpinner();
-        spnItalianLgPizzaQty = new javax.swing.JSpinner();
-        spnItalianPastaQty = new javax.swing.JSpinner();
-        spnItalianGelatoQty = new javax.swing.JSpinner();
-        spnItalianDesPizzaQty = new javax.swing.JSpinner();
-        spnItalianFountainQty = new javax.swing.JSpinner();
-        spnItalianBottledQty = new javax.swing.JSpinner();
-        btnItalianCancelOrder = new javax.swing.JButton();
-        btnItalianPlaceOrder = new javax.swing.JButton();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
-        jLabel38 = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
         pnlElTaco = new javax.swing.JPanel();
         lblSelectRestaurantTitle4 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
@@ -196,6 +182,22 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         spnMexicanBottledQty = new javax.swing.JSpinner();
+        pnlFoodOrderConfirmation = new javax.swing.JPanel();
+        lblFoodOrderConfTitle = new javax.swing.JLabel();
+        lblOrderNumber = new javax.swing.JLabel();
+        lblRestaurant = new javax.swing.JLabel();
+        lblConfirmSubtotal = new javax.swing.JLabel();
+        lblConfirmTax = new javax.swing.JLabel();
+        lblConfirmTotalCost = new javax.swing.JLabel();
+        lblConfirmTotalCostValue = new javax.swing.JLabel();
+        lblConfirmTaxValue = new javax.swing.JLabel();
+        lblConfirmSubtotalValue = new javax.swing.JLabel();
+        lblConfirmNumberOfTicketsValue = new javax.swing.JLabel();
+        lblConfirmOrderNumberValue = new javax.swing.JLabel();
+        lblListFoodsSelected = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        taFoodsSelected = new javax.swing.JTextArea();
+        btnMainMenuOrdCon = new javax.swing.JButton();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -210,6 +212,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("frmOrderFood"); // NOI18N
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
+
+        pnlSelectRestaurant.setLayout(new java.awt.GridBagLayout());
 
         btnSandwichShop.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnSandwichShop.setText("Sandwich Shop");
@@ -219,6 +225,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnSandwichShopActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 165;
+        gridBagConstraints.ipady = 19;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 32, 0, 10);
+        pnlSelectRestaurant.add(btnSandwichShop, gridBagConstraints);
 
         btnSofiasPizza.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnSofiasPizza.setText("Sofia's Pizza");
@@ -228,6 +242,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnSofiasPizzaActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 185;
+        gridBagConstraints.ipady = 19;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        pnlSelectRestaurant.add(btnSofiasPizza, gridBagConstraints);
 
         btnElTaco.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnElTaco.setText("El Taco");
@@ -237,6 +259,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnElTacoActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 221;
+        gridBagConstraints.ipady = 19;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        pnlSelectRestaurant.add(btnElTaco, gridBagConstraints);
 
         btnGrubGrill.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnGrubGrill.setText("Grub Grill");
@@ -246,10 +276,25 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnGrubGrillActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 205;
+        gridBagConstraints.ipady = 19;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        pnlSelectRestaurant.add(btnGrubGrill, gridBagConstraints);
 
         lblSelectRestaurant.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblSelectRestaurant.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSelectRestaurant.setText("Select a Restaurant");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 83;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        pnlSelectRestaurant.add(lblSelectRestaurant, gridBagConstraints);
 
         btnMainMenuResSel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnMainMenuResSel.setText("Main Menu");
@@ -259,120 +304,277 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnMainMenuResSelActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 193;
+        gridBagConstraints.ipady = 22;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(54, 32, 179, 10);
+        pnlSelectRestaurant.add(btnMainMenuResSel, gridBagConstraints);
 
-        javax.swing.GroupLayout pnlSelectRestaurantLayout = new javax.swing.GroupLayout(pnlSelectRestaurant);
-        pnlSelectRestaurant.setLayout(pnlSelectRestaurantLayout);
-        pnlSelectRestaurantLayout.setHorizontalGroup(
-            pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSelectRestaurantLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblSelectRestaurant, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE)
-                    .addComponent(btnSandwichShop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnGrubGrill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnElTaco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSofiasPizza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(18, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSelectRestaurantLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnMainMenuResSel)
-                .addGap(121, 121, 121))
-        );
-        pnlSelectRestaurantLayout.setVerticalGroup(
-            pnlSelectRestaurantLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSelectRestaurantLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(lblSelectRestaurant)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSandwichShop, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnSofiasPizza, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnGrubGrill)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnElTaco)
-                .addGap(18, 18, 18)
-                .addComponent(btnMainMenuResSel)
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+        getContentPane().add(pnlSelectRestaurant);
 
-        pnlSelectRestaurantLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnElTaco, btnGrubGrill, btnSandwichShop, btnSofiasPizza});
+        pnlSandwichShop.setLayout(new java.awt.GridBagLayout());
 
         lblSelectRestaurantTitle1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblSelectRestaurantTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSelectRestaurantTitle1.setText("Sandwich Shop Menu");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.ipadx = 95;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlSandwichShop.add(lblSelectRestaurantTitle1, gridBagConstraints);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel1.setText("Sandwich");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 58;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel2.setText("Sub");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 93;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel2, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel3.setText("Salad");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 83;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel3, gridBagConstraints);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel5.setText("Chips");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 82;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel5, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel6.setText("Cookie");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 72;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel6, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel7.setText("Fountain Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel7, gridBagConstraints);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel8.setText("Brownie");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 66;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel8, gridBagConstraints);
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel9.setText("Bottled Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 35;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jLabel9, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("$ 9.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel4, gridBagConstraints);
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("$ 12.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel10, gridBagConstraints);
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel11.setText("$ 7.00");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel11, gridBagConstraints);
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel12.setText("$ 3.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel12, gridBagConstraints);
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel13.setText("$ 4.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel13, gridBagConstraints);
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel14.setText("$ 2.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel14, gridBagConstraints);
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel15.setText("$ 4.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel15, gridBagConstraints);
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("$ 3.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.ipadx = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSandwichShop.add(jLabel16, gridBagConstraints);
 
         spnDeliSandwichQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliSandwichQty, gridBagConstraints);
 
         spnDeliSubQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliSubQty, gridBagConstraints);
 
         spnDeliSaladQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliSaladQty, gridBagConstraints);
 
         spnDeliCookieQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliCookieQty, gridBagConstraints);
 
         spnDeliChipsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliChipsQty, gridBagConstraints);
 
         spnDeliBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliBottledQty, gridBagConstraints);
 
         spnDeliBrownieQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliBrownieQty, gridBagConstraints);
 
         spnDeliFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSandwichShop.add(spnDeliFountainQty, gridBagConstraints);
 
         btnDeliCancelOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnDeliCancelOrder.setText("Cancel Order");
@@ -382,6 +584,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnDeliCancelOrderActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 124, 0);
+        pnlSandwichShop.add(btnDeliCancelOrder, gridBagConstraints);
 
         btnDeliPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnDeliPlaceOrder.setText("Place Order");
@@ -391,597 +601,290 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnDeliPlaceOrderActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 24;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 15, 124, 0);
+        pnlSandwichShop.add(btnDeliPlaceOrder, gridBagConstraints);
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel17.setText("Menu Options");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 10, 0, 0);
+        pnlSandwichShop.add(jLabel17, gridBagConstraints);
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel18.setText("Select Quantity");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
+        pnlSandwichShop.add(jLabel18, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlSandwichShop.add(jSeparator1, gridBagConstraints);
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel19.setText("Price Each");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        pnlSandwichShop.add(jLabel19, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(39, 10, 0, 0);
+        pnlSandwichShop.add(jSeparator2, gridBagConstraints);
 
-        javax.swing.GroupLayout pnlSandwichShopLayout = new javax.swing.GroupLayout(pnlSandwichShop);
-        pnlSandwichShop.setLayout(pnlSandwichShopLayout);
-        pnlSandwichShopLayout.setHorizontalGroup(
-            pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                        .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                .addComponent(btnDeliCancelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(71, 71, 71)
-                                .addComponent(btnDeliPlaceOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSandwichShopLayout.createSequentialGroup()
-                        .addGap(0, 20, Short.MAX_VALUE)
-                        .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblSelectRestaurantTitle1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSandwichShopLayout.createSequentialGroup()
-                                .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                        .addComponent(jLabel17)
-                                        .addGap(20, 20, 20)
-                                        .addComponent(jLabel19)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel18))
-                                    .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                            .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                                            .addGap(40, 40, 40)
-                                            .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(spnDeliSandwichQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliSubQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliSaladQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliCookieQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliChipsQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliBrownieQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnDeliBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(16, 16, 16))))))
-        );
+        getContentPane().add(pnlSandwichShop);
 
-        pnlSandwichShopLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel10, jLabel11, jLabel12, jLabel13, jLabel14, jLabel15, jLabel16, jLabel4});
-
-        pnlSandwichShopLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDeliCancelOrder, btnDeliPlaceOrder});
-
-        pnlSandwichShopLayout.setVerticalGroup(
-            pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblSelectRestaurantTitle1)
-                .addGap(27, 27, 27)
-                .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                        .addComponent(spnDeliSandwichQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliSubQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliSaladQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliCookieQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliChipsQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliBrownieQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnDeliBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                        .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3))
-                            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel11)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel9))
-                            .addGroup(pnlSandwichShopLayout.createSequentialGroup()
-                                .addComponent(jLabel13)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel12)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel15)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel14)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16)))))
-                .addGap(39, 39, 39)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlSandwichShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDeliCancelOrder)
-                    .addComponent(btnDeliPlaceOrder))
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-
-        lblSelectRestaurantTitle3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblSelectRestaurantTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSelectRestaurantTitle3.setText("Grub Grill Menu");
-
-        jLabel27.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel27.setText("Hot Dog");
-
-        jLabel35.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel35.setText("Hamburger");
-
-        jLabel39.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel39.setText("Turkey leg");
-
-        jLabel40.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel40.setText("Chips");
-
-        jLabel41.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel41.setText("Chicken Nuggets");
-
-        jLabel42.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel42.setText("Milkshake");
-
-        jLabel43.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel43.setText("French Fries");
-
-        jLabel44.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel44.setText("Fountain Drink");
-
-        jLabel45.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel45.setText("$ 6.99");
-
-        jLabel46.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel46.setText("$ 8.99");
-
-        jLabel47.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel47.setText("$ 7.00");
-
-        jLabel48.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel48.setText("$ 3.50");
-
-        jLabel49.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel49.setText("$ 6.99");
-
-        jLabel50.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel50.setText("$ 5.00");
-
-        jLabel51.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel51.setText("$ 4.50");
-
-        jLabel52.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel52.setText("$ 2.99");
-
-        spnGrillHotDogQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillHamburgerQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillTurkeyLegQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillChickenNuggetsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillChipsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillFriesQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        spnGrillMilkshakeQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        btnGrillCancelOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnGrillCancelOrder.setText("Cancel Order");
-        btnGrillCancelOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnGrillCancelOrder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGrillCancelOrderActionPerformed(evt);
-            }
-        });
-
-        btnGrillPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnGrillPlaceOrder.setText("Place Order");
-        btnGrillPlaceOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnGrillPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGrillPlaceOrderActionPerformed(evt);
-            }
-        });
-
-        jLabel53.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel53.setText("Menu Options");
-
-        jLabel54.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel54.setText("Select Quantity");
-
-        jLabel55.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel55.setText("Price Each");
-
-        jLabel56.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel56.setText("Bottled Drink");
-
-        jLabel57.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel57.setText("$ 3.99");
-
-        spnGrillBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-
-        javax.swing.GroupLayout pnlGrubGrillLayout = new javax.swing.GroupLayout(pnlGrubGrill);
-        pnlGrubGrill.setLayout(pnlGrubGrillLayout);
-        pnlGrubGrillLayout.setHorizontalGroup(
-            pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                        .addGap(0, 20, Short.MAX_VALUE)
-                        .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblSelectRestaurantTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                        .addComponent(jLabel53)
-                                        .addGap(20, 20, 20)
-                                        .addComponent(jLabel55)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel54))
-                                    .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                            .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(jLabel52, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel50, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel46, javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))
-                                            .addGap(40, 40, 40)
-                                            .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(spnGrillHotDogQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillHamburgerQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillTurkeyLegQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillChickenNuggetsQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillChipsQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillFriesQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillMilkshakeQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(spnGrillBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(16, 16, 16))))
-                    .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                            .addComponent(btnGrillCancelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(71, 71, 71)
-                            .addComponent(btnGrillPlaceOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel57))))
-        );
-        pnlGrubGrillLayout.setVerticalGroup(
-            pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblSelectRestaurantTitle3)
-                .addGap(27, 27, 27)
-                .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                        .addComponent(spnGrillHotDogQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillHamburgerQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillTurkeyLegQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillChickenNuggetsQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillChipsQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillFriesQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillMilkshakeQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnGrillFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                        .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                .addComponent(jLabel27)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel35)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel39))
-                            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                .addComponent(jLabel45)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel46)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel47)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                .addComponent(jLabel41)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel40)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel43)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel42)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel44))
-                            .addGroup(pnlGrubGrillLayout.createSequentialGroup()
-                                .addComponent(jLabel49)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel48)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel51)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel50)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel52)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel56)
-                    .addComponent(jLabel57)
-                    .addComponent(spnGrillBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlGrubGrillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGrillCancelOrder)
-                    .addComponent(btnGrillPlaceOrder))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        lblFoodOrderConfTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        lblFoodOrderConfTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFoodOrderConfTitle.setText("Food Order Confirmation");
-
-        lblOrderNumber.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblOrderNumber.setText("Order Number:");
-
-        lblRestaurant.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblRestaurant.setText("Restaurant:");
-
-        lblConfirmSubtotal.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmSubtotal.setText("Subtotal:");
-
-        lblConfirmTax.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmTax.setText("Tax Amount:");
-
-        lblConfirmTotalCost.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmTotalCost.setText("Total Cost:");
-
-        lblConfirmTotalCostValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmTotalCostValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmTotalCostValue.setText("$0");
-
-        lblConfirmTaxValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmTaxValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmTaxValue.setText("$0");
-
-        lblConfirmSubtotalValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmSubtotalValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmSubtotalValue.setText("$0");
-
-        lblConfirmNumberOfTicketsValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmNumberOfTicketsValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmNumberOfTicketsValue.setText("0");
-
-        lblConfirmOrderNumberValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmOrderNumberValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmOrderNumberValue.setText("0");
-
-        lblListFoodsSelected.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblListFoodsSelected.setText("Foods Selected:");
-
-        taFoodsSelected.setColumns(20);
-        taFoodsSelected.setRows(5);
-        jScrollPane2.setViewportView(taFoodsSelected);
-
-        btnMainMenuOrdCon.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnMainMenuOrdCon.setText("Main Menu");
-        btnMainMenuOrdCon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnMainMenuOrdCon.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMainMenuOrdConActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlFoodOrderConfirmationLayout = new javax.swing.GroupLayout(pnlFoodOrderConfirmation);
-        pnlFoodOrderConfirmation.setLayout(pnlFoodOrderConfirmationLayout);
-        pnlFoodOrderConfirmationLayout.setHorizontalGroup(
-            pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblFoodOrderConfTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 340, Short.MAX_VALUE)
-            .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
-                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
-                        .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblListFoodsSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
-                                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lblRestaurant, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblConfirmSubtotal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblConfirmTax, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblConfirmTotalCost, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblOrderNumber, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblConfirmOrderNumberValue, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblConfirmNumberOfTicketsValue, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblConfirmSubtotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblConfirmTaxValue, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblConfirmTotalCostValue, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(btnMainMenuOrdCon))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        pnlFoodOrderConfirmationLayout.setVerticalGroup(
-            pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
-                .addComponent(lblFoodOrderConfTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblOrderNumber)
-                    .addComponent(lblConfirmOrderNumberValue))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblRestaurant)
-                    .addComponent(lblConfirmNumberOfTicketsValue))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmSubtotal)
-                    .addComponent(lblConfirmSubtotalValue))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmTax)
-                    .addComponent(lblConfirmTaxValue))
-                .addGap(15, 15, 15)
-                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmTotalCostValue)
-                    .addComponent(lblConfirmTotalCost))
-                .addGap(18, 18, 18)
-                .addComponent(lblListFoodsSelected)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMainMenuOrdCon)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
+        pnlSofiasPizza.setLayout(new java.awt.GridBagLayout());
 
         lblSelectRestaurantTitle2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblSelectRestaurantTitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSelectRestaurantTitle2.setText("Sofia's Pizza Menu");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 14;
+        gridBagConstraints.ipadx = 126;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 10);
+        pnlSofiasPizza.add(lblSelectRestaurantTitle2, gridBagConstraints);
 
         jLabel20.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel20.setText("Small Pizza");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 49;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel20, gridBagConstraints);
 
         jLabel21.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel21.setText("Large Pizza");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 47;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel21, gridBagConstraints);
 
         jLabel22.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel22.setText("Pasta Bowl");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 48;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel22, gridBagConstraints);
 
         jLabel23.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel23.setText("Dessert Pizza");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 36;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel23, gridBagConstraints);
 
         jLabel24.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel24.setText("Gelato");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 77;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel24, gridBagConstraints);
 
         jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel25.setText("Bottled Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 35;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel25, gridBagConstraints);
 
         jLabel26.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel26.setText("Fountain Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel26, gridBagConstraints);
 
         jLabel28.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel28.setText("$ 9.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlSofiasPizza.add(jLabel28, gridBagConstraints);
 
         jLabel29.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel29.setText("$ 12.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlSofiasPizza.add(jLabel29, gridBagConstraints);
 
         jLabel30.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel30.setText("$ 7.00");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlSofiasPizza.add(jLabel30, gridBagConstraints);
 
         jLabel31.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel31.setText("$ 9.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlSofiasPizza.add(jLabel31, gridBagConstraints);
 
         jLabel32.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel32.setText("$ 4.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlSofiasPizza.add(jLabel32, gridBagConstraints);
 
         jLabel33.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel33.setText("$ 2.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlSofiasPizza.add(jLabel33, gridBagConstraints);
 
         jLabel34.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel34.setText("$ 4.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlSofiasPizza.add(jLabel34, gridBagConstraints);
 
         spnItalianSmPizzaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianSmPizzaQty, gridBagConstraints);
 
         spnItalianLgPizzaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianLgPizzaQty, gridBagConstraints);
 
         spnItalianPastaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianPastaQty, gridBagConstraints);
 
         spnItalianGelatoQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianGelatoQty, gridBagConstraints);
 
         spnItalianDesPizzaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianDesPizzaQty, gridBagConstraints);
 
         spnItalianFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianFountainQty, gridBagConstraints);
 
         spnItalianBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 40, 0, 0);
+        pnlSofiasPizza.add(spnItalianBottledQty, gridBagConstraints);
 
         btnItalianCancelOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnItalianCancelOrder.setText("Cancel Order");
@@ -991,6 +894,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnItalianCancelOrderActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 20, 124, 0);
+        pnlSofiasPizza.add(btnItalianCancelOrder, gridBagConstraints);
 
         btnItalianPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnItalianPlaceOrder.setText("Place Order");
@@ -1000,210 +911,684 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnItalianPlaceOrderActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 15, 124, 0);
+        pnlSofiasPizza.add(btnItalianPlaceOrder, gridBagConstraints);
 
         jLabel36.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel36.setText("Menu Options");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel36, gridBagConstraints);
 
         jLabel37.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel37.setText("Select Quantity");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
+        pnlSofiasPizza.add(jLabel37, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 13;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlSofiasPizza.add(jSeparator3, gridBagConstraints);
 
         jLabel38.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel38.setText("Price Each");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        pnlSofiasPizza.add(jLabel38, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(65, 10, 0, 0);
+        pnlSofiasPizza.add(jSeparator4, gridBagConstraints);
 
-        javax.swing.GroupLayout pnlSofiasPizzaLayout = new javax.swing.GroupLayout(pnlSofiasPizza);
-        pnlSofiasPizza.setLayout(pnlSofiasPizzaLayout);
-        pnlSofiasPizzaLayout.setHorizontalGroup(
-            pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                .addComponent(jLabel36)
-                                .addGap(20, 20, 20)
-                                .addComponent(jLabel38)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel37))
-                            .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                    .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel33, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel34, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel29, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel28, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addGap(40, 40, 40)
-                                    .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(spnItalianSmPizzaQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(spnItalianLgPizzaQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(spnItalianPastaQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(spnItalianGelatoQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(spnItalianDesPizzaQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(spnItalianFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(spnItalianBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(16, 16, 16))
-                    .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                        .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                .addComponent(btnItalianCancelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(71, 71, 71)
-                                .addComponent(btnItalianPlaceOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSofiasPizzaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblSelectRestaurantTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        pnlSofiasPizzaLayout.setVerticalGroup(
-            pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblSelectRestaurantTitle2)
-                .addGap(27, 27, 27)
-                .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                        .addComponent(spnItalianSmPizzaQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnItalianLgPizzaQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnItalianPastaQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnItalianGelatoQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnItalianDesPizzaQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnItalianFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnItalianBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                        .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                .addComponent(jLabel20)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel21)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel22))
-                            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                .addComponent(jLabel28)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel29)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel30)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                .addComponent(jLabel24)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel23)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel26)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel25))
-                            .addGroup(pnlSofiasPizzaLayout.createSequentialGroup()
-                                .addComponent(jLabel32)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel31)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel34)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel33)))))
-                .addGap(65, 65, 65)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlSofiasPizzaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnItalianCancelOrder)
-                    .addComponent(btnItalianPlaceOrder))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
+        getContentPane().add(pnlSofiasPizza);
+
+        pnlGrubGrill.setLayout(new java.awt.GridBagLayout());
+
+        lblSelectRestaurantTitle3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblSelectRestaurantTitle3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSelectRestaurantTitle3.setText("Grub Grill Menu");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 10;
+        gridBagConstraints.ipadx = 140;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlGrubGrill.add(lblSelectRestaurantTitle3, gridBagConstraints);
+
+        jLabel27.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel27.setText("Hot Dog");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 64;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel27, gridBagConstraints);
+
+        jLabel35.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel35.setText("Hamburger");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 49;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel35, gridBagConstraints);
+
+        jLabel39.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel39.setText("Turkey leg");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 53;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel39, gridBagConstraints);
+
+        jLabel40.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel40.setText("Chips");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 82;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel40, gridBagConstraints);
+
+        jLabel41.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel41.setText("Chicken Nuggets");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 13;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel41, gridBagConstraints);
+
+        jLabel42.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel42.setText("Milkshake");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 54;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel42, gridBagConstraints);
+
+        jLabel43.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel43.setText("French Fries");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 41;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel43, gridBagConstraints);
+
+        jLabel44.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel44.setText("Fountain Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel44, gridBagConstraints);
+
+        jLabel45.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel45.setText("$ 6.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel45, gridBagConstraints);
+
+        jLabel46.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel46.setText("$ 8.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel46, gridBagConstraints);
+
+        jLabel47.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel47.setText("$ 7.00");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel47, gridBagConstraints);
+
+        jLabel48.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel48.setText("$ 3.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel48, gridBagConstraints);
+
+        jLabel49.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel49.setText("$ 6.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel49, gridBagConstraints);
+
+        jLabel50.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel50.setText("$ 5.00");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel50, gridBagConstraints);
+
+        jLabel51.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel51.setText("$ 4.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel51, gridBagConstraints);
+
+        jLabel52.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel52.setText("$ 2.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel52, gridBagConstraints);
+
+        spnGrillHotDogQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillHotDogQty, gridBagConstraints);
+
+        spnGrillHamburgerQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillHamburgerQty, gridBagConstraints);
+
+        spnGrillTurkeyLegQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillTurkeyLegQty, gridBagConstraints);
+
+        spnGrillChickenNuggetsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillChickenNuggetsQty, gridBagConstraints);
+
+        spnGrillChipsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillChipsQty, gridBagConstraints);
+
+        spnGrillFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillFountainQty, gridBagConstraints);
+
+        spnGrillFriesQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillFriesQty, gridBagConstraints);
+
+        spnGrillMilkshakeQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillMilkshakeQty, gridBagConstraints);
+
+        btnGrillCancelOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnGrillCancelOrder.setText("Cancel Order");
+        btnGrillCancelOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnGrillCancelOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrillCancelOrderActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 20, 124, 0);
+        pnlGrubGrill.add(btnGrillCancelOrder, gridBagConstraints);
+
+        btnGrillPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnGrillPlaceOrder.setText("Place Order");
+        btnGrillPlaceOrder.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnGrillPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrillPlaceOrderActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 25, 124, 0);
+        pnlGrubGrill.add(btnGrillPlaceOrder, gridBagConstraints);
+
+        jLabel53.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel53.setText("Menu Options");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 10, 0, 0);
+        pnlGrubGrill.add(jLabel53, gridBagConstraints);
+
+        jLabel54.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel54.setText("Select Quantity");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
+        pnlGrubGrill.add(jLabel54, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jSeparator5, gridBagConstraints);
+
+        jLabel55.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel55.setText("Price Each");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        pnlGrubGrill.add(jLabel55, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 10, 0, 0);
+        pnlGrubGrill.add(jSeparator6, gridBagConstraints);
+
+        jLabel56.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel56.setText("Bottled Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 35;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlGrubGrill.add(jLabel56, gridBagConstraints);
+
+        jLabel57.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel57.setText("$ 3.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlGrubGrill.add(jLabel57, gridBagConstraints);
+
+        spnGrillBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 32, 0, 0);
+        pnlGrubGrill.add(spnGrillBottledQty, gridBagConstraints);
+
+        getContentPane().add(pnlGrubGrill);
+
+        pnlElTaco.setLayout(new java.awt.GridBagLayout());
 
         lblSelectRestaurantTitle4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblSelectRestaurantTitle4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSelectRestaurantTitle4.setText("El Taco Menu");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.ipadx = 172;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlElTaco.add(lblSelectRestaurantTitle4, gridBagConstraints);
 
         jLabel58.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel58.setText("Tacos");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 80;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 20, 0, 0);
+        pnlElTaco.add(jLabel58, gridBagConstraints);
 
         jLabel59.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel59.setText("Burrito");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 75;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel59, gridBagConstraints);
 
         jLabel60.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel60.setText("Rice Bowl");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 54;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel60, gridBagConstraints);
 
         jLabel61.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel61.setText("Chips & Salsa");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 30;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel61, gridBagConstraints);
 
         jLabel62.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel62.setText("Churro");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 74;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel62, gridBagConstraints);
 
         jLabel64.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel64.setText("Guacamole");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 49;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel64, gridBagConstraints);
 
         jLabel65.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel65.setText("Fountain Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 27;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel65, gridBagConstraints);
 
         jLabel66.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel66.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel66.setText("$ 9.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(7, 14, 0, 0);
+        pnlElTaco.add(jLabel66, gridBagConstraints);
 
         jLabel67.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel67.setText("$ 12.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlElTaco.add(jLabel67, gridBagConstraints);
 
         jLabel68.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel68.setText("$ 12.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 0);
+        pnlElTaco.add(jLabel68, gridBagConstraints);
 
         jLabel69.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel69.setText("$ 6.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlElTaco.add(jLabel69, gridBagConstraints);
 
         jLabel70.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel70.setText("$ 4.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlElTaco.add(jLabel70, gridBagConstraints);
 
         jLabel72.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel72.setText("$ 3.50");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlElTaco.add(jLabel72, gridBagConstraints);
 
         jLabel73.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel73.setText("$ 2.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlElTaco.add(jLabel73, gridBagConstraints);
 
         spnMexicanTacosQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 27, 0, 0);
+        pnlElTaco.add(spnMexicanTacosQty, gridBagConstraints);
 
         spnMexicanBurritoQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanBurritoQty, gridBagConstraints);
 
         spnMexicanRiceBowlQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanRiceBowlQty, gridBagConstraints);
 
         spnMexicanChurroQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanChurroQty, gridBagConstraints);
 
         spnMexicanChipsSalsaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanChipsSalsaQty, gridBagConstraints);
 
         spnMexicanFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanFountainQty, gridBagConstraints);
 
         spnMexicanGuacamoleQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanGuacamoleQty, gridBagConstraints);
 
         btnMexicanCancelOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnMexicanCancelOrder.setText("Cancel Order");
@@ -1213,6 +1598,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnMexicanCancelOrderActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 20, 123, 0);
+        pnlElTaco.add(btnMexicanCancelOrder, gridBagConstraints);
 
         btnMexicanPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnMexicanPlaceOrder.setText("Place Order");
@@ -1222,197 +1615,271 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnMexicanPlaceOrderActionPerformed(evt);
             }
         });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 20;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 11, 123, 0);
+        pnlElTaco.add(btnMexicanPlaceOrder, gridBagConstraints);
 
         jLabel74.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel74.setText("Menu Options");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 24, 0, 0);
+        pnlElTaco.add(jLabel74, gridBagConstraints);
 
         jLabel75.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel75.setText("Select Quantity");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        pnlElTaco.add(jLabel75, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlElTaco.add(jSeparator7, gridBagConstraints);
 
         jLabel76.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel76.setText("Price Each");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipady = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(27, 20, 0, 0);
+        pnlElTaco.add(jLabel76, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 300;
+        gridBagConstraints.ipady = 9;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(39, 10, 0, 0);
+        pnlElTaco.add(jSeparator8, gridBagConstraints);
 
         jLabel77.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel77.setText("Bottled Drink");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.ipadx = 35;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 0, 0);
+        pnlElTaco.add(jLabel77, gridBagConstraints);
 
         jLabel78.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel78.setText("$ 3.99");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.gridheight = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 14, 0, 0);
+        pnlElTaco.add(jLabel78, gridBagConstraints);
 
         spnMexicanBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 17;
+        gridBagConstraints.ipadx = 21;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
+        pnlElTaco.add(spnMexicanBottledQty, gridBagConstraints);
 
-        javax.swing.GroupLayout pnlElTacoLayout = new javax.swing.GroupLayout(pnlElTaco);
-        pnlElTaco.setLayout(pnlElTacoLayout);
-        pnlElTacoLayout.setHorizontalGroup(
-            pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlElTacoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel74)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel76)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel75)
-                .addGap(16, 16, 16))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlElTacoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblSelectRestaurantTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(pnlElTacoLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlElTacoLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel77, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel78, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel73, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel72, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel69, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel70, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel68, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel67, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(31, 31, 31)
-                        .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(spnMexicanTacosQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanBurritoQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanRiceBowlQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanChurroQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanChipsSalsaQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanGuacamoleQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(spnMexicanBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(pnlElTacoLayout.createSequentialGroup()
-                            .addComponent(btnMexicanCancelOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(71, 71, 71)
-                            .addComponent(btnMexicanPlaceOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlElTacoLayout.setVerticalGroup(
-            pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlElTacoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblSelectRestaurantTitle4)
-                .addGap(27, 27, 27)
-                .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlElTacoLayout.createSequentialGroup()
-                        .addComponent(jLabel58)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel59)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel60)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel62)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel61)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel64)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel65)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel77))
-                    .addGroup(pnlElTacoLayout.createSequentialGroup()
-                        .addComponent(jLabel66)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel67)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel68)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel70)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel69)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel72)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel73)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel78))
-                    .addGroup(pnlElTacoLayout.createSequentialGroup()
-                        .addComponent(spnMexicanTacosQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanBurritoQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanRiceBowlQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanChurroQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanChipsSalsaQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanGuacamoleQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanFountainQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(spnMexicanBottledQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)))
-                .addGap(39, 39, 39)
-                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlElTacoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMexicanCancelOrder)
-                    .addComponent(btnMexicanPlaceOrder))
-                .addContainerGap(25, Short.MAX_VALUE))
-        );
+        getContentPane().add(pnlElTaco);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pnlElTaco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnlGrubGrill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(pnlSofiasPizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(pnlSandwichShop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(pnlSelectRestaurant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(45, 45, 45)
-                .addComponent(pnlFoodOrderConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pnlSelectRestaurant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pnlSandwichShop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(pnlSofiasPizza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(pnlGrubGrill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(95, 95, 95)
-                        .addComponent(pnlElTaco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(65, 65, 65))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(pnlFoodOrderConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        pnlFoodOrderConfirmation.setLayout(new java.awt.GridBagLayout());
+
+        lblFoodOrderConfTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        lblFoodOrderConfTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblFoodOrderConfTitle.setText("Food Order Confirmation");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        pnlFoodOrderConfirmation.add(lblFoodOrderConfTitle, gridBagConstraints);
+
+        lblOrderNumber.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblOrderNumber.setText("Order Number:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 54;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblOrderNumber, gridBagConstraints);
+
+        lblRestaurant.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblRestaurant.setText("Restaurant:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 83;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblRestaurant, gridBagConstraints);
+
+        lblConfirmSubtotal.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmSubtotal.setText("Subtotal:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 101;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmSubtotal, gridBagConstraints);
+
+        lblConfirmTax.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmTax.setText("Tax Amount:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 69;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmTax, gridBagConstraints);
+
+        lblConfirmTotalCost.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmTotalCost.setText("Total Cost:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.ipadx = 84;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(15, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmTotalCost, gridBagConstraints);
+
+        lblConfirmTotalCostValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmTotalCostValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblConfirmTotalCostValue.setText("$0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 56;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(15, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmTotalCostValue, gridBagConstraints);
+
+        lblConfirmTaxValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmTaxValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblConfirmTaxValue.setText("$0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 56;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmTaxValue, gridBagConstraints);
+
+        lblConfirmSubtotalValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmSubtotalValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblConfirmSubtotalValue.setText("$0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 5;
+        gridBagConstraints.ipadx = 56;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmSubtotalValue, gridBagConstraints);
+
+        lblConfirmNumberOfTicketsValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmNumberOfTicketsValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblConfirmNumberOfTicketsValue.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 64;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmNumberOfTicketsValue, gridBagConstraints);
+
+        lblConfirmOrderNumberValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblConfirmOrderNumberValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblConfirmOrderNumberValue.setText("0");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.ipadx = 64;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblConfirmOrderNumberValue, gridBagConstraints);
+
+        lblListFoodsSelected.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblListFoodsSelected.setText("Foods Selected:");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.ipadx = 88;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(18, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(lblListFoodsSelected, gridBagConstraints);
+
+        taFoodsSelected.setColumns(20);
+        taFoodsSelected.setRows(5);
+        jScrollPane2.setViewportView(taFoodsSelected);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipadx = 225;
+        gridBagConstraints.ipady = 166;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        pnlFoodOrderConfirmation.add(jScrollPane2, gridBagConstraints);
+
+        btnMainMenuOrdCon.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnMainMenuOrdCon.setText("Main Menu");
+        btnMainMenuOrdCon.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnMainMenuOrdCon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMainMenuOrdConActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 8;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 57, 0);
+        pnlFoodOrderConfirmation.add(btnMainMenuOrdCon, gridBagConstraints);
+
+        getContentPane().add(pnlFoodOrderConfirmation);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1468,14 +1935,12 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeliPlaceOrderActionPerformed
 
     private void btnDeliCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliCancelOrderActionPerformed
-        NavigationUI navUI = new NavigationUI();
-        navUI.setVisible(true);
+        NavigationCtrl navCtrl = new NavigationCtrl();
         this.dispose();
     }//GEN-LAST:event_btnDeliCancelOrderActionPerformed
 
     private void btnItalianCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItalianCancelOrderActionPerformed
-        NavigationUI navUI = new NavigationUI();
-        navUI.setVisible(true);
+        NavigationCtrl navCtrl = new NavigationCtrl();
         this.dispose();
     }//GEN-LAST:event_btnItalianCancelOrderActionPerformed
 
@@ -1489,8 +1954,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnItalianPlaceOrderActionPerformed
 
     private void btnGrillCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrillCancelOrderActionPerformed
-        NavigationUI navUI = new NavigationUI();
-        navUI.setVisible(true);
+        NavigationCtrl navCtrl = new NavigationCtrl();
         this.dispose();
     }//GEN-LAST:event_btnGrillCancelOrderActionPerformed
 
@@ -1504,8 +1968,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGrillPlaceOrderActionPerformed
 
     private void btnMexicanCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMexicanCancelOrderActionPerformed
-        NavigationUI navUI = new NavigationUI();
-        navUI.setVisible(true);
+        NavigationCtrl navCtrl = new NavigationCtrl();
         this.dispose();
     }//GEN-LAST:event_btnMexicanCancelOrderActionPerformed
 
@@ -1519,16 +1982,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMexicanPlaceOrderActionPerformed
 
     private void btnMainMenuOrdConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuOrdConActionPerformed
-        NavigationUI navUI = new NavigationUI();
-        navUI.setVisible(true);
+        NavigationCtrl navCtrl = new NavigationCtrl();
         //add code to set the food orders array in the customer object and save to customer file to persist 
         
         this.dispose();
     }//GEN-LAST:event_btnMainMenuOrdConActionPerformed
 
     private void btnMainMenuResSelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuResSelActionPerformed
-        NavigationUI navUI = new NavigationUI();
-        navUI.setVisible(true);
+        NavigationCtrl navCtrl = new NavigationCtrl();
         
     }//GEN-LAST:event_btnMainMenuResSelActionPerformed
 

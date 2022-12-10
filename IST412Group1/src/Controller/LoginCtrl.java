@@ -134,12 +134,14 @@ public class LoginCtrl{
     }
     
     public void makeCustomerUIVisible(){
+        createCustUI.setLocationRelativeTo(null);
         createCustUI.setVisible(true);
         loginUI.setVisible(false);
     }
     
     public void makeLoginUIVisible(){
         createCustUI.setVisible(false);
+        loginUI.setLocationRelativeTo(null);
         loginUI.setVisible(true);
     }
 }

@@ -42,6 +42,7 @@ public class NavigationUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("WallyLand--Main Menu");
+        setBounds(new java.awt.Rectangle(50, 50, 350, 650));
 
         pnlMainMenu.setMinimumSize(new java.awt.Dimension(300, 590));
         pnlMainMenu.setName(""); // NOI18N
@@ -179,6 +180,7 @@ public class NavigationUI extends javax.swing.JFrame {
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
         PurchaseTicketsUI purchaseTicketsUI = new PurchaseTicketsUI();
+        purchaseTicketsUI.setLocationRelativeTo(null);
         purchaseTicketsUI.setVisible(true);
         purchaseTicketsUI.pnlPurchaseTickets.setVisible(true);
         purchaseTicketsUI.pnlTicketOrderConfirmation.setVisible(false);        
@@ -192,6 +194,8 @@ public class NavigationUI extends javax.swing.JFrame {
 
     private void btnManageFoodOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFoodOrdersActionPerformed
        OrderFoodUI orderFoodUI = new OrderFoodUI();
+       orderFoodUI.setSize(360, 650);
+       orderFoodUI.setLocationRelativeTo(null);
        orderFoodUI.setVisible(true);
        orderFoodUI.pnlSelectRestaurant.setVisible(true);
        orderFoodUI.pnlElTaco.setVisible(false);
