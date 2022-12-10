@@ -418,7 +418,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         if (nofTickets <= 0 || nofDays <= 0) {
             JOptionPane.showMessageDialog(null, "Invalid Entry.");
-            btnPurchaseTickets.setEnabled(true);
+            btnPurchaseTickets.setEnabled(false);
         } else {
             double subtotal = ticketOrder.getOrderSubtotal();
             double tax = ticketOrder.getOrderTax();
