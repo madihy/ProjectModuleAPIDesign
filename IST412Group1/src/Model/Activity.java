@@ -1,16 +1,24 @@
 package Model;
+
 import Model.*;
 import View.*;
 import Controller.*;
 import java.util.ArrayList;
-
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 /**
- * This class contains information on activities that a customer can do.
- * These can be displayed on an itinerary or displayed on a list
+ * This class contains information on activities that a customer can do. These
+ * can be displayed on an itinerary or displayed on a list
+ *
  * @author brandonworley
  */
-public class Activity {
+public class Activity implements Serializable {
+
     private String activityName;//Name of the restaurant, show or ride
     private String activityType;//Types are Dining, Show, or Ride
     //private int actLenInMins;
@@ -18,10 +26,9 @@ public class Activity {
     //private int waitTimeInMins;
     private ActivityUI activityView;
     private ActivityCtrl activityCtrl;
-    private ArrayList <ResOption> rideResOptions = new ArrayList<>();
-    
-    
-    
+    private ArrayList<ResOption> rideResOptions = new ArrayList<>();
+    String activityDataFileName = "activityData.ser";
+    private ArrayList<Activity> activityArray = new ArrayList<>();
 
     /**
      * This is the default constructor for the Activity class
@@ -37,6 +44,7 @@ public class Activity {
 
     /**
      * This is the full constructor of the Activity class
+     *
      * @param activityName The name of the activity
      * @param activityType The type of the activity (ie. ride, show, meal)
      * @param actLenInMins The length in minutes of the activity
@@ -54,6 +62,7 @@ public class Activity {
 
     /**
      * Gets the name of the activity
+     *
      * @return A string of the activity name
      */
     public String getActivityName() {
@@ -63,6 +72,7 @@ public class Activity {
 
     /**
      * Sets the name of the activity
+     *
      * @param activityName Sets the name of the activity
      */
     public void setActivityName(String activityName) {
@@ -71,6 +81,7 @@ public class Activity {
 
     /**
      * Gets the type of activity
+     *
      * @return A string representing the type of the activity
      */
     public String getActivityType() {
@@ -80,6 +91,7 @@ public class Activity {
 
     /**
      * Sets the type of activity
+     *
      * @param activityType Sets the type of activity
      */
     public void setActivityType(String activityType) {
@@ -89,69 +101,123 @@ public class Activity {
     /**
      * @return the rideResOptions
      */
-    public ArrayList <ResOption> getRideResOptions() {
+    public ArrayList<ResOption> getRideResOptions() {
         return rideResOptions;
     }
 
     /**
      * @param rideResOptions the rideResOptions to set
      */
-    public void setRideResOptions(ArrayList <ResOption> rideResOptions) {
+    public void setRideResOptions(ArrayList<ResOption> rideResOptions) {
         this.rideResOptions = rideResOptions;
+    }
+
+    public void readActivityDataFile() {
+
+        FileInputStream fis = null;
+        ObjectInputStream in = null;
+
+        try {
+            fis = new FileInputStream(activityDataFileName);
+            in = new ObjectInputStream(fis);
+            activityArray = (ArrayList<Activity>) in.readObject();
+            in.close();
+
+            if (!activityArray.isEmpty()) {
+                System.out.println("Activity Data Loaded from File");
+            }
+            this.activityArray = activityArray;
+
+        } catch (IOException ex) {
+            //ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            // ex.printStackTrace();
+        }
+
+    }
+    
+        public void writeArray(ArrayList<Activity> inf_activityArray) {
+        //userArray.clear();
+        this.activityArray = inf_activityArray;
+
+        writeActivityDataFile();
+
+    }
+    
+    public void writeActivityDataFile() {
+
+        FileOutputStream fos = null;
+        ObjectOutputStream out = null;
+
+        try {
+            fos = new FileOutputStream(activityDataFileName);
+            out = new ObjectOutputStream(fos);
+            out.writeObject(activityArray);
+            out.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
     }
 
     /**
      * Gets the length of the activity in minutes
+     *
      * @return An int representing the length of the activity in minutes
      */
-    /**public int getActLenInMins() {
-        System.out.println("Activity length in minutes: " + actLenInMins);
-        return 0;
-    }*/
-
+    /**
+     * public int getActLenInMins() { System.out.println("Activity length in
+     * minutes: " + actLenInMins); return 0;
+    }
+     */
     /**
      * Sets the length of the activity in minutes
+     *
      * @param actLenInMins Sets the length of the activity in minutes
      */
-    /**public void setActLenInMins(int actLenInMins) {
-        this.actLenInMins = actLenInMins;
-    }*/
-
+    /**
+     * public void setActLenInMins(int actLenInMins) { this.actLenInMins =
+     * actLenInMins;
+    }
+     */
     /**
      * Returns if the activity is available
+     *
      * @return True if the activity is available, false if it is not available
      */
-    /**public boolean isActivityAvail() {
-        System.out.println("Activity Available? " + activityAvail);
-        return activityAvail;
-    }*/
-
+    /**
+     * public boolean isActivityAvail() { System.out.println("Activity
+     * Available? " + activityAvail); return activityAvail;
+    }
+     */
     /**
      * Sets if the activity is available
+     *
      * @param activityAvail Sets if the activity is available or not available
      */
-    /**public void setActivityAvail(boolean activityAvail) {
-        this.activityAvail = activityAvail;
-    }*/
-
+    /**
+     * public void setActivityAvail(boolean activityAvail) { this.activityAvail
+     * = activityAvail;
+    }
+     */
     /**
      * Gets the wait time of the activity in minutes
+     *
      * @return An int representing the wait time in minutes
      */
-    /**public int getWaitTimeInMins() {
-        System.out.println("Activity Wat Time in Minutes: " + waitTimeInMins);
-        return waitTimeInMins;
-    }*/
-
+    /**
+     * public int getWaitTimeInMins() { System.out.println("Activity Wat Time in
+     * Minutes: " + waitTimeInMins); return waitTimeInMins;
+    }
+     */
     /**
      * Sets the wait time of an activity in minutes
+     *
      * @param waitTimeInMins Sets the wait time in minutes
      */
-    /**public void setWaitTimeInMins(int waitTimeInMins) {
-        this.waitTimeInMins = waitTimeInMins;
-    }*/
-    
-    
-    
-    
+    /**
+     * public void setWaitTimeInMins(int waitTimeInMins) { this.waitTimeInMins =
+     * waitTimeInMins;
+    }
+     */
 }
