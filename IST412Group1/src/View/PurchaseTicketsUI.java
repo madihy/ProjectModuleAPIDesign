@@ -414,17 +414,20 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         int nofDays = Integer.parseInt(tfNumberOfDays.getText());
         manTicketsCtrl.updateTicketSelectionButtonEvent(nofTickets, nofDays);
         TicketOrder ticketOrder = manTicketsCtrl.getTicketOrderInformation();
-           
-        double subtotal = ticketOrder.getOrderSubtotal();
-        double tax = ticketOrder.getOrderTax();
-        double total = ticketOrder.getOrderTotal();
-        System.out.println(nofTickets + " " + nofDays + " " + subtotal);
-        
-        lblPurchaseSubtotalValue.setText("$" + String.valueOf(subtotal));
-        lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
-        lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
-        
-        this.manTicketsCtrl = manTicketsCtrl;
+
+        if (nofTickets <= 0 || nofDays <= 0) {
+            JOptionPane.showMessageDialog(null, "Invalid Entry.");
+        } else {
+            double subtotal = ticketOrder.getOrderSubtotal();
+            double tax = ticketOrder.getOrderTax();
+            double total = ticketOrder.getOrderTotal();
+            System.out.println(nofTickets + " " + nofDays + " " + subtotal);
+            lblPurchaseSubtotalValue.setText("$" + String.valueOf(subtotal));
+            lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
+            lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
+            this.manTicketsCtrl = manTicketsCtrl;
+        }
+
         
     }//GEN-LAST:event_btnUpdateTicketPurchaseActionPerformed
 
