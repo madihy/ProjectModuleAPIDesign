@@ -193,6 +193,12 @@ public class NavigationUI extends javax.swing.JFrame {
     private void btnManageFoodOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageFoodOrdersActionPerformed
        OrderFoodUI orderFoodUI = new OrderFoodUI();
        orderFoodUI.setVisible(true);
+       orderFoodUI.pnlSelectRestaurant.setVisible(true);
+       orderFoodUI.pnlElTaco.setVisible(false);
+       orderFoodUI.pnlGrubGrill.setVisible(false);
+       orderFoodUI.pnlSandwichShop.setVisible(false);
+       orderFoodUI.pnlSofiasPizza.setVisible(false);
+       orderFoodUI.pnlFoodOrderConfirmation.setVisible(false);
        
        this.dispose();
        
