@@ -23,7 +23,7 @@ public class FoodOrder {
     private double foodOrderTax = this.getFoodOrderTax();
     private double foodOrderTotal = this.getFoodOrderTotal();
     private String foodOrderStatus = "pending"; //such as pending, being prepared, ready for pick-up, or completed
-    private ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
+    private String restaurantName = "";
     ArrayList<Integer> orderNums = new ArrayList<Integer>();
     
     /**

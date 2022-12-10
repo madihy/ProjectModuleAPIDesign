@@ -33,7 +33,7 @@ public class ManageFoodCtrl {
         ArrayList<Food> menuDeli = new ArrayList();
         Food food1 = new Food("Sandwich", 9.99);
         Food food2 = new Food("Sub", 12.99);
-        Food food3 = new Food("Pasta Salad", 7);
+        Food food3 = new Food("Salad", 7);
         Food food4 = new Food("Cookie", 4.50);
         Food food5 = new Food("Chips", 3.50);
         Food food6 = new Food("Brownie", 4.50);
@@ -88,7 +88,7 @@ public class ManageFoodCtrl {
         Food food22 = new Food("Rice Bowl", 12.99);
         Food food23 = new Food("Churro", 4.50);
         Food food24 = new Food("Chips and Salsa", 6.50);
-        Food food25 = new Food("chips and Guacamole", 7.50);
+        Food food25 = new Food("chips and Guacamole", 3.50);
         Food food26 = new Food("Fountain Drink", 2.99);
         Food food27 = new Food("Bottled Drink", 3.99);
         
@@ -113,7 +113,6 @@ public class ManageFoodCtrl {
         Food food7 = new Food("Hotdog", 6.99);
         Food food8 = new Food("Hamburger", 8.99);
         Food food9 = new Food("Turkey leg", 7);
-        Food food10 = new Food("Dole Whip", 4.50);
         Food food11 = new Food("Chicken Nuggets", 6.99);
         Food food12 = new Food("Chips", 3.50);
         Food food13 = new Food("French Fries", 4.50);
@@ -124,7 +123,6 @@ public class ManageFoodCtrl {
         menuGrill.add(food7);
         menuGrill.add(food8);
         menuGrill.add(food9);
-        menuGrill.add(food10);
         menuGrill.add(food11);
         menuGrill.add(food12);
         menuGrill.add(food13);
