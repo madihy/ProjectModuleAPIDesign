@@ -314,7 +314,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPurchaseTickets.setText("Purchase Tickets");
         btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnPurchaseTickets.setEnabled(false);
+        btnPurchaseTickets.setEnabled(true);
         btnPurchaseTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPurchaseTicketsActionPerformed(evt);
