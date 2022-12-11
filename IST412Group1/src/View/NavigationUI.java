@@ -46,9 +46,12 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnManageActivities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageActivities.setText("Manage Activities");
+        btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
 
         btnManageFoodOrders.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageFoodOrders.setText("Order Food");
+        btnManageFoodOrders.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+
         btnManageFoodOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageFoodOrdersActionPerformed(evt);
@@ -57,6 +60,7 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPurchaseTickets.setText("Purchase Tickets");
+        btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         btnPurchaseTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPurchaseTicketsActionPerformed(evt);
@@ -69,6 +73,7 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnExitApplication.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnExitApplication.setText("Exit Application");
+        btnExitApplication.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         btnExitApplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitApplicationActionPerformed(evt);
