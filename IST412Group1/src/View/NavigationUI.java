@@ -19,7 +19,6 @@ public class NavigationUI extends javax.swing.JFrame {
      */
     public NavigationUI() {
         initComponents();
-        this.btnAccountInformation.setVisible(false);
     }
 
     /**
@@ -32,8 +31,6 @@ public class NavigationUI extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlMainMenu = new javax.swing.JPanel();
-        btnAccountInformation = new javax.swing.JButton();
-        btnParkInformation = new javax.swing.JButton();
         btnManageActivities = new javax.swing.JButton();
         btnManageFoodOrders = new javax.swing.JButton();
         btnPurchaseTickets = new javax.swing.JButton();
@@ -47,31 +44,11 @@ public class NavigationUI extends javax.swing.JFrame {
         pnlMainMenu.setMinimumSize(new java.awt.Dimension(300, 590));
         pnlMainMenu.setName(""); // NOI18N
 
-        btnAccountInformation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnAccountInformation.setText("Account Information");
-        btnAccountInformation.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnAccountInformation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAccountInformationActionPerformed(evt);
-            }
-        });
-
-        btnParkInformation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnParkInformation.setText("Park Information");
-        btnParkInformation.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnParkInformation.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnParkInformationActionPerformed(evt);
-            }
-        });
-
         btnManageActivities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageActivities.setText("Manage Activities");
-        btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnManageFoodOrders.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageFoodOrders.setText("Order Food");
-        btnManageFoodOrders.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageFoodOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageFoodOrdersActionPerformed(evt);
@@ -80,7 +57,6 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPurchaseTickets.setText("Purchase Tickets");
-        btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPurchaseTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPurchaseTicketsActionPerformed(evt);
@@ -93,7 +69,6 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnExitApplication.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnExitApplication.setText("Exit Application");
-        btnExitApplication.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnExitApplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitApplicationActionPerformed(evt);
@@ -106,21 +81,16 @@ public class NavigationUI extends javax.swing.JFrame {
             pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlMainMenuLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
-                .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                        .addComponent(btnAccountInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnParkInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnManageActivities, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnPurchaseTickets, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlMainMenuLayout.createSequentialGroup()
-                        .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)))
+                .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(btnManageActivities, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPurchaseTickets, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
             .addComponent(navigationPanelTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAccountInformation, btnManageActivities, btnManageFoodOrders, btnParkInformation, btnPurchaseTickets});
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageActivities, btnManageFoodOrders, btnPurchaseTickets});
 
         pnlMainMenuLayout.setVerticalGroup(
             pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,21 +98,17 @@ public class NavigationUI extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(navigationPanelTitleLabel)
                 .addGap(18, 18, 18)
-                .addComponent(btnAccountInformation)
-                .addGap(13, 13, 13)
-                .addComponent(btnParkInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnPurchaseTickets)
-                .addGap(11, 11, 11)
+                .addGap(18, 18, 18)
                 .addComponent(btnManageActivities)
-                .addGap(11, 11, 11)
+                .addGap(18, 18, 18)
                 .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAccountInformation, btnManageActivities, btnParkInformation, btnPurchaseTickets});
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnManageActivities, btnPurchaseTickets});
 
         pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnExitApplication, btnManageFoodOrders});
 
@@ -165,16 +131,6 @@ public class NavigationUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnAccountInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccountInformationActionPerformed
-        CreateCustomerUI createCustUI = new CreateCustomerUI();
-        this.dispose();
-    }//GEN-LAST:event_btnAccountInformationActionPerformed
-
-    private void btnParkInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnParkInformationActionPerformed
-        ParkInformationCtrl parkInfoCtrl = new ParkInformationCtrl();
-        this.dispose();
-    }//GEN-LAST:event_btnParkInformationActionPerformed
 
     private void btnPurchaseTicketsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPurchaseTicketsActionPerformed
         PurchaseTicketsUI purchaseTicketsUI = new PurchaseTicketsUI();
@@ -250,11 +206,9 @@ public class NavigationUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAccountInformation;
     public javax.swing.JButton btnExitApplication;
     public javax.swing.JButton btnManageActivities;
     public javax.swing.JButton btnManageFoodOrders;
-    public javax.swing.JButton btnParkInformation;
     public javax.swing.JButton btnPurchaseTickets;
     private javax.swing.JLabel navigationPanelTitleLabel;
     public javax.swing.JPanel pnlMainMenu;
@@ -277,7 +231,6 @@ public class NavigationUI extends javax.swing.JFrame {
 
     /**
      * Sets the boolean status for this navigation interface screen status.
-     * @param navigationUI sets the boolean status for the navigation interface screen status.
      * @param navigationUIActive the navigationUIActive to set
      */
     public void setNavigationUIActive(boolean navigationUIActive) {
