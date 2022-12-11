@@ -44,9 +44,7 @@ public class FoodOrder {
      * @return the integer orderNumber representing the order number for the food order.
      */
     public int getOrderNumber() {
-        
-        System.out.println("Order number: " + orderNumber);
-        return 0;
+        return orderNumber;
     }
 
     /**
@@ -78,8 +76,7 @@ public class FoodOrder {
      * @return the double foodOrderSubtotal representing the food cost subtotal for the food order.
      */
     public double getFoodOrderSubtotal() {
-        System.out.println("Order subtotal: " + foodOrderSubtotal);
-        return 0;
+        return foodOrderSubtotal;
     }
 
     /**
@@ -95,8 +92,7 @@ public class FoodOrder {
      * @return the double foodOrderTax representing the tax amount for the food order.
      */
     public double getFoodOrderTax() { 
-        System.out.println("Order tax: " + foodOrderTax);
-        return 0;
+        return foodOrderTax;
     }
 
     /**
@@ -111,10 +107,8 @@ public class FoodOrder {
      * Gets the total cost of the food including tax for this food order.
      * @return the double foodOrderTotal representing the total cost of the food including tax for the food order.
      */
-    public double getFoodOrderTotal() {       
-        foodOrderTotal = foodOrderSubtotal + foodOrderTax;       
-        System.out.println("Order total: " + foodOrderTotal);
-        return 0;
+    public double getFoodOrderTotal() {               
+        return foodOrderTotal;
     }
 
     /**
@@ -164,7 +158,7 @@ public class FoodOrder {
              foodOrderSubtotal = foodOrderSubtotal + foodsSelected.get(i).getFoodSubtotal();
          }
          System.out.println("Food order subtotal: $ " + foodOrderSubtotal);
-         return 10.50;
+         return foodOrderSubtotal;
      }
      
      /**
