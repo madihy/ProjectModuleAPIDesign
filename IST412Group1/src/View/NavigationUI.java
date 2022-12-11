@@ -36,6 +36,7 @@ public class NavigationUI extends javax.swing.JFrame {
         btnPurchaseTickets = new javax.swing.JButton();
         navigationPanelTitleLabel = new javax.swing.JLabel();
         btnExitApplication = new javax.swing.JButton();
+        wallyPhoto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("WallyLand--Main Menu");
@@ -46,12 +47,11 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnManageActivities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageActivities.setText("Manage Activities");
-        btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnManageFoodOrders.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageFoodOrders.setText("Order Food");
-        btnManageFoodOrders.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
-
+        btnManageFoodOrders.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageFoodOrders.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageFoodOrdersActionPerformed(evt);
@@ -60,7 +60,7 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnPurchaseTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnPurchaseTickets.setText("Purchase Tickets");
-        btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        btnPurchaseTickets.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnPurchaseTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPurchaseTicketsActionPerformed(evt);
@@ -73,12 +73,14 @@ public class NavigationUI extends javax.swing.JFrame {
 
         btnExitApplication.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnExitApplication.setText("Exit Application");
-        btnExitApplication.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
+        btnExitApplication.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnExitApplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExitApplicationActionPerformed(evt);
             }
         });
+
+        wallyPhoto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/pexels-photo-136412.png"))); // NOI18N
 
         javax.swing.GroupLayout pnlMainMenuLayout = new javax.swing.GroupLayout(pnlMainMenu);
         pnlMainMenu.setLayout(pnlMainMenuLayout);
@@ -90,7 +92,8 @@ public class NavigationUI extends javax.swing.JFrame {
                     .addComponent(btnManageActivities, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPurchaseTickets, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(wallyPhoto))
                 .addContainerGap(25, Short.MAX_VALUE))
             .addComponent(navigationPanelTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -110,6 +113,8 @@ public class NavigationUI extends javax.swing.JFrame {
                 .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(wallyPhoto)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -130,8 +135,8 @@ public class NavigationUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addComponent(pnlMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         pack();
@@ -217,6 +222,7 @@ public class NavigationUI extends javax.swing.JFrame {
     public javax.swing.JButton btnPurchaseTickets;
     private javax.swing.JLabel navigationPanelTitleLabel;
     public javax.swing.JPanel pnlMainMenu;
+    private javax.swing.JLabel wallyPhoto;
     // End of variables declaration//GEN-END:variables
 
 
