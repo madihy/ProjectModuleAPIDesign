@@ -37,9 +37,29 @@ public class Activity implements Serializable {
         this.activityName = "None";
         this.activityType = "None";
         this.rideResOptions = rideResOptions;
+        this.readActivityDataFile();
+        
+        if (activityArray.isEmpty() || activityArray == null) {
+            System.out.println("Activity Array is empty, creating test activities...");
+            this.createTestActivities();
+            this.writeActivityDataFile();
+            this.readActivityDataFile();
+        }
         //this.actLenInMins = 0;
         //this.activityAvail = false;
         //this.waitTimeInMins = 0;
+    }
+    
+    public void createTestActivities() {
+        // need to create test activites
+        // rides, shows, what else?
+    }
+    
+    public ArrayList<Activity> getActivityArray() {
+        return activityArray;
+    }
+    public void setActivityArray() {
+        this.activityArray = activityArray;
     }
 
     /**
