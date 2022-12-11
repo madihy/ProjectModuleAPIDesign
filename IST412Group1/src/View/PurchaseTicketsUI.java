@@ -424,9 +424,9 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
             double tax = ticketOrder.getOrderTax();
             double total = ticketOrder.getOrderTotal();
             System.out.println(nofTickets + " " + nofDays + " " + subtotal);
-            lblPurchaseSubtotalValue.setText("$" + String.valueOf(subtotal));
-            lblPurchaseTaxValue.setText("$" + String.valueOf(tax));
-            lblPurchaseTotalCostValue.setText("$" + String.valueOf(total));
+            lblPurchaseSubtotalValue.setText("$" + String.format("%.2f", subtotal));
+            lblPurchaseTaxValue.setText("$" + String.format("%.2f", tax));
+            lblPurchaseTotalCostValue.setText("$" + String.format("%.2f", total));
             this.manTicketsCtrl = manTicketsCtrl;
             btnPurchaseTickets.setEnabled(true);
         }
@@ -446,9 +446,9 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         TicketOrder ticketOrder = manTicketsCtrl.getTicketOrderInformation();
         
-        lblConfirmSubtotalValue.setText("$" + String.valueOf(ticketOrder.getOrderSubtotal()));
-        lblConfirmTaxValue.setText("$" + String.valueOf(ticketOrder.getOrderTax()));
-        lblConfirmTotalCostValue.setText("$" + String.valueOf(ticketOrder.getOrderTotal()));
+        lblConfirmSubtotalValue.setText("$" + String.format("%.2f", ticketOrder.getOrderSubtotal()));
+        lblConfirmTaxValue.setText("$" + String.format("%.2f", ticketOrder.getOrderTax()));
+        lblConfirmTotalCostValue.setText("$" + String.format("%.2f", ticketOrder.getOrderTotal()));
         lblConfirmNumberOfTicketsValue.setText(String.valueOf(ticketOrder.getQuantityTickets()));
         lblConfirmNumberOfDaysValue.setText(String.valueOf(ticketOrder.getQuantityDays()));
         lblConfirmOrderNumberValue.setText(String.valueOf(ticketOrder.getOrderNumber()));
