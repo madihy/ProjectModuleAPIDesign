@@ -51,8 +51,25 @@ public class Activity implements Serializable {
     }
     
     public void createTestActivities() {
-        // need to create test activites
-        // rides, shows, what else?
+        Activity ride1 = new Activity("Monster Coaster", "Roller Coaster", null);
+        Activity ride2 = new Activity("Kiddy Coaster", "Roller Coaster", null);
+        Activity ride3 = new Activity("3D Train Ride", "Roller Coaster", null);
+        Activity ride4 = new Activity("Tornado", "Roller Coaster", null);
+        Activity ride5 = new Activity("Shoot The Rapids", "Roller Coaster", null);
+        
+        Activity show1 = new Activity("Kate's Komedy Show", "Show", null);
+        Activity show2 = new Activity("Hytham's Gone HayWire!", "Show", null);
+        Activity show3 = new Activity("Brandon's Boredom Buster", "Show", null);
+        Activity show4 = new Activity("Professor Ken's The Floor Is Java", "Show", null);
+        activityArray.add(ride1);
+        activityArray.add(ride2);
+        activityArray.add(ride3);
+        activityArray.add(ride4);
+        activityArray.add(ride5);
+        activityArray.add(show1);
+        activityArray.add(show2);
+        activityArray.add(show3);
+        activityArray.add(show4);
     }
     
     public ArrayList<Activity> getActivityArray() {

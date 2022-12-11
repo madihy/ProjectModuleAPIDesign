@@ -13,7 +13,7 @@ import java.time.LocalTime;
  */
 public class ResOption {
     private LocalDate reservationDate;
-    private LocalTime reservationTime;
+    private String reservationTime;
     private int quantityAvailable;
     
     /**
@@ -22,7 +22,7 @@ public class ResOption {
      * @param reservationTime
      * @param quantityAvailable 
      */
-    public ResOption (LocalDate reservationDate, LocalTime reservationTime, int quantityAvailable){
+    public ResOption (String reservationTime, int quantityAvailable){
         
         this.reservationDate = reservationDate;
         this.reservationTime = reservationTime;
@@ -49,15 +49,15 @@ public class ResOption {
      * Gets the reservation time for this reservation option.
      * @return the local time reservationTime representing the reservation time for the reservation option.
      */
-    public LocalTime getReservationTime() {
-        return reservationTime;
+    public String getReservationTime() {
+       return reservationTime;
     }
 
     /**
      * Sets the reservation time for this reservation option.
      * @param reservationTime sets the reservation time for the reservation option.
      */
-    public void setReservationTime(LocalTime reservationTime) {
+    public void setReservationTime(String reservationTime) {
         this.reservationTime = reservationTime;
     }
 
