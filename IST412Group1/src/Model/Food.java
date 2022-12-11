@@ -22,11 +22,11 @@ public class Food{
      * @param foodDescription string representing the description of the food item
      * @param foodPrice double representing the price of the food item
      */   
-    public Food (String foodName, double foodPrice){
+    public Food (String foodName, double foodPrice, int foodQuantity){
         
         this.foodName = foodName;
         this.foodPrice = foodPrice;
-        this.foodQuantity = 0; //begins null but will change on input from user on the FoodOrderUI
+        this.foodQuantity = foodQuantity; 
         this.foodSubtotal = this.calculateFoodSubtotal(this.foodPrice, this.foodQuantity);
               
     }
@@ -106,6 +106,8 @@ public class Food{
     
     public String ToString(){
         return "Food Name: " + this.foodName +
-                ", Price: $" + this.foodPrice;
+                ", Price Each: $" + this.foodPrice +
+                ", Quantity Ordered: " + this.foodQuantity +
+                ", Item Subtotal: $ " + this.foodSubtotal;
     }
 }

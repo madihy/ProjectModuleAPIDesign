@@ -7,6 +7,7 @@ package View;
 import Controller.ManageFoodCtrl;
 import Controller.NavigationCtrl;
 import Model.Food;
+import Model.FoodOrder;
 import java.util.ArrayList;
 import javax.swing.JScrollPane;
 import javax.swing.table.AbstractTableModel;
@@ -18,7 +19,9 @@ import javax.swing.table.TableColumn;
  * @author Kate
  */
 public class OrderFoodUI extends javax.swing.JFrame {
-    ArrayList<Food> menu = new ArrayList<Food>();
+    ArrayList<Food> menuSelections;
+    ManageFoodCtrl manageFoodCtrl;
+    FoodOrder newFoodOrder;
 
     /**
      * Creates new form OrderFoodUI2
@@ -26,7 +29,70 @@ public class OrderFoodUI extends javax.swing.JFrame {
     public OrderFoodUI() {
         initComponents();
     }
-
+    public ArrayList<Food> getSelectedFoods(){
+        manageFoodCtrl = new ManageFoodCtrl();
+        menuSelections = new ArrayList<Food>(); //receives the selected foods from controller method call
+        
+        //get quantity input values from the UI to pass to the manage food controller
+        int sandwich = Integer.parseInt(this.spnDeliSandwichQty.getValue().toString());
+        int sub = Integer.parseInt(this.spnDeliSubQty.getValue().toString());
+        int salad = Integer.parseInt(this.spnDeliSaladQty.getValue().toString());
+        int cookie = Integer.parseInt(this.spnDeliCookieQty.getValue().toString());
+        int deliChips = Integer.parseInt(this.spnDeliChipsQty.getValue().toString());
+        int brownie = Integer.parseInt(this.spnDeliBrownieQty.getValue().toString());
+        int deliFountain = Integer.parseInt(this.spnDeliFountainQty.getValue().toString());
+        int deliBottled = Integer.parseInt(this.spnDeliBottledQty.getValue().toString());
+        int smallPizza = Integer.parseInt(this.spnItalianSmPizzaQty.getValue().toString());
+        int largePizza = Integer.parseInt(this.spnItalianLgPizzaQty.getValue().toString());
+        int pastaBowl = Integer.parseInt(this.spnItalianPastaQty.getValue().toString());
+        int gelato = Integer.parseInt(this.spnItalianGelatoQty.getValue().toString());
+        int dessertPizza = Integer.parseInt(this.spnItalianDesPizzaQty.getValue().toString());
+        int italianFountain = Integer.parseInt(this.spnItalianFountainQty.getValue().toString());
+        int italianBottled = Integer.parseInt(this.spnItalianBottledQty.getValue().toString());
+        int hotdog = Integer.parseInt(this.spnGrillHotDogQty.getValue().toString());
+        int hamburger = Integer.parseInt(this.spnGrillHamburgerQty.getValue().toString());
+        int turkeyLeg = Integer.parseInt(this.spnGrillTurkeyLegQty.getValue().toString());
+        int chickenNuggets = Integer.parseInt(this.spnGrillChickenNuggetsQty.getValue().toString());
+        int grillChips = Integer.parseInt(this.spnGrillChipsQty.getValue().toString());
+        int frenchFries = Integer.parseInt(this.spnGrillFriesQty.getValue().toString());
+        int milkshake = Integer.parseInt(this.spnGrillMilkshakeQty.getValue().toString());
+        int grillFountain = Integer.parseInt(this.spnGrillFountainQty.getValue().toString());
+        int grillBottled = Integer.parseInt(this.spnGrillBottledQty.getValue().toString());
+        int tacos = Integer.parseInt(this.spnMexicanTacosQty.getValue().toString());
+        int burrito = Integer.parseInt(this.spnMexicanBurritoQty.getValue().toString());
+        int riceBowl = Integer.parseInt(this.spnMexicanRiceBowlQty.getValue().toString());
+        int churro = Integer.parseInt(this.spnMexicanChurroQty.getValue().toString());
+        int chipsSalsa = Integer.parseInt(this.spnMexicanChipsSalsaQty.getValue().toString());
+        int guacamole = Integer.parseInt(this.spnMexicanGuacamoleQty.getValue().toString());
+        int mexicanFountain = Integer.parseInt(this.spnMexicanFountainQty.getValue().toString());
+        int mexicanBottled = Integer.parseInt(this.spnMexicanBottledQty.getValue().toString());
+        
+        //call to method to create the selected foods array in the manage foods controller
+        menuSelections = manageFoodCtrl.createSelectedFoodsArray(sandwich, sub, salad, cookie, deliChips, 
+                brownie, deliFountain, deliBottled, smallPizza, largePizza, pastaBowl, gelato, dessertPizza, 
+                italianFountain, italianBottled, hotdog, hamburger, turkeyLeg, chickenNuggets, grillChips, 
+                frenchFries, milkshake, grillFountain, grillBottled, tacos, burrito, riceBowl, churro, 
+                chipsSalsa, guacamole, mexicanFountain, mexicanBottled);
+        
+        this.menuSelections = menuSelections;
+        this.manageFoodCtrl = manageFoodCtrl;
+        
+        return menuSelections;
+    }
+    
+    public void setFoodOrderConfirmationInfo(FoodOrder inf_foodOrder){
+        
+        this.lblConfirmOrderNumberValue.setText(String.valueOf(newFoodOrder.getOrderNumber()));
+        this.lblRestaurantNameValue.setText(newFoodOrder.getRestaurantName());
+        this.lblConfirmSubtotalValue.setText("$" + String.valueOf(newFoodOrder.getFoodOrderSubtotal()));
+        this.lblConfirmTaxValue.setText("$" + String.valueOf(newFoodOrder.getFoodOrderTax()));
+        this.lblConfirmTotalCostValue.setText("$" + String.valueOf(newFoodOrder.getFoodOrderTotal()));
+        
+        for(int i = 0; i < menuSelections.size(); i++){
+            this.taFoodsSelected.append(menuSelections.get(i).toString());
+            this.taFoodsSelected.append("\n");
+        }
+    } 
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -192,7 +258,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         lblConfirmTotalCostValue = new javax.swing.JLabel();
         lblConfirmTaxValue = new javax.swing.JLabel();
         lblConfirmSubtotalValue = new javax.swing.JLabel();
-        lblConfirmNumberOfTicketsValue = new javax.swing.JLabel();
+        lblRestaurantNameValue = new javax.swing.JLabel();
         lblConfirmOrderNumberValue = new javax.swing.JLabel();
         lblListFoodsSelected = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -1812,9 +1878,9 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
         pnlFoodOrderConfirmation.add(lblConfirmSubtotalValue, gridBagConstraints);
 
-        lblConfirmNumberOfTicketsValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        lblConfirmNumberOfTicketsValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblConfirmNumberOfTicketsValue.setText("0");
+        lblRestaurantNameValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblRestaurantNameValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblRestaurantNameValue.setText("Restaurant Name");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -1822,7 +1888,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.ipadx = 64;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmNumberOfTicketsValue, gridBagConstraints);
+        pnlFoodOrderConfirmation.add(lblRestaurantNameValue, gridBagConstraints);
 
         lblConfirmOrderNumberValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmOrderNumberValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -1887,51 +1953,38 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private void btnSandwichShopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSandwichShopActionPerformed
         this.pnlSelectRestaurant.setVisible(false);
         this.pnlSandwichShop.setVisible(true);
-        
-        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
-        menu = new ArrayList<Food>(manageFoodCtrl.getDeliMenuToDisplay());
-        this.menu = menu;
-        
-
+       
     }//GEN-LAST:event_btnSandwichShopActionPerformed
 
     private void btnSofiasPizzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSofiasPizzaActionPerformed
         this.pnlSelectRestaurant.setVisible(false);
         this.pnlSofiasPizza.setVisible(true);
-        
-        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
-        menu = new ArrayList<Food>(manageFoodCtrl.getItalianMenuToDisplay());
-        this.menu = menu;
-        
+         
     }//GEN-LAST:event_btnSofiasPizzaActionPerformed
 
     private void btnElTacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElTacoActionPerformed
         this.pnlSelectRestaurant.setVisible(false);
         this.pnlElTaco.setVisible(true);
-        
-        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
-        menu = new ArrayList<Food>(manageFoodCtrl.getMexicanMenuToDisplay());
-        this.menu = menu;
-        
+            
     }//GEN-LAST:event_btnElTacoActionPerformed
 
     private void btnGrubGrillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrubGrillActionPerformed
         this.pnlSelectRestaurant.setVisible(false);
         this.pnlGrubGrill.setVisible(true);
-        
-        ManageFoodCtrl manageFoodCtrl = new ManageFoodCtrl();
-        menu = new ArrayList<Food>(manageFoodCtrl.getGrillMenuToDisplay());
-        this.menu = menu;
-        
+    
     }//GEN-LAST:event_btnGrubGrillActionPerformed
 
     private void btnDeliPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliPlaceOrderActionPerformed
-        this.pnlFoodOrderConfirmation.setVisible(true);
-        //add code to use selection values to set selected food array information
-        //add code to create food order and set selected food array to food order
-        //add code display food order information on confirmation screen
 
+        menuSelections = this.getSelectedFoods();
+        manageFoodCtrl.createFoodOrder("Sandwich Shop"); 
+        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+        this.newFoodOrder = newFoodOrder;
+        this.setFoodOrderConfirmationInfo(newFoodOrder);
+        
+        this.pnlFoodOrderConfirmation.setVisible(true); 
         this.pnlSandwichShop.setVisible(false);
+        
     }//GEN-LAST:event_btnDeliPlaceOrderActionPerformed
 
     private void btnDeliCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliCancelOrderActionPerformed
@@ -1945,11 +1998,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnItalianCancelOrderActionPerformed
 
     private void btnItalianPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItalianPlaceOrderActionPerformed
-       this.pnlFoodOrderConfirmation.setVisible(true);
-        //add code to use selection values to set selected food array information
-        //add code to create food order and set selected food array to food order
-        //add code display food order information on confirmation screen
-
+        menuSelections = this.getSelectedFoods();
+        manageFoodCtrl.createFoodOrder("Sofia's Pizza");
+        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+        this.newFoodOrder = newFoodOrder;
+        
+        setFoodOrderConfirmationInfo(newFoodOrder);
+        
+        this.pnlFoodOrderConfirmation.setVisible(true);
         this.pnlSofiasPizza.setVisible(false);
     }//GEN-LAST:event_btnItalianPlaceOrderActionPerformed
 
@@ -1959,11 +2015,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGrillCancelOrderActionPerformed
 
     private void btnGrillPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrillPlaceOrderActionPerformed
+        //manageFoodCtrl = new ManageFoodCtrl();
+        menuSelections = this.getSelectedFoods();
+        manageFoodCtrl.createFoodOrder("Grub Grill");
+        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+        this.newFoodOrder = newFoodOrder;
+        setFoodOrderConfirmationInfo(newFoodOrder);
+        
         this.pnlFoodOrderConfirmation.setVisible(true);
-        //add code to use selection values to set selected food array information
-        //add code to create food order and set selected food array to food order
-        //add code display food order information on confirmation screen
-
         this.pnlGrubGrill.setVisible(false);
     }//GEN-LAST:event_btnGrillPlaceOrderActionPerformed
 
@@ -1973,11 +2032,14 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMexicanCancelOrderActionPerformed
 
     private void btnMexicanPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMexicanPlaceOrderActionPerformed
+        //manageFoodCtrl = new ManageFoodCtrl();
+        menuSelections = this.getSelectedFoods();
+        manageFoodCtrl.createFoodOrder("El Taco"); 
+        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+        this.newFoodOrder = newFoodOrder;
+        setFoodOrderConfirmationInfo(newFoodOrder);        
+        
         this.pnlFoodOrderConfirmation.setVisible(true);
-        //add code to use selection values to set selected food array information
-        //add code to create food order and set selected food array to food order
-        //add code display food order information on confirmation screen
-
         this.pnlElTaco.setVisible(false);
     }//GEN-LAST:event_btnMexicanPlaceOrderActionPerformed
 
@@ -2134,7 +2196,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
-    public javax.swing.JLabel lblConfirmNumberOfTicketsValue;
     public javax.swing.JLabel lblConfirmOrderNumberValue;
     private javax.swing.JLabel lblConfirmSubtotal;
     public javax.swing.JLabel lblConfirmSubtotalValue;
@@ -2146,6 +2207,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblListFoodsSelected;
     private javax.swing.JLabel lblOrderNumber;
     private javax.swing.JLabel lblRestaurant;
+    public javax.swing.JLabel lblRestaurantNameValue;
     private javax.swing.JLabel lblSelectRestaurant;
     private javax.swing.JLabel lblSelectRestaurantTitle1;
     private javax.swing.JLabel lblSelectRestaurantTitle2;

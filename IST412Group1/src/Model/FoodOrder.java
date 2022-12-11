@@ -17,20 +17,26 @@ import java.util.ArrayList;
  * @author katerineer
  */
 public class FoodOrder {
-    private int orderNumber = this.getOrderNumber();
+    private int orderNumber;
     private ArrayList<Food> foodsSelected = new ArrayList<>();
-    private double foodOrderSubtotal = this.foodOrderSubtotal;
-    private double foodOrderTax = this.getFoodOrderTax();
-    private double foodOrderTotal = this.getFoodOrderTotal();
-    private String foodOrderStatus = "pending"; //such as pending, being prepared, ready for pick-up, or completed
-    private String restaurantName = "";
+    private double foodOrderSubtotal;
+    private double foodOrderTax;
+    private double foodOrderTotal;
+    private String restaurantName;
     ArrayList<Integer> orderNums = new ArrayList<Integer>();
     
     /**
      * Empty constructor for the Food Order class
      */
     public FoodOrder (){
-     
+        
+        this.restaurantName = restaurantName;
+        this.foodsSelected = foodsSelected;
+        this.orderNumber = createFoodOrderNumber();
+        this.foodOrderSubtotal = calculateFoodOrderSubtotal(foodsSelected);
+        this.foodOrderTax = calculateFoodOrderTax(foodOrderSubtotal);
+        this.foodOrderTotal = calculateTotal(foodOrderSubtotal, foodOrderTax);
+       
     }
 
     /**
@@ -118,23 +124,23 @@ public class FoodOrder {
     public void setFoodOrderTotal(double foodOrderTotal) {
         this.foodOrderTotal = foodOrderTotal;
     }
-
+    
     /**
-     * Gets the status of this food order.
-     * @return the string foodOrderStatus representing the status of the food order.
+     * Gets the name of the restaurant for this food order.
+     * @return the string restaurantName representing the name of the restaurant for this food order.
      */
-    public String getFoodOrderStatus() {
-        System.out.println("Your order status: " + foodOrderStatus);
-        return "";
+    public String getRestaurantName() {
+        return restaurantName;
     }
 
     /**
-     * Sets the status for this food order.
-     * @param foodOrderStatus sets the status for the food order.
+     * Sets the name of the restaurant for this food order
+     * @param restaurantName sets the name of the restaurant for the food order
      */
-    public void setFoodOrderStatus(String foodOrderStatus) {
-        this.foodOrderStatus = foodOrderStatus;
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
     }
+   
     
     public int createFoodOrderNumber(){
         int orderNum = 0;
@@ -151,10 +157,14 @@ public class FoodOrder {
       * @param foodsSelected sets the array of foods to be used for this ticket order.
       * @return a double representing the calculated subtotal amount of an array of tickets for the ticket order.
       */
-     public double calculateFoodOrderSubtotal (ArrayList foodsSelected){
-         double foodSubtotal = 0;
-         System.out.println("Food order subtotal calculated!");
-         return foodSubtotal;
+     public double calculateFoodOrderSubtotal (ArrayList<Food> foodsSelected){
+         double foodOrderSubtotal = 0;
+         for (int i = 0; i < foodsSelected.size(); i++){
+             foodsSelected.get(i).setFoodSubtotal(foodsSelected.get(i).calculateFoodSubtotal(foodsSelected.get(i).getFoodPrice(), foodsSelected.get(i).getFoodQuantity()));
+             foodOrderSubtotal = foodOrderSubtotal + foodsSelected.get(i).getFoodSubtotal();
+         }
+         System.out.println("Food order subtotal: $ " + foodOrderSubtotal);
+         return 10.50;
      }
      
      /**
@@ -179,5 +189,5 @@ public class FoodOrder {
          System.out.println("Food order subtotal calculated!");
          return total;
      }
-   
+
 }
