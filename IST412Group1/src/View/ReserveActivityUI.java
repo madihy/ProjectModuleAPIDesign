@@ -14,8 +14,7 @@ import java.util.ArrayList;
  * @author Kate
  */
 public class ReserveActivityUI extends javax.swing.JFrame {
-    ArrayList<Activity> rideActivities = new ArrayList<>();
-    ArrayList<Activity> showActivities = new ArrayList<>();
+    Activity reservedActivity;
     ActivityCtrl activityCtrl;   
     private int counter = 0;
     private int maxCapacityRide = 10;
@@ -447,6 +446,9 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         timeSlot = (String) cbSelectRideReservation.getSelectedItem();
         quant = Integer.parseInt(spnRideResQty.getValue().toString());
         
+        activityCtrl.createReservationObject(activityType, activityName, timeSlot, quant);
+        reservedActivity = activityCtrl.getReservedActivityInformation();
+        
         System.out.println(activityName);
         System.out.println(activityType);
         System.out.println(timeSlot);
@@ -473,7 +475,7 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         timeSlot = (String) cbSelectShowReservation.getSelectedItem();
         quant = Integer.parseInt(spnShowResQty.getValue().toString());
         activityCtrl.createReservationObject(activityType, activityName, timeSlot, quant);
-        Activity newActivity = new Activity();
+        reservedActivity = activityCtrl.getReservedActivityInformation();
         
         
         System.out.println(activityName);
