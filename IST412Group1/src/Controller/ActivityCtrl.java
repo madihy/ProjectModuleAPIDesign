@@ -2,6 +2,7 @@ package Controller;
 import Model.*;
 import View.*;
 import Controller.*;
+import java.util.ArrayList;
 
 
 /**
@@ -24,10 +25,19 @@ public class ActivityCtrl {
         reservedActivity.setReservationQty(inf_resQty);
         
         this.reservedActivity = reservedActivity;
+        
     }
     
     public Activity getReservedActivityInformation(){
         return reservedActivity;
+    }
+    
+    public void addReservedActivityToReservationArray(){
+        Reservation newReservation = Reservation();
+        ArrayList<Activity> reservations = new ArrayList<Activity>();
+        reservations = newReservation.getReservedActivities();
+        reservations.add(reservedActivity);
+        newReservation.setReservedActivities(reservations);  
     }
     
     /**
@@ -74,7 +84,7 @@ public class ActivityCtrl {
     
     @Override
     public String toString() {
-        return "Activity: " + activity.getActivityName() + "\nType: " + activity.getActivityType();
+        return "Activity: " + reservedActivity.getActivityName() + "\nType: " + reservedActivity.getActivityType();
 }
 
     private Reservation Reservation() {
