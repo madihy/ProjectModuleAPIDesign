@@ -7,7 +7,6 @@ package View;
 
 import Controller.LoginCtrl;
 import Controller.NavigationCtrl;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -172,9 +171,7 @@ public class LoginUI extends javax.swing.JFrame {
         
         LoginCtrl loginCtrl = new LoginCtrl();
         Boolean auth = false;
-        auth = loginCtrl.authenticateUser(this.usernameTextField.getText(), this.passwordTextField.getText());
-        System.out.println(auth);
-        
+        auth = loginCtrl.authenticateUser(this.usernameTextField.getText(), this.passwordTextField.getText());    
         
         if (auth == true){
             NavigationCtrl navCtrl = new NavigationCtrl();
@@ -195,10 +192,7 @@ public class LoginUI extends javax.swing.JFrame {
         createCustUI.setLocationRelativeTo(null);
         createCustUI.setVisible(true);
         this.dispose();
-        
-        
-        
-        
+
     }//GEN-LAST:event_newAccountButtonActionPerformed
 
     /**

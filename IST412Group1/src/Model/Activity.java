@@ -1,7 +1,5 @@
 package Model;
 
-import Model.*;
-import View.*;
 import Controller.*;
 import java.util.ArrayList;
 import java.io.FileInputStream;
@@ -22,13 +20,7 @@ public class Activity implements Serializable {
     private String activityName;//Name of the restaurant, show or ride
     private String activityType;//Types are Dining, Show, or Ride
     private String timeSlot;
-    private int reservationQty;
-    //private int actLenInMins;
-    //private boolean activityAvail;
-    //private int waitTimeInMins;
-    
-    private ActivityCtrl activityCtrl;
-    private ArrayList<ResOption> rideResOptions = new ArrayList<>();
+    private int reservationQty; 
     String activityDataFileName = "activityData.ser";
     private ArrayList<Activity> activityArray = new ArrayList<>();
 
@@ -38,11 +30,9 @@ public class Activity implements Serializable {
     public Activity() {
         this.activityName = "None";
         this.activityType = "None";
-        this.rideResOptions = rideResOptions;
         this.readActivityDataFile();
         
         if (activityArray.isEmpty() || activityArray == null) {
-            System.out.println("Activity Array is empty, creating test activities...");
             this.createTestActivities();  // Should only need to be created once.  After that the data should persist between runs
             this.writeActivityDataFile();
             this.readActivityDataFile();
@@ -86,18 +76,12 @@ public class Activity implements Serializable {
      *
      * @param activityName The name of the activity
      * @param activityType The type of the activity (ie. ride, show, meal)
-     * @param actLenInMins The length in minutes of the activity
-     * @param activityAvail Is the activity available, true or false
-     * @param waitTimeInMins The wait time for the activity in minutes
+     * @param timeSlot
      */
     public Activity(String activityName, String activityType, String timeSlot) {
         this.activityName = activityName;
         this.activityType = activityType;
         this.timeSlot = timeSlot;
-        this.rideResOptions = rideResOptions;
-        //this.actLenInMins = actLenInMins;
-        //this.activityAvail = activityAvail;
-        //this.waitTimeInMins = waitTimeInMins;
     }
 
     /**
@@ -106,8 +90,7 @@ public class Activity implements Serializable {
      * @return A string of the activity name
      */
     public String getActivityName() {
-        System.out.println("Activity Name: " + this.activityName);
-        return "";
+        return activityName;
     }
 
     /**
@@ -125,8 +108,7 @@ public class Activity implements Serializable {
      * @return A string representing the type of the activity
      */
     public String getActivityType() {
-        System.out.println("Acvtivity Type: " + activityType);
-        return "";
+        return activityType;
     }
 
     /**
@@ -138,23 +120,8 @@ public class Activity implements Serializable {
         this.activityType = activityType;
     }
 
-    /**
-     * @return the rideResOptions
-     */
-    public ArrayList<ResOption> getRideResOptions() {
-        return rideResOptions;
-    }
-
-    /**
-     * @param rideResOptions the rideResOptions to set
-     */
-    public void setRideResOptions(ArrayList<ResOption> rideResOptions) {
-        this.rideResOptions = rideResOptions;
-    }
-
     public String getTimeSlot() {
-        System.out.println("Activity Time: " + timeSlot);
-        return "";
+        return timeSlot;
     }
 
     public void setTimeSlot(String timeSlot) {
@@ -175,7 +142,7 @@ public class Activity implements Serializable {
             in.close();
 
             if (!activityArray.isEmpty()) {
-                System.out.println("Activity Data Loaded from File");
+                //System.out.println("Activity Data Loaded from File");
             }
             this.activityArray = activityArray;
 
@@ -213,7 +180,7 @@ public class Activity implements Serializable {
     
     @Override
     public String toString() {
-        System.out.println(this.getActivityName() + " " + this.getActivityType() + " " + this.getTimeSlot() + " " + this.getReservationQty());
+        
         return "";
     }
 
@@ -221,7 +188,6 @@ public class Activity implements Serializable {
      * @return the reservationQty
      */
     public int getReservationQty() {
-        System.out.print("Quantity: ");
         return reservationQty;
     }
 
@@ -232,64 +198,4 @@ public class Activity implements Serializable {
         this.reservationQty = reservationQty;
     }
 
-    /**
-     * Gets the length of the activity in minutes
-     *
-     * @return An int representing the length of the activity in minutes
-     */
-    /**
-     * public int getActLenInMins() { System.out.println("Activity length in
-     * minutes: " + actLenInMins); return 0;
-    }
-     */
-    /**
-     * Sets the length of the activity in minutes
-     *
-     * @param actLenInMins Sets the length of the activity in minutes
-     */
-    /**
-     * public void setActLenInMins(int actLenInMins) { this.actLenInMins =
-     * actLenInMins;
-    }
-     */
-    /**
-     * Returns if the activity is available
-     *
-     * @return True if the activity is available, false if it is not available
-     */
-    /**
-     * public boolean isActivityAvail() { System.out.println("Activity
-     * Available? " + activityAvail); return activityAvail;
-    }
-     */
-    /**
-     * Sets if the activity is available
-     *
-     * @param activityAvail Sets if the activity is available or not available
-     */
-    /**
-     * public void setActivityAvail(boolean activityAvail) { this.activityAvail
-     * = activityAvail;
-    }
-     */
-    /**
-     * Gets the wait time of the activity in minutes
-     *
-     * @return An int representing the wait time in minutes
-     */
-    /**
-     * public int getWaitTimeInMins() { System.out.println("Activity Wat Time in
-     * Minutes: " + waitTimeInMins); return waitTimeInMins;
-    }
-     */
-    /**
-     * Sets the wait time of an activity in minutes
-     *
-     * @param waitTimeInMins Sets the wait time in minutes
-     */
-    /**
-     * public void setWaitTimeInMins(int waitTimeInMins) { this.waitTimeInMins =
-     * waitTimeInMins;
-    }
-     */
 }

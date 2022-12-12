@@ -1,6 +1,5 @@
 package Model;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 
@@ -44,7 +43,6 @@ public class Customer extends Account{
      * @return a string representing the email for this account.
      */
     public String getEmail() {
-        System.out.println("Email: " + email);
         return email;
     }
 
@@ -57,9 +55,7 @@ public class Customer extends Account{
          String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
         if (this.email.matches(regex)) {
             this.email = email;
-        } else {
-            System.out.println("Not a valid address!");
-        }
+        } 
     }
 
     /**

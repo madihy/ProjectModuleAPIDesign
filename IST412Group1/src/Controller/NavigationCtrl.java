@@ -5,7 +5,6 @@
 package Controller;
 
 import View.NavigationUI;
-import java.awt.event.ActionEvent;
 
 /**
  * This class provides the actions to facilitate user interface navigation menus in the application.

@@ -5,8 +5,6 @@
 package Model;
 
 import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.Random;
 
 /**
  * This is a class for the account login information that will be used for both customers and employees.
@@ -15,16 +13,13 @@ import java.util.Random;
  */
 public class Account implements Serializable{
 
-    private int accountID;
     private String username;
     private String password;
     private String firstName; 
     private String lastName; 
-    private Boolean accountTypeCustomer;
         
     /**
      * This is the full constructor for the Account class.
-     * @param accountID
      * @param username
      * @param password
      * @param firstName
@@ -37,19 +32,14 @@ public class Account implements Serializable{
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;    
-        
-        //Instantiates the account type Boolean value.
-        accountTypeCustomer = true;
 
     }
-
 
     /**
      * Returns the username for this login account.
      * @return a string representing the username for this login account.
      */
     public String getUsername() {
-        System.out.println("Username: " + username);
         return username;
     }
 
@@ -62,28 +52,10 @@ public class Account implements Serializable{
     }
 
     /**
-     * Returns the account ID for this account.
-     * @return the integer representing the accountID for the account.
-     */
-    public int getAccountID() {
-        System.out.println("Account ID: " + accountID);
-        return accountID;
-    }
-
-    /**
-     * Sets the account ID for this account.
-     * @param accountID sets the account ID for the account.
-     */
-    public void setAccountID(int accountID) {
-        this.accountID = accountID;
-    }
-
-    /**
      * Returns the password for this login account.
      * @return a string representing the password for this login account.
      */
     public String getPassword() {
-        System.out.println("Password: " + password);
         return password;
     }
 
@@ -100,7 +72,6 @@ public class Account implements Serializable{
      * @return a string representing the firstName for this account.
      */
     public String getFirstName() {
-        System.out.println("First Name: " + firstName);
         return firstName;
     }
 
@@ -117,7 +88,6 @@ public class Account implements Serializable{
      * @return a string representing the lastName for the account.
      */
     public String getLastName() {
-        System.out.println("Last Name: " + lastName);
         return lastName;
     }
 

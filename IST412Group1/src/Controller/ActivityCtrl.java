@@ -1,7 +1,8 @@
 package Controller;
-import Model.*;
-import View.*;
-import Controller.*;
+
+import Model.Activity;
+import Model.Reservation;
+import View.ReserveActivityUI;
 import java.util.ArrayList;
 
 
@@ -39,55 +40,6 @@ public class ActivityCtrl {
         reservations.add(reservedActivity);
         newReservation.setReservedActivities(reservations);  
     }
-    
-    /**
- * Add new activities
- */ 
-    public void addActivity() {
-        System.out.println("Activityy Added!");
-        
-    }
-    
-/** 
- * Update info on existing activities
- */
-    public void updateActivity() {
-        System.out.println("Activity Updated!");
-    }
-
-/** 
- * Update availability of individual activities    
- */
-    public void updateActivityAvail() {
-        System.out.println("Activity Availability Updated!");
-    }
-
-/** 
- * Update list of available activities    
- */
-    public void updateAvailList() {
-        System.out.println("The list of Available Activities has been Updated!");
-    }
-    
-/** 
- * Change wait times    
- */
-    public void updateWaitTime() {
-        System.out.println("Activity Wait Time has been updated");
-    }  
-/**
- * Method to return back to the Navigation Menu
- */    
-    public void returnToNav() {
-        System.out.println("Returning to Navigation Menu!\n");
-    }
-    
-    @Override
-    public String toString() {
-        System.out.println("Activity: " + reservedActivity.getActivityName() + "\nType: " + reservedActivity.getActivityType()
-         + "\nQuantity: " + reservedActivity.getReservationQty());
-        return "";
-}
 
     private Reservation Reservation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

@@ -9,10 +9,6 @@ import Controller.NavigationCtrl;
 import Model.Food;
 import Model.FoodOrder;
 import java.util.ArrayList;
-import javax.swing.JScrollPane;
-import javax.swing.table.AbstractTableModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 
 /**
  *
@@ -2044,7 +2040,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private void btnDeliPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
         boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
-        System.out.println("all zeros = " + allZeros);
         if (allZeros == true){
              this.lblDeliError.setVisible(true); 
         }
@@ -2133,14 +2128,12 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
     private void btnMainMenuOrdConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuOrdConActionPerformed
         NavigationCtrl navCtrl = new NavigationCtrl();
-        //add code to set the food orders array in the customer object and save to customer file to persist 
-        
         this.dispose();
     }//GEN-LAST:event_btnMainMenuOrdConActionPerformed
 
     private void btnMainMenuResSelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuResSelActionPerformed
         NavigationCtrl navCtrl = new NavigationCtrl();
-        
+        this.dispose();        
     }//GEN-LAST:event_btnMainMenuResSelActionPerformed
 
     /**

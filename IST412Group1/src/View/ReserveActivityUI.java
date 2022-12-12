@@ -7,7 +7,6 @@ package View;
 import Controller.ActivityCtrl;
 import Controller.NavigationCtrl;
 import Model.Activity;
-import java.util.ArrayList;
 
 /**
  *
@@ -16,9 +15,7 @@ import java.util.ArrayList;
 public class ReserveActivityUI extends javax.swing.JFrame {
     Activity reservedActivity;
     ActivityCtrl activityCtrl;   
-    private int counter = 0;
-    private int maxCapacityRide = 10;
-    private int maxCapacityShow = 50;
+    
     /**
      * Creates new form ReserveActivityUI
      */
@@ -456,11 +453,6 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                 "\nActivity Type: " + activityType + "\nTime: " + timeSlot + 
                 "\nQuantity: " + quant);
         
-        System.out.println(activityName);
-        System.out.println(activityType);
-        System.out.println(timeSlot);
-        System.out.println(quant);    
-        
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveRide.setVisible(false);
         
@@ -487,12 +479,6 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                 "\nActivity Type: " + activityType + "\nTime: " + timeSlot + 
                 "\nQuantity: " + quant);
         
-        
-        System.out.println(activityName);
-        System.out.println(activityType);
-        System.out.println(timeSlot);
-        System.out.println(quant);                    
-      
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveShow.setVisible(false);
     }//GEN-LAST:event_btnShowReserveActionPerformed

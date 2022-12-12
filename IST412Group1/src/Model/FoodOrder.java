@@ -4,12 +4,6 @@
  */
 package Model;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -135,7 +129,10 @@ public class FoodOrder {
         this.restaurantName = restaurantName;
     }
    
-    
+    /**
+     * Creates a food order number randomly
+     * @return OrderNum integer representing the food order number
+     */
     public int createFoodOrderNumber(){
         int orderNum = 0;
         do{
@@ -157,7 +154,6 @@ public class FoodOrder {
              foodsSelected.get(i).setFoodSubtotal(foodsSelected.get(i).calculateFoodSubtotal(foodsSelected.get(i).getFoodPrice(), foodsSelected.get(i).getFoodQuantity()));
              foodOrderSubtotal = foodOrderSubtotal + foodsSelected.get(i).getFoodSubtotal();
          }
-         System.out.println("Food order subtotal: $ " + foodOrderSubtotal);
          return foodOrderSubtotal;
      }
      
@@ -168,7 +164,6 @@ public class FoodOrder {
       */
      public double calculateFoodOrderTax (double subtotal){
          double tax = this.foodOrderSubtotal * 0.13;
-         System.out.println("Food order tax calculated!");
          return tax;
      }
      
@@ -180,7 +175,6 @@ public class FoodOrder {
       */
      public double calculateTotal (double subtotal, double tax){
          double total = subtotal + tax;
-         System.out.println("Food order subtotal calculated!");
          return total;
      }
 

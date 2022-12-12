@@ -4,7 +4,6 @@
  */
 package Model;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -60,7 +59,6 @@ public class TicketOrder{
      public ArrayList<Ticket> createTicketsArray (int numberOfTickets, int numberOfDays){
          ArrayList<Ticket> ticketsRequested = new ArrayList();
          int quantity = numberOfTickets * numberOfDays;
-         System.out.println("Ticket array created.");
          for(int i = 0; i < quantity; i++){
              Ticket newTicket = new Ticket();
              ticketsRequested.add(newTicket);
@@ -76,7 +74,6 @@ public class TicketOrder{
       */
      public double calculateOrderSubtotal (int tickets, int days){
          double subTotal = tickets * days * 50;
-         System.out.println("Order subtotal calculated!");
          return subTotal;
      }
      
@@ -87,7 +84,6 @@ public class TicketOrder{
       */
      public double calculateTax (double subtotal){
          double tax = this.orderSubtotal * 0.13;
-         System.out.println("Order tax calculated!");
          return tax;
      }
      
@@ -99,7 +95,6 @@ public class TicketOrder{
       */
      public double calculateTotal (double subtotal, double tax){
          double total = subtotal + tax;
-         System.out.println("Order subtotal calculated!");
          return total;
      }
 
@@ -108,7 +103,6 @@ public class TicketOrder{
      * @return an integer representing the orderNumber for the ticket order.
      */
     public int getOrderNumber() {
-        System.out.println("Order Number: " + orderNumber);
         return orderNumber;
     }
 
@@ -117,7 +111,6 @@ public class TicketOrder{
      * @return the integer quantityTickets representing the quantity of tickets for the ticket order.
      */
     public int getQuantityTickets() {
-        System.out.println("Quantity of Tickets: " + quantityTickets);
         return quantityTickets;
     }
 
@@ -126,7 +119,6 @@ public class TicketOrder{
      * @return the integer quantityDays representing the quantity of days for each ticket for the ticket order.
      */
     public int getQuantityDays() {
-        System.out.println("Quantity of Days: "+"quantityDays");
         return quantityDays;
     }
 
@@ -135,7 +127,6 @@ public class TicketOrder{
      * @return the ArrayList ticketsOrdered representing the list of tickets for the ticket order.
      */
     public ArrayList <Ticket> getTicketsOrdered() {
-        System.out.println("Tickets Array: " + ticketsOrdered);
         return ticketsOrdered;
     }
          
@@ -144,7 +135,6 @@ public class TicketOrder{
      * @return a double representing the order subtotal for the ticket order.
      */
     public double getOrderSubtotal() {
-        System.out.println("Subtotal: " + orderSubtotal);
         return orderSubtotal;
     }
 
@@ -153,7 +143,6 @@ public class TicketOrder{
      * @return a double representing the order tax amount for the ticket order.
      */
     public double getOrderTax() {
-        System.out.println("Tax: " + orderTax);
         return orderTax;
     }
 
@@ -162,7 +151,6 @@ public class TicketOrder{
      * @return a double representing the order total for the ticket order.
      */
     public double getOrderTotal() {
-        System.out.println("Total: " + orderTotal);
         return orderTotal;
     }
 

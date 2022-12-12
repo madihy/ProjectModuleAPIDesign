@@ -35,8 +35,7 @@ public class Authentication{
         this.readCustomerDataFile();
         
         if (customerArray.isEmpty() || customerArray == null){
-            System.out.println("customerArray empty, creating test customers...");
-            
+                       
             this.createTestCustomers();
             this.writeCustomerDataFile();
             this.readCustomerDataFile();
@@ -124,20 +123,18 @@ public class Authentication{
             in.close();
 
             if (!customerArray.isEmpty()) {
-                System.out.println("Customer Data Loaded from File");
             }
             this.customerArray = customerArray;
 
         } catch (IOException ex) {
-            //ex.printStackTrace();
+            
         } catch (ClassNotFoundException ex) {
-            // ex.printStackTrace();
+            
         }
 
     }
 
     public void writeArray(ArrayList<Customer> inf_userArray) {
-        //userArray.clear();
         this.customerArray = inf_userArray;
 
         writeCustomerDataFile();

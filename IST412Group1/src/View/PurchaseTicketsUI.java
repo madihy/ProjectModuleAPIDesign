@@ -10,14 +10,10 @@ import Model.Ticket;
 import Model.TicketOrder;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import static java.time.Clock.system;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  *
@@ -417,12 +413,10 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         if (nofTickets <= 0 || nofDays <= 0) {
             JOptionPane.showMessageDialog(null, "Invalid Entry.");
-            //btnPurchaseTickets.setEnabled(false);
         } else {
             double subtotal = ticketOrder.getOrderSubtotal();
             double tax = ticketOrder.getOrderTax();
             double total = ticketOrder.getOrderTotal();
-            System.out.println(nofTickets + " " + nofDays + " " + subtotal);
             lblPurchaseSubtotalValue.setText("$" + String.format("%.2f", subtotal));
             lblPurchaseTaxValue.setText("$" + String.format("%.2f", tax));
             lblPurchaseTotalCostValue.setText("$" + String.format("%.2f", total));
