@@ -104,6 +104,6 @@ public class Food{
     @Override
     public String toString() {
         
-        return this.foodName + " at $" + this.foodPrice + " for a quantity of " + this.foodQuantity;
+        return this.foodName + " at $" + String.format("%.2f", this.foodPrice) + " for a quantity of " + this.foodQuantity;
     }
 }
