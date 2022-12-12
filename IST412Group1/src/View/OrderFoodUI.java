@@ -84,9 +84,9 @@ public class OrderFoodUI extends javax.swing.JFrame {
         
         this.lblConfirmOrderNumberValue.setText(String.valueOf(newFoodOrder.getOrderNumber()));
         this.lblRestaurantNameValue.setText(newFoodOrder.getRestaurantName());
-        this.lblConfirmSubtotalValue.setText("$" + String.valueOf(newFoodOrder.getFoodOrderSubtotal()));
-        this.lblConfirmTaxValue.setText("$" + String.valueOf(newFoodOrder.getFoodOrderTax()));
-        this.lblConfirmTotalCostValue.setText("$" + String.valueOf(newFoodOrder.getFoodOrderTotal()));
+        this.lblConfirmSubtotalValue.setText("$" + String.format("%.2f", newFoodOrder.getFoodOrderSubtotal()));
+        this.lblConfirmTaxValue.setText("$" + String.format("%.2f", newFoodOrder.getFoodOrderTax()));
+        this.lblConfirmTotalCostValue.setText("$" + String.format("%.2f", newFoodOrder.getFoodOrderTotal()));
         
         for(int i = 0; i < menuSelections.size(); i++){
             this.taFoodsSelected.append(menuSelections.get(i).toString());
