@@ -448,8 +448,7 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         
         activityCtrl.createReservationObject(activityType, activityName, timeSlot, quant);
         reservedActivity = activityCtrl.getReservedActivityInformation();
-        taActivityReservationInfo.setText(reservedActivity.getActivityName() + 
-                reservedActivity.getActivityType() + reservedActivity.getTimeSlot().toString());
+        this.taActivityReservationInfo.append(reservedActivity.toString());
         
         System.out.println(activityName);
         System.out.println(activityType);

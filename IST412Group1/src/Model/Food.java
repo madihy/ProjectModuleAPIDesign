@@ -101,11 +101,9 @@ public class Food{
     public void setFoodSubtotal(double foodSubtotal) {
         this.foodSubtotal = foodSubtotal;
     }
-    
-    public String ToString(){
-        return "Food Name: " + this.foodName +
-                ", Price Each: $" + this.foodPrice +
-                ", Quantity Ordered: " + this.foodQuantity +
-                ", Item Subtotal: $ " + this.foodSubtotal;
+    @Override
+    public String toString() {
+        
+        return this.foodName + " at $" + this.foodPrice + " for a quantity of " + this.foodQuantity;
     }
 }
