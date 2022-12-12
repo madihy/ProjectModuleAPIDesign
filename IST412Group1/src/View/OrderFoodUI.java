@@ -93,6 +93,20 @@ public class OrderFoodUI extends javax.swing.JFrame {
             this.taFoodsSelected.append("\n");
         }
     } 
+    
+    public boolean allZeroQuantitiesCheck (ArrayList<Food> inf_menuSelections){
+        boolean allZeroQuantities = true;
+        int total = 0;
+        for (int i = 0; i<inf_menuSelections.size(); i++){
+           int foodQuantity = inf_menuSelections.get(i).getFoodQuantity();
+           total = total + foodQuantity;
+        }
+        if (total > 0){
+            allZeroQuantities = false;
+        }
+        return allZeroQuantities;
+                
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -149,6 +163,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel19 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+        lblDeliError = new javax.swing.JLabel();
         pnlSofiasPizza = new javax.swing.JPanel();
         lblSelectRestaurantTitle2 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -179,6 +194,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jLabel38 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        lblItalianError = new javax.swing.JLabel();
         pnlGrubGrill = new javax.swing.JPanel();
         lblSelectRestaurantTitle3 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -215,6 +231,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jLabel56 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
         spnGrillBottledQty = new javax.swing.JSpinner();
+        lbGrillError = new javax.swing.JLabel();
         pnlElTaco = new javax.swing.JPanel();
         lblSelectRestaurantTitle4 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
@@ -248,6 +265,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         spnMexicanBottledQty = new javax.swing.JSpinner();
+        lbMexicanError = new javax.swing.JLabel();
         pnlFoodOrderConfirmation = new javax.swing.JPanel();
         lblFoodOrderConfTitle = new javax.swing.JLabel();
         lblOrderNumber = new javax.swing.JLabel();
@@ -389,10 +407,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.gridwidth = 13;
         gridBagConstraints.ipadx = 95;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 40);
         pnlSandwichShop.add(lblSelectRestaurantTitle1, gridBagConstraints);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -660,11 +678,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridy = 13;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 124, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
         pnlSandwichShop.add(btnDeliCancelOrder, gridBagConstraints);
 
         btnDeliPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -677,11 +695,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.ipadx = 24;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 15, 124, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 15, 0, 0);
         pnlSandwichShop.add(btnDeliPlaceOrder, gridBagConstraints);
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -699,7 +717,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
@@ -707,7 +725,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridwidth = 12;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -726,13 +744,26 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(jLabel19, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 12;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(39, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
         pnlSandwichShop.add(jSeparator2, gridBagConstraints);
+
+        lblDeliError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblDeliError.setForeground(new java.awt.Color(255, 0, 0));
+        lblDeliError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDeliError.setText("Must select item(s)");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.ipadx = 158;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(14, 10, 0, 0);
+        pnlSandwichShop.add(lblDeliError, gridBagConstraints);
 
         getContentPane().add(pnlSandwichShop);
 
@@ -744,10 +775,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 14;
+        gridBagConstraints.gridwidth = 20;
         gridBagConstraints.ipadx = 126;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
         pnlSofiasPizza.add(lblSelectRestaurantTitle2, gridBagConstraints);
 
         jLabel20.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -977,11 +1008,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 20, 124, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 20, 0, 0);
         pnlSofiasPizza.add(btnItalianCancelOrder, gridBagConstraints);
 
         btnItalianPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -994,11 +1025,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.gridwidth = 8;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 15, 124, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 15, 0, 0);
         pnlSofiasPizza.add(btnItalianPlaceOrder, gridBagConstraints);
 
         jLabel36.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -1016,7 +1047,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 8;
+        gridBagConstraints.gridwidth = 14;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
@@ -1024,7 +1055,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 13;
+        gridBagConstraints.gridwidth = 19;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -1043,13 +1074,26 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(jLabel38, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
-        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridy = 11;
+        gridBagConstraints.gridwidth = 13;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(65, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
         pnlSofiasPizza.add(jSeparator4, gridBagConstraints);
+
+        lblItalianError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblItalianError.setForeground(new java.awt.Color(255, 0, 0));
+        lblItalianError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblItalianError.setText("Must select item(s)");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 158;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(33, 10, 0, 0);
+        pnlSofiasPizza.add(lblItalianError, gridBagConstraints);
 
         getContentPane().add(pnlSofiasPizza);
 
@@ -1061,7 +1105,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 10;
+        gridBagConstraints.gridwidth = 25;
         gridBagConstraints.ipadx = 140;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
@@ -1333,11 +1377,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridy = 15;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 20, 124, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 20, 11, 0);
         pnlGrubGrill.add(btnGrillCancelOrder, gridBagConstraints);
 
         btnGrillPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -1350,11 +1394,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
-        gridBagConstraints.gridy = 14;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridy = 15;
+        gridBagConstraints.gridwidth = 18;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 25, 124, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 41, 11, 0);
         pnlGrubGrill.add(btnGrillPlaceOrder, gridBagConstraints);
 
         jLabel53.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -1372,7 +1416,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridwidth = 10;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
@@ -1380,7 +1424,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.gridwidth = 17;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
@@ -1399,12 +1443,12 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(jLabel55, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.gridy = 14;
+        gridBagConstraints.gridwidth = 17;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(12, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
         pnlGrubGrill.add(jSeparator6, gridBagConstraints);
 
         jLabel56.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -1439,6 +1483,19 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(7, 32, 0, 0);
         pnlGrubGrill.add(spnGrillBottledQty, gridBagConstraints);
+
+        lbGrillError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbGrillError.setForeground(new java.awt.Color(255, 0, 0));
+        lbGrillError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbGrillError.setText("Must select item(s)");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.gridwidth = 9;
+        gridBagConstraints.ipadx = 158;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 10, 0, 0);
+        pnlGrubGrill.add(lbGrillError, gridBagConstraints);
 
         getContentPane().add(pnlGrubGrill);
 
@@ -1697,11 +1754,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 20;
+        gridBagConstraints.gridy = 21;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 20, 123, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 20, 0, 0);
         pnlElTaco.add(btnMexicanCancelOrder, gridBagConstraints);
 
         btnMexicanPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -1714,11 +1771,11 @@ public class OrderFoodUI extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 20;
+        gridBagConstraints.gridy = 21;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 11, 123, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 11, 0, 0);
         pnlElTaco.add(btnMexicanPlaceOrder, gridBagConstraints);
 
         jLabel74.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -1763,12 +1820,12 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(jLabel76, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 19;
+        gridBagConstraints.gridy = 20;
         gridBagConstraints.gridwidth = 7;
         gridBagConstraints.ipadx = 300;
         gridBagConstraints.ipady = 9;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(39, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
         pnlElTaco.add(jSeparator8, gridBagConstraints);
 
         jLabel77.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -1803,6 +1860,19 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(5, 27, 0, 0);
         pnlElTaco.add(spnMexicanBottledQty, gridBagConstraints);
+
+        lbMexicanError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lbMexicanError.setForeground(new java.awt.Color(255, 0, 0));
+        lbMexicanError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbMexicanError.setText("Must select item(s)");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 19;
+        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.ipadx = 158;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(12, 16, 0, 0);
+        pnlElTaco.add(lbMexicanError, gridBagConstraints);
 
         getContentPane().add(pnlElTaco);
 
@@ -2008,13 +2078,20 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
     private void btnDeliPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
-        manageFoodCtrl.createFoodOrder("Sandwich Shop"); 
-        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
-        this.newFoodOrder = newFoodOrder;
-        this.setFoodOrderConfirmationInfo(newFoodOrder);
+        boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
+        if (allZeros = true){
+            this.lblDeliError.setVisible(true);
+        }
+        else{
+            manageFoodCtrl.createFoodOrder("Sandwich Shop"); 
+            newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+            this.newFoodOrder = newFoodOrder;
+            this.setFoodOrderConfirmationInfo(newFoodOrder);
         
-        this.pnlFoodOrderConfirmation.setVisible(true); 
-        this.pnlSandwichShop.setVisible(false);
+            this.pnlFoodOrderConfirmation.setVisible(true); 
+            this.pnlSandwichShop.setVisible(false);
+        }
+        
         
     }//GEN-LAST:event_btnDeliPlaceOrderActionPerformed
 
@@ -2030,13 +2107,19 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
     private void btnItalianPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItalianPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
-        manageFoodCtrl.createFoodOrder("Sofia's Pizza");
-        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
-        this.newFoodOrder = newFoodOrder;
-        setFoodOrderConfirmationInfo(newFoodOrder);
+        boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
+        if (allZeros = true){
+            this.lblItalianError.setVisible(true);
+        }
+        else{
+            manageFoodCtrl.createFoodOrder("Sofia's Pizza");
+            newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+            this.newFoodOrder = newFoodOrder;
+            setFoodOrderConfirmationInfo(newFoodOrder);
         
-        this.pnlFoodOrderConfirmation.setVisible(true);
-        this.pnlSofiasPizza.setVisible(false);
+            this.pnlFoodOrderConfirmation.setVisible(true);
+            this.pnlSofiasPizza.setVisible(false);
+        }
     }//GEN-LAST:event_btnItalianPlaceOrderActionPerformed
 
     private void btnGrillCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrillCancelOrderActionPerformed
@@ -2046,13 +2129,19 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
     private void btnGrillPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrillPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
-        manageFoodCtrl.createFoodOrder("Grub Grill");
-        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
-        this.newFoodOrder = newFoodOrder;
-        setFoodOrderConfirmationInfo(newFoodOrder);
+        boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
+        if (allZeros = true){
+            this.lbGrillError.setVisible(true);
+        }
+        else{
+            manageFoodCtrl.createFoodOrder("Grub Grill");
+            newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+            this.newFoodOrder = newFoodOrder;
+            setFoodOrderConfirmationInfo(newFoodOrder);
         
-        this.pnlFoodOrderConfirmation.setVisible(true);
-        this.pnlGrubGrill.setVisible(false);
+            this.pnlFoodOrderConfirmation.setVisible(true);
+            this.pnlGrubGrill.setVisible(false);
+        }
     }//GEN-LAST:event_btnGrillPlaceOrderActionPerformed
 
     private void btnMexicanCancelOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMexicanCancelOrderActionPerformed
@@ -2062,13 +2151,19 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
     private void btnMexicanPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMexicanPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
-        manageFoodCtrl.createFoodOrder("El Taco"); 
-        newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
-        this.newFoodOrder = newFoodOrder;
-        setFoodOrderConfirmationInfo(newFoodOrder);        
+        boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
+        if (allZeros = true){
+            this.lbMexicanError.setVisible(true);
+        }
+        else{
+            manageFoodCtrl.createFoodOrder("El Taco"); 
+            newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
+            this.newFoodOrder = newFoodOrder;
+            setFoodOrderConfirmationInfo(newFoodOrder);        
         
-        this.pnlFoodOrderConfirmation.setVisible(true);
-        this.pnlElTaco.setVisible(false);
+            this.pnlFoodOrderConfirmation.setVisible(true);
+            this.pnlElTaco.setVisible(false);
+        }
     }//GEN-LAST:event_btnMexicanPlaceOrderActionPerformed
 
     private void btnMainMenuOrdConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMainMenuOrdConActionPerformed
@@ -2224,6 +2319,8 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
+    public javax.swing.JLabel lbGrillError;
+    public javax.swing.JLabel lbMexicanError;
     public javax.swing.JLabel lblConfirmOrderNumberValue;
     private javax.swing.JLabel lblConfirmSubtotal;
     public javax.swing.JLabel lblConfirmSubtotalValue;
@@ -2231,7 +2328,9 @@ public class OrderFoodUI extends javax.swing.JFrame {
     public javax.swing.JLabel lblConfirmTaxValue;
     private javax.swing.JLabel lblConfirmTotalCost;
     public javax.swing.JLabel lblConfirmTotalCostValue;
+    public javax.swing.JLabel lblDeliError;
     private javax.swing.JLabel lblFoodOrderConfTitle;
+    public javax.swing.JLabel lblItalianError;
     private javax.swing.JLabel lblListFoodsSelected;
     private javax.swing.JLabel lblOrderNumber;
     private javax.swing.JLabel lblRestaurant;
