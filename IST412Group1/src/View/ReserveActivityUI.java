@@ -437,19 +437,24 @@ public class ReserveActivityUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMainMenuActSelActionPerformed
 
     private void btnRideReserveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRideReserveActionPerformed
-        Activity rideToAdd = new Activity();
-        rideToAdd.setActivityName((String) cbSelectRide.getSelectedItem());
-        rideToAdd.setActivityType("Ride");
-        rideToAdd.setTimeSlot((String) cbSelectRideReservation.getSelectedItem());
-        rideActivities.add(rideToAdd);
-        System.out.println(rideActivities.toString());
-        for (int i = 0; i < rideActivities.size(); i++) {
-            taActivityReservationInfo.append(rideActivities.get(i).toString());
-            taActivityReservationInfo.append("\n");
-        }
+        activityCtrl = new ActivityCtrl();
+        String activityName;
+        String activityType;
+        String timeSlot;
+        int quant;
+        activityName = (String) cbSelectRide.getSelectedItem();
+        activityType = "Ride";
+        timeSlot = (String) cbSelectRideReservation.getSelectedItem();
+        quant = Integer.parseInt(spnRideResQty.getValue().toString());
+        
+        System.out.println(activityName);
+        System.out.println(activityType);
+        System.out.println(timeSlot);
+        System.out.println(quant);    
         
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveRide.setVisible(false);
+        
     }//GEN-LAST:event_btnRideReserveActionPerformed
 
     private void btnRideCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRideCancelActionPerformed
@@ -458,17 +463,24 @@ public class ReserveActivityUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRideCancelActionPerformed
 
     private void btnShowReserveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowReserveActionPerformed
-        Activity showToAdd = new Activity();
-        showToAdd.setActivityName((String) cbSelectShow.getSelectedItem());
-        showToAdd.setActivityType("Show");
-        showToAdd.setTimeSlot((String) cbSelectShowReservation.getSelectedItem());
-        showActivities.add(showToAdd);
-        System.out.println(showActivities.toString());
-        for (int i = 0; i < showActivities.size(); i++) {
-            taActivityReservationInfo.append(showActivities.get(i).toString());
-            taActivityReservationInfo.append("\n");
-        }
+        activityCtrl = new ActivityCtrl();
+        String activityName;
+        String activityType;
+        String timeSlot;
+        int quant;
+        activityName = (String) cbSelectShow.getSelectedItem();
+        activityType = "Show";
+        timeSlot = (String) cbSelectShowReservation.getSelectedItem();
+        quant = Integer.parseInt(spnShowResQty.getValue().toString());
+        activityCtrl.createReservationObject(activityType, activityName, timeSlot, quant);
+        Activity newActivity = new Activity();
         
+        
+        System.out.println(activityName);
+        System.out.println(activityType);
+        System.out.println(timeSlot);
+        System.out.println(quant);                    
+      
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveShow.setVisible(false);
     }//GEN-LAST:event_btnShowReserveActionPerformed
