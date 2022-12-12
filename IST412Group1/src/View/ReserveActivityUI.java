@@ -52,6 +52,9 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         lblSelectRideReservation = new javax.swing.JLabel();
         btnRideReserve = new javax.swing.JButton();
         btnRideCancel = new javax.swing.JButton();
+        spnRideResQty = new javax.swing.JSpinner();
+        lblRideResError = new javax.swing.JLabel();
+        lblSelectRideResQty = new javax.swing.JLabel();
         pnlReserveShow = new javax.swing.JPanel();
         cbSelectShow = new javax.swing.JComboBox<>();
         cbSelectShowReservation = new javax.swing.JComboBox<>();
@@ -60,6 +63,9 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         lblSelectShowReservation = new javax.swing.JLabel();
         btnShowReserve = new javax.swing.JButton();
         btnShowCancel = new javax.swing.JButton();
+        lblShowResError = new javax.swing.JLabel();
+        spnShowResQty = new javax.swing.JSpinner();
+        lblSelectShowResQty = new javax.swing.JLabel();
         pnlReservationConfirmation = new javax.swing.JPanel();
         lblReserveRideTitle1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -147,7 +153,7 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                 .addComponent(btnShow, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
                 .addComponent(btnMainMenuActSel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(136, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlSelectActivityType);
@@ -186,6 +192,16 @@ public class ReserveActivityUI extends javax.swing.JFrame {
             }
         });
 
+        spnRideResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        lblRideResError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblRideResError.setForeground(new java.awt.Color(255, 0, 0));
+        lblRideResError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblRideResError.setText("Error Message");
+
+        lblSelectRideResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblSelectRideResQty.setText("Ride Reservation Quantity:");
+
         javax.swing.GroupLayout pnlReserveRideLayout = new javax.swing.GroupLayout(pnlReserveRide);
         pnlReserveRide.setLayout(pnlReserveRideLayout);
         pnlReserveRideLayout.setHorizontalGroup(
@@ -193,17 +209,26 @@ public class ReserveActivityUI extends javax.swing.JFrame {
             .addComponent(lblReserveRideTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
             .addGroup(pnlReserveRideLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(pnlReserveRideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlReserveRideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cbSelectRideReservation, 0, 217, Short.MAX_VALUE)
                     .addComponent(lblSelectRideReservation)
                     .addComponent(lblSelectRide)
-                    .addGroup(pnlReserveRideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlReserveRideLayout.createSequentialGroup()
-                            .addComponent(btnRideCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRideReserve, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(cbSelectRide, javax.swing.GroupLayout.Alignment.LEADING, 0, 217, Short.MAX_VALUE)
-                        .addComponent(cbSelectRideReservation, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(pnlReserveRideLayout.createSequentialGroup()
+                        .addComponent(btnRideCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRideReserve, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbSelectRide, 0, 217, Short.MAX_VALUE)
+                    .addComponent(lblSelectRideResQty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReserveRideLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlReserveRideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReserveRideLayout.createSequentialGroup()
+                        .addComponent(spnRideResQty, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(150, 150, 150))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlReserveRideLayout.createSequentialGroup()
+                        .addComponent(lblRideResError, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         pnlReserveRideLayout.setVerticalGroup(
             pnlReserveRideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,11 +243,17 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                 .addComponent(lblSelectRideReservation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cbSelectRideReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(17, 17, 17)
+                .addComponent(lblSelectRideResQty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(spnRideResQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblRideResError)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(pnlReserveRideLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRideReserve)
                     .addComponent(btnRideCancel))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addGap(52, 52, 52))
         );
 
         getContentPane().add(pnlReserveRide);
@@ -261,6 +292,16 @@ public class ReserveActivityUI extends javax.swing.JFrame {
             }
         });
 
+        lblShowResError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblShowResError.setForeground(new java.awt.Color(255, 0, 0));
+        lblShowResError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblShowResError.setText("Error Message");
+
+        spnShowResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+
+        lblSelectShowResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        lblSelectShowResQty.setText("Show Reservation Quantity:");
+
         javax.swing.GroupLayout pnlReserveShowLayout = new javax.swing.GroupLayout(pnlReserveShow);
         pnlReserveShow.setLayout(pnlReserveShowLayout);
         pnlReserveShowLayout.setHorizontalGroup(
@@ -279,6 +320,18 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                         .addComponent(cbSelectShow, javax.swing.GroupLayout.Alignment.LEADING, 0, 217, Short.MAX_VALUE)
                         .addComponent(cbSelectShowReservation, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlReserveShowLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(lblSelectShowResQty, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(41, 41, 41))
+            .addGroup(pnlReserveShowLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblShowResError, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlReserveShowLayout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(spnShowResQty, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlReserveShowLayout.setVerticalGroup(
             pnlReserveShowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -293,11 +346,17 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                 .addComponent(lblSelectShowReservation)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cbSelectShowReservation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(18, 18, 18)
+                .addComponent(lblSelectShowResQty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(spnShowResQty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblShowResError)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(pnlReserveShowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnShowReserve)
                     .addComponent(btnShowCancel))
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addGap(51, 51, 51))
         );
 
         getContentPane().add(pnlReserveShow);
@@ -351,7 +410,7 @@ public class ReserveActivityUI extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnMainMenu)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlReservationConfirmation);
@@ -479,15 +538,21 @@ public class ReserveActivityUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblReserveRideTitle;
     private javax.swing.JLabel lblReserveRideTitle1;
     private javax.swing.JLabel lblReserveShowTitle;
+    public javax.swing.JLabel lblRideResError;
     private javax.swing.JLabel lblSelectActivityType;
     private javax.swing.JLabel lblSelectRide;
+    private javax.swing.JLabel lblSelectRideResQty;
     private javax.swing.JLabel lblSelectRideReservation;
     private javax.swing.JLabel lblSelectShow;
+    private javax.swing.JLabel lblSelectShowResQty;
     private javax.swing.JLabel lblSelectShowReservation;
+    public javax.swing.JLabel lblShowResError;
     public javax.swing.JPanel pnlReservationConfirmation;
     public javax.swing.JPanel pnlReserveRide;
     public javax.swing.JPanel pnlReserveShow;
     public javax.swing.JPanel pnlSelectActivityType;
+    public javax.swing.JSpinner spnRideResQty;
+    public javax.swing.JSpinner spnShowResQty;
     public javax.swing.JTextArea taActivityReservationInfo;
     // End of variables declaration//GEN-END:variables
 }
