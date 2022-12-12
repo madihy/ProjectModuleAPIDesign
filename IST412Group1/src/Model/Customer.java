@@ -10,8 +10,9 @@ import java.util.ArrayList;
  */
 public class Customer extends Account{    
     private String email;
-    private ArrayList<Ticket> purchasedTickets = new ArrayList<>();
-    private ArrayList<FoodOrder> foodOrders = new ArrayList<>();
+    private ArrayList<Ticket> purchasedTickets;
+    private ArrayList<FoodOrder> foodOrders;
+    private ArrayList<Activity> reservedActivities;
 
     
     /**
@@ -23,15 +24,18 @@ public class Customer extends Account{
      * @param email the customer's email.
      * @param purchasedTickets array list of the tickets the customer has purchased.
      * @param foodOrders array list of the food order the customer has placed.
+     * @param reservedActivities array list of the activity reservations the customer has placed.
      */
     
-    public Customer(String username, String password, String firstName, String lastName, String email, ArrayList<Ticket> purchasedTickets, ArrayList<FoodOrder> foodOrders) {
+    public Customer(String username, String password, String firstName, String lastName, String email, 
+            ArrayList<Ticket> purchasedTickets, ArrayList<FoodOrder> foodOrders, ArrayList<Activity> reservedActivities) {
         
         super(username, password, firstName, lastName);  
         
         this.email = email;
         this.purchasedTickets = purchasedTickets;
         this.foodOrders = foodOrders;
+        this.reservedActivities = reservedActivities;
     }
     
     
@@ -73,6 +77,38 @@ public class Customer extends Account{
      */
     public void setPurchasedTickets(ArrayList<Ticket> purchasedTickets) {
         this.purchasedTickets = purchasedTickets;
+    }
+
+    /**
+     * Gets the list of food orders by this customer.
+     * @return the foodOrders and Array List of the customer's food orders.
+     */
+    public ArrayList<FoodOrder> getFoodOrders() {
+        return foodOrders;
+    }
+
+    /**
+     * Sets the array list of the food orders for this customer
+     * @param foodOrders array list sets the list of food orders placed by the customer
+     */
+    public void setFoodOrders(ArrayList<FoodOrder> foodOrders) {
+        this.foodOrders = foodOrders;
+    }
+
+    /**
+     * Gets the list of activities reserved by this customer
+     * @return the reservedActivities array list representing reserved activities for the customer
+     */
+    public ArrayList<Activity> getReservedActivities() {
+        return reservedActivities;
+    }
+
+    /**
+     * Sets the list of reserved activities for this customer
+     * @param reservedActivities sets the list of reserved activities for the customer
+     */
+    public void setReservedActivities(ArrayList<Activity> reservedActivities) {
+        this.reservedActivities = reservedActivities;
     }
     
     

@@ -1,5 +1,5 @@
 
-import TestHarness.TestHarness;
+
 import Model.*;
 import View.*;
 import Controller.*;

@@ -28,6 +28,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
      */
     public OrderFoodUI() {
         initComponents();
+        lblDeliError.setVisible(false);
+        lblItalianError.setVisible(false);
+        lbMexicanError.setVisible(false);
+        lbGrillError.setVisible(false);
     }
     public ArrayList<Food> getSelectedFoods(){
         manageFoodCtrl = new ManageFoodCtrl();
@@ -312,10 +316,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 165;
+        gridBagConstraints.ipadx = 193;
         gridBagConstraints.ipady = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 32, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(11, 29, 0, 10);
         pnlSelectRestaurant.add(btnSandwichShop, gridBagConstraints);
 
         btnSofiasPizza.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -329,10 +333,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.ipadx = 185;
+        gridBagConstraints.ipadx = 213;
         gridBagConstraints.ipady = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(6, 29, 0, 10);
         pnlSelectRestaurant.add(btnSofiasPizza, gridBagConstraints);
 
         btnElTaco.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -346,10 +350,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
-        gridBagConstraints.ipadx = 221;
+        gridBagConstraints.ipadx = 249;
         gridBagConstraints.ipady = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(6, 29, 0, 10);
         pnlSelectRestaurant.add(btnElTaco, gridBagConstraints);
 
         btnGrubGrill.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -363,10 +367,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = 205;
+        gridBagConstraints.ipadx = 233;
         gridBagConstraints.ipady = 19;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(6, 29, 0, 10);
         pnlSelectRestaurant.add(btnGrubGrill, gridBagConstraints);
 
         lblSelectRestaurant.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -375,9 +379,9 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 83;
+        gridBagConstraints.ipadx = 111;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 32, 0, 10);
+        gridBagConstraints.insets = new java.awt.Insets(29, 29, 0, 10);
         pnlSelectRestaurant.add(lblSelectRestaurant, gridBagConstraints);
 
         btnMainMenuResSel.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -391,10 +395,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
-        gridBagConstraints.ipadx = 193;
+        gridBagConstraints.ipadx = 221;
         gridBagConstraints.ipady = 22;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(54, 32, 179, 10);
+        gridBagConstraints.insets = new java.awt.Insets(54, 29, 86, 10);
         pnlSelectRestaurant.add(btnMainMenuResSel, gridBagConstraints);
 
         getContentPane().add(pnlSelectRestaurant);
@@ -407,10 +411,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 13;
+        gridBagConstraints.gridwidth = 19;
         gridBagConstraints.ipadx = 95;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 40);
+        gridBagConstraints.insets = new java.awt.Insets(33, 30, 0, 0);
         pnlSandwichShop.add(lblSelectRestaurantTitle1, gridBagConstraints);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -421,7 +425,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 58;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel1, gridBagConstraints);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -432,7 +436,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 93;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel2, gridBagConstraints);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -443,7 +447,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 83;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel3, gridBagConstraints);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -454,7 +458,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 82;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel5, gridBagConstraints);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -465,7 +469,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 72;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel6, gridBagConstraints);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -476,7 +480,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 27;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel7, gridBagConstraints);
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -487,7 +491,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 66;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel8, gridBagConstraints);
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -498,7 +502,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.ipadx = 35;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jLabel9, gridBagConstraints);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
@@ -682,7 +686,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.ipadx = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 30, 0, 0);
         pnlSandwichShop.add(btnDeliCancelOrder, gridBagConstraints);
 
         btnDeliPlaceOrder.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -696,7 +700,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 13;
-        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridwidth = 13;
         gridBagConstraints.ipadx = 24;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(11, 15, 0, 0);
@@ -709,7 +713,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(27, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(27, 30, 0, 0);
         pnlSandwichShop.add(jLabel17, gridBagConstraints);
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -717,7 +721,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 7;
+        gridBagConstraints.gridwidth = 13;
         gridBagConstraints.ipady = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(27, 34, 0, 0);
@@ -726,10 +730,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 12;
-        gridBagConstraints.ipadx = 300;
-        gridBagConstraints.ipady = 9;
+        gridBagConstraints.ipadx = 299;
+        gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(6, 30, 0, 0);
         pnlSandwichShop.add(jSeparator1, gridBagConstraints);
 
         jLabel19.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -746,10 +750,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 12;
         gridBagConstraints.gridwidth = 12;
-        gridBagConstraints.ipadx = 300;
-        gridBagConstraints.ipady = 9;
+        gridBagConstraints.ipadx = 299;
+        gridBagConstraints.ipady = 10;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(11, 30, 0, 0);
         pnlSandwichShop.add(jSeparator2, gridBagConstraints);
 
         lblDeliError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -759,10 +763,10 @@ public class OrderFoodUI extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 11;
-        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.gridwidth = 7;
         gridBagConstraints.ipadx = 158;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(14, 10, 0, 0);
+        gridBagConstraints.insets = new java.awt.Insets(14, 30, 0, 0);
         pnlSandwichShop.add(lblDeliError, gridBagConstraints);
 
         getContentPane().add(pnlSandwichShop);
@@ -1876,161 +1880,56 @@ public class OrderFoodUI extends javax.swing.JFrame {
 
         getContentPane().add(pnlElTaco);
 
-        pnlFoodOrderConfirmation.setLayout(new java.awt.GridBagLayout());
-
         lblFoodOrderConfTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblFoodOrderConfTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblFoodOrderConfTitle.setText("Food Order Confirmation");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 8;
-        gridBagConstraints.ipadx = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        pnlFoodOrderConfirmation.add(lblFoodOrderConfTitle, gridBagConstraints);
 
         lblOrderNumber.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblOrderNumber.setText("Order Number:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 54;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblOrderNumber, gridBagConstraints);
 
         lblRestaurant.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblRestaurant.setText("Restaurant:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 83;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblRestaurant, gridBagConstraints);
 
         lblConfirmSubtotal.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmSubtotal.setText("Subtotal:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 101;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmSubtotal, gridBagConstraints);
 
         lblConfirmTax.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmTax.setText("Tax Amount:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 69;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmTax, gridBagConstraints);
 
         lblConfirmTotalCost.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmTotalCost.setText("Total Cost:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.ipadx = 84;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmTotalCost, gridBagConstraints);
 
         lblConfirmTotalCostValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmTotalCostValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmTotalCostValue.setText("$0");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.ipadx = 56;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(15, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmTotalCostValue, gridBagConstraints);
+        lblConfirmTotalCostValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmTaxValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmTaxValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmTaxValue.setText("$0");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.ipadx = 56;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmTaxValue, gridBagConstraints);
+        lblConfirmTaxValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmSubtotalValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmSubtotalValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmSubtotalValue.setText("$0");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 5;
-        gridBagConstraints.ipadx = 56;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmSubtotalValue, gridBagConstraints);
+        lblConfirmSubtotalValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblRestaurantNameValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblRestaurantNameValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblRestaurantNameValue.setText("Restaurant Name");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.ipadx = 64;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblRestaurantNameValue, gridBagConstraints);
+        lblRestaurantNameValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmOrderNumberValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmOrderNumberValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmOrderNumberValue.setText("0");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 4;
-        gridBagConstraints.ipadx = 64;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblConfirmOrderNumberValue, gridBagConstraints);
+        lblConfirmOrderNumberValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblListFoodsSelected.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblListFoodsSelected.setText("Foods Selected:");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.ipadx = 88;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(18, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(lblListFoodsSelected, gridBagConstraints);
 
         taFoodsSelected.setColumns(20);
         taFoodsSelected.setRows(5);
         jScrollPane2.setViewportView(taFoodsSelected);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.ipadx = 225;
-        gridBagConstraints.ipady = 166;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.weighty = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(6, 10, 0, 0);
-        pnlFoodOrderConfirmation.add(jScrollPane2, gridBagConstraints);
 
         btnMainMenuOrdCon.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnMainMenuOrdCon.setText("Main Menu");
@@ -2040,12 +1939,78 @@ public class OrderFoodUI extends javax.swing.JFrame {
                 btnMainMenuOrdConActionPerformed(evt);
             }
         });
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 8;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(11, 10, 57, 0);
-        pnlFoodOrderConfirmation.add(btnMainMenuOrdCon, gridBagConstraints);
+
+        javax.swing.GroupLayout pnlFoodOrderConfirmationLayout = new javax.swing.GroupLayout(pnlFoodOrderConfirmation);
+        pnlFoodOrderConfirmation.setLayout(pnlFoodOrderConfirmationLayout);
+        pnlFoodOrderConfirmationLayout.setHorizontalGroup(
+            pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnMainMenuOrdCon)
+                            .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblListFoodsSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                                        .addComponent(lblConfirmTotalCost, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblConfirmTotalCostValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                                        .addComponent(lblConfirmTax, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblConfirmTaxValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                                        .addComponent(lblConfirmSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblConfirmSubtotalValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                                        .addComponent(lblOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblConfirmOrderNumberValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                                        .addComponent(lblRestaurant, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(lblRestaurantNameValue, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblFoodOrderConfTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(34, 34, 34))
+        );
+        pnlFoodOrderConfirmationLayout.setVerticalGroup(
+            pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFoodOrderConfirmationLayout.createSequentialGroup()
+                .addComponent(lblFoodOrderConfTitle)
+                .addGap(11, 11, 11)
+                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblOrderNumber)
+                    .addComponent(lblConfirmOrderNumberValue))
+                .addGap(11, 11, 11)
+                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRestaurant)
+                    .addComponent(lblRestaurantNameValue))
+                .addGap(11, 11, 11)
+                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblConfirmSubtotal)
+                    .addComponent(lblConfirmSubtotalValue))
+                .addGap(11, 11, 11)
+                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblConfirmTax)
+                    .addComponent(lblConfirmTaxValue))
+                .addGap(15, 15, 15)
+                .addGroup(pnlFoodOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblConfirmTotalCost)
+                    .addComponent(lblConfirmTotalCostValue))
+                .addGap(18, 18, 18)
+                .addComponent(lblListFoodsSelected)
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnMainMenuOrdCon)
+                .addContainerGap())
+        );
 
         getContentPane().add(pnlFoodOrderConfirmation);
 
@@ -2079,8 +2044,9 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private void btnDeliPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
         boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
-        if (allZeros = true){
-            this.lblDeliError.setVisible(true);
+        System.out.println("all zeros = " + allZeros);
+        if (allZeros == true){
+             this.lblDeliError.setVisible(true); 
         }
         else{
             manageFoodCtrl.createFoodOrder("Sandwich Shop"); 
@@ -2090,8 +2056,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         
             this.pnlFoodOrderConfirmation.setVisible(true); 
             this.pnlSandwichShop.setVisible(false);
-        }
-        
+        }  
         
     }//GEN-LAST:event_btnDeliPlaceOrderActionPerformed
 
@@ -2108,7 +2073,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private void btnItalianPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItalianPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
         boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
-        if (allZeros = true){
+        if (allZeros == true){
             this.lblItalianError.setVisible(true);
         }
         else{
@@ -2130,7 +2095,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private void btnGrillPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrillPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
         boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
-        if (allZeros = true){
+        if (allZeros == true){
             this.lbGrillError.setVisible(true);
         }
         else{
@@ -2152,7 +2117,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
     private void btnMexicanPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMexicanPlaceOrderActionPerformed
         menuSelections = this.getSelectedFoods();
         boolean allZeros = this.allZeroQuantitiesCheck(menuSelections);
-        if (allZeros = true){
+        if (allZeros == true){
             this.lbMexicanError.setVisible(true);
         }
         else{

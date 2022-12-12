@@ -6,7 +6,6 @@ package View;
 
 
 import Controller.ManageTicketsCtrl;
-import Controller.ParkInformationCtrl;
 
 /**
  *
@@ -173,10 +172,6 @@ public class NavigationUI extends javax.swing.JFrame {
        orderFoodUI.pnlSandwichShop.setVisible(false);
        orderFoodUI.pnlSofiasPizza.setVisible(false);
        orderFoodUI.pnlFoodOrderConfirmation.setVisible(false);
-       orderFoodUI.lblDeliError.setVisible(false);
-       orderFoodUI.lblItalianError.setVisible(false);
-       orderFoodUI.lbMexicanError.setVisible(false);
-       orderFoodUI.lbGrillError.setVisible(false);
        
        this.dispose();
        

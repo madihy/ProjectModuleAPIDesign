@@ -30,6 +30,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
      */
     public PurchaseTicketsUI() {
         initComponents();
+        this.btnPurchaseTickets.setEnabled(false);
     }
 
     /**
@@ -104,14 +105,17 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblConfirmSubtotalValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmSubtotalValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmSubtotalValue.setText("$0");
+        lblConfirmSubtotalValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmTotalCostValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmTotalCostValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmTotalCostValue.setText("$0");
+        lblConfirmTotalCostValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmTaxValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmTaxValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmTaxValue.setText("$0");
+        lblConfirmTaxValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         btnMainMenu.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnMainMenu.setText("Main Menu");
@@ -128,14 +132,17 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         lblConfirmNumberOfDaysValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmNumberOfDaysValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmNumberOfDaysValue.setText("0");
+        lblConfirmNumberOfDaysValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmNumberOfTicketsValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmNumberOfTicketsValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmNumberOfTicketsValue.setText("0");
+        lblConfirmNumberOfTicketsValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblConfirmOrderNumberValue.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblConfirmOrderNumberValue.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblConfirmOrderNumberValue.setText("0");
+        lblConfirmOrderNumberValue.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         lblListTicketsPurchased.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblListTicketsPurchased.setText("List of Tickets Purchased:");
@@ -149,81 +156,87 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
         pnlTicketOrderConfirmationLayout.setHorizontalGroup(
             pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2)
-                        .addContainerGap())
+                        .addGap(10, 10, 10)
+                        .addComponent(purchaseTicketsTitleLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblConfirmTax, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmSubtotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmNumberOfDays, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmNumberOfTickets, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
-                            .addComponent(lblOrderNumber, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmTotalCost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(lblConfirmSubtotalValue, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmTaxValue, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmTotalCostValue, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmNumberOfDaysValue, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(lblConfirmOrderNumberValue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(lblConfirmNumberOfTicketsValue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(113, 113, 113))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addComponent(purchaseTicketsTitleLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
+                        .addGap(10, 10, 10)
+                        .addComponent(lblListTicketsPurchased, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addComponent(lblListTicketsPurchased, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                                .addComponent(lblConfirmTotalCost, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblConfirmTotalCostValue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                                    .addComponent(lblConfirmTax, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lblConfirmTaxValue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                                        .addComponent(lblConfirmSubtotal, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lblConfirmSubtotalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                                            .addComponent(lblConfirmNumberOfDays, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(lblConfirmNumberOfDaysValue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                                                .addComponent(lblConfirmNumberOfTickets, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(19, 19, 19)
+                                                .addComponent(lblConfirmNumberOfTicketsValue, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                                                .addComponent(lblOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(19, 19, 19)
+                                                .addComponent(lblConfirmOrderNumberValue, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
+                .addGap(10, 10, 10))
         );
         pnlTicketOrderConfirmationLayout.setVerticalGroup(
             pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(11, 11, 11)
                 .addComponent(purchaseTicketsTitleLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblConfirmOrderNumberValue)
-                    .addComponent(lblOrderNumber, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblOrderNumber)
+                    .addComponent(lblConfirmOrderNumberValue))
+                .addGap(11, 11, 11)
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblConfirmNumberOfTicketsValue)
-                    .addComponent(lblConfirmNumberOfTickets))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblConfirmNumberOfTickets)
+                    .addComponent(lblConfirmNumberOfTicketsValue))
+                .addGap(11, 11, 11)
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblConfirmNumberOfDaysValue)
-                    .addComponent(lblConfirmNumberOfDays))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(lblConfirmNumberOfDays)
+                    .addComponent(lblConfirmNumberOfDaysValue))
+                .addGap(11, 11, 11)
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblConfirmSubtotalValue)
-                    .addComponent(lblConfirmSubtotal))
+                    .addComponent(lblConfirmSubtotal)
+                    .addComponent(lblConfirmSubtotalValue))
+                .addGap(13, 13, 13)
                 .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(lblConfirmTotalCostValue))
-                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblConfirmTax)
-                            .addComponent(lblConfirmTaxValue))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblConfirmTotalCost)))
+                    .addComponent(lblConfirmTax)
+                    .addComponent(lblConfirmTaxValue))
+                .addGap(11, 11, 11)
+                .addGroup(pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblConfirmTotalCost)
+                    .addComponent(lblConfirmTotalCostValue))
                 .addGap(30, 30, 30)
                 .addComponent(lblListTicketsPurchased)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnMainMenu)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addComponent(btnMainMenu))
         );
 
         getContentPane().add(pnlTicketOrderConfirmation, "TicketCard2");
@@ -404,7 +417,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         if (nofTickets <= 0 || nofDays <= 0) {
             JOptionPane.showMessageDialog(null, "Invalid Entry.");
-            btnPurchaseTickets.setEnabled(false);
+            //btnPurchaseTickets.setEnabled(false);
         } else {
             double subtotal = ticketOrder.getOrderSubtotal();
             double tax = ticketOrder.getOrderTax();
