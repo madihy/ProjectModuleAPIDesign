@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class ReserveActivityUI extends javax.swing.JFrame {
     ArrayList<Activity> rideActivities;
     ArrayList<Activity> showActivities;
-    ActivityCtrl activityCtrl;
+    ActivityCtrl activityCtrl;   
     /**
      * Creates new form ReserveActivityUI
      */
@@ -150,10 +150,10 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         getContentPane().add(pnlSelectActivityType);
 
         cbSelectRide.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        cbSelectRide.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSelectRide.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Monster Coaster", "Kiddy Coaster", "3D Train Ride", "Tornado", "Shoot The Rapids" }));
 
         cbSelectRideReservation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        cbSelectRideReservation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSelectRideReservation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:00 AM", "8:15 AM", "8:30 AM", "8:45 AM", "9:00 AM", "9:15 AM", "9:30 AM", "9:45 AM", "10:00 AM", "10:15 AM", "10:30 AM", "10:45 AM", "11:00 AM", "11:15 AM", "11:30 AM", "11:45 AM", "12:00 PM", "12:15 PM", "12:30 PM", "12:45 PM", "1:00 PM", "1:15 PM", "1:30 PM", "1:45 PM", "2:00 PM", "2:15 PM", "2:30 PM", "2:45 PM", "3:00 PM", "3:15 PM", "3:30 PM", "3:45 PM", "4:00 PM", "4:15 PM", "4:30 PM", "4:45 PM", "5:00 PM", "5:15 PM", "5:30 PM", "5:45 PM", "6:00 PM", "6:15 PM", "6:30 PM", "6:45 PM" }));
 
         lblReserveRideTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblReserveRideTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -225,10 +225,10 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         getContentPane().add(pnlReserveRide);
 
         cbSelectShow.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        cbSelectShow.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSelectShow.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kate's Komedy Show", "Hytham's Gone Haywire!", "Brandon's Boredom Buster", "Professor Ken's The Floor Is Java" }));
 
         cbSelectShowReservation.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        cbSelectShowReservation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbSelectShowReservation.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10:00 AM", "12:00 PM", "2:00 PM", "4:00 PM", "6:00 PM" }));
 
         lblReserveShowTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         lblReserveShowTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
