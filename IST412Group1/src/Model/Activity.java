@@ -213,13 +213,15 @@ public class Activity implements Serializable {
     
     @Override
     public String toString() {
-        return this.getActivityName() + " " + this.getActivityType() + " " + this.getTimeSlot();
+        System.out.println(this.getActivityName() + " " + this.getActivityType() + " " + this.getTimeSlot() + " " + this.getReservationQty());
+        return "";
     }
 
     /**
      * @return the reservationQty
      */
     public int getReservationQty() {
+        System.out.print("Quantity: ");
         return reservationQty;
     }
 

@@ -84,7 +84,9 @@ public class ActivityCtrl {
     
     @Override
     public String toString() {
-        return "Activity: " + reservedActivity.getActivityName() + "\nType: " + reservedActivity.getActivityType();
+        System.out.println("Activity: " + reservedActivity.getActivityName() + "\nType: " + reservedActivity.getActivityType()
+         + "\nQuantity: " + reservedActivity.getReservationQty());
+        return "";
 }
 
     private Reservation Reservation() {

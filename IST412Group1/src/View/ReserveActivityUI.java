@@ -448,7 +448,9 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         
         activityCtrl.createReservationObject(activityType, activityName, timeSlot, quant);
         reservedActivity = activityCtrl.getReservedActivityInformation();
-        this.taActivityReservationInfo.append(reservedActivity.toString());
+        taActivityReservationInfo.append("Activity Name: " + activityName + 
+                "\nActivity Type: " + activityType + "\nTime: " + timeSlot + 
+                "\nQuantity: " + quant);
         
         System.out.println(activityName);
         System.out.println(activityType);
@@ -477,6 +479,9 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         quant = Integer.parseInt(spnShowResQty.getValue().toString());
         activityCtrl.createReservationObject(activityType, activityName, timeSlot, quant);
         reservedActivity = activityCtrl.getReservedActivityInformation();
+        taActivityReservationInfo.append("Activity Name: " + activityName + 
+                "\nActivity Type: " + activityType + "\nTime: " + timeSlot + 
+                "\nQuantity: " + quant);
         
         
         System.out.println(activityName);
