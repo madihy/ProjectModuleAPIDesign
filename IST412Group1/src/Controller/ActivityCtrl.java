@@ -12,7 +12,7 @@ import Controller.*;
  */
 public class ActivityCtrl {
     private Activity activity;
-    private ActivityUI activityView;
+    private ReserveActivityUI activityView;
 /**
  * Add new activities
  */ 

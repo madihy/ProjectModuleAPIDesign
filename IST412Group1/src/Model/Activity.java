@@ -24,7 +24,7 @@ public class Activity implements Serializable {
     //private int actLenInMins;
     //private boolean activityAvail;
     //private int waitTimeInMins;
-    private ActivityUI activityView;
+    
     private ActivityCtrl activityCtrl;
     private ArrayList<ResOption> rideResOptions = new ArrayList<>();
     String activityDataFileName = "activityData.ser";

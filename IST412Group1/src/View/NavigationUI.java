@@ -31,7 +31,7 @@ public class NavigationUI extends javax.swing.JFrame {
     private void initComponents() {
 
         pnlMainMenu = new javax.swing.JPanel();
-        btnManageActivities = new javax.swing.JButton();
+        btnReserveActivity = new javax.swing.JButton();
         btnManageFoodOrders = new javax.swing.JButton();
         btnPurchaseTickets = new javax.swing.JButton();
         navigationPanelTitleLabel = new javax.swing.JLabel();
@@ -45,9 +45,14 @@ public class NavigationUI extends javax.swing.JFrame {
         pnlMainMenu.setMinimumSize(new java.awt.Dimension(300, 590));
         pnlMainMenu.setName(""); // NOI18N
 
-        btnManageActivities.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        btnManageActivities.setText("Manage Activities");
-        btnManageActivities.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnReserveActivity.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        btnReserveActivity.setText("Reserve Activity");
+        btnReserveActivity.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnReserveActivity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReserveActivityActionPerformed(evt);
+            }
+        });
 
         btnManageFoodOrders.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnManageFoodOrders.setText("Order Food");
@@ -89,7 +94,7 @@ public class NavigationUI extends javax.swing.JFrame {
             .addGroup(pnlMainMenuLayout.createSequentialGroup()
                 .addContainerGap(25, Short.MAX_VALUE)
                 .addGroup(pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(btnManageActivities, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReserveActivity, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPurchaseTickets, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnExitApplication, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -98,7 +103,7 @@ public class NavigationUI extends javax.swing.JFrame {
             .addComponent(navigationPanelTitleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageActivities, btnManageFoodOrders, btnPurchaseTickets});
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageFoodOrders, btnPurchaseTickets, btnReserveActivity});
 
         pnlMainMenuLayout.setVerticalGroup(
             pnlMainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +113,7 @@ public class NavigationUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btnPurchaseTickets)
                 .addGap(18, 18, 18)
-                .addComponent(btnManageActivities)
+                .addComponent(btnReserveActivity)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageFoodOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -118,7 +123,7 @@ public class NavigationUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnManageActivities, btnPurchaseTickets});
+        pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnPurchaseTickets, btnReserveActivity});
 
         pnlMainMenuLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnExitApplication, btnManageFoodOrders});
 
@@ -173,6 +178,19 @@ public class NavigationUI extends javax.swing.JFrame {
        
     }//GEN-LAST:event_btnManageFoodOrdersActionPerformed
 
+    private void btnReserveActivityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReserveActivityActionPerformed
+       ReserveActivityUI reserveActivityUI = new ReserveActivityUI();
+       reserveActivityUI.setSize(400, 650);
+       reserveActivityUI.setLocationRelativeTo(null);
+       reserveActivityUI.setVisible(true);
+       reserveActivityUI.pnlSelectActivityType.setVisible(true);
+       reserveActivityUI.pnlReserveRide.setVisible(false);
+       reserveActivityUI.pnlReserveShow.setVisible(false);
+       reserveActivityUI.pnlReservationConfirmation.setVisible(false);
+       
+       this.dispose();
+    }//GEN-LAST:event_btnReserveActivityActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -217,9 +235,9 @@ public class NavigationUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnExitApplication;
-    public javax.swing.JButton btnManageActivities;
     public javax.swing.JButton btnManageFoodOrders;
     public javax.swing.JButton btnPurchaseTickets;
+    public javax.swing.JButton btnReserveActivity;
     private javax.swing.JLabel navigationPanelTitleLabel;
     public javax.swing.JPanel pnlMainMenu;
     private javax.swing.JLabel wallyPhoto;

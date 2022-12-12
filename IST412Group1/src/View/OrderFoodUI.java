@@ -1975,7 +1975,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGrubGrillActionPerformed
 
     private void btnDeliPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeliPlaceOrderActionPerformed
-
         menuSelections = this.getSelectedFoods();
         manageFoodCtrl.createFoodOrder("Sandwich Shop"); 
         newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
@@ -2002,7 +2001,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
         manageFoodCtrl.createFoodOrder("Sofia's Pizza");
         newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
         this.newFoodOrder = newFoodOrder;
-        
         setFoodOrderConfirmationInfo(newFoodOrder);
         
         this.pnlFoodOrderConfirmation.setVisible(true);
@@ -2015,7 +2013,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnGrillCancelOrderActionPerformed
 
     private void btnGrillPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrillPlaceOrderActionPerformed
-        //manageFoodCtrl = new ManageFoodCtrl();
         menuSelections = this.getSelectedFoods();
         manageFoodCtrl.createFoodOrder("Grub Grill");
         newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
@@ -2032,7 +2029,6 @@ public class OrderFoodUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMexicanCancelOrderActionPerformed
 
     private void btnMexicanPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMexicanPlaceOrderActionPerformed
-        //manageFoodCtrl = new ManageFoodCtrl();
         menuSelections = this.getSelectedFoods();
         manageFoodCtrl.createFoodOrder("El Taco"); 
         newFoodOrder = manageFoodCtrl.getFoodOrderInformation();
