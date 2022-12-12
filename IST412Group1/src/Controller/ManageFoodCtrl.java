@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
 /**
- * This class is to manage the actions to place and manage food orders at the park.
+ * This class is to handle actions to place food orders at the park.
  * @author katerineer
  */
 public class ManageFoodCtrl {
@@ -20,13 +20,53 @@ public class ManageFoodCtrl {
     ArrayList<Food> selectedFoods;
     
     /**
-     * This is the default controller for the ManageFoodCtrl class.
+     * This is the constructor for the ManageFoodCtrl class.
      */
     public ManageFoodCtrl(){
         
     
     }
-    
+    /**
+     * Creates the selected foods array to be used in the food order object.
+     * Passes the integer values from the spinner objects to this controller object.
+     * Creates food objects and uses the integer values to set the quantity for each food object created.
+     * Creates an array of all food objects from all restaurant menus.
+     * Finds all objects in the menu array with a quantity greater than 0 and adds them to the foods selected array.
+     * Returns the food selected array to be used to create the food order object.
+     * @param inf_sandwich
+     * @param inf_sub
+     * @param inf_salad
+     * @param inf_cookie
+     * @param inf_deliChips
+     * @param inf_brownie
+     * @param inf_deliFountain
+     * @param inf_deliBottled
+     * @param inf_smallPizza
+     * @param inf_largePizza
+     * @param inf_pastaBowl
+     * @param inf_gelato
+     * @param inf_dessertPizza
+     * @param inf_italianFountain
+     * @param inf_italianBottled
+     * @param inf_hotdog
+     * @param inf_hamburger
+     * @param inf_turkeyLeg
+     * @param inf_chickenNuggets
+     * @param inf_grillChips
+     * @param inf_frenchFries
+     * @param inf_milkshake
+     * @param inf_grillFountain
+     * @param inf_grillBottled
+     * @param inf_tacos
+     * @param inf_burrito
+     * @param inf_riceBowl
+     * @param inf_churro
+     * @param inf_chipsSalsa
+     * @param inf_guacamole
+     * @param inf_mexicanFountain
+     * @param inf_mexicanBottled
+     * @return 
+     */
     public ArrayList<Food> createSelectedFoodsArray(int inf_sandwich, int inf_sub, int inf_salad, int inf_cookie, 
             int inf_deliChips, int inf_brownie, int inf_deliFountain, int inf_deliBottled, 
             int inf_smallPizza, int inf_largePizza, int inf_pastaBowl, int inf_gelato, int inf_dessertPizza, 
@@ -126,14 +166,16 @@ public class ManageFoodCtrl {
         return selectedFoods;
     }   
     
+    /**
+     * Creates the food order object and sets all variables for the new object.
+     * @param inf_restaurant 
+     */
     public void createFoodOrder(String inf_restaurant){
         FoodOrder foodOrder = new FoodOrder();
         foodOrder.setRestaurantName(inf_restaurant);
         foodOrder.setFoodsSelected(selectedFoods);
         foodOrder.setOrderNumber(foodOrder.createFoodOrderNumber());
-        System.out.println("Food Order Number: " + foodOrder.getOrderNumber());
         foodOrder.setFoodOrderSubtotal(foodOrder.calculateFoodOrderSubtotal(foodOrder.getFoodsSelected()));
-        System.out.println("Food Order Subtotal: $" + foodOrder.getFoodOrderSubtotal());
         foodOrder.setFoodOrderTax(foodOrder.calculateFoodOrderTax(foodOrder.getFoodOrderSubtotal()));
         foodOrder.setFoodOrderTotal(foodOrder.calculateTotal(foodOrder.getFoodOrderSubtotal(), foodOrder.getFoodOrderTax()));
         
@@ -141,19 +183,11 @@ public class ManageFoodCtrl {
         this.foodOrder = foodOrder;
     }
     
+    /**
+     * Gets the food order object so it can be passed to the food order confirmation panel to display.
+     * @return 
+     */
     public FoodOrder getFoodOrderInformation(){
         return foodOrder;
-    }
-     /**
-     * Establishes the action event to be carried out when the return to main menu button 
-     * is selected on the order food user interface.
-     * returns user to the applications main menu interface.
-     * @param event sets the event variable to occur when the return to main menu button is selected.
-     */
-    public void returnToMenuButtonEvent (){
-        System.out.println("Button clicked to return to the main menu.");
-        
-    }
-        
-        
+    }      
  }
