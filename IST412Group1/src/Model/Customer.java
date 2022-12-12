@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Customer extends Account{    
     private String email;
     private ArrayList<Ticket> purchasedTickets = new ArrayList<>();
+    private ArrayList<FoodOrder> foodOrders = new ArrayList<>();
 
     
     /**
@@ -21,14 +22,16 @@ public class Customer extends Account{
      * @param lastName the customer's account last name.
      * @param email the customer's email.
      * @param purchasedTickets array list of the tickets the customer has purchased.
+     * @param foodOrders array list of the food order the customer has placed.
      */
     
-    public Customer(String username, String password, String firstName, String lastName, String email, ArrayList<Ticket> purchasedTickets) {
+    public Customer(String username, String password, String firstName, String lastName, String email, ArrayList<Ticket> purchasedTickets, ArrayList<FoodOrder> foodOrders) {
         
         super(username, password, firstName, lastName);  
         
         this.email = email;
         this.purchasedTickets = purchasedTickets;
+        this.foodOrders = foodOrders;
     }
     
     

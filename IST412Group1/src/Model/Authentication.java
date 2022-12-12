@@ -51,9 +51,9 @@ public class Authentication{
     public void createTestCustomers() {
         
         //Populate array with some test users 
-        Customer customer1 = new Customer("username1", "password1", "user1FirstName", "user1LastName", "email1@test.com", null);
-        Customer customer2 = new Customer("username2", "password2", "user2FirstName", "user2LastName", "email2@test.com", null);
-        Customer customer3 = new Customer("username3", "password3", "user3FirstName", "user3LastName", "email3@test.com", null);
+        Customer customer1 = new Customer("username1", "password1", "user1FirstName", "user1LastName", "email1@test.com", null, null);
+        Customer customer2 = new Customer("username2", "password2", "user2FirstName", "user2LastName", "email2@test.com", null, null);
+        Customer customer3 = new Customer("username3", "password3", "user3FirstName", "user3LastName", "email3@test.com", null, null);
         
         
         //Adds customer accounts to the customer array

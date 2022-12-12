@@ -118,7 +118,7 @@ public class LoginCtrl{
         
         if (accountCreateSuccess == true) {
             
-            Customer newCustomer = new Customer(inf_Username, inf_Password, inf_FirstName, inf_LastName, inf_Email, null);
+            Customer newCustomer = new Customer(inf_Username, inf_Password, inf_FirstName, inf_LastName, inf_Email, null, null);
             customerArray.add(newCustomer);
             writeArray(customerArray);
         }
