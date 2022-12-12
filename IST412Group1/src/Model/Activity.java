@@ -41,7 +41,7 @@ public class Activity implements Serializable {
         
         if (activityArray.isEmpty() || activityArray == null) {
             System.out.println("Activity Array is empty, creating test activities...");
-            this.createTestActivities();
+            this.createTestActivities();  // Should only need to be created once.  After that the data should persist between runs
             this.writeActivityDataFile();
             this.readActivityDataFile();
         }
@@ -51,11 +51,11 @@ public class Activity implements Serializable {
     }
     
     public void createTestActivities() {
-        Activity ride1 = new Activity("Monster Coaster", "Roller Coaster", null);
-        Activity ride2 = new Activity("Kiddy Coaster", "Roller Coaster", null);
-        Activity ride3 = new Activity("3D Train Ride", "Roller Coaster", null);
-        Activity ride4 = new Activity("Tornado", "Roller Coaster", null);
-        Activity ride5 = new Activity("Shoot The Rapids", "Roller Coaster", null);
+        Activity ride1 = new Activity("Monster Coaster", "Ride", null);
+        Activity ride2 = new Activity("Kiddy Coaster", "Ride", null);
+        Activity ride3 = new Activity("3D Train Ride", "Ride", null);
+        Activity ride4 = new Activity("Tornado", "Ride", null);
+        Activity ride5 = new Activity("Shoot The Rapids", "Ride", null);
         
         Activity show1 = new Activity("Kate's Komedy Show", "Show", null);
         Activity show2 = new Activity("Hytham's Gone HayWire!", "Show", null);

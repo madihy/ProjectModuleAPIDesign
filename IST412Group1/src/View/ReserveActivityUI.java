@@ -17,6 +17,9 @@ public class ReserveActivityUI extends javax.swing.JFrame {
     ArrayList<Activity> rideActivities;
     ArrayList<Activity> showActivities;
     ActivityCtrl activityCtrl;   
+    private int counter = 0;
+    private int maxCapacityRide = 10;
+    private int maxCapacityShow = 50;
     /**
      * Creates new form ReserveActivityUI
      */

@@ -6,6 +6,7 @@ package Model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 /**
  * This class contains the basic information for any type of reservation so can be used for show, ride, or restaurant reservations.
@@ -15,6 +16,7 @@ public class ResOption {
     private LocalDate reservationDate;
     private String reservationTime;
     private int quantityAvailable;
+    private ArrayList<ResOption> initialResOptions;
     
     /**
      * This is the full constructor for the reservation options class.
@@ -29,6 +31,10 @@ public class ResOption {
         this.quantityAvailable = quantityAvailable;
     }
 
+    public void createResOptions() {
+        initialResOptions = new ArrayList<>();
+        //initialResOptions.add(
+    }
     /**
      * Gets the reservation date for this reservation option.
      * @return the local date reservationDate representing the reservation date for the reservation option.
