@@ -160,9 +160,6 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(lblListTicketsPurchased, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
                         .addGap(121, 121, 121)
                         .addComponent(btnMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
@@ -195,8 +192,11 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
                                             .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
                                                 .addComponent(lblOrderNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(19, 19, 19)
-                                                .addComponent(lblConfirmOrderNumberValue, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))))))
-                .addGap(10, 10, 10))
+                                                .addComponent(lblConfirmOrderNumberValue, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
+                    .addGroup(pnlTicketOrderConfirmationLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(112, 112, 112))
         );
         pnlTicketOrderConfirmationLayout.setVerticalGroup(
             pnlTicketOrderConfirmationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,6 +248,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         tfNumberOfTickets.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tfNumberOfTickets.setText("0");
+        tfNumberOfTickets.setMinimumSize(new java.awt.Dimension(30, 27));
         tfNumberOfTickets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumberOfTicketsActionPerformed(evt);
@@ -262,6 +263,7 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
 
         tfNumberOfDays.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tfNumberOfDays.setText("0");
+        tfNumberOfDays.setMinimumSize(new java.awt.Dimension(30, 27));
         tfNumberOfDays.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfNumberOfDaysActionPerformed(evt);
@@ -338,8 +340,8 @@ public class PurchaseTicketsUI extends javax.swing.JFrame {
                             .addComponent(lblNumberOfTickets, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(32, 32, 32)
                         .addGroup(pnlPurchaseTicketsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfNumberOfTickets)
-                            .addComponent(tfNumberOfDays)))
+                            .addComponent(tfNumberOfTickets, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tfNumberOfDays, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pnlPurchaseTicketsLayout.createSequentialGroup()
                         .addComponent(lblPurchaseTax, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
