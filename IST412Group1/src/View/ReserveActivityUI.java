@@ -378,7 +378,11 @@ public class ReserveActivityUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMainMenuActSelActionPerformed
 
     private void btnRideReserveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRideReserveActionPerformed
-        // TODO add your handling code here:
+        Activity rideToAdd = new Activity();
+        rideToAdd.setActivityName((String) cbSelectRide.getSelectedItem());
+        rideToAdd.setActivityType("Ride");
+        rideToAdd.setTimeSlot((String) cbSelectRideReservation.getSelectedItem());
+        rideActivities.add(rideToAdd);
         
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveRide.setVisible(false);
@@ -390,7 +394,11 @@ public class ReserveActivityUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRideCancelActionPerformed
 
     private void btnShowReserveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowReserveActionPerformed
-        // TODO add your handling code here:
+        Activity showToAdd = new Activity();
+        showToAdd.setActivityName((String) cbSelectShow.getSelectedItem());
+        showToAdd.setActivityType("Show");
+        showToAdd.setTimeSlot((String) cbSelectShowReservation.getSelectedItem());
+        showActivities.add(showToAdd);
         
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveShow.setVisible(false);

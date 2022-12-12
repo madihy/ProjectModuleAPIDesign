@@ -21,6 +21,7 @@ public class Activity implements Serializable {
 
     private String activityName;//Name of the restaurant, show or ride
     private String activityType;//Types are Dining, Show, or Ride
+    private String timeSlot;
     //private int actLenInMins;
     //private boolean activityAvail;
     //private int waitTimeInMins;
@@ -88,9 +89,10 @@ public class Activity implements Serializable {
      * @param activityAvail Is the activity available, true or false
      * @param waitTimeInMins The wait time for the activity in minutes
      */
-    public Activity(String activityName, String activityType, ArrayList<ResOption> rideResOptions) {
+    public Activity(String activityName, String activityType, String timeSlot) {
         this.activityName = activityName;
         this.activityType = activityType;
+        this.timeSlot = timeSlot;
         this.rideResOptions = rideResOptions;
         //this.actLenInMins = actLenInMins;
         //this.activityAvail = activityAvail;
@@ -148,6 +150,16 @@ public class Activity implements Serializable {
     public void setRideResOptions(ArrayList<ResOption> rideResOptions) {
         this.rideResOptions = rideResOptions;
     }
+
+    public String getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(String timeSlot) {
+        this.timeSlot = timeSlot;
+    }
+    
+    
 
     public void readActivityDataFile() {
 
