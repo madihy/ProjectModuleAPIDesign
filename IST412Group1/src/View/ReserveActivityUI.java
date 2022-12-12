@@ -14,8 +14,8 @@ import java.util.ArrayList;
  * @author Kate
  */
 public class ReserveActivityUI extends javax.swing.JFrame {
-    ArrayList<Activity> rideActivities;
-    ArrayList<Activity> showActivities;
+    ArrayList<Activity> rideActivities = new ArrayList<>();
+    ArrayList<Activity> showActivities = new ArrayList<>();
     ActivityCtrl activityCtrl;   
     private int counter = 0;
     private int maxCapacityRide = 10;
@@ -447,6 +447,11 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         rideToAdd.setActivityType("Ride");
         rideToAdd.setTimeSlot((String) cbSelectRideReservation.getSelectedItem());
         rideActivities.add(rideToAdd);
+        System.out.println(rideActivities.toString());
+        for (int i = 0; i < rideActivities.size(); i++) {
+            taActivityReservationInfo.append(rideActivities.get(i).toString());
+            taActivityReservationInfo.append("\n");
+        }
         
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveRide.setVisible(false);
@@ -463,6 +468,11 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         showToAdd.setActivityType("Show");
         showToAdd.setTimeSlot((String) cbSelectShowReservation.getSelectedItem());
         showActivities.add(showToAdd);
+        System.out.println(showActivities.toString());
+        for (int i = 0; i < showActivities.size(); i++) {
+            taActivityReservationInfo.append(showActivities.get(i).toString());
+            taActivityReservationInfo.append("\n");
+        }
         
         this.pnlReservationConfirmation.setVisible(true);
         this.pnlReserveShow.setVisible(false);

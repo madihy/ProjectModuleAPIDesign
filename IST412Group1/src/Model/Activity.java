@@ -152,7 +152,8 @@ public class Activity implements Serializable {
     }
 
     public String getTimeSlot() {
-        return timeSlot;
+        System.out.println("Activity Time: " + timeSlot);
+        return "";
     }
 
     public void setTimeSlot(String timeSlot) {
@@ -207,6 +208,11 @@ public class Activity implements Serializable {
             ex.printStackTrace();
         }
 
+    }
+    
+    @Override
+    public String toString() {
+        return this.getActivityName() + " " + this.getActivityType() + " " + this.getTimeSlot();
     }
 
     /**
