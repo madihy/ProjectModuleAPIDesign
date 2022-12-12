@@ -11,9 +11,26 @@ import Controller.*;
  * @author brandonworley
  */
 public class ActivityCtrl {
-    private Activity activity;
+    private Activity reservedActivity;
     private ReserveActivityUI activityView;
-/**
+    Reservation newReservation;
+
+    
+    public void createReservationObject(String inf_activityType, String inf_activityName, String inf_activityTimeSlot, int inf_resQty){
+        reservedActivity = new Activity();
+        reservedActivity.setActivityType(inf_activityType);
+        reservedActivity.setActivityName(inf_activityName);
+        reservedActivity.setTimeSlot(inf_activityTimeSlot);
+        reservedActivity.setReservationQty(inf_resQty);
+        
+        this.reservedActivity = reservedActivity;
+    }
+    
+    public Activity getReservedActivityInformation(){
+        return reservedActivity;
+    }
+    
+    /**
  * Add new activities
  */ 
     public void addActivity() {
@@ -59,4 +76,8 @@ public class ActivityCtrl {
     public String toString() {
         return "Activity: " + activity.getActivityName() + "\nType: " + activity.getActivityType();
 }
+
+    private Reservation Reservation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -22,6 +22,7 @@ public class Activity implements Serializable {
     private String activityName;//Name of the restaurant, show or ride
     private String activityType;//Types are Dining, Show, or Ride
     private String timeSlot;
+    private int reservationQty;
     //private int actLenInMins;
     //private boolean activityAvail;
     //private int waitTimeInMins;
@@ -213,6 +214,20 @@ public class Activity implements Serializable {
     @Override
     public String toString() {
         return this.getActivityName() + " " + this.getActivityType() + " " + this.getTimeSlot();
+    }
+
+    /**
+     * @return the reservationQty
+     */
+    public int getReservationQty() {
+        return reservationQty;
+    }
+
+    /**
+     * @param reservationQty the reservationQty to set
+     */
+    public void setReservationQty(int reservationQty) {
+        this.reservationQty = reservationQty;
     }
 
     /**
