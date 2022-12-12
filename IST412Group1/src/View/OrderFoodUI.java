@@ -571,6 +571,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(jLabel16, gridBagConstraints);
 
         spnDeliSandwichQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliSandwichQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
@@ -580,6 +581,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliSandwichQty, gridBagConstraints);
 
         spnDeliSubQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliSubQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
@@ -589,6 +591,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliSubQty, gridBagConstraints);
 
         spnDeliSaladQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliSaladQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
@@ -598,6 +601,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliSaladQty, gridBagConstraints);
 
         spnDeliCookieQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliCookieQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
@@ -607,6 +611,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliCookieQty, gridBagConstraints);
 
         spnDeliChipsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliChipsQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
@@ -616,6 +621,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliChipsQty, gridBagConstraints);
 
         spnDeliBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliBottledQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 10;
@@ -625,6 +631,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliBottledQty, gridBagConstraints);
 
         spnDeliBrownieQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliBrownieQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
@@ -634,6 +641,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSandwichShop.add(spnDeliBrownieQty, gridBagConstraints);
 
         spnDeliFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnDeliFountainQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
@@ -890,6 +898,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(jLabel34, gridBagConstraints);
 
         spnItalianSmPizzaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianSmPizzaQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
@@ -899,6 +908,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(spnItalianSmPizzaQty, gridBagConstraints);
 
         spnItalianLgPizzaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianLgPizzaQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 4;
@@ -908,6 +918,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(spnItalianLgPizzaQty, gridBagConstraints);
 
         spnItalianPastaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianPastaQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
@@ -917,6 +928,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(spnItalianPastaQty, gridBagConstraints);
 
         spnItalianGelatoQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianGelatoQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 6;
@@ -926,6 +938,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(spnItalianGelatoQty, gridBagConstraints);
 
         spnItalianDesPizzaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianDesPizzaQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
@@ -935,6 +948,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(spnItalianDesPizzaQty, gridBagConstraints);
 
         spnItalianFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianFountainQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 8;
@@ -944,6 +958,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlSofiasPizza.add(spnItalianFountainQty, gridBagConstraints);
 
         spnItalianBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnItalianBottledQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
@@ -1229,6 +1244,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(jLabel52, gridBagConstraints);
 
         spnGrillHotDogQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillHotDogQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 3;
@@ -1238,6 +1254,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillHotDogQty, gridBagConstraints);
 
         spnGrillHamburgerQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillHamburgerQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 4;
@@ -1247,6 +1264,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillHamburgerQty, gridBagConstraints);
 
         spnGrillTurkeyLegQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillTurkeyLegQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 5;
@@ -1256,6 +1274,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillTurkeyLegQty, gridBagConstraints);
 
         spnGrillChickenNuggetsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillChickenNuggetsQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 6;
@@ -1265,6 +1284,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillChickenNuggetsQty, gridBagConstraints);
 
         spnGrillChipsQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillChipsQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 7;
@@ -1274,6 +1294,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillChipsQty, gridBagConstraints);
 
         spnGrillFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillFountainQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 10;
@@ -1283,6 +1304,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillFountainQty, gridBagConstraints);
 
         spnGrillFriesQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillFriesQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 8;
@@ -1292,6 +1314,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(spnGrillFriesQty, gridBagConstraints);
 
         spnGrillMilkshakeQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillMilkshakeQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 9;
@@ -1407,6 +1430,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlGrubGrill.add(jLabel57, gridBagConstraints);
 
         spnGrillBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnGrillBottledQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 11;
@@ -1594,6 +1618,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(jLabel73, gridBagConstraints);
 
         spnMexicanTacosQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanTacosQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 3;
@@ -1603,6 +1628,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(spnMexicanTacosQty, gridBagConstraints);
 
         spnMexicanBurritoQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanBurritoQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 5;
@@ -1612,6 +1638,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(spnMexicanBurritoQty, gridBagConstraints);
 
         spnMexicanRiceBowlQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanRiceBowlQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 7;
@@ -1621,6 +1648,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(spnMexicanRiceBowlQty, gridBagConstraints);
 
         spnMexicanChurroQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanChurroQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 9;
@@ -1630,6 +1658,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(spnMexicanChurroQty, gridBagConstraints);
 
         spnMexicanChipsSalsaQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanChipsSalsaQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 11;
@@ -1639,6 +1668,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(spnMexicanChipsSalsaQty, gridBagConstraints);
 
         spnMexicanFountainQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanFountainQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 15;
@@ -1648,6 +1678,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(spnMexicanFountainQty, gridBagConstraints);
 
         spnMexicanGuacamoleQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanGuacamoleQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 13;
@@ -1764,6 +1795,7 @@ public class OrderFoodUI extends javax.swing.JFrame {
         pnlElTaco.add(jLabel78, gridBagConstraints);
 
         spnMexicanBottledQty.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        spnMexicanBottledQty.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 17;
