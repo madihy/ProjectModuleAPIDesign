@@ -4,29 +4,17 @@
  */
 package Controller;
 
-import java.awt.event.ActionEvent;
-import View.LoginUI;
-import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 import Model.Authentication;
 import Model.Customer;
 import View.CreateCustomerUI;
 import View.LoginUI;
-import View.NavigationUI;
-import View.LoginUI;
-
-import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import javax.swing.*;
-
 
 /**
  *
  * @author Kate
- * This class manages the actions to facilitate the login process for all users of this application.
+ * This class manages the actions to facilitate the login and create new customer 
+ * processes for all users of this application.
  */
 public class LoginCtrl{
     
@@ -35,30 +23,36 @@ public class LoginCtrl{
     LoginUI loginUI;
     CreateCustomerUI createCustUI;
     
-    
+    /**
+     * This is the constructor for the LoginCtrl class.
+     */
     public LoginCtrl(){
-        auth = new Authentication();
-        auth.readCustomerDataFile();
+        auth = new Authentication(); //creates the authentication class object
+        auth.readCustomerDataFile(); //read persisted file of customers
         this.auth = auth;
         
+        //passes customers array stored in the persisted file to the current application class
         customerArray = new ArrayList<Customer>(auth.getCustomerArray());
         this.customerArray = customerArray;
         
-               
+        //creates the create customer UI and sets it visible      
         createCustUI = new CreateCustomerUI();
         createCustUI.setVisible(false);
         this.createCustUI = createCustUI;
         
     }
-    
+    /**
+     * Passes the customer data from the authentication class to use in the Login Controller
+     * @return 
+     */
     public Authentication getCustomerDataFromLoginController(){
         return this.auth;
     }
     
     /**
-     * Method to authenticate customer username and password from the LoginUI with the customerArray
-     * @param inf_userName
-     * @param inf_password
+     * Authenticates customer username and password from the LoginUI with the customerArray.
+     * @param inf_userName is a string representing the username entered by the user on login screen
+     * @param inf_password is a string representing the password entered by the user on login screen
      * @return 
      */
     public boolean authenticateUser(String inf_userName, String inf_password){
@@ -81,13 +75,14 @@ public class LoginCtrl{
         
     }
     /**
-     * Method to find an account and returns a customer object
-     * @param inf_username
+     * Finds an account and returns a customer object that matches the current username.
+     * @param inf_username is a string representing the text field entry by user for the username.
      * @return 
      */
     public Customer findAccount(String inf_username){
         Customer customerToReturn = null;
         
+        //For loop checks the current username provided to find the customer in the customer array
         for (int i = 0; i < customerArray.size(); i++){
             if (customerArray.get(i).getUsername().equals(inf_username)){
                 customerToReturn = customerArray.get(i);
@@ -96,23 +91,30 @@ public class LoginCtrl{
         
         return customerToReturn;
     }
-    
+    /**
+     * Creates the account object for this new customer.
+     * Validates against duplicates and blanks on fields with all fields being required.
+     * Calls the method to write the new account to the customer array to persist for the application.
+     * @param inf_FirstName is a string representing the first name for the new account
+     * @param inf_LastName is a string representing the last name for the new account
+     * @param inf_Email is a string representing the email for the new account
+     * @param inf_Username is string representing the username for the new account
+     * @param inf_Password is a string representing the password for the new account
+     * @return 
+     */
     public boolean createAccount(String inf_FirstName, String inf_LastName, String inf_Email, String inf_Username, String inf_Password) { //Method to create a new account. If account is created, return boolean is true 
 
         boolean accountCreateSuccess = false; //returns true if account creation is successful 
         boolean noDuplicate = true; 
         
-        System.out.println(accountCreateSuccess);    
-        System.out.println(inf_Username + ", " + inf_Password + ", " + inf_FirstName + ", " + inf_LastName + ", " + inf_Email);
-        
         for (int i = 0; i < customerArray.size(); i++) {
             if (customerArray.get(i).getUsername().equals(inf_Username)) { //check to make sure username doesn't already exist 
                 noDuplicate = false;
-                System.out.println("duplicate found: " + noDuplicate);
+                
             }            
         } 
         accountCreateSuccess = noDuplicate;
-        System.out.println(accountCreateSuccess);
+        
         
         if (accountCreateSuccess == true) {
             
@@ -120,28 +122,19 @@ public class LoginCtrl{
             customerArray.add(newCustomer);
             writeArray(customerArray);
         }
-        System.out.println(accountCreateSuccess);
    
 
         return accountCreateSuccess;
 
     }
- 
+    /**
+     * Writes the local arraylist back to the user data file to be persisted
+     * @param inf_arrayToWrite 
+     */
     public void writeArray(ArrayList<Customer> inf_arrayToWrite) { //write the local arraylist back to userdata
 
         auth.writeArray(inf_arrayToWrite);
 
     }
-    
-    public void makeCustomerUIVisible(){
-        createCustUI.setLocationRelativeTo(null);
-        createCustUI.setVisible(true);
-        loginUI.setVisible(false);
-    }
-    
-    public void makeLoginUIVisible(){
-        createCustUI.setVisible(false);
-        loginUI.setLocationRelativeTo(null);
-        loginUI.setVisible(true);
-    }
+ 
 }
