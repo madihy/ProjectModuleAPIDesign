@@ -2,7 +2,6 @@ package Controller;
 import Model.*;
 import View.*;
 import Controller.*;
-import java.util.ArrayList;
 
 
 /**
@@ -14,25 +13,12 @@ import java.util.ArrayList;
 public class ActivityCtrl {
     private Activity activity;
     private ReserveActivityUI activityView;
-    
 /**
  * Add new activities
  */ 
     public void addActivity() {
         System.out.println("Activityy Added!");
         
-    }
-    
-    public ArrayList <String> getRideNamesArray(ArrayList<Activity> allActivities){
-        ArrayList<String> rideNames = new ArrayList<String>();
-        
-        
-        for(int i = 0; i < allActivities.size(); i++){
-            String activityName = allActivities.get(i).getActivityName();
-            rideNames.add(activityName);
-        }
-        
-        return rideNames;    
     }
     
 /** 
