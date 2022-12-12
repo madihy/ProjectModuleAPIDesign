@@ -192,6 +192,7 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         });
 
         spnRideResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        spnRideResQty.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         lblRideResError.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblRideResError.setForeground(new java.awt.Color(255, 0, 0));
@@ -297,6 +298,7 @@ public class ReserveActivityUI extends javax.swing.JFrame {
         lblShowResError.setText("Error Message");
 
         spnShowResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        spnShowResQty.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
         lblSelectShowResQty.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         lblSelectShowResQty.setText("Show Reservation Quantity:");
@@ -419,12 +421,14 @@ public class ReserveActivityUI extends javax.swing.JFrame {
 
     private void btnRideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRideActionPerformed
         this.pnlSelectActivityType.setVisible(false);
+        this.lblRideResError.setVisible(false);
         this.pnlReserveRide.setVisible(true);
 
     }//GEN-LAST:event_btnRideActionPerformed
 
     private void btnShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowActionPerformed
         this.pnlSelectActivityType.setVisible(false);
+        this.lblShowResError.setVisible(false);
         this.pnlReserveShow.setVisible(true);
 
     }//GEN-LAST:event_btnShowActionPerformed
