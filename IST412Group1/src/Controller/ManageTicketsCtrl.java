@@ -33,7 +33,10 @@ public class ManageTicketsCtrl {
         newTicketOrder.setOrderTotal(newTicketOrder.calculateTotal(newTicketOrder.getOrderSubtotal(), newTicketOrder.getOrderTax()));
         this.newTicketOrder = newTicketOrder;  
     }
-    
+    /**
+     * Returns the information from the ticket order.
+     * @return newTicketOrder
+     */
     public TicketOrder getTicketOrderInformation(){
         return newTicketOrder;
     }

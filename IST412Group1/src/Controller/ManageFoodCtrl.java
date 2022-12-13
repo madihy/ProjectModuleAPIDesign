@@ -82,7 +82,7 @@ public class ManageFoodCtrl {
         Food food6 = new Food("Brownie", 4.50, inf_brownie);
         Food food7 = new Food("Fountain Drink", 2.99, inf_deliFountain);
         Food food8 = new Food("Bottled Drink", 3.99, inf_deliBottled);
-        //Add Mexican Menu food objects to the menu array
+        //Add Deli Menu food objects to the menu array
         menu.add(food1);
         menu.add(food2);
         menu.add(food3);

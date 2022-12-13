@@ -41,6 +41,9 @@ public class Activity implements Serializable {
         //this.activityAvail = false;
         //this.waitTimeInMins = 0;
     }
+    /**
+     * This method creates test activities
+     */
     
     public void createTestActivities() {
         Activity ride1 = new Activity("Monster Coaster", "Ride", null);
@@ -63,7 +66,10 @@ public class Activity implements Serializable {
         activityArray.add(show3);
         activityArray.add(show4);
     }
-    
+    /**
+     * Methods for getting and setting the Activity Array
+     * @return activityArry
+     */
     public ArrayList<Activity> getActivityArray() {
         return activityArray;
     }
@@ -119,7 +125,10 @@ public class Activity implements Serializable {
     public void setActivityType(String activityType) {
         this.activityType = activityType;
     }
-
+/**
+ * Methods for getting and setting the time slots for the activities.
+ * @return timeSlot
+ */
     public String getTimeSlot() {
         return timeSlot;
     }
@@ -129,7 +138,9 @@ public class Activity implements Serializable {
     }
     
     
-
+/**
+ * Method to read the activity data from the file "activityDataFile"
+ */
     public void readActivityDataFile() {
 
         FileInputStream fis = null;
@@ -153,7 +164,10 @@ public class Activity implements Serializable {
         }
 
     }
-    
+    /**
+     * Method to write the activity array to the data file
+     * @param inf_activityArray 
+     */
         public void writeArray(ArrayList<Activity> inf_activityArray) {
         //userArray.clear();
         this.activityArray = inf_activityArray;
@@ -161,7 +175,9 @@ public class Activity implements Serializable {
         writeActivityDataFile();
 
     }
-    
+    /**
+     * Method to write the data file
+     */
     public void writeActivityDataFile() {
 
         FileOutputStream fos = null;

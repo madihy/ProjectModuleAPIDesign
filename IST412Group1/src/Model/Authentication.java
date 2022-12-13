@@ -110,7 +110,9 @@ public class Authentication{
         this.currentPassword = currentPassword;
     }
 
-
+/**
+ * The following methods are used to read and write data in the customer data file
+ */
     public void readCustomerDataFile() {
 
         FileInputStream fis = null;
